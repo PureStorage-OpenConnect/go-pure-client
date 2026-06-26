@@ -1,0 +1,1073 @@
+# \PoliciesManagementAuthenticationAPI
+
+All URIs are relative to *http://localhost*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**AdminsManagementAuthenticationPoliciesDelete**](PoliciesManagementAuthenticationAPI.md#AdminsManagementAuthenticationPoliciesDelete) | **Delete** /api/2.26/admins/management-authentication-policies | DELETE admins/management-authentication-policies
+[**AdminsManagementAuthenticationPoliciesGet**](PoliciesManagementAuthenticationAPI.md#AdminsManagementAuthenticationPoliciesGet) | **Get** /api/2.26/admins/management-authentication-policies | GET admins/management-authentication-policies
+[**AdminsManagementAuthenticationPoliciesPost**](PoliciesManagementAuthenticationAPI.md#AdminsManagementAuthenticationPoliciesPost) | **Post** /api/2.26/admins/management-authentication-policies | POST admins/management-authentication-policies
+[**ArraysManagementAuthenticationPoliciesDelete**](PoliciesManagementAuthenticationAPI.md#ArraysManagementAuthenticationPoliciesDelete) | **Delete** /api/2.26/arrays/management-authentication-policies | DELETE arrays/management-authentication-policies
+[**ArraysManagementAuthenticationPoliciesGet**](PoliciesManagementAuthenticationAPI.md#ArraysManagementAuthenticationPoliciesGet) | **Get** /api/2.26/arrays/management-authentication-policies | GET arrays/management-authentication-policies
+[**ArraysManagementAuthenticationPoliciesPost**](PoliciesManagementAuthenticationAPI.md#ArraysManagementAuthenticationPoliciesPost) | **Post** /api/2.26/arrays/management-authentication-policies | POST arrays/management-authentication-policies
+[**ManagementAuthenticationPoliciesDelete**](PoliciesManagementAuthenticationAPI.md#ManagementAuthenticationPoliciesDelete) | **Delete** /api/2.26/management-authentication-policies | DELETE management-authentication-policies
+[**ManagementAuthenticationPoliciesGet**](PoliciesManagementAuthenticationAPI.md#ManagementAuthenticationPoliciesGet) | **Get** /api/2.26/management-authentication-policies | GET management-authentication-policies
+[**ManagementAuthenticationPoliciesMembersDelete**](PoliciesManagementAuthenticationAPI.md#ManagementAuthenticationPoliciesMembersDelete) | **Delete** /api/2.26/management-authentication-policies/members | DELETE management-authentication-policies/members
+[**ManagementAuthenticationPoliciesMembersGet**](PoliciesManagementAuthenticationAPI.md#ManagementAuthenticationPoliciesMembersGet) | **Get** /api/2.26/management-authentication-policies/members | GET management-authentication-policies/members
+[**ManagementAuthenticationPoliciesMembersPost**](PoliciesManagementAuthenticationAPI.md#ManagementAuthenticationPoliciesMembersPost) | **Post** /api/2.26/management-authentication-policies/members | POST management-authentication-policies/members
+[**ManagementAuthenticationPoliciesPatch**](PoliciesManagementAuthenticationAPI.md#ManagementAuthenticationPoliciesPatch) | **Patch** /api/2.26/management-authentication-policies | PATCH management-authentication-policies
+[**ManagementAuthenticationPoliciesPost**](PoliciesManagementAuthenticationAPI.md#ManagementAuthenticationPoliciesPost) | **Post** /api/2.26/management-authentication-policies | POST management-authentication-policies
+
+
+
+## AdminsManagementAuthenticationPoliciesDelete
+
+> AdminsManagementAuthenticationPoliciesDelete(ctx).XRequestID(xRequestID).ContextNames(contextNames).MemberIds(memberIds).MemberNames(memberNames).PolicyIds(policyIds).PolicyNames(policyNames).Execute()
+
+DELETE admins/management-authentication-policies
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/pure-shared/go-pure-client/flashblade/FB_2_26"
+)
+
+func main() {
+    configuration, err := openapiclient.NewConfigurationBuilder(server.URL).
+        APIToken(apiToken).
+        Build()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client configuration: %v\n", err)
+    }
+    apiClient, err := openapiclient.NewClient(configuration)
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client: %v\n", err)
+    }
+    req := apiClient.PoliciesManagementAuthenticationAPI.AdminsManagementAuthenticationPoliciesDelete(context.Background())
+    // Set request parameters ...
+
+    resp, r, err := req.Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PoliciesManagementAuthenticationAPI.AdminsManagementAuthenticationPoliciesDelete``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiAdminsManagementAuthenticationPoliciesDeleteRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
+ **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
+ **memberIds** | **[]string** | A comma-separated list of member IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;member_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;member_names&#x60; query parameter.  | 
+ **memberNames** | **[]string** | A comma-separated list of member names.  | 
+ **policyIds** | **[]string** | A comma-separated list of policy IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;policy_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;policy_names&#x60; query parameter.  | 
+ **policyNames** | **[]string** | A comma-separated list of policy names.  | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## AdminsManagementAuthenticationPoliciesGet
+
+> PolicyMemberContextGetResponse AdminsManagementAuthenticationPoliciesGet(ctx).XRequestID(xRequestID).AllowErrors(allowErrors).ContextNames(contextNames).ContinuationToken(continuationToken).Filter(filter).Limit(limit).MemberIds(memberIds).MemberNames(memberNames).Offset(offset).PolicyIds(policyIds).PolicyNames(policyNames).Sort(sort).Execute()
+
+GET admins/management-authentication-policies
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/pure-shared/go-pure-client/flashblade/FB_2_26"
+)
+
+func main() {
+    configuration, err := openapiclient.NewConfigurationBuilder(server.URL).
+        APIToken(apiToken).
+        Build()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client configuration: %v\n", err)
+    }
+    apiClient, err := openapiclient.NewClient(configuration)
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client: %v\n", err)
+    }
+    req := apiClient.PoliciesManagementAuthenticationAPI.AdminsManagementAuthenticationPoliciesGet(context.Background())
+    // Set request parameters ...
+
+    resp, r, err := req.Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PoliciesManagementAuthenticationAPI.AdminsManagementAuthenticationPoliciesGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `AdminsManagementAuthenticationPoliciesGet`: PolicyMemberContextGetResponse
+    fmt.Fprintf(os.Stdout, "Response from `PoliciesManagementAuthenticationAPI.AdminsManagementAuthenticationPoliciesGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiAdminsManagementAuthenticationPoliciesGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
+ **allowErrors** | **bool** | If set to &#x60;true&#x60;, the API will allow the operation to continue even if there are errors. Any errors will be returned in the &#x60;errors&#x60; field of the response. If set to &#x60;false&#x60;, the operation will fail if there are any errors.  | [default to false]
+ **contextNames** | **[]string** | Performs the operation on the unique contexts specified.  If specified, each context name must be the name of an array in the same fleet or the name of the fleet itself.  If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  | 
+ **continuationToken** | **string** | A token used to retrieve the next page of data with some consistency guaranteed. The token is a Base64 encoded value. Set &#x60;continuation_token&#x60; to the system-generated token taken from the &#x60;x-next-token&#x60; header field of the response. A query has reached its last page when the response does not include a token. Pagination requires the &#x60;limit&#x60; and &#x60;continuation_token&#x60; query parameters.  | 
+ **filter** | **string** | Narrows down the results to only the response objects that satisfy the filter criteria.  | 
+ **limit** | **int32** | Limits the size of the response to the specified number of objects on each page. To return the total number of resources, set &#x60;limit&#x3D;0&#x60;. The total number of resources is returned as a &#x60;total_item_count&#x60; value. If the page size requested is larger than the system maximum limit, the server returns the maximum limit, disregarding the requested page size.  | 
+ **memberIds** | **[]string** | A comma-separated list of member IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;member_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;member_names&#x60; query parameter.  | 
+ **memberNames** | **[]string** | A comma-separated list of member names.  | 
+ **offset** | **int32** | The offset of the first resource to return from a collection.  | 
+ **policyIds** | **[]string** | A comma-separated list of policy IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;policy_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;policy_names&#x60; query parameter.  | 
+ **policyNames** | **[]string** | A comma-separated list of policy names.  | 
+ **sort** | **[]string** | Sort the response by the specified fields (in descending order if &#39;-&#39; is appended to the field name). NOTE: If you provide a sort you will not get a &#x60;continuation_token&#x60; in the response.  | 
+
+### Return type
+
+[**PolicyMemberContextGetResponse**](PolicyMemberContextGetResponse.md)
+
+### Authorization
+
+Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## AdminsManagementAuthenticationPoliciesPost
+
+> PolicyMemberContextResponse AdminsManagementAuthenticationPoliciesPost(ctx).XRequestID(xRequestID).ContextNames(contextNames).MemberIds(memberIds).MemberNames(memberNames).PolicyIds(policyIds).PolicyNames(policyNames).Execute()
+
+POST admins/management-authentication-policies
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/pure-shared/go-pure-client/flashblade/FB_2_26"
+)
+
+func main() {
+    configuration, err := openapiclient.NewConfigurationBuilder(server.URL).
+        APIToken(apiToken).
+        Build()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client configuration: %v\n", err)
+    }
+    apiClient, err := openapiclient.NewClient(configuration)
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client: %v\n", err)
+    }
+    req := apiClient.PoliciesManagementAuthenticationAPI.AdminsManagementAuthenticationPoliciesPost(context.Background())
+    // Set request parameters ...
+
+    resp, r, err := req.Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PoliciesManagementAuthenticationAPI.AdminsManagementAuthenticationPoliciesPost``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `AdminsManagementAuthenticationPoliciesPost`: PolicyMemberContextResponse
+    fmt.Fprintf(os.Stdout, "Response from `PoliciesManagementAuthenticationAPI.AdminsManagementAuthenticationPoliciesPost`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiAdminsManagementAuthenticationPoliciesPostRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
+ **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
+ **memberIds** | **[]string** | A comma-separated list of member IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;member_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;member_names&#x60; query parameter.  | 
+ **memberNames** | **[]string** | A comma-separated list of member names.  | 
+ **policyIds** | **[]string** | A comma-separated list of policy IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;policy_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;policy_names&#x60; query parameter.  | 
+ **policyNames** | **[]string** | A comma-separated list of policy names.  | 
+
+### Return type
+
+[**PolicyMemberContextResponse**](PolicyMemberContextResponse.md)
+
+### Authorization
+
+Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## ArraysManagementAuthenticationPoliciesDelete
+
+> ArraysManagementAuthenticationPoliciesDelete(ctx).XRequestID(xRequestID).ContextNames(contextNames).MemberIds(memberIds).MemberNames(memberNames).PolicyIds(policyIds).PolicyNames(policyNames).Execute()
+
+DELETE arrays/management-authentication-policies
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/pure-shared/go-pure-client/flashblade/FB_2_26"
+)
+
+func main() {
+    configuration, err := openapiclient.NewConfigurationBuilder(server.URL).
+        APIToken(apiToken).
+        Build()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client configuration: %v\n", err)
+    }
+    apiClient, err := openapiclient.NewClient(configuration)
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client: %v\n", err)
+    }
+    req := apiClient.PoliciesManagementAuthenticationAPI.ArraysManagementAuthenticationPoliciesDelete(context.Background())
+    // Set request parameters ...
+
+    resp, r, err := req.Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PoliciesManagementAuthenticationAPI.ArraysManagementAuthenticationPoliciesDelete``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiArraysManagementAuthenticationPoliciesDeleteRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
+ **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
+ **memberIds** | **[]string** | A comma-separated list of member IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;member_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;member_names&#x60; query parameter.  | 
+ **memberNames** | **[]string** | A comma-separated list of member names.  | 
+ **policyIds** | **[]string** | A comma-separated list of policy IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;policy_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;policy_names&#x60; query parameter.  | 
+ **policyNames** | **[]string** | A comma-separated list of policy names.  | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## ArraysManagementAuthenticationPoliciesGet
+
+> PolicyMemberContextGetResponse ArraysManagementAuthenticationPoliciesGet(ctx).XRequestID(xRequestID).AllowErrors(allowErrors).ContextNames(contextNames).ContinuationToken(continuationToken).Filter(filter).Limit(limit).MemberIds(memberIds).MemberNames(memberNames).Offset(offset).PolicyIds(policyIds).PolicyNames(policyNames).Sort(sort).Execute()
+
+GET arrays/management-authentication-policies
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/pure-shared/go-pure-client/flashblade/FB_2_26"
+)
+
+func main() {
+    configuration, err := openapiclient.NewConfigurationBuilder(server.URL).
+        APIToken(apiToken).
+        Build()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client configuration: %v\n", err)
+    }
+    apiClient, err := openapiclient.NewClient(configuration)
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client: %v\n", err)
+    }
+    req := apiClient.PoliciesManagementAuthenticationAPI.ArraysManagementAuthenticationPoliciesGet(context.Background())
+    // Set request parameters ...
+
+    resp, r, err := req.Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PoliciesManagementAuthenticationAPI.ArraysManagementAuthenticationPoliciesGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `ArraysManagementAuthenticationPoliciesGet`: PolicyMemberContextGetResponse
+    fmt.Fprintf(os.Stdout, "Response from `PoliciesManagementAuthenticationAPI.ArraysManagementAuthenticationPoliciesGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiArraysManagementAuthenticationPoliciesGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
+ **allowErrors** | **bool** | If set to &#x60;true&#x60;, the API will allow the operation to continue even if there are errors. Any errors will be returned in the &#x60;errors&#x60; field of the response. If set to &#x60;false&#x60;, the operation will fail if there are any errors.  | [default to false]
+ **contextNames** | **[]string** | Performs the operation on the unique contexts specified.  If specified, each context name must be the name of an array in the same fleet or the name of the fleet itself.  If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  | 
+ **continuationToken** | **string** | A token used to retrieve the next page of data with some consistency guaranteed. The token is a Base64 encoded value. Set &#x60;continuation_token&#x60; to the system-generated token taken from the &#x60;x-next-token&#x60; header field of the response. A query has reached its last page when the response does not include a token. Pagination requires the &#x60;limit&#x60; and &#x60;continuation_token&#x60; query parameters.  | 
+ **filter** | **string** | Narrows down the results to only the response objects that satisfy the filter criteria.  | 
+ **limit** | **int32** | Limits the size of the response to the specified number of objects on each page. To return the total number of resources, set &#x60;limit&#x3D;0&#x60;. The total number of resources is returned as a &#x60;total_item_count&#x60; value. If the page size requested is larger than the system maximum limit, the server returns the maximum limit, disregarding the requested page size.  | 
+ **memberIds** | **[]string** | A comma-separated list of member IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;member_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;member_names&#x60; query parameter.  | 
+ **memberNames** | **[]string** | A comma-separated list of member names.  | 
+ **offset** | **int32** | The offset of the first resource to return from a collection.  | 
+ **policyIds** | **[]string** | A comma-separated list of policy IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;policy_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;policy_names&#x60; query parameter.  | 
+ **policyNames** | **[]string** | A comma-separated list of policy names.  | 
+ **sort** | **[]string** | Sort the response by the specified fields (in descending order if &#39;-&#39; is appended to the field name). NOTE: If you provide a sort you will not get a &#x60;continuation_token&#x60; in the response.  | 
+
+### Return type
+
+[**PolicyMemberContextGetResponse**](PolicyMemberContextGetResponse.md)
+
+### Authorization
+
+Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## ArraysManagementAuthenticationPoliciesPost
+
+> PolicyMemberContextResponse ArraysManagementAuthenticationPoliciesPost(ctx).XRequestID(xRequestID).ContextNames(contextNames).MemberIds(memberIds).MemberNames(memberNames).PolicyIds(policyIds).PolicyNames(policyNames).Execute()
+
+POST arrays/management-authentication-policies
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/pure-shared/go-pure-client/flashblade/FB_2_26"
+)
+
+func main() {
+    configuration, err := openapiclient.NewConfigurationBuilder(server.URL).
+        APIToken(apiToken).
+        Build()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client configuration: %v\n", err)
+    }
+    apiClient, err := openapiclient.NewClient(configuration)
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client: %v\n", err)
+    }
+    req := apiClient.PoliciesManagementAuthenticationAPI.ArraysManagementAuthenticationPoliciesPost(context.Background())
+    // Set request parameters ...
+
+    resp, r, err := req.Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PoliciesManagementAuthenticationAPI.ArraysManagementAuthenticationPoliciesPost``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `ArraysManagementAuthenticationPoliciesPost`: PolicyMemberContextResponse
+    fmt.Fprintf(os.Stdout, "Response from `PoliciesManagementAuthenticationAPI.ArraysManagementAuthenticationPoliciesPost`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiArraysManagementAuthenticationPoliciesPostRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
+ **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
+ **memberIds** | **[]string** | A comma-separated list of member IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;member_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;member_names&#x60; query parameter.  | 
+ **memberNames** | **[]string** | A comma-separated list of member names.  | 
+ **policyIds** | **[]string** | A comma-separated list of policy IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;policy_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;policy_names&#x60; query parameter.  | 
+ **policyNames** | **[]string** | A comma-separated list of policy names.  | 
+
+### Return type
+
+[**PolicyMemberContextResponse**](PolicyMemberContextResponse.md)
+
+### Authorization
+
+Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## ManagementAuthenticationPoliciesDelete
+
+> ManagementAuthenticationPoliciesDelete(ctx).XRequestID(xRequestID).ContextNames(contextNames).Ids(ids).Names(names).Execute()
+
+DELETE management-authentication-policies
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/pure-shared/go-pure-client/flashblade/FB_2_26"
+)
+
+func main() {
+    configuration, err := openapiclient.NewConfigurationBuilder(server.URL).
+        APIToken(apiToken).
+        Build()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client configuration: %v\n", err)
+    }
+    apiClient, err := openapiclient.NewClient(configuration)
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client: %v\n", err)
+    }
+    req := apiClient.PoliciesManagementAuthenticationAPI.ManagementAuthenticationPoliciesDelete(context.Background())
+    // Set request parameters ...
+
+    resp, r, err := req.Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PoliciesManagementAuthenticationAPI.ManagementAuthenticationPoliciesDelete``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiManagementAuthenticationPoliciesDeleteRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
+ **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
+ **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;name&#x60; or &#x60;names&#x60; query parameters.  | 
+ **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## ManagementAuthenticationPoliciesGet
+
+> ManagementAuthenticationPoliciesGetResponse ManagementAuthenticationPoliciesGet(ctx).XRequestID(xRequestID).AllowErrors(allowErrors).ContextNames(contextNames).ContinuationToken(continuationToken).Filter(filter).Ids(ids).Limit(limit).Names(names).Offset(offset).Sort(sort).Execute()
+
+GET management-authentication-policies
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/pure-shared/go-pure-client/flashblade/FB_2_26"
+)
+
+func main() {
+    configuration, err := openapiclient.NewConfigurationBuilder(server.URL).
+        APIToken(apiToken).
+        Build()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client configuration: %v\n", err)
+    }
+    apiClient, err := openapiclient.NewClient(configuration)
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client: %v\n", err)
+    }
+    req := apiClient.PoliciesManagementAuthenticationAPI.ManagementAuthenticationPoliciesGet(context.Background())
+    // Set request parameters ...
+
+    resp, r, err := req.Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PoliciesManagementAuthenticationAPI.ManagementAuthenticationPoliciesGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `ManagementAuthenticationPoliciesGet`: ManagementAuthenticationPoliciesGetResponse
+    fmt.Fprintf(os.Stdout, "Response from `PoliciesManagementAuthenticationAPI.ManagementAuthenticationPoliciesGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiManagementAuthenticationPoliciesGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
+ **allowErrors** | **bool** | If set to &#x60;true&#x60;, the API will allow the operation to continue even if there are errors. Any errors will be returned in the &#x60;errors&#x60; field of the response. If set to &#x60;false&#x60;, the operation will fail if there are any errors.  | [default to false]
+ **contextNames** | **[]string** | Performs the operation on the unique contexts specified.  If specified, each context name must be the name of an array in the same fleet or the name of the fleet itself.  If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  | 
+ **continuationToken** | **string** | A token used to retrieve the next page of data with some consistency guaranteed. The token is a Base64 encoded value. Set &#x60;continuation_token&#x60; to the system-generated token taken from the &#x60;x-next-token&#x60; header field of the response. A query has reached its last page when the response does not include a token. Pagination requires the &#x60;limit&#x60; and &#x60;continuation_token&#x60; query parameters.  | 
+ **filter** | **string** | Narrows down the results to only the response objects that satisfy the filter criteria.  | 
+ **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;name&#x60; or &#x60;names&#x60; query parameters.  | 
+ **limit** | **int32** | Limits the size of the response to the specified number of objects on each page. To return the total number of resources, set &#x60;limit&#x3D;0&#x60;. The total number of resources is returned as a &#x60;total_item_count&#x60; value. If the page size requested is larger than the system maximum limit, the server returns the maximum limit, disregarding the requested page size.  | 
+ **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
+ **offset** | **int32** | The offset of the first resource to return from a collection.  | 
+ **sort** | **[]string** | Sort the response by the specified fields (in descending order if &#39;-&#39; is appended to the field name). NOTE: If you provide a sort you will not get a &#x60;continuation_token&#x60; in the response.  | 
+
+### Return type
+
+[**ManagementAuthenticationPoliciesGetResponse**](ManagementAuthenticationPoliciesGetResponse.md)
+
+### Authorization
+
+Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## ManagementAuthenticationPoliciesMembersDelete
+
+> ManagementAuthenticationPoliciesMembersDelete(ctx).XRequestID(xRequestID).ContextNames(contextNames).MemberIds(memberIds).MemberNames(memberNames).MemberTypes(memberTypes).PolicyIds(policyIds).PolicyNames(policyNames).Execute()
+
+DELETE management-authentication-policies/members
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/pure-shared/go-pure-client/flashblade/FB_2_26"
+)
+
+func main() {
+    configuration, err := openapiclient.NewConfigurationBuilder(server.URL).
+        APIToken(apiToken).
+        Build()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client configuration: %v\n", err)
+    }
+    apiClient, err := openapiclient.NewClient(configuration)
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client: %v\n", err)
+    }
+    req := apiClient.PoliciesManagementAuthenticationAPI.ManagementAuthenticationPoliciesMembersDelete(context.Background())
+    // Set request parameters ...
+
+    resp, r, err := req.Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PoliciesManagementAuthenticationAPI.ManagementAuthenticationPoliciesMembersDelete``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiManagementAuthenticationPoliciesMembersDeleteRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
+ **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
+ **memberIds** | **[]string** | A comma-separated list of member IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;member_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;member_names&#x60; query parameter.  | 
+ **memberNames** | **[]string** | A comma-separated list of member names.  | 
+ **memberTypes** | **[]string** | A comma-separated list of member types. Valid values are &#x60;admins&#x60; and &#x60;arrays&#x60;.  | 
+ **policyIds** | **[]string** | A comma-separated list of policy IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;policy_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;policy_names&#x60; query parameter.  | 
+ **policyNames** | **[]string** | A comma-separated list of policy names.  | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## ManagementAuthenticationPoliciesMembersGet
+
+> PolicyMemberContextGetResponse ManagementAuthenticationPoliciesMembersGet(ctx).XRequestID(xRequestID).AllowErrors(allowErrors).ContextNames(contextNames).ContinuationToken(continuationToken).Filter(filter).Limit(limit).MemberIds(memberIds).MemberNames(memberNames).MemberTypes(memberTypes).Offset(offset).PolicyIds(policyIds).PolicyNames(policyNames).Sort(sort).Execute()
+
+GET management-authentication-policies/members
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/pure-shared/go-pure-client/flashblade/FB_2_26"
+)
+
+func main() {
+    configuration, err := openapiclient.NewConfigurationBuilder(server.URL).
+        APIToken(apiToken).
+        Build()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client configuration: %v\n", err)
+    }
+    apiClient, err := openapiclient.NewClient(configuration)
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client: %v\n", err)
+    }
+    req := apiClient.PoliciesManagementAuthenticationAPI.ManagementAuthenticationPoliciesMembersGet(context.Background())
+    // Set request parameters ...
+
+    resp, r, err := req.Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PoliciesManagementAuthenticationAPI.ManagementAuthenticationPoliciesMembersGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `ManagementAuthenticationPoliciesMembersGet`: PolicyMemberContextGetResponse
+    fmt.Fprintf(os.Stdout, "Response from `PoliciesManagementAuthenticationAPI.ManagementAuthenticationPoliciesMembersGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiManagementAuthenticationPoliciesMembersGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
+ **allowErrors** | **bool** | If set to &#x60;true&#x60;, the API will allow the operation to continue even if there are errors. Any errors will be returned in the &#x60;errors&#x60; field of the response. If set to &#x60;false&#x60;, the operation will fail if there are any errors.  | [default to false]
+ **contextNames** | **[]string** | Performs the operation on the unique contexts specified.  If specified, each context name must be the name of an array in the same fleet or the name of the fleet itself.  If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  | 
+ **continuationToken** | **string** | A token used to retrieve the next page of data with some consistency guaranteed. The token is a Base64 encoded value. Set &#x60;continuation_token&#x60; to the system-generated token taken from the &#x60;x-next-token&#x60; header field of the response. A query has reached its last page when the response does not include a token. Pagination requires the &#x60;limit&#x60; and &#x60;continuation_token&#x60; query parameters.  | 
+ **filter** | **string** | Narrows down the results to only the response objects that satisfy the filter criteria.  | 
+ **limit** | **int32** | Limits the size of the response to the specified number of objects on each page. To return the total number of resources, set &#x60;limit&#x3D;0&#x60;. The total number of resources is returned as a &#x60;total_item_count&#x60; value. If the page size requested is larger than the system maximum limit, the server returns the maximum limit, disregarding the requested page size.  | 
+ **memberIds** | **[]string** | A comma-separated list of member IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;member_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;member_names&#x60; query parameter.  | 
+ **memberNames** | **[]string** | A comma-separated list of member names.  | 
+ **memberTypes** | **[]string** | A comma-separated list of member types. Valid values are &#x60;admins&#x60; and &#x60;arrays&#x60;.  | 
+ **offset** | **int32** | The offset of the first resource to return from a collection.  | 
+ **policyIds** | **[]string** | A comma-separated list of policy IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;policy_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;policy_names&#x60; query parameter.  | 
+ **policyNames** | **[]string** | A comma-separated list of policy names.  | 
+ **sort** | **[]string** | Sort the response by the specified fields (in descending order if &#39;-&#39; is appended to the field name). NOTE: If you provide a sort you will not get a &#x60;continuation_token&#x60; in the response.  | 
+
+### Return type
+
+[**PolicyMemberContextGetResponse**](PolicyMemberContextGetResponse.md)
+
+### Authorization
+
+Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## ManagementAuthenticationPoliciesMembersPost
+
+> PolicyMemberContextResponse ManagementAuthenticationPoliciesMembersPost(ctx).XRequestID(xRequestID).ContextNames(contextNames).MemberIds(memberIds).MemberNames(memberNames).MemberTypes(memberTypes).PolicyIds(policyIds).PolicyNames(policyNames).Execute()
+
+POST management-authentication-policies/members
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/pure-shared/go-pure-client/flashblade/FB_2_26"
+)
+
+func main() {
+    configuration, err := openapiclient.NewConfigurationBuilder(server.URL).
+        APIToken(apiToken).
+        Build()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client configuration: %v\n", err)
+    }
+    apiClient, err := openapiclient.NewClient(configuration)
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client: %v\n", err)
+    }
+    req := apiClient.PoliciesManagementAuthenticationAPI.ManagementAuthenticationPoliciesMembersPost(context.Background())
+    // Set request parameters ...
+
+    resp, r, err := req.Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PoliciesManagementAuthenticationAPI.ManagementAuthenticationPoliciesMembersPost``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `ManagementAuthenticationPoliciesMembersPost`: PolicyMemberContextResponse
+    fmt.Fprintf(os.Stdout, "Response from `PoliciesManagementAuthenticationAPI.ManagementAuthenticationPoliciesMembersPost`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiManagementAuthenticationPoliciesMembersPostRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
+ **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
+ **memberIds** | **[]string** | A comma-separated list of member IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;member_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;member_names&#x60; query parameter.  | 
+ **memberNames** | **[]string** | A comma-separated list of member names.  | 
+ **memberTypes** | **[]string** | A comma-separated list of member types. Valid values are &#x60;admins&#x60; and &#x60;arrays&#x60;.  | 
+ **policyIds** | **[]string** | A comma-separated list of policy IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;policy_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;policy_names&#x60; query parameter.  | 
+ **policyNames** | **[]string** | A comma-separated list of policy names.  | 
+
+### Return type
+
+[**PolicyMemberContextResponse**](PolicyMemberContextResponse.md)
+
+### Authorization
+
+Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## ManagementAuthenticationPoliciesPatch
+
+> ManagementAuthenticationPoliciesResponse ManagementAuthenticationPoliciesPatch(ctx).Policy(policy).XRequestID(xRequestID).ContextNames(contextNames).Ids(ids).Names(names).Execute()
+
+PATCH management-authentication-policies
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/pure-shared/go-pure-client/flashblade/FB_2_26"
+)
+
+func main() {
+    configuration, err := openapiclient.NewConfigurationBuilder(server.URL).
+        APIToken(apiToken).
+        Build()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client configuration: %v\n", err)
+    }
+    apiClient, err := openapiclient.NewClient(configuration)
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client: %v\n", err)
+    }
+    req := apiClient.PoliciesManagementAuthenticationAPI.ManagementAuthenticationPoliciesPatch(context.Background())
+    // Set request parameters ...
+
+    resp, r, err := req.Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PoliciesManagementAuthenticationAPI.ManagementAuthenticationPoliciesPatch``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `ManagementAuthenticationPoliciesPatch`: ManagementAuthenticationPoliciesResponse
+    fmt.Fprintf(os.Stdout, "Response from `PoliciesManagementAuthenticationAPI.ManagementAuthenticationPoliciesPatch`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiManagementAuthenticationPoliciesPatchRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **policy** | [**ManagementAuthenticationPolicy**](ManagementAuthenticationPolicy.md) |  | 
+ **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
+ **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
+ **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;name&#x60; or &#x60;names&#x60; query parameters.  | 
+ **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
+
+### Return type
+
+[**ManagementAuthenticationPoliciesResponse**](ManagementAuthenticationPoliciesResponse.md)
+
+### Authorization
+
+Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## ManagementAuthenticationPoliciesPost
+
+> ManagementAuthenticationPoliciesResponse ManagementAuthenticationPoliciesPost(ctx).Names(names).Policy(policy).XRequestID(xRequestID).ContextNames(contextNames).Execute()
+
+POST management-authentication-policies
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/pure-shared/go-pure-client/flashblade/FB_2_26"
+)
+
+func main() {
+    configuration, err := openapiclient.NewConfigurationBuilder(server.URL).
+        APIToken(apiToken).
+        Build()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client configuration: %v\n", err)
+    }
+    apiClient, err := openapiclient.NewClient(configuration)
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client: %v\n", err)
+    }
+    req := apiClient.PoliciesManagementAuthenticationAPI.ManagementAuthenticationPoliciesPost(context.Background())
+    // Set request parameters ...
+
+    resp, r, err := req.Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PoliciesManagementAuthenticationAPI.ManagementAuthenticationPoliciesPost``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `ManagementAuthenticationPoliciesPost`: ManagementAuthenticationPoliciesResponse
+    fmt.Fprintf(os.Stdout, "Response from `PoliciesManagementAuthenticationAPI.ManagementAuthenticationPoliciesPost`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiManagementAuthenticationPoliciesPostRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **names** | **[]string** | A comma-separated list of resource names.  | 
+ **policy** | [**ManagementAuthenticationPolicyPost**](ManagementAuthenticationPolicyPost.md) |  | 
+ **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
+ **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
+
+### Return type
+
+[**ManagementAuthenticationPoliciesResponse**](ManagementAuthenticationPoliciesResponse.md)
+
+### Authorization
+
+Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
