@@ -1,0 +1,642 @@
+# \PoliciesSMBClientAPI
+
+All URIs are relative to *http://localhost*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**SmbClientPoliciesDelete**](PoliciesSMBClientAPI.md#SmbClientPoliciesDelete) | **Delete** /api/2.11/smb-client-policies | DELETE smb-client-policies
+[**SmbClientPoliciesGet**](PoliciesSMBClientAPI.md#SmbClientPoliciesGet) | **Get** /api/2.11/smb-client-policies | GET smb-client-policies
+[**SmbClientPoliciesPatch**](PoliciesSMBClientAPI.md#SmbClientPoliciesPatch) | **Patch** /api/2.11/smb-client-policies | PATCH smb-client-policies
+[**SmbClientPoliciesPost**](PoliciesSMBClientAPI.md#SmbClientPoliciesPost) | **Post** /api/2.11/smb-client-policies | POST smb-client-policies
+[**SmbClientPoliciesRulesDelete**](PoliciesSMBClientAPI.md#SmbClientPoliciesRulesDelete) | **Delete** /api/2.11/smb-client-policies/rules | DELETE smb-client-policies/rules
+[**SmbClientPoliciesRulesGet**](PoliciesSMBClientAPI.md#SmbClientPoliciesRulesGet) | **Get** /api/2.11/smb-client-policies/rules | GET smb-client-policies/rules
+[**SmbClientPoliciesRulesPatch**](PoliciesSMBClientAPI.md#SmbClientPoliciesRulesPatch) | **Patch** /api/2.11/smb-client-policies/rules | PATCH smb-client-policies/rules
+[**SmbClientPoliciesRulesPost**](PoliciesSMBClientAPI.md#SmbClientPoliciesRulesPost) | **Post** /api/2.11/smb-client-policies/rules | POST smb-client-policies/rules
+
+
+
+## SmbClientPoliciesDelete
+
+> SmbClientPoliciesDelete(ctx).Ids(ids).Names(names).Execute()
+
+DELETE smb-client-policies
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/pure-shared/go-pure-client/flashblade/FB_2_11"
+)
+
+func main() {
+    configuration, err := openapiclient.NewConfigurationBuilder(server.URL).
+        APIToken(apiToken).
+        Build()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client configuration: %v\n", err)
+    }
+    apiClient, err := openapiclient.NewClient(configuration)
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client: %v\n", err)
+    }
+    req := apiClient.PoliciesSMBClientAPI.SmbClientPoliciesDelete(context.Background())
+    // Set request parameters ...
+
+    resp, r, err := req.Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PoliciesSMBClientAPI.SmbClientPoliciesDelete``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiSmbClientPoliciesDeleteRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;name&#x60; or &#x60;names&#x60; query parameters.  | 
+ **names** | **[]string** | A comma-separated list of resource names. If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned.  | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## SmbClientPoliciesGet
+
+> SmbClientPolicyGetResponse SmbClientPoliciesGet(ctx).ContinuationToken(continuationToken).Filter(filter).Ids(ids).Limit(limit).Names(names).Offset(offset).Sort(sort).Execute()
+
+GET smb-client-policies
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/pure-shared/go-pure-client/flashblade/FB_2_11"
+)
+
+func main() {
+    configuration, err := openapiclient.NewConfigurationBuilder(server.URL).
+        APIToken(apiToken).
+        Build()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client configuration: %v\n", err)
+    }
+    apiClient, err := openapiclient.NewClient(configuration)
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client: %v\n", err)
+    }
+    req := apiClient.PoliciesSMBClientAPI.SmbClientPoliciesGet(context.Background())
+    // Set request parameters ...
+
+    resp, r, err := req.Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PoliciesSMBClientAPI.SmbClientPoliciesGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `SmbClientPoliciesGet`: SmbClientPolicyGetResponse
+    fmt.Fprintf(os.Stdout, "Response from `PoliciesSMBClientAPI.SmbClientPoliciesGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiSmbClientPoliciesGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **continuationToken** | **string** | An opaque token used to iterate over a collection. The token to use on the next request is returned in the &#x60;continuation_token&#x60; field of the result.  | 
+ **filter** | **string** | Exclude resources that don&#39;t match the specified criteria.  | 
+ **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;name&#x60; or &#x60;names&#x60; query parameters.  | 
+ **limit** | **int32** | Limit the size of the response to the specified number of resources. A &#x60;limit&#x60; of &#x60;0&#x60; can be used to get the number of resources without getting all of the resources. It will be returned in the &#x60;total_item_count&#x60; field. If a client asks for a page size larger than the available number, the request is still valid. In that case the server just returns the available number of items, disregarding the client&#39;s page size request.  | 
+ **names** | **[]string** | A comma-separated list of resource names. If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned.  | 
+ **offset** | **int32** | The offset of the first resource to return from a collection.  | 
+ **sort** | **[]string** | Sort the response by the specified fields (in descending order if &#39;-&#39; is appended to the field name). NOTE: If you provide a sort you will not get a &#x60;continuation_token&#x60; in the response.  | 
+
+### Return type
+
+[**SmbClientPolicyGetResponse**](SmbClientPolicyGetResponse.md)
+
+### Authorization
+
+Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## SmbClientPoliciesPatch
+
+> SmbClientPolicyResponse SmbClientPoliciesPatch(ctx).Policy(policy).Ids(ids).Names(names).Execute()
+
+PATCH smb-client-policies
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/pure-shared/go-pure-client/flashblade/FB_2_11"
+)
+
+func main() {
+    configuration, err := openapiclient.NewConfigurationBuilder(server.URL).
+        APIToken(apiToken).
+        Build()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client configuration: %v\n", err)
+    }
+    apiClient, err := openapiclient.NewClient(configuration)
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client: %v\n", err)
+    }
+    req := apiClient.PoliciesSMBClientAPI.SmbClientPoliciesPatch(context.Background())
+    // Set request parameters ...
+
+    resp, r, err := req.Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PoliciesSMBClientAPI.SmbClientPoliciesPatch``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `SmbClientPoliciesPatch`: SmbClientPolicyResponse
+    fmt.Fprintf(os.Stdout, "Response from `PoliciesSMBClientAPI.SmbClientPoliciesPatch`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiSmbClientPoliciesPatchRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **policy** | [**SmbClientPolicy**](SmbClientPolicy.md) |  | 
+ **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;name&#x60; or &#x60;names&#x60; query parameters.  | 
+ **names** | **[]string** | A comma-separated list of resource names. If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned.  | 
+
+### Return type
+
+[**SmbClientPolicyResponse**](SmbClientPolicyResponse.md)
+
+### Authorization
+
+Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## SmbClientPoliciesPost
+
+> SmbClientPolicyResponse SmbClientPoliciesPost(ctx).Names(names).Policy(policy).Execute()
+
+POST smb-client-policies
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/pure-shared/go-pure-client/flashblade/FB_2_11"
+)
+
+func main() {
+    configuration, err := openapiclient.NewConfigurationBuilder(server.URL).
+        APIToken(apiToken).
+        Build()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client configuration: %v\n", err)
+    }
+    apiClient, err := openapiclient.NewClient(configuration)
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client: %v\n", err)
+    }
+    req := apiClient.PoliciesSMBClientAPI.SmbClientPoliciesPost(context.Background())
+    // Set request parameters ...
+
+    resp, r, err := req.Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PoliciesSMBClientAPI.SmbClientPoliciesPost``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `SmbClientPoliciesPost`: SmbClientPolicyResponse
+    fmt.Fprintf(os.Stdout, "Response from `PoliciesSMBClientAPI.SmbClientPoliciesPost`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiSmbClientPoliciesPostRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **names** | **[]string** | A comma-separated list of resource names.  | 
+ **policy** | [**SmbClientPolicyPost**](SmbClientPolicyPost.md) |  | 
+
+### Return type
+
+[**SmbClientPolicyResponse**](SmbClientPolicyResponse.md)
+
+### Authorization
+
+Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## SmbClientPoliciesRulesDelete
+
+> SmbClientPoliciesRulesDelete(ctx).Ids(ids).Names(names).Versions(versions).Execute()
+
+DELETE smb-client-policies/rules
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/pure-shared/go-pure-client/flashblade/FB_2_11"
+)
+
+func main() {
+    configuration, err := openapiclient.NewConfigurationBuilder(server.URL).
+        APIToken(apiToken).
+        Build()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client configuration: %v\n", err)
+    }
+    apiClient, err := openapiclient.NewClient(configuration)
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client: %v\n", err)
+    }
+    req := apiClient.PoliciesSMBClientAPI.SmbClientPoliciesRulesDelete(context.Background())
+    // Set request parameters ...
+
+    resp, r, err := req.Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PoliciesSMBClientAPI.SmbClientPoliciesRulesDelete``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiSmbClientPoliciesRulesDeleteRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;name&#x60; or &#x60;names&#x60; query parameters.  | 
+ **names** | **[]string** | A comma-separated list of resource names. If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned.  | 
+ **versions** | **[]string** | A comma-separated list of versions. This is an optional query param used for concurrency control. The ordering should match the names or ids query param. This will fail with a 412 Precondition failed if the resource was changed and the current version of the resource doesn&#39;t match the value in the query param.  | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## SmbClientPoliciesRulesGet
+
+> SmbClientPolicyRuleGetResponse SmbClientPoliciesRulesGet(ctx).ContinuationToken(continuationToken).Filter(filter).Ids(ids).Limit(limit).Names(names).Offset(offset).PolicyIds(policyIds).PolicyNames(policyNames).Sort(sort).Execute()
+
+GET smb-client-policies/rules
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/pure-shared/go-pure-client/flashblade/FB_2_11"
+)
+
+func main() {
+    configuration, err := openapiclient.NewConfigurationBuilder(server.URL).
+        APIToken(apiToken).
+        Build()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client configuration: %v\n", err)
+    }
+    apiClient, err := openapiclient.NewClient(configuration)
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client: %v\n", err)
+    }
+    req := apiClient.PoliciesSMBClientAPI.SmbClientPoliciesRulesGet(context.Background())
+    // Set request parameters ...
+
+    resp, r, err := req.Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PoliciesSMBClientAPI.SmbClientPoliciesRulesGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `SmbClientPoliciesRulesGet`: SmbClientPolicyRuleGetResponse
+    fmt.Fprintf(os.Stdout, "Response from `PoliciesSMBClientAPI.SmbClientPoliciesRulesGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiSmbClientPoliciesRulesGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **continuationToken** | **string** | An opaque token used to iterate over a collection. The token to use on the next request is returned in the &#x60;continuation_token&#x60; field of the result.  | 
+ **filter** | **string** | Exclude resources that don&#39;t match the specified criteria.  | 
+ **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;name&#x60; or &#x60;names&#x60; query parameters.  | 
+ **limit** | **int32** | Limit the size of the response to the specified number of resources. A &#x60;limit&#x60; of &#x60;0&#x60; can be used to get the number of resources without getting all of the resources. It will be returned in the &#x60;total_item_count&#x60; field. If a client asks for a page size larger than the available number, the request is still valid. In that case the server just returns the available number of items, disregarding the client&#39;s page size request.  | 
+ **names** | **[]string** | A comma-separated list of resource names. If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned.  | 
+ **offset** | **int32** | The offset of the first resource to return from a collection.  | 
+ **policyIds** | **[]string** | A comma-separated list of policy IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;policy_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;policy_names&#x60; query parameter.  | 
+ **policyNames** | **[]string** | A comma-separated list of policy names.  | 
+ **sort** | **[]string** | Sort the response by the specified fields (in descending order if &#39;-&#39; is appended to the field name). NOTE: If you provide a sort you will not get a &#x60;continuation_token&#x60; in the response.  | 
+
+### Return type
+
+[**SmbClientPolicyRuleGetResponse**](SmbClientPolicyRuleGetResponse.md)
+
+### Authorization
+
+Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## SmbClientPoliciesRulesPatch
+
+> SmbClientPolicyRuleResponse SmbClientPoliciesRulesPatch(ctx).Rule(rule).BeforeRuleId(beforeRuleId).BeforeRuleName(beforeRuleName).Ids(ids).Names(names).Versions(versions).Execute()
+
+PATCH smb-client-policies/rules
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/pure-shared/go-pure-client/flashblade/FB_2_11"
+)
+
+func main() {
+    configuration, err := openapiclient.NewConfigurationBuilder(server.URL).
+        APIToken(apiToken).
+        Build()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client configuration: %v\n", err)
+    }
+    apiClient, err := openapiclient.NewClient(configuration)
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client: %v\n", err)
+    }
+    req := apiClient.PoliciesSMBClientAPI.SmbClientPoliciesRulesPatch(context.Background())
+    // Set request parameters ...
+
+    resp, r, err := req.Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PoliciesSMBClientAPI.SmbClientPoliciesRulesPatch``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `SmbClientPoliciesRulesPatch`: SmbClientPolicyRuleResponse
+    fmt.Fprintf(os.Stdout, "Response from `PoliciesSMBClientAPI.SmbClientPoliciesRulesPatch`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiSmbClientPoliciesRulesPatchRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **rule** | [**SmbClientPolicyRule**](SmbClientPolicyRule.md) |  | 
+ **beforeRuleId** | **string** | The id of the rule to insert or move a rule before. This cannot be provided together with the &#x60;before_rule_name&#x60; query parameter.  | 
+ **beforeRuleName** | **string** | The name of the rule to insert or move a rule before. This cannot be provided together with the &#x60;before_rule_id&#x60; query parameter.  | 
+ **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;name&#x60; or &#x60;names&#x60; query parameters.  | 
+ **names** | **[]string** | A comma-separated list of resource names. If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned.  | 
+ **versions** | **[]string** | A comma-separated list of versions. This is an optional query param used for concurrency control. The ordering should match the names or ids query param. This will fail with a 412 Precondition failed if the resource was changed and the current version of the resource doesn&#39;t match the value in the query param.  | 
+
+### Return type
+
+[**SmbClientPolicyRuleResponse**](SmbClientPolicyRuleResponse.md)
+
+### Authorization
+
+Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## SmbClientPoliciesRulesPost
+
+> SmbClientPolicyRuleResponse SmbClientPoliciesRulesPost(ctx).Rule(rule).BeforeRuleId(beforeRuleId).BeforeRuleName(beforeRuleName).PolicyIds(policyIds).PolicyNames(policyNames).Versions(versions).Execute()
+
+POST smb-client-policies/rules
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/pure-shared/go-pure-client/flashblade/FB_2_11"
+)
+
+func main() {
+    configuration, err := openapiclient.NewConfigurationBuilder(server.URL).
+        APIToken(apiToken).
+        Build()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client configuration: %v\n", err)
+    }
+    apiClient, err := openapiclient.NewClient(configuration)
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client: %v\n", err)
+    }
+    req := apiClient.PoliciesSMBClientAPI.SmbClientPoliciesRulesPost(context.Background())
+    // Set request parameters ...
+
+    resp, r, err := req.Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PoliciesSMBClientAPI.SmbClientPoliciesRulesPost``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `SmbClientPoliciesRulesPost`: SmbClientPolicyRuleResponse
+    fmt.Fprintf(os.Stdout, "Response from `PoliciesSMBClientAPI.SmbClientPoliciesRulesPost`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiSmbClientPoliciesRulesPostRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **rule** | [**SmbClientPolicyRulePost**](SmbClientPolicyRulePost.md) |  | 
+ **beforeRuleId** | **string** | The id of the rule to insert or move a rule before. This cannot be provided together with the &#x60;before_rule_name&#x60; query parameter.  | 
+ **beforeRuleName** | **string** | The name of the rule to insert or move a rule before. This cannot be provided together with the &#x60;before_rule_id&#x60; query parameter.  | 
+ **policyIds** | **[]string** | A comma-separated list of policy IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;policy_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;policy_names&#x60; query parameter.  | 
+ **policyNames** | **[]string** | A comma-separated list of policy names.  | 
+ **versions** | **[]string** | A comma-separated list of versions. This is an optional query param used for concurrency control. The ordering should match the names or ids query param. This will fail with a 412 Precondition failed if the resource was changed and the current version of the resource doesn&#39;t match the value in the query param.  | 
+
+### Return type
+
+[**SmbClientPolicyRuleResponse**](SmbClientPolicyRuleResponse.md)
+
+### Authorization
+
+Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+

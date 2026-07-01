@@ -1,0 +1,1064 @@
+# \PoliciesSnapshotAPI
+
+All URIs are relative to *http://localhost*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**PoliciesDelete**](PoliciesSnapshotAPI.md#PoliciesDelete) | **Delete** /api/2.12/policies | DELETE policies
+[**PoliciesFileSystemReplicaLinksDelete**](PoliciesSnapshotAPI.md#PoliciesFileSystemReplicaLinksDelete) | **Delete** /api/2.12/policies/file-system-replica-links | DELETE policies/file-system-replica-links
+[**PoliciesFileSystemReplicaLinksGet**](PoliciesSnapshotAPI.md#PoliciesFileSystemReplicaLinksGet) | **Get** /api/2.12/policies/file-system-replica-links | GET policies/file-system-replica-links
+[**PoliciesFileSystemReplicaLinksPost**](PoliciesSnapshotAPI.md#PoliciesFileSystemReplicaLinksPost) | **Post** /api/2.12/policies/file-system-replica-links | POST policies/file-system-replica-links
+[**PoliciesFileSystemSnapshotsDelete**](PoliciesSnapshotAPI.md#PoliciesFileSystemSnapshotsDelete) | **Delete** /api/2.12/policies/file-system-snapshots | DELETE policies/file-system-snapshots
+[**PoliciesFileSystemSnapshotsGet**](PoliciesSnapshotAPI.md#PoliciesFileSystemSnapshotsGet) | **Get** /api/2.12/policies/file-system-snapshots | GET policies/file-system-snapshots
+[**PoliciesFileSystemsDelete**](PoliciesSnapshotAPI.md#PoliciesFileSystemsDelete) | **Delete** /api/2.12/policies/file-systems | DELETE policies/file-systems
+[**PoliciesFileSystemsGet**](PoliciesSnapshotAPI.md#PoliciesFileSystemsGet) | **Get** /api/2.12/policies/file-systems | GET policies/file-systems
+[**PoliciesFileSystemsPost**](PoliciesSnapshotAPI.md#PoliciesFileSystemsPost) | **Post** /api/2.12/policies/file-systems | POST policies/file-systems
+[**PoliciesGet**](PoliciesSnapshotAPI.md#PoliciesGet) | **Get** /api/2.12/policies | GET policies
+[**PoliciesMembersGet**](PoliciesSnapshotAPI.md#PoliciesMembersGet) | **Get** /api/2.12/policies/members | GET policies/members
+[**PoliciesPatch**](PoliciesSnapshotAPI.md#PoliciesPatch) | **Patch** /api/2.12/policies | PATCH policies
+[**PoliciesPost**](PoliciesSnapshotAPI.md#PoliciesPost) | **Post** /api/2.12/policies | POST policies
+
+
+
+## PoliciesDelete
+
+> PoliciesDelete(ctx).Ids(ids).Names(names).Execute()
+
+DELETE policies
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/pure-shared/go-pure-client/flashblade/FB_2_12"
+)
+
+func main() {
+    configuration, err := openapiclient.NewConfigurationBuilder(server.URL).
+        APIToken(apiToken).
+        Build()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client configuration: %v\n", err)
+    }
+    apiClient, err := openapiclient.NewClient(configuration)
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client: %v\n", err)
+    }
+    req := apiClient.PoliciesSnapshotAPI.PoliciesDelete(context.Background())
+    // Set request parameters ...
+
+    resp, r, err := req.Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PoliciesSnapshotAPI.PoliciesDelete``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiPoliciesDeleteRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;name&#x60; or &#x60;names&#x60; query parameters.  | 
+ **names** | **[]string** | A comma-separated list of resource names. If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned.  | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## PoliciesFileSystemReplicaLinksDelete
+
+> PoliciesFileSystemReplicaLinksDelete(ctx).LocalFileSystemIds(localFileSystemIds).LocalFileSystemNames(localFileSystemNames).MemberIds(memberIds).PolicyIds(policyIds).PolicyNames(policyNames).RemoteIds(remoteIds).RemoteNames(remoteNames).Execute()
+
+DELETE policies/file-system-replica-links
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/pure-shared/go-pure-client/flashblade/FB_2_12"
+)
+
+func main() {
+    configuration, err := openapiclient.NewConfigurationBuilder(server.URL).
+        APIToken(apiToken).
+        Build()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client configuration: %v\n", err)
+    }
+    apiClient, err := openapiclient.NewClient(configuration)
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client: %v\n", err)
+    }
+    req := apiClient.PoliciesSnapshotAPI.PoliciesFileSystemReplicaLinksDelete(context.Background())
+    // Set request parameters ...
+
+    resp, r, err := req.Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PoliciesSnapshotAPI.PoliciesFileSystemReplicaLinksDelete``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiPoliciesFileSystemReplicaLinksDeleteRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **localFileSystemIds** | **[]string** | A comma-separated list of local file system IDs. If after filtering, there is not at least one resource that matches each of the elements, then an error is returned. This cannot be provided together with the &#x60;local_file_system_names&#x60; query parameter.  | 
+ **localFileSystemNames** | **[]string** | A comma-separated list of local file system names. If there is not at least one resource that matches each of the elements, then an error is returned. This cannot be provided together with &#x60;local_file_system_ids&#x60; query parameter.  | 
+ **memberIds** | **[]string** | A comma-separated list of member IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;member_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;member_names&#x60; query parameter.  | 
+ **policyIds** | **[]string** | A comma-separated list of policy IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;policy_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;policy_names&#x60; query parameter.  | 
+ **policyNames** | **[]string** | A comma-separated list of policy names.  | 
+ **remoteIds** | **[]string** | A comma-separated list of remote array IDs. If after filtering, there is not at least one resource that matches each of the elements, then an error is returned. This cannot be provided together with the &#x60;remote_names&#x60; query parameter.  | 
+ **remoteNames** | **[]string** | A comma-separated list of remote array names. If there is not at least one resource that matches each of the elements, then an error is returned. This cannot be provided together with &#x60;remote_ids&#x60; query parameter.  | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## PoliciesFileSystemReplicaLinksGet
+
+> PolicyMemberWithRemoteGetResponse PoliciesFileSystemReplicaLinksGet(ctx).ContinuationToken(continuationToken).Filter(filter).Limit(limit).LocalFileSystemIds(localFileSystemIds).LocalFileSystemNames(localFileSystemNames).MemberIds(memberIds).Offset(offset).PolicyIds(policyIds).PolicyNames(policyNames).RemoteFileSystemIds(remoteFileSystemIds).RemoteFileSystemNames(remoteFileSystemNames).RemoteIds(remoteIds).RemoteNames(remoteNames).Sort(sort).Execute()
+
+GET policies/file-system-replica-links
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/pure-shared/go-pure-client/flashblade/FB_2_12"
+)
+
+func main() {
+    configuration, err := openapiclient.NewConfigurationBuilder(server.URL).
+        APIToken(apiToken).
+        Build()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client configuration: %v\n", err)
+    }
+    apiClient, err := openapiclient.NewClient(configuration)
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client: %v\n", err)
+    }
+    req := apiClient.PoliciesSnapshotAPI.PoliciesFileSystemReplicaLinksGet(context.Background())
+    // Set request parameters ...
+
+    resp, r, err := req.Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PoliciesSnapshotAPI.PoliciesFileSystemReplicaLinksGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `PoliciesFileSystemReplicaLinksGet`: PolicyMemberWithRemoteGetResponse
+    fmt.Fprintf(os.Stdout, "Response from `PoliciesSnapshotAPI.PoliciesFileSystemReplicaLinksGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiPoliciesFileSystemReplicaLinksGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **continuationToken** | **string** | An opaque token used to iterate over a collection. The token to use on the next request is returned in the &#x60;continuation_token&#x60; field of the result.  | 
+ **filter** | **string** | Exclude resources that don&#39;t match the specified criteria.  | 
+ **limit** | **int32** | Limit the size of the response to the specified number of resources. A &#x60;limit&#x60; of &#x60;0&#x60; can be used to get the number of resources without getting all of the resources. It will be returned in the &#x60;total_item_count&#x60; field. If a client asks for a page size larger than the available number, the request is still valid. In that case the server just returns the available number of items, disregarding the client&#39;s page size request.  | 
+ **localFileSystemIds** | **[]string** | A comma-separated list of local file system IDs. If after filtering, there is not at least one resource that matches each of the elements, then an error is returned. This cannot be provided together with the &#x60;local_file_system_names&#x60; query parameter.  | 
+ **localFileSystemNames** | **[]string** | A comma-separated list of local file system names. If there is not at least one resource that matches each of the elements, then an error is returned. This cannot be provided together with &#x60;local_file_system_ids&#x60; query parameter.  | 
+ **memberIds** | **[]string** | A comma-separated list of member IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;member_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;member_names&#x60; query parameter.  | 
+ **offset** | **int32** | The offset of the first resource to return from a collection.  | 
+ **policyIds** | **[]string** | A comma-separated list of policy IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;policy_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;policy_names&#x60; query parameter.  | 
+ **policyNames** | **[]string** | A comma-separated list of policy names.  | 
+ **remoteFileSystemIds** | **[]string** | A comma-separated list of remote file system IDs. If there is not at least one resource that matches each of the elements, then an error is returned. This cannot be provided together with the &#x60;remote_file_system_names&#x60; query parameter.  | 
+ **remoteFileSystemNames** | **[]string** | A comma-separated list of remote file system names. If there is not at least one resource that matches each of the elements, then an error is returned. This cannot be provided together with the &#x60;remote_file_system_ids&#x60; query parameter.  | 
+ **remoteIds** | **[]string** | A comma-separated list of remote array IDs. If after filtering, there is not at least one resource that matches each of the elements, then an error is returned. This cannot be provided together with the &#x60;remote_names&#x60; query parameter.  | 
+ **remoteNames** | **[]string** | A comma-separated list of remote array names. If there is not at least one resource that matches each of the elements, then an error is returned. This cannot be provided together with &#x60;remote_ids&#x60; query parameter.  | 
+ **sort** | **[]string** | Sort the response by the specified fields (in descending order if &#39;-&#39; is appended to the field name). NOTE: If you provide a sort you will not get a &#x60;continuation_token&#x60; in the response.  | 
+
+### Return type
+
+[**PolicyMemberWithRemoteGetResponse**](PolicyMemberWithRemoteGetResponse.md)
+
+### Authorization
+
+Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## PoliciesFileSystemReplicaLinksPost
+
+> PolicyMemberWithRemoteResponse PoliciesFileSystemReplicaLinksPost(ctx).LocalFileSystemIds(localFileSystemIds).LocalFileSystemNames(localFileSystemNames).MemberIds(memberIds).PolicyIds(policyIds).PolicyNames(policyNames).RemoteIds(remoteIds).RemoteNames(remoteNames).Execute()
+
+POST policies/file-system-replica-links
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/pure-shared/go-pure-client/flashblade/FB_2_12"
+)
+
+func main() {
+    configuration, err := openapiclient.NewConfigurationBuilder(server.URL).
+        APIToken(apiToken).
+        Build()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client configuration: %v\n", err)
+    }
+    apiClient, err := openapiclient.NewClient(configuration)
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client: %v\n", err)
+    }
+    req := apiClient.PoliciesSnapshotAPI.PoliciesFileSystemReplicaLinksPost(context.Background())
+    // Set request parameters ...
+
+    resp, r, err := req.Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PoliciesSnapshotAPI.PoliciesFileSystemReplicaLinksPost``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `PoliciesFileSystemReplicaLinksPost`: PolicyMemberWithRemoteResponse
+    fmt.Fprintf(os.Stdout, "Response from `PoliciesSnapshotAPI.PoliciesFileSystemReplicaLinksPost`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiPoliciesFileSystemReplicaLinksPostRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **localFileSystemIds** | **[]string** | A comma-separated list of local file system IDs. If after filtering, there is not at least one resource that matches each of the elements, then an error is returned. This cannot be provided together with the &#x60;local_file_system_names&#x60; query parameter.  | 
+ **localFileSystemNames** | **[]string** | A comma-separated list of local file system names. If there is not at least one resource that matches each of the elements, then an error is returned. This cannot be provided together with &#x60;local_file_system_ids&#x60; query parameter.  | 
+ **memberIds** | **[]string** | A comma-separated list of member IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;member_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;member_names&#x60; query parameter.  | 
+ **policyIds** | **[]string** | A comma-separated list of policy IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;policy_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;policy_names&#x60; query parameter.  | 
+ **policyNames** | **[]string** | A comma-separated list of policy names.  | 
+ **remoteIds** | **[]string** | A comma-separated list of remote array IDs. If after filtering, there is not at least one resource that matches each of the elements, then an error is returned. This cannot be provided together with the &#x60;remote_names&#x60; query parameter.  | 
+ **remoteNames** | **[]string** | A comma-separated list of remote array names. If there is not at least one resource that matches each of the elements, then an error is returned. This cannot be provided together with &#x60;remote_ids&#x60; query parameter.  | 
+
+### Return type
+
+[**PolicyMemberWithRemoteResponse**](PolicyMemberWithRemoteResponse.md)
+
+### Authorization
+
+Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## PoliciesFileSystemSnapshotsDelete
+
+> PoliciesFileSystemSnapshotsDelete(ctx).MemberIds(memberIds).MemberNames(memberNames).PolicyIds(policyIds).PolicyNames(policyNames).Execute()
+
+DELETE policies/file-system-snapshots
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/pure-shared/go-pure-client/flashblade/FB_2_12"
+)
+
+func main() {
+    configuration, err := openapiclient.NewConfigurationBuilder(server.URL).
+        APIToken(apiToken).
+        Build()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client configuration: %v\n", err)
+    }
+    apiClient, err := openapiclient.NewClient(configuration)
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client: %v\n", err)
+    }
+    req := apiClient.PoliciesSnapshotAPI.PoliciesFileSystemSnapshotsDelete(context.Background())
+    // Set request parameters ...
+
+    resp, r, err := req.Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PoliciesSnapshotAPI.PoliciesFileSystemSnapshotsDelete``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiPoliciesFileSystemSnapshotsDeleteRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **memberIds** | **[]string** | A comma-separated list of member IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;member_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;member_names&#x60; query parameter.  | 
+ **memberNames** | **[]string** | A comma-separated list of member names.  | 
+ **policyIds** | **[]string** | A comma-separated list of policy IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;policy_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;policy_names&#x60; query parameter.  | 
+ **policyNames** | **[]string** | A comma-separated list of policy names.  | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## PoliciesFileSystemSnapshotsGet
+
+> PolicyFileSystemSnapshotGetResponse PoliciesFileSystemSnapshotsGet(ctx).ContinuationToken(continuationToken).Filter(filter).Limit(limit).MemberIds(memberIds).MemberNames(memberNames).Offset(offset).PolicyIds(policyIds).PolicyNames(policyNames).Sort(sort).Execute()
+
+GET policies/file-system-snapshots
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/pure-shared/go-pure-client/flashblade/FB_2_12"
+)
+
+func main() {
+    configuration, err := openapiclient.NewConfigurationBuilder(server.URL).
+        APIToken(apiToken).
+        Build()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client configuration: %v\n", err)
+    }
+    apiClient, err := openapiclient.NewClient(configuration)
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client: %v\n", err)
+    }
+    req := apiClient.PoliciesSnapshotAPI.PoliciesFileSystemSnapshotsGet(context.Background())
+    // Set request parameters ...
+
+    resp, r, err := req.Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PoliciesSnapshotAPI.PoliciesFileSystemSnapshotsGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `PoliciesFileSystemSnapshotsGet`: PolicyFileSystemSnapshotGetResponse
+    fmt.Fprintf(os.Stdout, "Response from `PoliciesSnapshotAPI.PoliciesFileSystemSnapshotsGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiPoliciesFileSystemSnapshotsGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **continuationToken** | **string** | An opaque token used to iterate over a collection. The token to use on the next request is returned in the &#x60;continuation_token&#x60; field of the result.  | 
+ **filter** | **string** | Exclude resources that don&#39;t match the specified criteria.  | 
+ **limit** | **int32** | Limit the size of the response to the specified number of resources. A &#x60;limit&#x60; of &#x60;0&#x60; can be used to get the number of resources without getting all of the resources. It will be returned in the &#x60;total_item_count&#x60; field. If a client asks for a page size larger than the available number, the request is still valid. In that case the server just returns the available number of items, disregarding the client&#39;s page size request.  | 
+ **memberIds** | **[]string** | A comma-separated list of member IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;member_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;member_names&#x60; query parameter.  | 
+ **memberNames** | **[]string** | A comma-separated list of member names.  | 
+ **offset** | **int32** | The offset of the first resource to return from a collection.  | 
+ **policyIds** | **[]string** | A comma-separated list of policy IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;policy_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;policy_names&#x60; query parameter.  | 
+ **policyNames** | **[]string** | A comma-separated list of policy names.  | 
+ **sort** | **[]string** | Sort the response by the specified fields (in descending order if &#39;-&#39; is appended to the field name). NOTE: If you provide a sort you will not get a &#x60;continuation_token&#x60; in the response.  | 
+
+### Return type
+
+[**PolicyFileSystemSnapshotGetResponse**](PolicyFileSystemSnapshotGetResponse.md)
+
+### Authorization
+
+Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## PoliciesFileSystemsDelete
+
+> PoliciesFileSystemsDelete(ctx).MemberIds(memberIds).MemberNames(memberNames).PolicyIds(policyIds).PolicyNames(policyNames).Execute()
+
+DELETE policies/file-systems
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/pure-shared/go-pure-client/flashblade/FB_2_12"
+)
+
+func main() {
+    configuration, err := openapiclient.NewConfigurationBuilder(server.URL).
+        APIToken(apiToken).
+        Build()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client configuration: %v\n", err)
+    }
+    apiClient, err := openapiclient.NewClient(configuration)
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client: %v\n", err)
+    }
+    req := apiClient.PoliciesSnapshotAPI.PoliciesFileSystemsDelete(context.Background())
+    // Set request parameters ...
+
+    resp, r, err := req.Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PoliciesSnapshotAPI.PoliciesFileSystemsDelete``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiPoliciesFileSystemsDeleteRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **memberIds** | **[]string** | A comma-separated list of member IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;member_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;member_names&#x60; query parameter.  | 
+ **memberNames** | **[]string** | A comma-separated list of member names.  | 
+ **policyIds** | **[]string** | A comma-separated list of policy IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;policy_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;policy_names&#x60; query parameter.  | 
+ **policyNames** | **[]string** | A comma-separated list of policy names.  | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## PoliciesFileSystemsGet
+
+> PolicyMemberGetResponse PoliciesFileSystemsGet(ctx).ContinuationToken(continuationToken).Filter(filter).Limit(limit).MemberIds(memberIds).MemberNames(memberNames).Offset(offset).PolicyIds(policyIds).PolicyNames(policyNames).Sort(sort).Execute()
+
+GET policies/file-systems
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/pure-shared/go-pure-client/flashblade/FB_2_12"
+)
+
+func main() {
+    configuration, err := openapiclient.NewConfigurationBuilder(server.URL).
+        APIToken(apiToken).
+        Build()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client configuration: %v\n", err)
+    }
+    apiClient, err := openapiclient.NewClient(configuration)
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client: %v\n", err)
+    }
+    req := apiClient.PoliciesSnapshotAPI.PoliciesFileSystemsGet(context.Background())
+    // Set request parameters ...
+
+    resp, r, err := req.Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PoliciesSnapshotAPI.PoliciesFileSystemsGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `PoliciesFileSystemsGet`: PolicyMemberGetResponse
+    fmt.Fprintf(os.Stdout, "Response from `PoliciesSnapshotAPI.PoliciesFileSystemsGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiPoliciesFileSystemsGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **continuationToken** | **string** | An opaque token used to iterate over a collection. The token to use on the next request is returned in the &#x60;continuation_token&#x60; field of the result.  | 
+ **filter** | **string** | Exclude resources that don&#39;t match the specified criteria.  | 
+ **limit** | **int32** | Limit the size of the response to the specified number of resources. A &#x60;limit&#x60; of &#x60;0&#x60; can be used to get the number of resources without getting all of the resources. It will be returned in the &#x60;total_item_count&#x60; field. If a client asks for a page size larger than the available number, the request is still valid. In that case the server just returns the available number of items, disregarding the client&#39;s page size request.  | 
+ **memberIds** | **[]string** | A comma-separated list of member IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;member_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;member_names&#x60; query parameter.  | 
+ **memberNames** | **[]string** | A comma-separated list of member names.  | 
+ **offset** | **int32** | The offset of the first resource to return from a collection.  | 
+ **policyIds** | **[]string** | A comma-separated list of policy IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;policy_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;policy_names&#x60; query parameter.  | 
+ **policyNames** | **[]string** | A comma-separated list of policy names.  | 
+ **sort** | **[]string** | Sort the response by the specified fields (in descending order if &#39;-&#39; is appended to the field name). NOTE: If you provide a sort you will not get a &#x60;continuation_token&#x60; in the response.  | 
+
+### Return type
+
+[**PolicyMemberGetResponse**](PolicyMemberGetResponse.md)
+
+### Authorization
+
+Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## PoliciesFileSystemsPost
+
+> PolicyMemberResponse PoliciesFileSystemsPost(ctx).MemberIds(memberIds).MemberNames(memberNames).PolicyIds(policyIds).PolicyNames(policyNames).Execute()
+
+POST policies/file-systems
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/pure-shared/go-pure-client/flashblade/FB_2_12"
+)
+
+func main() {
+    configuration, err := openapiclient.NewConfigurationBuilder(server.URL).
+        APIToken(apiToken).
+        Build()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client configuration: %v\n", err)
+    }
+    apiClient, err := openapiclient.NewClient(configuration)
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client: %v\n", err)
+    }
+    req := apiClient.PoliciesSnapshotAPI.PoliciesFileSystemsPost(context.Background())
+    // Set request parameters ...
+
+    resp, r, err := req.Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PoliciesSnapshotAPI.PoliciesFileSystemsPost``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `PoliciesFileSystemsPost`: PolicyMemberResponse
+    fmt.Fprintf(os.Stdout, "Response from `PoliciesSnapshotAPI.PoliciesFileSystemsPost`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiPoliciesFileSystemsPostRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **memberIds** | **[]string** | A comma-separated list of member IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;member_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;member_names&#x60; query parameter.  | 
+ **memberNames** | **[]string** | A comma-separated list of member names.  | 
+ **policyIds** | **[]string** | A comma-separated list of policy IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;policy_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;policy_names&#x60; query parameter.  | 
+ **policyNames** | **[]string** | A comma-separated list of policy names.  | 
+
+### Return type
+
+[**PolicyMemberResponse**](PolicyMemberResponse.md)
+
+### Authorization
+
+Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## PoliciesGet
+
+> PolicyGetResponse PoliciesGet(ctx).ContinuationToken(continuationToken).Filter(filter).Ids(ids).Limit(limit).Names(names).Offset(offset).Sort(sort).Execute()
+
+GET policies
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/pure-shared/go-pure-client/flashblade/FB_2_12"
+)
+
+func main() {
+    configuration, err := openapiclient.NewConfigurationBuilder(server.URL).
+        APIToken(apiToken).
+        Build()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client configuration: %v\n", err)
+    }
+    apiClient, err := openapiclient.NewClient(configuration)
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client: %v\n", err)
+    }
+    req := apiClient.PoliciesSnapshotAPI.PoliciesGet(context.Background())
+    // Set request parameters ...
+
+    resp, r, err := req.Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PoliciesSnapshotAPI.PoliciesGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `PoliciesGet`: PolicyGetResponse
+    fmt.Fprintf(os.Stdout, "Response from `PoliciesSnapshotAPI.PoliciesGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiPoliciesGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **continuationToken** | **string** | An opaque token used to iterate over a collection. The token to use on the next request is returned in the &#x60;continuation_token&#x60; field of the result.  | 
+ **filter** | **string** | Exclude resources that don&#39;t match the specified criteria.  | 
+ **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;name&#x60; or &#x60;names&#x60; query parameters.  | 
+ **limit** | **int32** | Limit the size of the response to the specified number of resources. A &#x60;limit&#x60; of &#x60;0&#x60; can be used to get the number of resources without getting all of the resources. It will be returned in the &#x60;total_item_count&#x60; field. If a client asks for a page size larger than the available number, the request is still valid. In that case the server just returns the available number of items, disregarding the client&#39;s page size request.  | 
+ **names** | **[]string** | A comma-separated list of resource names. If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned.  | 
+ **offset** | **int32** | The offset of the first resource to return from a collection.  | 
+ **sort** | **[]string** | Sort the response by the specified fields (in descending order if &#39;-&#39; is appended to the field name). NOTE: If you provide a sort you will not get a &#x60;continuation_token&#x60; in the response.  | 
+
+### Return type
+
+[**PolicyGetResponse**](PolicyGetResponse.md)
+
+### Authorization
+
+Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## PoliciesMembersGet
+
+> PolicyMemberWithRemoteGetResponse PoliciesMembersGet(ctx).ContinuationToken(continuationToken).Filter(filter).Limit(limit).LocalFileSystemIds(localFileSystemIds).LocalFileSystemNames(localFileSystemNames).MemberIds(memberIds).MemberNames(memberNames).MemberTypes(memberTypes).Offset(offset).PolicyIds(policyIds).PolicyNames(policyNames).RemoteFileSystemIds(remoteFileSystemIds).RemoteFileSystemNames(remoteFileSystemNames).RemoteIds(remoteIds).RemoteNames(remoteNames).Sort(sort).Execute()
+
+GET policies/members
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/pure-shared/go-pure-client/flashblade/FB_2_12"
+)
+
+func main() {
+    configuration, err := openapiclient.NewConfigurationBuilder(server.URL).
+        APIToken(apiToken).
+        Build()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client configuration: %v\n", err)
+    }
+    apiClient, err := openapiclient.NewClient(configuration)
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client: %v\n", err)
+    }
+    req := apiClient.PoliciesSnapshotAPI.PoliciesMembersGet(context.Background())
+    // Set request parameters ...
+
+    resp, r, err := req.Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PoliciesSnapshotAPI.PoliciesMembersGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `PoliciesMembersGet`: PolicyMemberWithRemoteGetResponse
+    fmt.Fprintf(os.Stdout, "Response from `PoliciesSnapshotAPI.PoliciesMembersGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiPoliciesMembersGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **continuationToken** | **string** | An opaque token used to iterate over a collection. The token to use on the next request is returned in the &#x60;continuation_token&#x60; field of the result.  | 
+ **filter** | **string** | Exclude resources that don&#39;t match the specified criteria.  | 
+ **limit** | **int32** | Limit the size of the response to the specified number of resources. A &#x60;limit&#x60; of &#x60;0&#x60; can be used to get the number of resources without getting all of the resources. It will be returned in the &#x60;total_item_count&#x60; field. If a client asks for a page size larger than the available number, the request is still valid. In that case the server just returns the available number of items, disregarding the client&#39;s page size request.  | 
+ **localFileSystemIds** | **[]string** | A comma-separated list of local file system IDs. If after filtering, there is not at least one resource that matches each of the elements, then an error is returned. This cannot be provided together with the &#x60;local_file_system_names&#x60; query parameter.  | 
+ **localFileSystemNames** | **[]string** | A comma-separated list of local file system names. If there is not at least one resource that matches each of the elements, then an error is returned. This cannot be provided together with &#x60;local_file_system_ids&#x60; query parameter.  | 
+ **memberIds** | **[]string** | A comma-separated list of member IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;member_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;member_names&#x60; query parameter.  | 
+ **memberNames** | **[]string** | A comma-separated list of member names.  | 
+ **memberTypes** | **[]string** | A comma-separated list of member types. Valid values are &#x60;file-systems&#x60;, &#x60;file-system-snapshots&#x60;, &#x60;file-system-replica-links&#x60;, and &#x60;object-store-users&#x60;. Different endpoints may accept different subsets of these values.  | 
+ **offset** | **int32** | The offset of the first resource to return from a collection.  | 
+ **policyIds** | **[]string** | A comma-separated list of policy IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;policy_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;policy_names&#x60; query parameter.  | 
+ **policyNames** | **[]string** | A comma-separated list of policy names.  | 
+ **remoteFileSystemIds** | **[]string** | A comma-separated list of remote file system IDs. If there is not at least one resource that matches each of the elements, then an error is returned. This cannot be provided together with the &#x60;remote_file_system_names&#x60; query parameter.  | 
+ **remoteFileSystemNames** | **[]string** | A comma-separated list of remote file system names. If there is not at least one resource that matches each of the elements, then an error is returned. This cannot be provided together with the &#x60;remote_file_system_ids&#x60; query parameter.  | 
+ **remoteIds** | **[]string** | A comma-separated list of remote array IDs. If after filtering, there is not at least one resource that matches each of the elements, then an error is returned. This cannot be provided together with the &#x60;remote_names&#x60; query parameter.  | 
+ **remoteNames** | **[]string** | A comma-separated list of remote array names. If there is not at least one resource that matches each of the elements, then an error is returned. This cannot be provided together with &#x60;remote_ids&#x60; query parameter.  | 
+ **sort** | **[]string** | Sort the response by the specified fields (in descending order if &#39;-&#39; is appended to the field name). NOTE: If you provide a sort you will not get a &#x60;continuation_token&#x60; in the response.  | 
+
+### Return type
+
+[**PolicyMemberWithRemoteGetResponse**](PolicyMemberWithRemoteGetResponse.md)
+
+### Authorization
+
+Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## PoliciesPatch
+
+> PolicyResponse PoliciesPatch(ctx).Policy(policy).DestroySnapshots(destroySnapshots).Ids(ids).Names(names).Execute()
+
+PATCH policies
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/pure-shared/go-pure-client/flashblade/FB_2_12"
+)
+
+func main() {
+    configuration, err := openapiclient.NewConfigurationBuilder(server.URL).
+        APIToken(apiToken).
+        Build()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client configuration: %v\n", err)
+    }
+    apiClient, err := openapiclient.NewClient(configuration)
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client: %v\n", err)
+    }
+    req := apiClient.PoliciesSnapshotAPI.PoliciesPatch(context.Background())
+    // Set request parameters ...
+
+    resp, r, err := req.Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PoliciesSnapshotAPI.PoliciesPatch``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `PoliciesPatch`: PolicyResponse
+    fmt.Fprintf(os.Stdout, "Response from `PoliciesSnapshotAPI.PoliciesPatch`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiPoliciesPatchRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **policy** | [**PolicyPatch**](PolicyPatch.md) |  | 
+ **destroySnapshots** | **bool** | This parameter must be set to &#x60;true&#x60; in order to modify a policy such that local or remote snapshots would be destroyed.  | 
+ **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;name&#x60; or &#x60;names&#x60; query parameters.  | 
+ **names** | **[]string** | A comma-separated list of resource names. If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned.  | 
+
+### Return type
+
+[**PolicyResponse**](PolicyResponse.md)
+
+### Authorization
+
+Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## PoliciesPost
+
+> PolicyResponse PoliciesPost(ctx).Names(names).Policy(policy).Execute()
+
+POST policies
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "github.com/pure-shared/go-pure-client/flashblade/FB_2_12"
+)
+
+func main() {
+    configuration, err := openapiclient.NewConfigurationBuilder(server.URL).
+        APIToken(apiToken).
+        Build()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client configuration: %v\n", err)
+    }
+    apiClient, err := openapiclient.NewClient(configuration)
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when creating api client: %v\n", err)
+    }
+    req := apiClient.PoliciesSnapshotAPI.PoliciesPost(context.Background())
+    // Set request parameters ...
+
+    resp, r, err := req.Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PoliciesSnapshotAPI.PoliciesPost``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `PoliciesPost`: PolicyResponse
+    fmt.Fprintf(os.Stdout, "Response from `PoliciesSnapshotAPI.PoliciesPost`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiPoliciesPostRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **names** | **[]string** | A comma-separated list of resource names.  | 
+ **policy** | [**Policy**](Policy.md) |  | 
+
+### Return type
+
+[**PolicyResponse**](PolicyResponse.md)
+
+### Authorization
+
+Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
