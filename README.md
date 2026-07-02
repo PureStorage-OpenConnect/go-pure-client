@@ -171,6 +171,8 @@ func main() {
 * [FA2.52](flasharray/FA_2_52/README.md)
 * [FA2.53](flasharray/FA_2_53/README.md)
 * [FA2.54](flasharray/FA_2_54/README.md)
+* [FA2.55](flasharray/FA_2_55/README.md)
+* [FA2.56](flasharray/FA_2_56/README.md)
 
 ### Flash Blade - ⚠️ preview
 * [FB2.0](flashblade/FB_2_0/README.md)
@@ -200,3 +202,4 @@ func main() {
 * [FB2.24](flashblade/FB_2_24/README.md)
 * [FB2.25](flashblade/FB_2_25/README.md)
 * [FB2.26](flashblade/FB_2_26/README.md)
+* [FB2.27](flashblade/FB_2_27/README.md)

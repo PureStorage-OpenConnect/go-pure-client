@@ -1,0 +1,290 @@
+# UserGroupQuotaPolicyRuleInPolicy
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Id** | Pointer to **string** | A non-modifiable, globally unique ID chosen by the system.  | [optional] [readonly] 
+**Name** | Pointer to **string** | Name of the object (e.g., a file system or snapshot). | [optional] [readonly] 
+**Enforced** | Pointer to **bool** | If set to &#x60;true&#x60;, this rule describes an enforced quota. A quota error is issued if the logical space usage of the subject exceeds the limit value described in this rule.  | [optional] 
+**Notifications** | Pointer to **string** | Specifies whether to send notifications to the affected quota subject or not. Valid values are &#x60;None&#x60; and &#x60;Account&#x60;. Defaults to &#x60;Account&#x60;.  | [optional] 
+**Policy** | Pointer to [**FixedReference**](FixedReference.md) | The policy to which this rule belongs. | [optional] [readonly] 
+**PolicyVersion** | Pointer to **string** | The policy&#39;s version. This can be used when updating the resource to ensure there aren&#39;t any updates to the policy since the resource was read.  | [optional] [readonly] 
+**QuotaLimit** | Pointer to **int64** | The limit of the quota (in bytes) for the specified user, cannot be &#x60;0&#x60;. If specified, this value will override the default quota for that particular subject type.  | [optional] 
+**QuotaType** | Pointer to **string** | Specifies quota type for the quota policy. Valid values are &#x60;user&#x60;, &#x60;group&#x60;, &#x60;user-default&#x60;and &#x60;group-default&#x60;. &#x60;user-default&#x60; and &#x60;group-default&#x60; cannot be specified with a subject.  | [optional] 
+**Subject** | Pointer to [**UserGroupQuotaSubject**](UserGroupQuotaSubject.md) | The user or group subject on which this rule is applied | [optional] 
+**Index** | Pointer to **int32** | The index within the policy. The &#x60;index&#x60; indicates the order the rules are evaluated.  | [optional] [readonly] 
+
+## Methods
+
+### NewUserGroupQuotaPolicyRuleInPolicy
+
+`func NewUserGroupQuotaPolicyRuleInPolicy() *UserGroupQuotaPolicyRuleInPolicy`
+
+NewUserGroupQuotaPolicyRuleInPolicy instantiates a new UserGroupQuotaPolicyRuleInPolicy object
+This constructor will assign default values to properties that have it defined,
+and makes sure properties required by API are set, but the set of arguments
+will change when the set of required properties is changed
+
+### NewUserGroupQuotaPolicyRuleInPolicyWithDefaults
+
+`func NewUserGroupQuotaPolicyRuleInPolicyWithDefaults() *UserGroupQuotaPolicyRuleInPolicy`
+
+NewUserGroupQuotaPolicyRuleInPolicyWithDefaults instantiates a new UserGroupQuotaPolicyRuleInPolicy object
+This constructor will only assign default values to properties that have it defined,
+but it doesn't guarantee that properties required by API are set
+
+### GetId
+
+`func (o *UserGroupQuotaPolicyRuleInPolicy) GetId() string`
+
+GetId returns the Id field if non-nil, zero value otherwise.
+
+### GetIdOk
+
+`func (o *UserGroupQuotaPolicyRuleInPolicy) GetIdOk() (*string, bool)`
+
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetId
+
+`func (o *UserGroupQuotaPolicyRuleInPolicy) SetId(v string)`
+
+SetId sets Id field to given value.
+
+### HasId
+
+`func (o *UserGroupQuotaPolicyRuleInPolicy) HasId() bool`
+
+HasId returns a boolean if a field has been set.
+
+### GetName
+
+`func (o *UserGroupQuotaPolicyRuleInPolicy) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *UserGroupQuotaPolicyRuleInPolicy) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *UserGroupQuotaPolicyRuleInPolicy) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *UserGroupQuotaPolicyRuleInPolicy) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetEnforced
+
+`func (o *UserGroupQuotaPolicyRuleInPolicy) GetEnforced() bool`
+
+GetEnforced returns the Enforced field if non-nil, zero value otherwise.
+
+### GetEnforcedOk
+
+`func (o *UserGroupQuotaPolicyRuleInPolicy) GetEnforcedOk() (*bool, bool)`
+
+GetEnforcedOk returns a tuple with the Enforced field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnforced
+
+`func (o *UserGroupQuotaPolicyRuleInPolicy) SetEnforced(v bool)`
+
+SetEnforced sets Enforced field to given value.
+
+### HasEnforced
+
+`func (o *UserGroupQuotaPolicyRuleInPolicy) HasEnforced() bool`
+
+HasEnforced returns a boolean if a field has been set.
+
+### GetNotifications
+
+`func (o *UserGroupQuotaPolicyRuleInPolicy) GetNotifications() string`
+
+GetNotifications returns the Notifications field if non-nil, zero value otherwise.
+
+### GetNotificationsOk
+
+`func (o *UserGroupQuotaPolicyRuleInPolicy) GetNotificationsOk() (*string, bool)`
+
+GetNotificationsOk returns a tuple with the Notifications field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNotifications
+
+`func (o *UserGroupQuotaPolicyRuleInPolicy) SetNotifications(v string)`
+
+SetNotifications sets Notifications field to given value.
+
+### HasNotifications
+
+`func (o *UserGroupQuotaPolicyRuleInPolicy) HasNotifications() bool`
+
+HasNotifications returns a boolean if a field has been set.
+
+### GetPolicy
+
+`func (o *UserGroupQuotaPolicyRuleInPolicy) GetPolicy() FixedReference`
+
+GetPolicy returns the Policy field if non-nil, zero value otherwise.
+
+### GetPolicyOk
+
+`func (o *UserGroupQuotaPolicyRuleInPolicy) GetPolicyOk() (*FixedReference, bool)`
+
+GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPolicy
+
+`func (o *UserGroupQuotaPolicyRuleInPolicy) SetPolicy(v FixedReference)`
+
+SetPolicy sets Policy field to given value.
+
+### HasPolicy
+
+`func (o *UserGroupQuotaPolicyRuleInPolicy) HasPolicy() bool`
+
+HasPolicy returns a boolean if a field has been set.
+
+### GetPolicyVersion
+
+`func (o *UserGroupQuotaPolicyRuleInPolicy) GetPolicyVersion() string`
+
+GetPolicyVersion returns the PolicyVersion field if non-nil, zero value otherwise.
+
+### GetPolicyVersionOk
+
+`func (o *UserGroupQuotaPolicyRuleInPolicy) GetPolicyVersionOk() (*string, bool)`
+
+GetPolicyVersionOk returns a tuple with the PolicyVersion field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPolicyVersion
+
+`func (o *UserGroupQuotaPolicyRuleInPolicy) SetPolicyVersion(v string)`
+
+SetPolicyVersion sets PolicyVersion field to given value.
+
+### HasPolicyVersion
+
+`func (o *UserGroupQuotaPolicyRuleInPolicy) HasPolicyVersion() bool`
+
+HasPolicyVersion returns a boolean if a field has been set.
+
+### GetQuotaLimit
+
+`func (o *UserGroupQuotaPolicyRuleInPolicy) GetQuotaLimit() int64`
+
+GetQuotaLimit returns the QuotaLimit field if non-nil, zero value otherwise.
+
+### GetQuotaLimitOk
+
+`func (o *UserGroupQuotaPolicyRuleInPolicy) GetQuotaLimitOk() (*int64, bool)`
+
+GetQuotaLimitOk returns a tuple with the QuotaLimit field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetQuotaLimit
+
+`func (o *UserGroupQuotaPolicyRuleInPolicy) SetQuotaLimit(v int64)`
+
+SetQuotaLimit sets QuotaLimit field to given value.
+
+### HasQuotaLimit
+
+`func (o *UserGroupQuotaPolicyRuleInPolicy) HasQuotaLimit() bool`
+
+HasQuotaLimit returns a boolean if a field has been set.
+
+### GetQuotaType
+
+`func (o *UserGroupQuotaPolicyRuleInPolicy) GetQuotaType() string`
+
+GetQuotaType returns the QuotaType field if non-nil, zero value otherwise.
+
+### GetQuotaTypeOk
+
+`func (o *UserGroupQuotaPolicyRuleInPolicy) GetQuotaTypeOk() (*string, bool)`
+
+GetQuotaTypeOk returns a tuple with the QuotaType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetQuotaType
+
+`func (o *UserGroupQuotaPolicyRuleInPolicy) SetQuotaType(v string)`
+
+SetQuotaType sets QuotaType field to given value.
+
+### HasQuotaType
+
+`func (o *UserGroupQuotaPolicyRuleInPolicy) HasQuotaType() bool`
+
+HasQuotaType returns a boolean if a field has been set.
+
+### GetSubject
+
+`func (o *UserGroupQuotaPolicyRuleInPolicy) GetSubject() UserGroupQuotaSubject`
+
+GetSubject returns the Subject field if non-nil, zero value otherwise.
+
+### GetSubjectOk
+
+`func (o *UserGroupQuotaPolicyRuleInPolicy) GetSubjectOk() (*UserGroupQuotaSubject, bool)`
+
+GetSubjectOk returns a tuple with the Subject field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSubject
+
+`func (o *UserGroupQuotaPolicyRuleInPolicy) SetSubject(v UserGroupQuotaSubject)`
+
+SetSubject sets Subject field to given value.
+
+### HasSubject
+
+`func (o *UserGroupQuotaPolicyRuleInPolicy) HasSubject() bool`
+
+HasSubject returns a boolean if a field has been set.
+
+### GetIndex
+
+`func (o *UserGroupQuotaPolicyRuleInPolicy) GetIndex() int32`
+
+GetIndex returns the Index field if non-nil, zero value otherwise.
+
+### GetIndexOk
+
+`func (o *UserGroupQuotaPolicyRuleInPolicy) GetIndexOk() (*int32, bool)`
+
+GetIndexOk returns a tuple with the Index field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIndex
+
+`func (o *UserGroupQuotaPolicyRuleInPolicy) SetIndex(v int32)`
+
+SetIndex sets Index field to given value.
+
+### HasIndex
+
+`func (o *UserGroupQuotaPolicyRuleInPolicy) HasIndex() bool`
+
+HasIndex returns a boolean if a field has been set.
+
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
