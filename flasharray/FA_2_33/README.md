@@ -428,7 +428,7 @@ Class | Method | HTTP request | Description
 *SubscriptionsAPI* | [**SubscriptionsGet**](docs/SubscriptionsAPI.md#api233subscriptionsget) | **Get** /api/2.33/subscriptions | List subscriptions
 *SupportAPI* | [**SupportGet**](docs/SupportAPI.md#api233supportget) | **Get** /api/2.33/support | List connection paths
 *SupportAPI* | [**SupportPatch**](docs/SupportAPI.md#api233supportpatch) | **Patch** /api/2.33/support | Create connection path
-*SupportAPI* | [**SupportTestGet**](docs/SupportAPI.md#api233supporttestget) | **Get** /api/2.33/support/test | List Pure Storage Support connection data
+*SupportAPI* | [**SupportTestGet**](docs/SupportAPI.md#api233supporttestget) | **Get** /api/2.33/support/test | List Everpure Support connection data
 *SyslogAPI* | [**SyslogServersDelete**](docs/SyslogAPI.md#api233syslogserversdelete) | **Delete** /api/2.33/syslog-servers | Delete syslog server
 *SyslogAPI* | [**SyslogServersGet**](docs/SyslogAPI.md#api233syslogserversget) | **Get** /api/2.33/syslog-servers | List syslog servers
 *SyslogAPI* | [**SyslogServersPatch**](docs/SyslogAPI.md#api233syslogserverspatch) | **Patch** /api/2.33/syslog-servers | Modify syslog server

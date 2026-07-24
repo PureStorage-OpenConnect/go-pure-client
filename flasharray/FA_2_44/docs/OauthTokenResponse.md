@@ -6,8 +6,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AccessToken** | Pointer to **string** | The serialized OAuth 2.0 Bearer token used to perform authenticated requests. The access token must be added to the Authorization header of all API calls.  | [optional] 
 **ExpiresIn** | Pointer to **int32** | The duration after which the access token will expire. Measured in seconds. This differs from other duration fields that are expressed in milliseconds.  | [optional] 
-**IssuedTokenType** | Pointer to **string** | The type of token that is issued. The Pure Storage REST API supports OAuth 2.0 access tokens.  | [optional] 
-**TokenType** | Pointer to **string** | Indicates how the API client can use the access token issued. The Pure Storage REST API supports the &#x60;Bearer&#x60; token.  | [optional] 
+**IssuedTokenType** | Pointer to **string** | The type of token that is issued. The Everpure REST API supports OAuth 2.0 access tokens.  | [optional] 
+**TokenType** | Pointer to **string** | Indicates how the API client can use the access token issued. The Everpure REST API supports the &#x60;Bearer&#x60; token.  | [optional] 
 
 ## Methods
 

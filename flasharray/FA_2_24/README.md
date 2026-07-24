@@ -401,7 +401,7 @@ Class | Method | HTTP request | Description
 *SubnetsAPI* | [**SubnetsPost**](docs/SubnetsAPI.md#api224subnetspost) | **Post** /api/2.24/subnets | Create subnet
 *SupportAPI* | [**SupportGet**](docs/SupportAPI.md#api224supportget) | **Get** /api/2.24/support | List connection paths
 *SupportAPI* | [**SupportPatch**](docs/SupportAPI.md#api224supportpatch) | **Patch** /api/2.24/support | Create connection path
-*SupportAPI* | [**SupportTestGet**](docs/SupportAPI.md#api224supporttestget) | **Get** /api/2.24/support/test | List Pure Storage Support connection data
+*SupportAPI* | [**SupportTestGet**](docs/SupportAPI.md#api224supporttestget) | **Get** /api/2.24/support/test | List Everpure Support connection data
 *SyslogAPI* | [**SyslogServersDelete**](docs/SyslogAPI.md#api224syslogserversdelete) | **Delete** /api/2.24/syslog-servers | Delete syslog server
 *SyslogAPI* | [**SyslogServersGet**](docs/SyslogAPI.md#api224syslogserversget) | **Get** /api/2.24/syslog-servers | List syslog servers
 *SyslogAPI* | [**SyslogServersPatch**](docs/SyslogAPI.md#api224syslogserverspatch) | **Patch** /api/2.24/syslog-servers | Modify syslog server

@@ -2045,7 +2045,7 @@ func (r APIArraysErasuresPostRequest) XRequestID(xRequestID string) APIArraysEra
 	return r
 }
 
-// A flag to skip phonehome connectivity check. If &#x60;skip_phonehome_check&#x60; is not set, the factory reset will fail if phonehome connectivity check fails. Arrays that intentionally disable phonehome or do not permit connectivity to Pure Storage&#39;s cloud servers must set this flag to &#x60;true&#x60; in order to start factory reset.
+// A flag to skip phonehome connectivity check. If &#x60;skip_phonehome_check&#x60; is not set, the factory reset will fail if phonehome connectivity check fails. Arrays that intentionally disable phonehome or do not permit connectivity to Everpure&#39;s cloud servers must set this flag to &#x60;true&#x60; in order to start factory reset.
 func (r APIArraysErasuresPostRequest) SkipPhonehomeCheck(skipPhonehomeCheck bool) APIArraysErasuresPostRequest {
 	r.skipPhonehomeCheck = &skipPhonehomeCheck
 	return r

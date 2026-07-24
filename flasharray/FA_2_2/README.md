@@ -223,7 +223,7 @@ Class | Method | HTTP request | Description
 *SubnetsAPI* | [**SubnetsPost**](docs/SubnetsAPI.md#api22subnetspost) | **Post** /api/2.2/subnets | Create subnet
 *SupportAPI* | [**SupportGet**](docs/SupportAPI.md#api22supportget) | **Get** /api/2.2/support | List connection paths
 *SupportAPI* | [**SupportPatch**](docs/SupportAPI.md#api22supportpatch) | **Patch** /api/2.2/support | Create connection path
-*SupportAPI* | [**SupportTestGet**](docs/SupportAPI.md#api22supporttestget) | **Get** /api/2.2/support/test | List Pure Storage Support connection data
+*SupportAPI* | [**SupportTestGet**](docs/SupportAPI.md#api22supporttestget) | **Get** /api/2.2/support/test | List Everpure Support connection data
 *VolumeGroupsAPI* | [**VolumeGroupsDelete**](docs/VolumeGroupsAPI.md#api22volumegroupsdelete) | **Delete** /api/2.2/volume-groups | Eradicate a volume group
 *VolumeGroupsAPI* | [**VolumeGroupsGet**](docs/VolumeGroupsAPI.md#api22volumegroupsget) | **Get** /api/2.2/volume-groups | List volume groups
 *VolumeGroupsAPI* | [**VolumeGroupsPatch**](docs/VolumeGroupsAPI.md#api22volumegroupspatch) | **Patch** /api/2.2/volume-groups | Manage a volume group

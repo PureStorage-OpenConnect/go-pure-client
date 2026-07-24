@@ -443,7 +443,7 @@ Class | Method | HTTP request | Description
 *SubscriptionsAPI* | [**SubscriptionsGet**](docs/SubscriptionsAPI.md#api234subscriptionsget) | **Get** /api/2.34/subscriptions | List subscriptions
 *SupportAPI* | [**SupportGet**](docs/SupportAPI.md#api234supportget) | **Get** /api/2.34/support | List connection paths
 *SupportAPI* | [**SupportPatch**](docs/SupportAPI.md#api234supportpatch) | **Patch** /api/2.34/support | Create connection path
-*SupportAPI* | [**SupportTestGet**](docs/SupportAPI.md#api234supporttestget) | **Get** /api/2.34/support/test | List Pure Storage Support connection data
+*SupportAPI* | [**SupportTestGet**](docs/SupportAPI.md#api234supporttestget) | **Get** /api/2.34/support/test | List Everpure Support connection data
 *SyslogAPI* | [**SyslogServersDelete**](docs/SyslogAPI.md#api234syslogserversdelete) | **Delete** /api/2.34/syslog-servers | Delete syslog server
 *SyslogAPI* | [**SyslogServersGet**](docs/SyslogAPI.md#api234syslogserversget) | **Get** /api/2.34/syslog-servers | List syslog servers
 *SyslogAPI* | [**SyslogServersPatch**](docs/SyslogAPI.md#api234syslogserverspatch) | **Patch** /api/2.34/syslog-servers | Modify syslog server

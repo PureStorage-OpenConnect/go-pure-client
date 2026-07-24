@@ -1,7 +1,7 @@
 /*
 FlashBlade REST API
 
-OpenAPI specification for FlashBlade REST API, developed by Pure Storage, Inc. (https://www.purestorage.com/).
+OpenAPI specification for FlashBlade REST API, developed by Everpure, Inc. (https://www.everpuredata.com/).
 
 API version: 2.24
 */
@@ -31,7 +31,7 @@ type PolicyBaseContext struct {
 	IsLocal *bool `json:"is_local,omitempty"`
 	// Reference to the array where the policy is defined.
 	Location *FixedReference `json:"location,omitempty"`
-	// Type of the policy. Valid values include `alert`, `audit`, `bucket-access`, `cross-origin-resource-sharing`, `network-access`, `nfs`, `object-access`, `s3-export`, smb-client`, `smb-share`, `ssh-certificate-authority`, and `telemetry-metrics`.
+	// Type of the policy. Valid values include `alert`, `audit`, `bucket-access`, `cross-origin-resource-sharing`, `network-access`, `nfs`, `object-access`, `s3-export`, `smb-client`, `smb-share`, `ssh-certificate-authority`, and `telemetry-metrics`.
 	PolicyType *string `json:"policy_type,omitempty"`
 	// The context in which the operation was performed.  Valid values include a reference to any array which is a member of the same fleet or to the fleet itself.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided `context`.
 	Context *FixedReference `json:"context,omitempty"`

@@ -359,7 +359,7 @@ Class | Method | HTTP request | Description
 *SubnetsAPI* | [**SubnetsPost**](docs/SubnetsAPI.md#api214subnetspost) | **Post** /api/2.14/subnets | Create subnet
 *SupportAPI* | [**SupportGet**](docs/SupportAPI.md#api214supportget) | **Get** /api/2.14/support | List connection paths
 *SupportAPI* | [**SupportPatch**](docs/SupportAPI.md#api214supportpatch) | **Patch** /api/2.14/support | Create connection path
-*SupportAPI* | [**SupportTestGet**](docs/SupportAPI.md#api214supporttestget) | **Get** /api/2.14/support/test | List Pure Storage Support connection data
+*SupportAPI* | [**SupportTestGet**](docs/SupportAPI.md#api214supporttestget) | **Get** /api/2.14/support/test | List Everpure Support connection data
 *SyslogAPI* | [**SyslogServersDelete**](docs/SyslogAPI.md#api214syslogserversdelete) | **Delete** /api/2.14/syslog-servers | Delete syslog server
 *SyslogAPI* | [**SyslogServersGet**](docs/SyslogAPI.md#api214syslogserversget) | **Get** /api/2.14/syslog-servers | List syslog servers
 *SyslogAPI* | [**SyslogServersPatch**](docs/SyslogAPI.md#api214syslogserverspatch) | **Patch** /api/2.14/syslog-servers | Modify syslog server

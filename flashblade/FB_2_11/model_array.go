@@ -1,7 +1,7 @@
 /*
 FlashBlade REST API
 
-A lightweight client for FlashBlade REST API 2.11, developed by Pure Storage, Inc. (http://www.purestorage.com/).
+OpenAPI specification for FlashBlade REST API, developed by Everpure, Inc. (https://www.everpuredata.com/).
 
 API version: 2.11
 */
@@ -39,7 +39,7 @@ type Array struct {
 	Revision    *string `json:"revision,omitempty"`
 	// The name of the installed security update that currently applies to the system. This field will be `null` if either no security update has been installed, or if the most recently installed security update is no longer needed by the current FlashBlade software due to the current software fully incorporating the update.
 	SecurityUpdate *string `json:"security_update,omitempty"`
-	// The current SMB mode of the array. This controls the type of authentication that is used by the array for SMB. Possible values include `ad-auto`, `ad-rfc2307`, `guest`, and `native`. Modifying this value requires the assistance of Pure Storage Support.
+	// The current SMB mode of the array. This controls the type of authentication that is used by the array for SMB. Possible values include `ad-auto`, `ad-rfc2307`, `guest`, and `native`. Modifying this value requires the assistance of Everpure Support.
 	SmbMode *string `json:"smb_mode,omitempty"`
 	// The time zone to use for the array. In particular this affects the CLI formatting and the default snapshot policy time zone.
 	TimeZone *string `json:"time_zone,omitempty"`

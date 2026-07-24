@@ -370,7 +370,7 @@ Class | Method | HTTP request | Description
 *SubnetsAPI* | [**SubnetsPost**](docs/SubnetsAPI.md#api220subnetspost) | **Post** /api/2.20/subnets | Create subnet
 *SupportAPI* | [**SupportGet**](docs/SupportAPI.md#api220supportget) | **Get** /api/2.20/support | List connection paths
 *SupportAPI* | [**SupportPatch**](docs/SupportAPI.md#api220supportpatch) | **Patch** /api/2.20/support | Create connection path
-*SupportAPI* | [**SupportTestGet**](docs/SupportAPI.md#api220supporttestget) | **Get** /api/2.20/support/test | List Pure Storage Support connection data
+*SupportAPI* | [**SupportTestGet**](docs/SupportAPI.md#api220supporttestget) | **Get** /api/2.20/support/test | List Everpure Support connection data
 *SyslogAPI* | [**SyslogServersDelete**](docs/SyslogAPI.md#api220syslogserversdelete) | **Delete** /api/2.20/syslog-servers | Delete syslog server
 *SyslogAPI* | [**SyslogServersGet**](docs/SyslogAPI.md#api220syslogserversget) | **Get** /api/2.20/syslog-servers | List syslog servers
 *SyslogAPI* | [**SyslogServersPatch**](docs/SyslogAPI.md#api220syslogserverspatch) | **Patch** /api/2.20/syslog-servers | Modify syslog server
