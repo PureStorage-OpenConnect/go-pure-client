@@ -391,7 +391,7 @@ Class | Method | HTTP request | Description
 *SubnetsAPI* | [**SubnetsPost**](docs/SubnetsAPI.md#api223subnetspost) | **Post** /api/2.23/subnets | Create subnet
 *SupportAPI* | [**SupportGet**](docs/SupportAPI.md#api223supportget) | **Get** /api/2.23/support | List connection paths
 *SupportAPI* | [**SupportPatch**](docs/SupportAPI.md#api223supportpatch) | **Patch** /api/2.23/support | Create connection path
-*SupportAPI* | [**SupportTestGet**](docs/SupportAPI.md#api223supporttestget) | **Get** /api/2.23/support/test | List Pure Storage Support connection data
+*SupportAPI* | [**SupportTestGet**](docs/SupportAPI.md#api223supporttestget) | **Get** /api/2.23/support/test | List Everpure Support connection data
 *SyslogAPI* | [**SyslogServersDelete**](docs/SyslogAPI.md#api223syslogserversdelete) | **Delete** /api/2.23/syslog-servers | Delete syslog server
 *SyslogAPI* | [**SyslogServersGet**](docs/SyslogAPI.md#api223syslogserversget) | **Get** /api/2.23/syslog-servers | List syslog servers
 *SyslogAPI* | [**SyslogServersPatch**](docs/SyslogAPI.md#api223syslogserverspatch) | **Patch** /api/2.23/syslog-servers | Modify syslog server

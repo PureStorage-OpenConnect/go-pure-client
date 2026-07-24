@@ -1,7 +1,7 @@
 /*
 FlashBlade REST API
 
-OpenAPI specification for FlashBlade REST API, developed by Pure Storage, Inc. (https://www.purestorage.com/).
+OpenAPI specification for FlashBlade REST API, developed by Everpure, Inc. (https://www.everpuredata.com/).
 
 API version: 2.25
 */
@@ -565,7 +565,7 @@ func (r APIArraysErasuresPostRequest) PreserveConfigurationData(preserveConfigur
 	return r
 }
 
-// A flag to skip phonehome connectivity check. Arrays that intentionally disable phonehome or do not permit connectivity to Pure Storage&#39;s cloud servers must set this flag to &#x60;true&#x60; in order to start factory reset.
+// A flag to skip phonehome connectivity check. Arrays that intentionally disable phonehome or do not permit connectivity to Everpure&#39;s cloud servers must set this flag to &#x60;true&#x60; in order to start factory reset.
 func (r APIArraysErasuresPostRequest) SkipPhonehomeCheck(skipPhonehomeCheck bool) APIArraysErasuresPostRequest {
 	r.skipPhonehomeCheck = &skipPhonehomeCheck
 	return r

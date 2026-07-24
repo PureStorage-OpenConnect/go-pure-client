@@ -1,7 +1,7 @@
 /*
 FlashBlade REST API
 
-OpenAPI specification for FlashBlade REST API, developed by Pure Storage, Inc. (https://www.purestorage.com/).
+OpenAPI specification for FlashBlade REST API, developed by Everpure, Inc. (https://www.everpuredata.com/).
 
 API version: 2.24
 */
@@ -31,7 +31,7 @@ type AuditFileSystemsPolicyNoContext struct {
 	IsLocal *bool `json:"is_local,omitempty"`
 	// Reference to the array where the policy is defined.
 	Location *FixedReference `json:"location,omitempty"`
-	// Type of the policy. Valid values include `alert`, `audit`, `bucket-access`, `cross-origin-resource-sharing`, `network-access`, `nfs`, `object-access`, `s3-export`, smb-client`, `smb-share`, `ssh-certificate-authority`, and `telemetry-metrics`.
+	// Type of the policy. Valid values include `alert`, `audit`, `bucket-access`, `cross-origin-resource-sharing`, `network-access`, `nfs`, `object-access`, `s3-export`, `smb-client`, `smb-share`, `ssh-certificate-authority`, and `telemetry-metrics`.
 	PolicyType *string `json:"policy_type,omitempty"`
 	// Specifies the evaluation mode for auditing in this policy. Valid values are \"policy\", \"sacl\". If not specified, the default value is \"sacl\".
 	ControlType *string `json:"control_type,omitempty"`

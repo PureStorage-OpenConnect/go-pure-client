@@ -416,7 +416,7 @@ Class | Method | HTTP request | Description
 *SubscriptionsAPI* | [**SubscriptionsGet**](docs/SubscriptionsAPI.md#api232subscriptionsget) | **Get** /api/2.32/subscriptions | List subscriptions
 *SupportAPI* | [**SupportGet**](docs/SupportAPI.md#api232supportget) | **Get** /api/2.32/support | List connection paths
 *SupportAPI* | [**SupportPatch**](docs/SupportAPI.md#api232supportpatch) | **Patch** /api/2.32/support | Create connection path
-*SupportAPI* | [**SupportTestGet**](docs/SupportAPI.md#api232supporttestget) | **Get** /api/2.32/support/test | List Pure Storage Support connection data
+*SupportAPI* | [**SupportTestGet**](docs/SupportAPI.md#api232supporttestget) | **Get** /api/2.32/support/test | List Everpure Support connection data
 *SyslogAPI* | [**SyslogServersDelete**](docs/SyslogAPI.md#api232syslogserversdelete) | **Delete** /api/2.32/syslog-servers | Delete syslog server
 *SyslogAPI* | [**SyslogServersGet**](docs/SyslogAPI.md#api232syslogserversget) | **Get** /api/2.32/syslog-servers | List syslog servers
 *SyslogAPI* | [**SyslogServersPatch**](docs/SyslogAPI.md#api232syslogserverspatch) | **Patch** /api/2.32/syslog-servers | Modify syslog server

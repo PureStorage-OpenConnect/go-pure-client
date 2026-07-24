@@ -507,7 +507,7 @@ Class | Method | HTTP request | Description
 *SupportAPI* | [**SupportDiagnosticsSettingsPatch**](docs/SupportAPI.md#api237supportdiagnosticssettingspatch) | **Patch** /api/2.37/support-diagnostics/settings | Update diagnostics tools
 *SupportAPI* | [**SupportGet**](docs/SupportAPI.md#api237supportget) | **Get** /api/2.37/support | List connection paths
 *SupportAPI* | [**SupportPatch**](docs/SupportAPI.md#api237supportpatch) | **Patch** /api/2.37/support | Create connection path
-*SupportAPI* | [**SupportTestGet**](docs/SupportAPI.md#api237supporttestget) | **Get** /api/2.37/support/test | List Pure Storage Support connection data
+*SupportAPI* | [**SupportTestGet**](docs/SupportAPI.md#api237supporttestget) | **Get** /api/2.37/support/test | List Everpure Support connection data
 *SyslogAPI* | [**SyslogServersDelete**](docs/SyslogAPI.md#api237syslogserversdelete) | **Delete** /api/2.37/syslog-servers | Delete syslog server
 *SyslogAPI* | [**SyslogServersGet**](docs/SyslogAPI.md#api237syslogserversget) | **Get** /api/2.37/syslog-servers | List syslog servers
 *SyslogAPI* | [**SyslogServersPatch**](docs/SyslogAPI.md#api237syslogserverspatch) | **Patch** /api/2.37/syslog-servers | Modify syslog server

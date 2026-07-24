@@ -347,7 +347,7 @@ Class | Method | HTTP request | Description
 *SubnetsAPI* | [**SubnetsPost**](docs/SubnetsAPI.md#api28subnetspost) | **Post** /api/2.8/subnets | Create subnet
 *SupportAPI* | [**SupportGet**](docs/SupportAPI.md#api28supportget) | **Get** /api/2.8/support | List connection paths
 *SupportAPI* | [**SupportPatch**](docs/SupportAPI.md#api28supportpatch) | **Patch** /api/2.8/support | Create connection path
-*SupportAPI* | [**SupportTestGet**](docs/SupportAPI.md#api28supporttestget) | **Get** /api/2.8/support/test | List Pure Storage Support connection data
+*SupportAPI* | [**SupportTestGet**](docs/SupportAPI.md#api28supporttestget) | **Get** /api/2.8/support/test | List Everpure Support connection data
 *SyslogAPI* | [**SyslogServersDelete**](docs/SyslogAPI.md#api28syslogserversdelete) | **Delete** /api/2.8/syslog-servers | Delete syslog server
 *SyslogAPI* | [**SyslogServersGet**](docs/SyslogAPI.md#api28syslogserversget) | **Get** /api/2.8/syslog-servers | List syslog servers
 *SyslogAPI* | [**SyslogServersPatch**](docs/SyslogAPI.md#api28syslogserverspatch) | **Patch** /api/2.8/syslog-servers | Modify syslog server

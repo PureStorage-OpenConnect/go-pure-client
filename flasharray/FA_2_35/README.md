@@ -465,7 +465,7 @@ Class | Method | HTTP request | Description
 *SubscriptionsAPI* | [**SubscriptionsGet**](docs/SubscriptionsAPI.md#api235subscriptionsget) | **Get** /api/2.35/subscriptions | List subscriptions
 *SupportAPI* | [**SupportGet**](docs/SupportAPI.md#api235supportget) | **Get** /api/2.35/support | List connection paths
 *SupportAPI* | [**SupportPatch**](docs/SupportAPI.md#api235supportpatch) | **Patch** /api/2.35/support | Create connection path
-*SupportAPI* | [**SupportTestGet**](docs/SupportAPI.md#api235supporttestget) | **Get** /api/2.35/support/test | List Pure Storage Support connection data
+*SupportAPI* | [**SupportTestGet**](docs/SupportAPI.md#api235supporttestget) | **Get** /api/2.35/support/test | List Everpure Support connection data
 *SyslogAPI* | [**SyslogServersDelete**](docs/SyslogAPI.md#api235syslogserversdelete) | **Delete** /api/2.35/syslog-servers | Delete syslog server
 *SyslogAPI* | [**SyslogServersGet**](docs/SyslogAPI.md#api235syslogserversget) | **Get** /api/2.35/syslog-servers | List syslog servers
 *SyslogAPI* | [**SyslogServersPatch**](docs/SyslogAPI.md#api235syslogserverspatch) | **Patch** /api/2.35/syslog-servers | Modify syslog server

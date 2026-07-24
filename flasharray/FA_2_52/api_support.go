@@ -2170,9 +2170,9 @@ func (r APISupportTestGetRequest) Execute() (*TestResultGetResponse, *http.Respo
 }
 
 /*
-SupportTestGet List Pure Storage Support connection data
+SupportTestGet List Everpure Support connection data
 
-Displays information about whether the array can connect to Pure Storage Support by establishing a secure shell or secure HTTP connection and verifies that messages can be exchanged.
+Displays information about whether the array can connect to Everpure Support by establishing a secure shell or secure HTTP connection and verifies that messages can be exchanged.
 
 	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 	@return APISupportTestGetRequest

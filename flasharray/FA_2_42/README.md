@@ -536,7 +536,7 @@ Class | Method | HTTP request | Description
 *SupportAPI* | [**SupportRemoteAssistSessionsPatch**](docs/SupportAPI.md#api242supportremoteassistsessionspatch) | **Patch** /api/2.42/support/remote-assist-sessions | Modify remote assist session
 *SupportAPI* | [**SupportRemoteAssistSessionsSettingsGet**](docs/SupportAPI.md#api242supportremoteassistsessionssettingsget) | **Get** /api/2.42/support/remote-assist-sessions/settings | List remote assist session global settings
 *SupportAPI* | [**SupportRemoteAssistSessionsSettingsPatch**](docs/SupportAPI.md#api242supportremoteassistsessionssettingspatch) | **Patch** /api/2.42/support/remote-assist-sessions/settings | Update remote assist session global settings
-*SupportAPI* | [**SupportTestGet**](docs/SupportAPI.md#api242supporttestget) | **Get** /api/2.42/support/test | List Pure Storage Support connection data
+*SupportAPI* | [**SupportTestGet**](docs/SupportAPI.md#api242supporttestget) | **Get** /api/2.42/support/test | List Everpure Support connection data
 *SyslogAPI* | [**SyslogServersDelete**](docs/SyslogAPI.md#api242syslogserversdelete) | **Delete** /api/2.42/syslog-servers | Delete syslog server
 *SyslogAPI* | [**SyslogServersGet**](docs/SyslogAPI.md#api242syslogserversget) | **Get** /api/2.42/syslog-servers | List syslog servers
 *SyslogAPI* | [**SyslogServersPatch**](docs/SyslogAPI.md#api242syslogserverspatch) | **Patch** /api/2.42/syslog-servers | Modify syslog server

@@ -412,7 +412,7 @@ Class | Method | HTTP request | Description
 *SubscriptionsAPI* | [**SubscriptionsGet**](docs/SubscriptionsAPI.md#api230subscriptionsget) | **Get** /api/2.30/subscriptions | List subscriptions
 *SupportAPI* | [**SupportGet**](docs/SupportAPI.md#api230supportget) | **Get** /api/2.30/support | List connection paths
 *SupportAPI* | [**SupportPatch**](docs/SupportAPI.md#api230supportpatch) | **Patch** /api/2.30/support | Create connection path
-*SupportAPI* | [**SupportTestGet**](docs/SupportAPI.md#api230supporttestget) | **Get** /api/2.30/support/test | List Pure Storage Support connection data
+*SupportAPI* | [**SupportTestGet**](docs/SupportAPI.md#api230supporttestget) | **Get** /api/2.30/support/test | List Everpure Support connection data
 *SyslogAPI* | [**SyslogServersDelete**](docs/SyslogAPI.md#api230syslogserversdelete) | **Delete** /api/2.30/syslog-servers | Delete syslog server
 *SyslogAPI* | [**SyslogServersGet**](docs/SyslogAPI.md#api230syslogserversget) | **Get** /api/2.30/syslog-servers | List syslog servers
 *SyslogAPI* | [**SyslogServersPatch**](docs/SyslogAPI.md#api230syslogserverspatch) | **Patch** /api/2.30/syslog-servers | Modify syslog server

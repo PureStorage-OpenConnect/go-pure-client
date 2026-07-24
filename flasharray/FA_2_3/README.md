@@ -285,7 +285,7 @@ Class | Method | HTTP request | Description
 *SubnetsAPI* | [**SubnetsPost**](docs/SubnetsAPI.md#api23subnetspost) | **Post** /api/2.3/subnets | Create subnet
 *SupportAPI* | [**SupportGet**](docs/SupportAPI.md#api23supportget) | **Get** /api/2.3/support | List connection paths
 *SupportAPI* | [**SupportPatch**](docs/SupportAPI.md#api23supportpatch) | **Patch** /api/2.3/support | Create connection path
-*SupportAPI* | [**SupportTestGet**](docs/SupportAPI.md#api23supporttestget) | **Get** /api/2.3/support/test | List Pure Storage Support connection data
+*SupportAPI* | [**SupportTestGet**](docs/SupportAPI.md#api23supporttestget) | **Get** /api/2.3/support/test | List Everpure Support connection data
 *VolumeGroupsAPI* | [**VolumeGroupsDelete**](docs/VolumeGroupsAPI.md#api23volumegroupsdelete) | **Delete** /api/2.3/volume-groups | Delete a volume group
 *VolumeGroupsAPI* | [**VolumeGroupsGet**](docs/VolumeGroupsAPI.md#api23volumegroupsget) | **Get** /api/2.3/volume-groups | List volume groups
 *VolumeGroupsAPI* | [**VolumeGroupsPatch**](docs/VolumeGroupsAPI.md#api23volumegroupspatch) | **Patch** /api/2.3/volume-groups | Modify a volume group

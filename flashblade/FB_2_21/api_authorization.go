@@ -1,7 +1,7 @@
 /*
 FlashBlade REST API
 
-A lightweight client for FlashBlade REST API 2.20, developed by Pure Storage, Inc. (http://www.purestorage.com/).
+OpenAPI specification for FlashBlade REST API, developed by Everpure, Inc. (https://www.everpuredata.com/).
 
 API version: 2.21
 */
@@ -668,7 +668,7 @@ type APIOauth210TokenPostRequest struct {
 	xRequestID       *string
 }
 
-// The method by which the access token will be obtained. The Pure Storage REST API supports the OAuth 2.0 \\\&quot;token exchange\\\&quot; grant type, which indicates that a token exchange is being performed. Set &#x60;grant_type&#x60; to &#x60;urn:ietf:params:oauth:grant-type:token-exchange&#x60;.
+// The method by which the access token will be obtained. The Everpure REST API supports the OAuth 2.0 \\\&quot;token exchange\\\&quot; grant type, which indicates that a token exchange is being performed. Set &#x60;grant_type&#x60; to &#x60;urn:ietf:params:oauth:grant-type:token-exchange&#x60;.
 func (r APIOauth210TokenPostRequest) GrantType(grantType string) APIOauth210TokenPostRequest {
 	r.grantType = &grantType
 	return r
@@ -680,7 +680,7 @@ func (r APIOauth210TokenPostRequest) SubjectToken(subjectToken string) APIOauth2
 	return r
 }
 
-// An identifier that indicates the type of security token specifed in the &#x60;subject_token&#x60; parameter. The Pure Storage REST API supports the JSON Web Token (JWT) as the means for requesting the access token. Set &#x60;subject_token_type&#x60; to &#x60;urn:ietf:params:oauth:token-type:jwt&#x60;.
+// An identifier that indicates the type of security token specifed in the &#x60;subject_token&#x60; parameter. The Everpure REST API supports the JSON Web Token (JWT) as the means for requesting the access token. Set &#x60;subject_token_type&#x60; to &#x60;urn:ietf:params:oauth:token-type:jwt&#x60;.
 func (r APIOauth210TokenPostRequest) SubjectTokenType(subjectTokenType string) APIOauth210TokenPostRequest {
 	r.subjectTokenType = &subjectTokenType
 	return r

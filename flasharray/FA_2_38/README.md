@@ -508,7 +508,7 @@ Class | Method | HTTP request | Description
 *SupportAPI* | [**SupportDiagnosticsSettingsPatch**](docs/SupportAPI.md#api238supportdiagnosticssettingspatch) | **Patch** /api/2.38/support-diagnostics/settings | Update diagnostics tools
 *SupportAPI* | [**SupportGet**](docs/SupportAPI.md#api238supportget) | **Get** /api/2.38/support | List connection paths
 *SupportAPI* | [**SupportPatch**](docs/SupportAPI.md#api238supportpatch) | **Patch** /api/2.38/support | Create connection path
-*SupportAPI* | [**SupportTestGet**](docs/SupportAPI.md#api238supporttestget) | **Get** /api/2.38/support/test | List Pure Storage Support connection data
+*SupportAPI* | [**SupportTestGet**](docs/SupportAPI.md#api238supporttestget) | **Get** /api/2.38/support/test | List Everpure Support connection data
 *SyslogAPI* | [**SyslogServersDelete**](docs/SyslogAPI.md#api238syslogserversdelete) | **Delete** /api/2.38/syslog-servers | Delete syslog server
 *SyslogAPI* | [**SyslogServersGet**](docs/SyslogAPI.md#api238syslogserversget) | **Get** /api/2.38/syslog-servers | List syslog servers
 *SyslogAPI* | [**SyslogServersPatch**](docs/SyslogAPI.md#api238syslogserverspatch) | **Patch** /api/2.38/syslog-servers | Modify syslog server

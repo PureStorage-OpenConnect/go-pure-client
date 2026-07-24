@@ -14,7 +14,7 @@ Method | HTTP request | Description
 [**SupportRemoteAssistSessionsSettingsGet**](SupportAPI.md#SupportRemoteAssistSessionsSettingsGet) | **Get** /api/2.53/support/remote-assist-sessions/settings | List remote assist session global settings
 [**SupportRemoteAssistSessionsSettingsPatch**](SupportAPI.md#SupportRemoteAssistSessionsSettingsPatch) | **Patch** /api/2.53/support/remote-assist-sessions/settings | Update remote assist session global settings
 [**SupportSystemManifestGet**](SupportAPI.md#SupportSystemManifestGet) | **Get** /api/2.53/support/system-manifest | List the system manifest
-[**SupportTestGet**](SupportAPI.md#SupportTestGet) | **Get** /api/2.53/support/test | List Pure Storage Support connection data
+[**SupportTestGet**](SupportAPI.md#SupportTestGet) | **Get** /api/2.53/support/test | List Everpure Support connection data
 
 
 
@@ -822,7 +822,7 @@ Authorization is handled by Authorizer specified in configuration and data are f
 
 > TestResultGetResponse SupportTestGet(ctx).Authorization(authorization).XRequestID(xRequestID).Filter(filter).Limit(limit).Offset(offset).Sort(sort).TestType(testType).TotalItemCount(totalItemCount).Execute()
 
-List Pure Storage Support connection data
+List Everpure Support connection data
 
 
 

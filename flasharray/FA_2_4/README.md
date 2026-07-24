@@ -328,7 +328,7 @@ Class | Method | HTTP request | Description
 *SubnetsAPI* | [**SubnetsPost**](docs/SubnetsAPI.md#api24subnetspost) | **Post** /api/2.4/subnets | Create subnet
 *SupportAPI* | [**SupportGet**](docs/SupportAPI.md#api24supportget) | **Get** /api/2.4/support | List connection paths
 *SupportAPI* | [**SupportPatch**](docs/SupportAPI.md#api24supportpatch) | **Patch** /api/2.4/support | Create connection path
-*SupportAPI* | [**SupportTestGet**](docs/SupportAPI.md#api24supporttestget) | **Get** /api/2.4/support/test | List Pure Storage Support connection data
+*SupportAPI* | [**SupportTestGet**](docs/SupportAPI.md#api24supporttestget) | **Get** /api/2.4/support/test | List Everpure Support connection data
 *SyslogAPI* | [**SyslogServersDelete**](docs/SyslogAPI.md#api24syslogserversdelete) | **Delete** /api/2.4/syslog-servers | Delete syslog server
 *SyslogAPI* | [**SyslogServersGet**](docs/SyslogAPI.md#api24syslogserversget) | **Get** /api/2.4/syslog-servers | List syslog servers
 *SyslogAPI* | [**SyslogServersPatch**](docs/SyslogAPI.md#api24syslogserverspatch) | **Patch** /api/2.4/syslog-servers | Modify syslog server

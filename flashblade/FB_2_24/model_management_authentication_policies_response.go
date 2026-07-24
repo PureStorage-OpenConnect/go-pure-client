@@ -1,7 +1,7 @@
 /*
 FlashBlade REST API
 
-OpenAPI specification for FlashBlade REST API, developed by Pure Storage, Inc. (https://www.purestorage.com/).
+OpenAPI specification for FlashBlade REST API, developed by Everpure, Inc. (https://www.everpuredata.com/).
 
 API version: 2.24
 */

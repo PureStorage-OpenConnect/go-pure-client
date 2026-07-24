@@ -1,7 +1,7 @@
 /*
 FlashBlade REST API
 
-OpenAPI specification for FlashBlade REST API, developed by Pure Storage, Inc. (https://www.purestorage.com/).
+OpenAPI specification for FlashBlade REST API, developed by Everpure, Inc. (https://www.everpuredata.com/).
 
 API version: 2.26
 */
@@ -23,9 +23,9 @@ type OauthTokenResponse struct {
 	AccessToken *string `json:"access_token,omitempty"`
 	// The duration after which the access token will expire. Measured in seconds. This differs from other duration fields that are expressed in milliseconds.
 	ExpiresIn *int32 `json:"expires_in,omitempty"`
-	// The type of token that is issued. The Pure Storage REST API supports OAuth 2.0 access tokens.
+	// The type of token that is issued. The Everpure REST API supports OAuth 2.0 access tokens.
 	IssuedTokenType *string `json:"issued_token_type,omitempty"`
-	// Indicates how the API client can use the access token issued. The Pure Storage REST API supports the `Bearer` token.
+	// Indicates how the API client can use the access token issued. The Everpure REST API supports the `Bearer` token.
 	TokenType *string `json:"token_type,omitempty"`
 }
 

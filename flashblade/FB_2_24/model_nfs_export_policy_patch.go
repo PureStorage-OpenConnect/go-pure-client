@@ -1,7 +1,7 @@
 /*
 FlashBlade REST API
 
-OpenAPI specification for FlashBlade REST API, developed by Pure Storage, Inc. (https://www.purestorage.com/).
+OpenAPI specification for FlashBlade REST API, developed by Everpure, Inc. (https://www.everpuredata.com/).
 
 API version: 2.24
 */
@@ -31,7 +31,7 @@ type NfsExportPolicyPatch struct {
 	IsLocal *bool `json:"is_local,omitempty"`
 	// Reference to the array where the policy is defined.
 	Location *FixedReference `json:"location,omitempty"`
-	// Type of the policy. Valid values include `alert`, `audit`, `bucket-access`, `cross-origin-resource-sharing`, `network-access`, `nfs`, `object-access`, `s3-export`, smb-client`, `smb-share`, `ssh-certificate-authority`, and `telemetry-metrics`.
+	// Type of the policy. Valid values include `alert`, `audit`, `bucket-access`, `cross-origin-resource-sharing`, `network-access`, `nfs`, `object-access`, `s3-export`, `smb-client`, `smb-share`, `ssh-certificate-authority`, and `telemetry-metrics`.
 	PolicyType *string `json:"policy_type,omitempty"`
 	// A hash of the other properties of this resource. This can be used when updating the resource to ensure there aren't any updates since the resource was read.
 	Version *string `json:"version,omitempty"`

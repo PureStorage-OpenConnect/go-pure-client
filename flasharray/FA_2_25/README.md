@@ -404,7 +404,7 @@ Class | Method | HTTP request | Description
 *SubnetsAPI* | [**SubnetsPost**](docs/SubnetsAPI.md#api225subnetspost) | **Post** /api/2.25/subnets | Create subnet
 *SupportAPI* | [**SupportGet**](docs/SupportAPI.md#api225supportget) | **Get** /api/2.25/support | List connection paths
 *SupportAPI* | [**SupportPatch**](docs/SupportAPI.md#api225supportpatch) | **Patch** /api/2.25/support | Create connection path
-*SupportAPI* | [**SupportTestGet**](docs/SupportAPI.md#api225supporttestget) | **Get** /api/2.25/support/test | List Pure Storage Support connection data
+*SupportAPI* | [**SupportTestGet**](docs/SupportAPI.md#api225supporttestget) | **Get** /api/2.25/support/test | List Everpure Support connection data
 *SyslogAPI* | [**SyslogServersDelete**](docs/SyslogAPI.md#api225syslogserversdelete) | **Delete** /api/2.25/syslog-servers | Delete syslog server
 *SyslogAPI* | [**SyslogServersGet**](docs/SyslogAPI.md#api225syslogserversget) | **Get** /api/2.25/syslog-servers | List syslog servers
 *SyslogAPI* | [**SyslogServersPatch**](docs/SyslogAPI.md#api225syslogserverspatch) | **Patch** /api/2.25/syslog-servers | Modify syslog server

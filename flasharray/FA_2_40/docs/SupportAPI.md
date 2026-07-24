@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**SupportDiagnosticsSettingsPatch**](SupportAPI.md#SupportDiagnosticsSettingsPatch) | **Patch** /api/2.40/support-diagnostics/settings | Update diagnostics tools
 [**SupportGet**](SupportAPI.md#SupportGet) | **Get** /api/2.40/support | List connection paths
 [**SupportPatch**](SupportAPI.md#SupportPatch) | **Patch** /api/2.40/support | Create connection path
-[**SupportTestGet**](SupportAPI.md#SupportTestGet) | **Get** /api/2.40/support/test | List Pure Storage Support connection data
+[**SupportTestGet**](SupportAPI.md#SupportTestGet) | **Get** /api/2.40/support/test | List Everpure Support connection data
 
 
 
@@ -417,7 +417,7 @@ Authorization is handled by Authorizer specified in configuration and data are f
 
 > TestResultGetResponse SupportTestGet(ctx).Authorization(authorization).XRequestID(xRequestID).Filter(filter).Limit(limit).Offset(offset).Sort(sort).TestType(testType).TotalItemCount(totalItemCount).Execute()
 
-List Pure Storage Support connection data
+List Everpure Support connection data
 
 
 

@@ -23,7 +23,7 @@ type SoftwareInstallationPost struct {
 	Mode *string `json:"mode,omitempty"`
 	// A list of upgrade checks whose failures are overridden during the upgrade. If any optional `args` are provided, they are validated later when the corresponding check script runs.
 	OverrideChecks []OverrideCheck `json:"override_checks,omitempty"`
-	// A list of parameters to be sent to the upgrade process. These parameters can be used to change the behavior of the upgrade process in specific ways such as enabling or disabling features in the target version or changing the attributes of the appliance at upgrade time. When there is a need or option to set an upgrade parameter, Pure Storage will provide documentation for the specific parameter. If you have been provided documentation related to a specific upgrade parameter, follow the instructions in the documentation. Otherwise, do not set any upgrade parameters.
+	// A list of parameters to be sent to the upgrade process. These parameters can be used to change the behavior of the upgrade process in specific ways such as enabling or disabling features in the target version or changing the attributes of the appliance at upgrade time. When there is a need or option to set an upgrade parameter, Everpure will provide documentation for the specific parameter. If you have been provided documentation related to a specific upgrade parameter, follow the instructions in the documentation. Otherwise, do not set any upgrade parameters.
 	UpgradeParameters []UpgradeParameters `json:"upgrade_parameters,omitempty"`
 }
 

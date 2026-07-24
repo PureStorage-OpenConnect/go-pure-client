@@ -1,7 +1,6 @@
 # Go API client for gopureclient
 
-A lightweight client for FlashBlade REST API 2.4, developed by
-Pure Storage, Inc. (http://www.purestorage.com/).
+OpenAPI specification for FlashBlade REST API, developed by Everpure, Inc. (https://www.everpuredata.com/).
 
 
 ## Overview
