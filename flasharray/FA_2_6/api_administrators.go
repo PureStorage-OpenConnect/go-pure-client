@@ -13,7 +13,7 @@ package gopureclient
 import (
 	"bytes"
 	"context"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"net/url"
 )
@@ -79,19 +79,21 @@ func (a *AdministratorsAPIService) AdminsAPITokensDeleteExecute(r APIAdminsAPITo
 
 	localBasePath := a.client.cfg.ArrayURL
 
-	non_auth_endpoints := map[string]bool{
+	nonAuthEndpoints := map[string]bool{
 		"AuthorizationAPIService.Oauth210TokenPost": true,
 		"AuthorizationAPIService.LoginPost":         true,
 	}
-	var authentificator Authentificator
-	if !non_auth_endpoints[endpoint] {
-		authentificator = a.client.cfg.Authentificator
+	var authenticator Authenticator
+	if !nonAuthEndpoints[endpoint] {
+		authenticator = a.client.cfg.Authenticator
 	} else {
-		authentificator = nil
+		authenticator = nil
 	}
 
-	if authentificator != nil {
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+	if authenticator != nil {
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return nil, err
+		}
 	}
 
 	localVarPath := localBasePath + "/api/2.6/admins/api-tokens"
@@ -120,10 +122,10 @@ func (a *AdministratorsAPIService) AdminsAPITokensDeleteExecute(r APIAdminsAPITo
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	if r.authorization != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("Authorization"), r.authorization, "")
 	}
 	if r.xRequestID != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "X-Request-ID", r.xRequestID, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("X-Request-ID"), r.xRequestID, "")
 	}
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
@@ -135,23 +137,30 @@ func (a *AdministratorsAPIService) AdminsAPITokensDeleteExecute(r APIAdminsAPITo
 		return localVarHTTPResponse, err
 	}
 
-	ignored_endpoints := map[string]bool{
+	ignoredEndpoints := map[string]bool{
 		"AuthorizationAPIService.LogoutPost": true,
 	}
 
-	auth_status_codes := map[int]bool{
+	authStatusCodes := map[int]bool{
 		401: true,
-		403: true,
 	}
 
-	if auth_status_codes[localVarHTTPResponse.StatusCode] && !ignored_endpoints[endpoint] && authentificator != nil {
+	if authStatusCodes[localVarHTTPResponse.StatusCode] && !ignoredEndpoints[endpoint] && authenticator != nil {
+		// Drain and close the first response body so its connection can be
+		// reused; keep a buffered copy readable in case the retry fails and
+		// this response is returned to the caller.
+		firstRespBody, _ := io.ReadAll(localVarHTTPResponse.Body)
+		localVarHTTPResponse.Body.Close()
+		localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(firstRespBody))
 		// retry with token refresh
-		err = authentificator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
+		err = authenticator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
 		if err != nil {
 			return localVarHTTPResponse, err
 		}
 		// Update auth header
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return localVarHTTPResponse, err
+		}
 		req, err = a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 		if err != nil {
 			return localVarHTTPResponse, err
@@ -162,9 +171,9 @@ func (a *AdministratorsAPIService) AdminsAPITokensDeleteExecute(r APIAdminsAPITo
 		}
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarHTTPResponse, err
 	}
@@ -297,19 +306,21 @@ func (a *AdministratorsAPIService) AdminsAPITokensGetExecute(r APIAdminsAPIToken
 
 	localBasePath := a.client.cfg.ArrayURL
 
-	non_auth_endpoints := map[string]bool{
+	nonAuthEndpoints := map[string]bool{
 		"AuthorizationAPIService.Oauth210TokenPost": true,
 		"AuthorizationAPIService.LoginPost":         true,
 	}
-	var authentificator Authentificator
-	if !non_auth_endpoints[endpoint] {
-		authentificator = a.client.cfg.Authentificator
+	var authenticator Authenticator
+	if !nonAuthEndpoints[endpoint] {
+		authenticator = a.client.cfg.Authenticator
 	} else {
-		authentificator = nil
+		authenticator = nil
 	}
 
-	if authentificator != nil {
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+	if authenticator != nil {
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return localVarReturnValue, nil, err
+		}
 	}
 
 	localVarPath := localBasePath + "/api/2.6/admins/api-tokens"
@@ -359,10 +370,10 @@ func (a *AdministratorsAPIService) AdminsAPITokensGetExecute(r APIAdminsAPIToken
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	if r.authorization != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("Authorization"), r.authorization, "")
 	}
 	if r.xRequestID != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "X-Request-ID", r.xRequestID, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("X-Request-ID"), r.xRequestID, "")
 	}
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
@@ -374,23 +385,30 @@ func (a *AdministratorsAPIService) AdminsAPITokensGetExecute(r APIAdminsAPIToken
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	ignored_endpoints := map[string]bool{
+	ignoredEndpoints := map[string]bool{
 		"AuthorizationAPIService.LogoutPost": true,
 	}
 
-	auth_status_codes := map[int]bool{
+	authStatusCodes := map[int]bool{
 		401: true,
-		403: true,
 	}
 
-	if auth_status_codes[localVarHTTPResponse.StatusCode] && !ignored_endpoints[endpoint] && authentificator != nil {
+	if authStatusCodes[localVarHTTPResponse.StatusCode] && !ignoredEndpoints[endpoint] && authenticator != nil {
+		// Drain and close the first response body so its connection can be
+		// reused; keep a buffered copy readable in case the retry fails and
+		// this response is returned to the caller.
+		firstRespBody, _ := io.ReadAll(localVarHTTPResponse.Body)
+		localVarHTTPResponse.Body.Close()
+		localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(firstRespBody))
 		// retry with token refresh
-		err = authentificator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
+		err = authenticator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
 		if err != nil {
 			return localVarReturnValue, localVarHTTPResponse, err
 		}
 		// Update auth header
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return localVarReturnValue, localVarHTTPResponse, err
+		}
 		req, err = a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 		if err != nil {
 			return localVarReturnValue, localVarHTTPResponse, err
@@ -401,9 +419,9 @@ func (a *AdministratorsAPIService) AdminsAPITokensGetExecute(r APIAdminsAPIToken
 		}
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -503,19 +521,21 @@ func (a *AdministratorsAPIService) AdminsAPITokensPostExecute(r APIAdminsAPIToke
 
 	localBasePath := a.client.cfg.ArrayURL
 
-	non_auth_endpoints := map[string]bool{
+	nonAuthEndpoints := map[string]bool{
 		"AuthorizationAPIService.Oauth210TokenPost": true,
 		"AuthorizationAPIService.LoginPost":         true,
 	}
-	var authentificator Authentificator
-	if !non_auth_endpoints[endpoint] {
-		authentificator = a.client.cfg.Authentificator
+	var authenticator Authenticator
+	if !nonAuthEndpoints[endpoint] {
+		authenticator = a.client.cfg.Authenticator
 	} else {
-		authentificator = nil
+		authenticator = nil
 	}
 
-	if authentificator != nil {
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+	if authenticator != nil {
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return localVarReturnValue, nil, err
+		}
 	}
 
 	localVarPath := localBasePath + "/api/2.6/admins/api-tokens"
@@ -547,10 +567,10 @@ func (a *AdministratorsAPIService) AdminsAPITokensPostExecute(r APIAdminsAPIToke
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	if r.authorization != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("Authorization"), r.authorization, "")
 	}
 	if r.xRequestID != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "X-Request-ID", r.xRequestID, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("X-Request-ID"), r.xRequestID, "")
 	}
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
@@ -562,23 +582,30 @@ func (a *AdministratorsAPIService) AdminsAPITokensPostExecute(r APIAdminsAPIToke
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	ignored_endpoints := map[string]bool{
+	ignoredEndpoints := map[string]bool{
 		"AuthorizationAPIService.LogoutPost": true,
 	}
 
-	auth_status_codes := map[int]bool{
+	authStatusCodes := map[int]bool{
 		401: true,
-		403: true,
 	}
 
-	if auth_status_codes[localVarHTTPResponse.StatusCode] && !ignored_endpoints[endpoint] && authentificator != nil {
+	if authStatusCodes[localVarHTTPResponse.StatusCode] && !ignoredEndpoints[endpoint] && authenticator != nil {
+		// Drain and close the first response body so its connection can be
+		// reused; keep a buffered copy readable in case the retry fails and
+		// this response is returned to the caller.
+		firstRespBody, _ := io.ReadAll(localVarHTTPResponse.Body)
+		localVarHTTPResponse.Body.Close()
+		localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(firstRespBody))
 		// retry with token refresh
-		err = authentificator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
+		err = authenticator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
 		if err != nil {
 			return localVarReturnValue, localVarHTTPResponse, err
 		}
 		// Update auth header
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return localVarReturnValue, localVarHTTPResponse, err
+		}
 		req, err = a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 		if err != nil {
 			return localVarReturnValue, localVarHTTPResponse, err
@@ -589,9 +616,9 @@ func (a *AdministratorsAPIService) AdminsAPITokensPostExecute(r APIAdminsAPIToke
 		}
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -681,19 +708,21 @@ func (a *AdministratorsAPIService) AdminsCacheDeleteExecute(r APIAdminsCacheDele
 
 	localBasePath := a.client.cfg.ArrayURL
 
-	non_auth_endpoints := map[string]bool{
+	nonAuthEndpoints := map[string]bool{
 		"AuthorizationAPIService.Oauth210TokenPost": true,
 		"AuthorizationAPIService.LoginPost":         true,
 	}
-	var authentificator Authentificator
-	if !non_auth_endpoints[endpoint] {
-		authentificator = a.client.cfg.Authentificator
+	var authenticator Authenticator
+	if !nonAuthEndpoints[endpoint] {
+		authenticator = a.client.cfg.Authenticator
 	} else {
-		authentificator = nil
+		authenticator = nil
 	}
 
-	if authentificator != nil {
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+	if authenticator != nil {
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return nil, err
+		}
 	}
 
 	localVarPath := localBasePath + "/api/2.6/admins/cache"
@@ -723,10 +752,10 @@ func (a *AdministratorsAPIService) AdminsCacheDeleteExecute(r APIAdminsCacheDele
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	if r.authorization != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("Authorization"), r.authorization, "")
 	}
 	if r.xRequestID != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "X-Request-ID", r.xRequestID, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("X-Request-ID"), r.xRequestID, "")
 	}
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
@@ -738,23 +767,30 @@ func (a *AdministratorsAPIService) AdminsCacheDeleteExecute(r APIAdminsCacheDele
 		return localVarHTTPResponse, err
 	}
 
-	ignored_endpoints := map[string]bool{
+	ignoredEndpoints := map[string]bool{
 		"AuthorizationAPIService.LogoutPost": true,
 	}
 
-	auth_status_codes := map[int]bool{
+	authStatusCodes := map[int]bool{
 		401: true,
-		403: true,
 	}
 
-	if auth_status_codes[localVarHTTPResponse.StatusCode] && !ignored_endpoints[endpoint] && authentificator != nil {
+	if authStatusCodes[localVarHTTPResponse.StatusCode] && !ignoredEndpoints[endpoint] && authenticator != nil {
+		// Drain and close the first response body so its connection can be
+		// reused; keep a buffered copy readable in case the retry fails and
+		// this response is returned to the caller.
+		firstRespBody, _ := io.ReadAll(localVarHTTPResponse.Body)
+		localVarHTTPResponse.Body.Close()
+		localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(firstRespBody))
 		// retry with token refresh
-		err = authentificator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
+		err = authenticator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
 		if err != nil {
 			return localVarHTTPResponse, err
 		}
 		// Update auth header
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return localVarHTTPResponse, err
+		}
 		req, err = a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 		if err != nil {
 			return localVarHTTPResponse, err
@@ -765,9 +801,9 @@ func (a *AdministratorsAPIService) AdminsCacheDeleteExecute(r APIAdminsCacheDele
 		}
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarHTTPResponse, err
 	}
@@ -893,19 +929,21 @@ func (a *AdministratorsAPIService) AdminsCacheGetExecute(r APIAdminsCacheGetRequ
 
 	localBasePath := a.client.cfg.ArrayURL
 
-	non_auth_endpoints := map[string]bool{
+	nonAuthEndpoints := map[string]bool{
 		"AuthorizationAPIService.Oauth210TokenPost": true,
 		"AuthorizationAPIService.LoginPost":         true,
 	}
-	var authentificator Authentificator
-	if !non_auth_endpoints[endpoint] {
-		authentificator = a.client.cfg.Authentificator
+	var authenticator Authenticator
+	if !nonAuthEndpoints[endpoint] {
+		authenticator = a.client.cfg.Authenticator
 	} else {
-		authentificator = nil
+		authenticator = nil
 	}
 
-	if authentificator != nil {
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+	if authenticator != nil {
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return localVarReturnValue, nil, err
+		}
 	}
 
 	localVarPath := localBasePath + "/api/2.6/admins/cache"
@@ -952,10 +990,10 @@ func (a *AdministratorsAPIService) AdminsCacheGetExecute(r APIAdminsCacheGetRequ
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	if r.authorization != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("Authorization"), r.authorization, "")
 	}
 	if r.xRequestID != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "X-Request-ID", r.xRequestID, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("X-Request-ID"), r.xRequestID, "")
 	}
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
@@ -967,23 +1005,30 @@ func (a *AdministratorsAPIService) AdminsCacheGetExecute(r APIAdminsCacheGetRequ
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	ignored_endpoints := map[string]bool{
+	ignoredEndpoints := map[string]bool{
 		"AuthorizationAPIService.LogoutPost": true,
 	}
 
-	auth_status_codes := map[int]bool{
+	authStatusCodes := map[int]bool{
 		401: true,
-		403: true,
 	}
 
-	if auth_status_codes[localVarHTTPResponse.StatusCode] && !ignored_endpoints[endpoint] && authentificator != nil {
+	if authStatusCodes[localVarHTTPResponse.StatusCode] && !ignoredEndpoints[endpoint] && authenticator != nil {
+		// Drain and close the first response body so its connection can be
+		// reused; keep a buffered copy readable in case the retry fails and
+		// this response is returned to the caller.
+		firstRespBody, _ := io.ReadAll(localVarHTTPResponse.Body)
+		localVarHTTPResponse.Body.Close()
+		localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(firstRespBody))
 		// retry with token refresh
-		err = authentificator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
+		err = authenticator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
 		if err != nil {
 			return localVarReturnValue, localVarHTTPResponse, err
 		}
 		// Update auth header
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return localVarReturnValue, localVarHTTPResponse, err
+		}
 		req, err = a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 		if err != nil {
 			return localVarReturnValue, localVarHTTPResponse, err
@@ -994,9 +1039,9 @@ func (a *AdministratorsAPIService) AdminsCacheGetExecute(r APIAdminsCacheGetRequ
 		}
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -1090,19 +1135,21 @@ func (a *AdministratorsAPIService) AdminsCachePutExecute(r APIAdminsCachePutRequ
 
 	localBasePath := a.client.cfg.ArrayURL
 
-	non_auth_endpoints := map[string]bool{
+	nonAuthEndpoints := map[string]bool{
 		"AuthorizationAPIService.Oauth210TokenPost": true,
 		"AuthorizationAPIService.LoginPost":         true,
 	}
-	var authentificator Authentificator
-	if !non_auth_endpoints[endpoint] {
-		authentificator = a.client.cfg.Authentificator
+	var authenticator Authenticator
+	if !nonAuthEndpoints[endpoint] {
+		authenticator = a.client.cfg.Authenticator
 	} else {
-		authentificator = nil
+		authenticator = nil
 	}
 
-	if authentificator != nil {
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+	if authenticator != nil {
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return localVarReturnValue, nil, err
+		}
 	}
 
 	localVarPath := localBasePath + "/api/2.6/admins/cache"
@@ -1131,10 +1178,10 @@ func (a *AdministratorsAPIService) AdminsCachePutExecute(r APIAdminsCachePutRequ
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	if r.authorization != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("Authorization"), r.authorization, "")
 	}
 	if r.xRequestID != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "X-Request-ID", r.xRequestID, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("X-Request-ID"), r.xRequestID, "")
 	}
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
@@ -1146,23 +1193,30 @@ func (a *AdministratorsAPIService) AdminsCachePutExecute(r APIAdminsCachePutRequ
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	ignored_endpoints := map[string]bool{
+	ignoredEndpoints := map[string]bool{
 		"AuthorizationAPIService.LogoutPost": true,
 	}
 
-	auth_status_codes := map[int]bool{
+	authStatusCodes := map[int]bool{
 		401: true,
-		403: true,
 	}
 
-	if auth_status_codes[localVarHTTPResponse.StatusCode] && !ignored_endpoints[endpoint] && authentificator != nil {
+	if authStatusCodes[localVarHTTPResponse.StatusCode] && !ignoredEndpoints[endpoint] && authenticator != nil {
+		// Drain and close the first response body so its connection can be
+		// reused; keep a buffered copy readable in case the retry fails and
+		// this response is returned to the caller.
+		firstRespBody, _ := io.ReadAll(localVarHTTPResponse.Body)
+		localVarHTTPResponse.Body.Close()
+		localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(firstRespBody))
 		// retry with token refresh
-		err = authentificator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
+		err = authenticator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
 		if err != nil {
 			return localVarReturnValue, localVarHTTPResponse, err
 		}
 		// Update auth header
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return localVarReturnValue, localVarHTTPResponse, err
+		}
 		req, err = a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 		if err != nil {
 			return localVarReturnValue, localVarHTTPResponse, err
@@ -1173,9 +1227,9 @@ func (a *AdministratorsAPIService) AdminsCachePutExecute(r APIAdminsCachePutRequ
 		}
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -1265,19 +1319,21 @@ func (a *AdministratorsAPIService) AdminsDeleteExecute(r APIAdminsDeleteRequest)
 
 	localBasePath := a.client.cfg.ArrayURL
 
-	non_auth_endpoints := map[string]bool{
+	nonAuthEndpoints := map[string]bool{
 		"AuthorizationAPIService.Oauth210TokenPost": true,
 		"AuthorizationAPIService.LoginPost":         true,
 	}
-	var authentificator Authentificator
-	if !non_auth_endpoints[endpoint] {
-		authentificator = a.client.cfg.Authentificator
+	var authenticator Authenticator
+	if !nonAuthEndpoints[endpoint] {
+		authenticator = a.client.cfg.Authenticator
 	} else {
-		authentificator = nil
+		authenticator = nil
 	}
 
-	if authentificator != nil {
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+	if authenticator != nil {
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return nil, err
+		}
 	}
 
 	localVarPath := localBasePath + "/api/2.6/admins"
@@ -1306,10 +1362,10 @@ func (a *AdministratorsAPIService) AdminsDeleteExecute(r APIAdminsDeleteRequest)
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	if r.authorization != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("Authorization"), r.authorization, "")
 	}
 	if r.xRequestID != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "X-Request-ID", r.xRequestID, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("X-Request-ID"), r.xRequestID, "")
 	}
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
@@ -1321,23 +1377,30 @@ func (a *AdministratorsAPIService) AdminsDeleteExecute(r APIAdminsDeleteRequest)
 		return localVarHTTPResponse, err
 	}
 
-	ignored_endpoints := map[string]bool{
+	ignoredEndpoints := map[string]bool{
 		"AuthorizationAPIService.LogoutPost": true,
 	}
 
-	auth_status_codes := map[int]bool{
+	authStatusCodes := map[int]bool{
 		401: true,
-		403: true,
 	}
 
-	if auth_status_codes[localVarHTTPResponse.StatusCode] && !ignored_endpoints[endpoint] && authentificator != nil {
+	if authStatusCodes[localVarHTTPResponse.StatusCode] && !ignoredEndpoints[endpoint] && authenticator != nil {
+		// Drain and close the first response body so its connection can be
+		// reused; keep a buffered copy readable in case the retry fails and
+		// this response is returned to the caller.
+		firstRespBody, _ := io.ReadAll(localVarHTTPResponse.Body)
+		localVarHTTPResponse.Body.Close()
+		localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(firstRespBody))
 		// retry with token refresh
-		err = authentificator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
+		err = authenticator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
 		if err != nil {
 			return localVarHTTPResponse, err
 		}
 		// Update auth header
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return localVarHTTPResponse, err
+		}
 		req, err = a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 		if err != nil {
 			return localVarHTTPResponse, err
@@ -1348,9 +1411,9 @@ func (a *AdministratorsAPIService) AdminsDeleteExecute(r APIAdminsDeleteRequest)
 		}
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarHTTPResponse, err
 	}
@@ -1483,19 +1546,21 @@ func (a *AdministratorsAPIService) AdminsGetExecute(r APIAdminsGetRequest) (*Adm
 
 	localBasePath := a.client.cfg.ArrayURL
 
-	non_auth_endpoints := map[string]bool{
+	nonAuthEndpoints := map[string]bool{
 		"AuthorizationAPIService.Oauth210TokenPost": true,
 		"AuthorizationAPIService.LoginPost":         true,
 	}
-	var authentificator Authentificator
-	if !non_auth_endpoints[endpoint] {
-		authentificator = a.client.cfg.Authentificator
+	var authenticator Authenticator
+	if !nonAuthEndpoints[endpoint] {
+		authenticator = a.client.cfg.Authenticator
 	} else {
-		authentificator = nil
+		authenticator = nil
 	}
 
-	if authentificator != nil {
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+	if authenticator != nil {
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return localVarReturnValue, nil, err
+		}
 	}
 
 	localVarPath := localBasePath + "/api/2.6/admins"
@@ -1545,10 +1610,10 @@ func (a *AdministratorsAPIService) AdminsGetExecute(r APIAdminsGetRequest) (*Adm
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	if r.authorization != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("Authorization"), r.authorization, "")
 	}
 	if r.xRequestID != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "X-Request-ID", r.xRequestID, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("X-Request-ID"), r.xRequestID, "")
 	}
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
@@ -1560,23 +1625,30 @@ func (a *AdministratorsAPIService) AdminsGetExecute(r APIAdminsGetRequest) (*Adm
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	ignored_endpoints := map[string]bool{
+	ignoredEndpoints := map[string]bool{
 		"AuthorizationAPIService.LogoutPost": true,
 	}
 
-	auth_status_codes := map[int]bool{
+	authStatusCodes := map[int]bool{
 		401: true,
-		403: true,
 	}
 
-	if auth_status_codes[localVarHTTPResponse.StatusCode] && !ignored_endpoints[endpoint] && authentificator != nil {
+	if authStatusCodes[localVarHTTPResponse.StatusCode] && !ignoredEndpoints[endpoint] && authenticator != nil {
+		// Drain and close the first response body so its connection can be
+		// reused; keep a buffered copy readable in case the retry fails and
+		// this response is returned to the caller.
+		firstRespBody, _ := io.ReadAll(localVarHTTPResponse.Body)
+		localVarHTTPResponse.Body.Close()
+		localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(firstRespBody))
 		// retry with token refresh
-		err = authentificator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
+		err = authenticator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
 		if err != nil {
 			return localVarReturnValue, localVarHTTPResponse, err
 		}
 		// Update auth header
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return localVarReturnValue, localVarHTTPResponse, err
+		}
 		req, err = a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 		if err != nil {
 			return localVarReturnValue, localVarHTTPResponse, err
@@ -1587,9 +1659,9 @@ func (a *AdministratorsAPIService) AdminsGetExecute(r APIAdminsGetRequest) (*Adm
 		}
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -1688,19 +1760,21 @@ func (a *AdministratorsAPIService) AdminsPatchExecute(r APIAdminsPatchRequest) (
 
 	localBasePath := a.client.cfg.ArrayURL
 
-	non_auth_endpoints := map[string]bool{
+	nonAuthEndpoints := map[string]bool{
 		"AuthorizationAPIService.Oauth210TokenPost": true,
 		"AuthorizationAPIService.LoginPost":         true,
 	}
-	var authentificator Authentificator
-	if !non_auth_endpoints[endpoint] {
-		authentificator = a.client.cfg.Authentificator
+	var authenticator Authenticator
+	if !nonAuthEndpoints[endpoint] {
+		authenticator = a.client.cfg.Authenticator
 	} else {
-		authentificator = nil
+		authenticator = nil
 	}
 
-	if authentificator != nil {
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+	if authenticator != nil {
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return localVarReturnValue, nil, err
+		}
 	}
 
 	localVarPath := localBasePath + "/api/2.6/admins"
@@ -1732,10 +1806,10 @@ func (a *AdministratorsAPIService) AdminsPatchExecute(r APIAdminsPatchRequest) (
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	if r.authorization != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("Authorization"), r.authorization, "")
 	}
 	if r.xRequestID != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "X-Request-ID", r.xRequestID, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("X-Request-ID"), r.xRequestID, "")
 	}
 	// body params
 	localVarPostBody = r.admin
@@ -1749,23 +1823,30 @@ func (a *AdministratorsAPIService) AdminsPatchExecute(r APIAdminsPatchRequest) (
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	ignored_endpoints := map[string]bool{
+	ignoredEndpoints := map[string]bool{
 		"AuthorizationAPIService.LogoutPost": true,
 	}
 
-	auth_status_codes := map[int]bool{
+	authStatusCodes := map[int]bool{
 		401: true,
-		403: true,
 	}
 
-	if auth_status_codes[localVarHTTPResponse.StatusCode] && !ignored_endpoints[endpoint] && authentificator != nil {
+	if authStatusCodes[localVarHTTPResponse.StatusCode] && !ignoredEndpoints[endpoint] && authenticator != nil {
+		// Drain and close the first response body so its connection can be
+		// reused; keep a buffered copy readable in case the retry fails and
+		// this response is returned to the caller.
+		firstRespBody, _ := io.ReadAll(localVarHTTPResponse.Body)
+		localVarHTTPResponse.Body.Close()
+		localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(firstRespBody))
 		// retry with token refresh
-		err = authentificator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
+		err = authenticator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
 		if err != nil {
 			return localVarReturnValue, localVarHTTPResponse, err
 		}
 		// Update auth header
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return localVarReturnValue, localVarHTTPResponse, err
+		}
 		req, err = a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 		if err != nil {
 			return localVarReturnValue, localVarHTTPResponse, err
@@ -1776,9 +1857,9 @@ func (a *AdministratorsAPIService) AdminsPatchExecute(r APIAdminsPatchRequest) (
 		}
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -1877,19 +1958,21 @@ func (a *AdministratorsAPIService) AdminsPostExecute(r APIAdminsPostRequest) (*A
 
 	localBasePath := a.client.cfg.ArrayURL
 
-	non_auth_endpoints := map[string]bool{
+	nonAuthEndpoints := map[string]bool{
 		"AuthorizationAPIService.Oauth210TokenPost": true,
 		"AuthorizationAPIService.LoginPost":         true,
 	}
-	var authentificator Authentificator
-	if !non_auth_endpoints[endpoint] {
-		authentificator = a.client.cfg.Authentificator
+	var authenticator Authenticator
+	if !nonAuthEndpoints[endpoint] {
+		authenticator = a.client.cfg.Authenticator
 	} else {
-		authentificator = nil
+		authenticator = nil
 	}
 
-	if authentificator != nil {
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+	if authenticator != nil {
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return localVarReturnValue, nil, err
+		}
 	}
 
 	localVarPath := localBasePath + "/api/2.6/admins"
@@ -1921,10 +2004,10 @@ func (a *AdministratorsAPIService) AdminsPostExecute(r APIAdminsPostRequest) (*A
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	if r.authorization != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("Authorization"), r.authorization, "")
 	}
 	if r.xRequestID != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "X-Request-ID", r.xRequestID, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("X-Request-ID"), r.xRequestID, "")
 	}
 	// body params
 	localVarPostBody = r.admin
@@ -1938,23 +2021,30 @@ func (a *AdministratorsAPIService) AdminsPostExecute(r APIAdminsPostRequest) (*A
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	ignored_endpoints := map[string]bool{
+	ignoredEndpoints := map[string]bool{
 		"AuthorizationAPIService.LogoutPost": true,
 	}
 
-	auth_status_codes := map[int]bool{
+	authStatusCodes := map[int]bool{
 		401: true,
-		403: true,
 	}
 
-	if auth_status_codes[localVarHTTPResponse.StatusCode] && !ignored_endpoints[endpoint] && authentificator != nil {
+	if authStatusCodes[localVarHTTPResponse.StatusCode] && !ignoredEndpoints[endpoint] && authenticator != nil {
+		// Drain and close the first response body so its connection can be
+		// reused; keep a buffered copy readable in case the retry fails and
+		// this response is returned to the caller.
+		firstRespBody, _ := io.ReadAll(localVarHTTPResponse.Body)
+		localVarHTTPResponse.Body.Close()
+		localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(firstRespBody))
 		// retry with token refresh
-		err = authentificator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
+		err = authenticator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
 		if err != nil {
 			return localVarReturnValue, localVarHTTPResponse, err
 		}
 		// Update auth header
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return localVarReturnValue, localVarHTTPResponse, err
+		}
 		req, err = a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 		if err != nil {
 			return localVarReturnValue, localVarHTTPResponse, err
@@ -1965,9 +2055,9 @@ func (a *AdministratorsAPIService) AdminsPostExecute(r APIAdminsPostRequest) (*A
 		}
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -2088,19 +2178,21 @@ func (a *AdministratorsAPIService) AdminsSettingsGetExecute(r APIAdminsSettingsG
 
 	localBasePath := a.client.cfg.ArrayURL
 
-	non_auth_endpoints := map[string]bool{
+	nonAuthEndpoints := map[string]bool{
 		"AuthorizationAPIService.Oauth210TokenPost": true,
 		"AuthorizationAPIService.LoginPost":         true,
 	}
-	var authentificator Authentificator
-	if !non_auth_endpoints[endpoint] {
-		authentificator = a.client.cfg.Authentificator
+	var authenticator Authenticator
+	if !nonAuthEndpoints[endpoint] {
+		authenticator = a.client.cfg.Authenticator
 	} else {
-		authentificator = nil
+		authenticator = nil
 	}
 
-	if authentificator != nil {
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+	if authenticator != nil {
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return localVarReturnValue, nil, err
+		}
 	}
 
 	localVarPath := localBasePath + "/api/2.6/admins/settings"
@@ -2141,10 +2233,10 @@ func (a *AdministratorsAPIService) AdminsSettingsGetExecute(r APIAdminsSettingsG
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	if r.authorization != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("Authorization"), r.authorization, "")
 	}
 	if r.xRequestID != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "X-Request-ID", r.xRequestID, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("X-Request-ID"), r.xRequestID, "")
 	}
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
@@ -2156,23 +2248,30 @@ func (a *AdministratorsAPIService) AdminsSettingsGetExecute(r APIAdminsSettingsG
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	ignored_endpoints := map[string]bool{
+	ignoredEndpoints := map[string]bool{
 		"AuthorizationAPIService.LogoutPost": true,
 	}
 
-	auth_status_codes := map[int]bool{
+	authStatusCodes := map[int]bool{
 		401: true,
-		403: true,
 	}
 
-	if auth_status_codes[localVarHTTPResponse.StatusCode] && !ignored_endpoints[endpoint] && authentificator != nil {
+	if authStatusCodes[localVarHTTPResponse.StatusCode] && !ignoredEndpoints[endpoint] && authenticator != nil {
+		// Drain and close the first response body so its connection can be
+		// reused; keep a buffered copy readable in case the retry fails and
+		// this response is returned to the caller.
+		firstRespBody, _ := io.ReadAll(localVarHTTPResponse.Body)
+		localVarHTTPResponse.Body.Close()
+		localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(firstRespBody))
 		// retry with token refresh
-		err = authentificator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
+		err = authenticator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
 		if err != nil {
 			return localVarReturnValue, localVarHTTPResponse, err
 		}
 		// Update auth header
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return localVarReturnValue, localVarHTTPResponse, err
+		}
 		req, err = a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 		if err != nil {
 			return localVarReturnValue, localVarHTTPResponse, err
@@ -2183,9 +2282,9 @@ func (a *AdministratorsAPIService) AdminsSettingsGetExecute(r APIAdminsSettingsG
 		}
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -2277,19 +2376,21 @@ func (a *AdministratorsAPIService) AdminsSettingsPatchExecute(r APIAdminsSetting
 
 	localBasePath := a.client.cfg.ArrayURL
 
-	non_auth_endpoints := map[string]bool{
+	nonAuthEndpoints := map[string]bool{
 		"AuthorizationAPIService.Oauth210TokenPost": true,
 		"AuthorizationAPIService.LoginPost":         true,
 	}
-	var authentificator Authentificator
-	if !non_auth_endpoints[endpoint] {
-		authentificator = a.client.cfg.Authentificator
+	var authenticator Authenticator
+	if !nonAuthEndpoints[endpoint] {
+		authenticator = a.client.cfg.Authenticator
 	} else {
-		authentificator = nil
+		authenticator = nil
 	}
 
-	if authentificator != nil {
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+	if authenticator != nil {
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return localVarReturnValue, nil, err
+		}
 	}
 
 	localVarPath := localBasePath + "/api/2.6/admins/settings"
@@ -2318,10 +2419,10 @@ func (a *AdministratorsAPIService) AdminsSettingsPatchExecute(r APIAdminsSetting
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	if r.authorization != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("Authorization"), r.authorization, "")
 	}
 	if r.xRequestID != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "X-Request-ID", r.xRequestID, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("X-Request-ID"), r.xRequestID, "")
 	}
 	// body params
 	localVarPostBody = r.adminSettings
@@ -2335,23 +2436,30 @@ func (a *AdministratorsAPIService) AdminsSettingsPatchExecute(r APIAdminsSetting
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	ignored_endpoints := map[string]bool{
+	ignoredEndpoints := map[string]bool{
 		"AuthorizationAPIService.LogoutPost": true,
 	}
 
-	auth_status_codes := map[int]bool{
+	authStatusCodes := map[int]bool{
 		401: true,
-		403: true,
 	}
 
-	if auth_status_codes[localVarHTTPResponse.StatusCode] && !ignored_endpoints[endpoint] && authentificator != nil {
+	if authStatusCodes[localVarHTTPResponse.StatusCode] && !ignoredEndpoints[endpoint] && authenticator != nil {
+		// Drain and close the first response body so its connection can be
+		// reused; keep a buffered copy readable in case the retry fails and
+		// this response is returned to the caller.
+		firstRespBody, _ := io.ReadAll(localVarHTTPResponse.Body)
+		localVarHTTPResponse.Body.Close()
+		localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(firstRespBody))
 		// retry with token refresh
-		err = authentificator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
+		err = authenticator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
 		if err != nil {
 			return localVarReturnValue, localVarHTTPResponse, err
 		}
 		// Update auth header
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return localVarReturnValue, localVarHTTPResponse, err
+		}
 		req, err = a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 		if err != nil {
 			return localVarReturnValue, localVarHTTPResponse, err
@@ -2362,9 +2470,9 @@ func (a *AdministratorsAPIService) AdminsSettingsPatchExecute(r APIAdminsSetting
 		}
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}

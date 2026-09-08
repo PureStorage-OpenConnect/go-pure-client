@@ -13,7 +13,7 @@ package gopureclient
 import (
 	"bytes"
 	"context"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"net/url"
 )
@@ -78,19 +78,21 @@ func (a *KMIPAPIService) KmipDeleteExecute(r APIKmipDeleteRequest) (*http.Respon
 
 	localBasePath := a.client.cfg.ArrayURL
 
-	non_auth_endpoints := map[string]bool{
+	nonAuthEndpoints := map[string]bool{
 		"AuthorizationAPIService.Oauth210TokenPost": true,
 		"AuthorizationAPIService.LoginPost":         true,
 	}
-	var authentificator Authentificator
-	if !non_auth_endpoints[endpoint] {
-		authentificator = a.client.cfg.Authentificator
+	var authenticator Authenticator
+	if !nonAuthEndpoints[endpoint] {
+		authenticator = a.client.cfg.Authenticator
 	} else {
-		authentificator = nil
+		authenticator = nil
 	}
 
-	if authentificator != nil {
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+	if authenticator != nil {
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return nil, err
+		}
 	}
 
 	localVarPath := localBasePath + "/api/2.8/kmip"
@@ -122,7 +124,7 @@ func (a *KMIPAPIService) KmipDeleteExecute(r APIKmipDeleteRequest) (*http.Respon
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	if r.authorizationHeader != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "x-auth-token", r.authorizationHeader, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("x-auth-token"), r.authorizationHeader, "")
 	}
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
@@ -134,23 +136,31 @@ func (a *KMIPAPIService) KmipDeleteExecute(r APIKmipDeleteRequest) (*http.Respon
 		return localVarHTTPResponse, err
 	}
 
-	ignored_endpoints := map[string]bool{
+	ignoredEndpoints := map[string]bool{
 		"AuthorizationAPIService.LogoutPost": true,
 	}
 
-	auth_status_codes := map[int]bool{
+	authStatusCodes := map[int]bool{
 		401: true,
 		403: true,
 	}
 
-	if auth_status_codes[localVarHTTPResponse.StatusCode] && !ignored_endpoints[endpoint] && authentificator != nil {
+	if authStatusCodes[localVarHTTPResponse.StatusCode] && !ignoredEndpoints[endpoint] && authenticator != nil {
+		// Drain and close the first response body so its connection can be
+		// reused; keep a buffered copy readable in case the retry fails and
+		// this response is returned to the caller.
+		firstRespBody, _ := io.ReadAll(localVarHTTPResponse.Body)
+		localVarHTTPResponse.Body.Close()
+		localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(firstRespBody))
 		// retry with token refresh
-		err = authentificator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
+		err = authenticator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
 		if err != nil {
 			return localVarHTTPResponse, err
 		}
 		// Update auth header
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return localVarHTTPResponse, err
+		}
 		req, err = a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 		if err != nil {
 			return localVarHTTPResponse, err
@@ -161,9 +171,9 @@ func (a *KMIPAPIService) KmipDeleteExecute(r APIKmipDeleteRequest) (*http.Respon
 		}
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarHTTPResponse, err
 	}
@@ -281,19 +291,21 @@ func (a *KMIPAPIService) KmipGetExecute(r APIKmipGetRequest) (*KmipServerRespons
 
 	localBasePath := a.client.cfg.ArrayURL
 
-	non_auth_endpoints := map[string]bool{
+	nonAuthEndpoints := map[string]bool{
 		"AuthorizationAPIService.Oauth210TokenPost": true,
 		"AuthorizationAPIService.LoginPost":         true,
 	}
-	var authentificator Authentificator
-	if !non_auth_endpoints[endpoint] {
-		authentificator = a.client.cfg.Authentificator
+	var authenticator Authenticator
+	if !nonAuthEndpoints[endpoint] {
+		authenticator = a.client.cfg.Authenticator
 	} else {
-		authentificator = nil
+		authenticator = nil
 	}
 
-	if authentificator != nil {
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+	if authenticator != nil {
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return localVarReturnValue, nil, err
+		}
 	}
 
 	localVarPath := localBasePath + "/api/2.8/kmip"
@@ -340,7 +352,7 @@ func (a *KMIPAPIService) KmipGetExecute(r APIKmipGetRequest) (*KmipServerRespons
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	if r.authorizationHeader != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "x-auth-token", r.authorizationHeader, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("x-auth-token"), r.authorizationHeader, "")
 	}
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
@@ -352,23 +364,31 @@ func (a *KMIPAPIService) KmipGetExecute(r APIKmipGetRequest) (*KmipServerRespons
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	ignored_endpoints := map[string]bool{
+	ignoredEndpoints := map[string]bool{
 		"AuthorizationAPIService.LogoutPost": true,
 	}
 
-	auth_status_codes := map[int]bool{
+	authStatusCodes := map[int]bool{
 		401: true,
 		403: true,
 	}
 
-	if auth_status_codes[localVarHTTPResponse.StatusCode] && !ignored_endpoints[endpoint] && authentificator != nil {
+	if authStatusCodes[localVarHTTPResponse.StatusCode] && !ignoredEndpoints[endpoint] && authenticator != nil {
+		// Drain and close the first response body so its connection can be
+		// reused; keep a buffered copy readable in case the retry fails and
+		// this response is returned to the caller.
+		firstRespBody, _ := io.ReadAll(localVarHTTPResponse.Body)
+		localVarHTTPResponse.Body.Close()
+		localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(firstRespBody))
 		// retry with token refresh
-		err = authentificator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
+		err = authenticator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
 		if err != nil {
 			return localVarReturnValue, localVarHTTPResponse, err
 		}
 		// Update auth header
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return localVarReturnValue, localVarHTTPResponse, err
+		}
 		req, err = a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 		if err != nil {
 			return localVarReturnValue, localVarHTTPResponse, err
@@ -379,9 +399,9 @@ func (a *KMIPAPIService) KmipGetExecute(r APIKmipGetRequest) (*KmipServerRespons
 		}
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -479,19 +499,21 @@ func (a *KMIPAPIService) KmipPatchExecute(r APIKmipPatchRequest) (*KmipServerRes
 
 	localBasePath := a.client.cfg.ArrayURL
 
-	non_auth_endpoints := map[string]bool{
+	nonAuthEndpoints := map[string]bool{
 		"AuthorizationAPIService.Oauth210TokenPost": true,
 		"AuthorizationAPIService.LoginPost":         true,
 	}
-	var authentificator Authentificator
-	if !non_auth_endpoints[endpoint] {
-		authentificator = a.client.cfg.Authentificator
+	var authenticator Authenticator
+	if !nonAuthEndpoints[endpoint] {
+		authenticator = a.client.cfg.Authenticator
 	} else {
-		authentificator = nil
+		authenticator = nil
 	}
 
-	if authentificator != nil {
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+	if authenticator != nil {
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return localVarReturnValue, nil, err
+		}
 	}
 
 	localVarPath := localBasePath + "/api/2.8/kmip"
@@ -526,7 +548,7 @@ func (a *KMIPAPIService) KmipPatchExecute(r APIKmipPatchRequest) (*KmipServerRes
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	if r.authorizationHeader != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "x-auth-token", r.authorizationHeader, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("x-auth-token"), r.authorizationHeader, "")
 	}
 	// body params
 	localVarPostBody = r.kmipServer
@@ -540,23 +562,31 @@ func (a *KMIPAPIService) KmipPatchExecute(r APIKmipPatchRequest) (*KmipServerRes
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	ignored_endpoints := map[string]bool{
+	ignoredEndpoints := map[string]bool{
 		"AuthorizationAPIService.LogoutPost": true,
 	}
 
-	auth_status_codes := map[int]bool{
+	authStatusCodes := map[int]bool{
 		401: true,
 		403: true,
 	}
 
-	if auth_status_codes[localVarHTTPResponse.StatusCode] && !ignored_endpoints[endpoint] && authentificator != nil {
+	if authStatusCodes[localVarHTTPResponse.StatusCode] && !ignoredEndpoints[endpoint] && authenticator != nil {
+		// Drain and close the first response body so its connection can be
+		// reused; keep a buffered copy readable in case the retry fails and
+		// this response is returned to the caller.
+		firstRespBody, _ := io.ReadAll(localVarHTTPResponse.Body)
+		localVarHTTPResponse.Body.Close()
+		localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(firstRespBody))
 		// retry with token refresh
-		err = authentificator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
+		err = authenticator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
 		if err != nil {
 			return localVarReturnValue, localVarHTTPResponse, err
 		}
 		// Update auth header
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return localVarReturnValue, localVarHTTPResponse, err
+		}
 		req, err = a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 		if err != nil {
 			return localVarReturnValue, localVarHTTPResponse, err
@@ -567,9 +597,9 @@ func (a *KMIPAPIService) KmipPatchExecute(r APIKmipPatchRequest) (*KmipServerRes
 		}
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -660,19 +690,21 @@ func (a *KMIPAPIService) KmipPostExecute(r APIKmipPostRequest) (*KmipServerRespo
 
 	localBasePath := a.client.cfg.ArrayURL
 
-	non_auth_endpoints := map[string]bool{
+	nonAuthEndpoints := map[string]bool{
 		"AuthorizationAPIService.Oauth210TokenPost": true,
 		"AuthorizationAPIService.LoginPost":         true,
 	}
-	var authentificator Authentificator
-	if !non_auth_endpoints[endpoint] {
-		authentificator = a.client.cfg.Authentificator
+	var authenticator Authenticator
+	if !nonAuthEndpoints[endpoint] {
+		authenticator = a.client.cfg.Authenticator
 	} else {
-		authentificator = nil
+		authenticator = nil
 	}
 
-	if authentificator != nil {
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+	if authenticator != nil {
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return localVarReturnValue, nil, err
+		}
 	}
 
 	localVarPath := localBasePath + "/api/2.8/kmip"
@@ -704,7 +736,7 @@ func (a *KMIPAPIService) KmipPostExecute(r APIKmipPostRequest) (*KmipServerRespo
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	if r.authorizationHeader != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "x-auth-token", r.authorizationHeader, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("x-auth-token"), r.authorizationHeader, "")
 	}
 	// body params
 	localVarPostBody = r.kmipServer
@@ -718,23 +750,31 @@ func (a *KMIPAPIService) KmipPostExecute(r APIKmipPostRequest) (*KmipServerRespo
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	ignored_endpoints := map[string]bool{
+	ignoredEndpoints := map[string]bool{
 		"AuthorizationAPIService.LogoutPost": true,
 	}
 
-	auth_status_codes := map[int]bool{
+	authStatusCodes := map[int]bool{
 		401: true,
 		403: true,
 	}
 
-	if auth_status_codes[localVarHTTPResponse.StatusCode] && !ignored_endpoints[endpoint] && authentificator != nil {
+	if authStatusCodes[localVarHTTPResponse.StatusCode] && !ignoredEndpoints[endpoint] && authenticator != nil {
+		// Drain and close the first response body so its connection can be
+		// reused; keep a buffered copy readable in case the retry fails and
+		// this response is returned to the caller.
+		firstRespBody, _ := io.ReadAll(localVarHTTPResponse.Body)
+		localVarHTTPResponse.Body.Close()
+		localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(firstRespBody))
 		// retry with token refresh
-		err = authentificator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
+		err = authenticator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
 		if err != nil {
 			return localVarReturnValue, localVarHTTPResponse, err
 		}
 		// Update auth header
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return localVarReturnValue, localVarHTTPResponse, err
+		}
 		req, err = a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 		if err != nil {
 			return localVarReturnValue, localVarHTTPResponse, err
@@ -745,9 +785,9 @@ func (a *KMIPAPIService) KmipPostExecute(r APIKmipPostRequest) (*KmipServerRespo
 		}
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -839,19 +879,21 @@ func (a *KMIPAPIService) KmipTestGetExecute(r APIKmipTestGetRequest) (*TestResul
 
 	localBasePath := a.client.cfg.ArrayURL
 
-	non_auth_endpoints := map[string]bool{
+	nonAuthEndpoints := map[string]bool{
 		"AuthorizationAPIService.Oauth210TokenPost": true,
 		"AuthorizationAPIService.LoginPost":         true,
 	}
-	var authentificator Authentificator
-	if !non_auth_endpoints[endpoint] {
-		authentificator = a.client.cfg.Authentificator
+	var authenticator Authenticator
+	if !nonAuthEndpoints[endpoint] {
+		authenticator = a.client.cfg.Authenticator
 	} else {
-		authentificator = nil
+		authenticator = nil
 	}
 
-	if authentificator != nil {
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+	if authenticator != nil {
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return localVarReturnValue, nil, err
+		}
 	}
 
 	localVarPath := localBasePath + "/api/2.8/kmip/test"
@@ -883,7 +925,7 @@ func (a *KMIPAPIService) KmipTestGetExecute(r APIKmipTestGetRequest) (*TestResul
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	if r.authorizationHeader != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "x-auth-token", r.authorizationHeader, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("x-auth-token"), r.authorizationHeader, "")
 	}
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
@@ -895,23 +937,31 @@ func (a *KMIPAPIService) KmipTestGetExecute(r APIKmipTestGetRequest) (*TestResul
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	ignored_endpoints := map[string]bool{
+	ignoredEndpoints := map[string]bool{
 		"AuthorizationAPIService.LogoutPost": true,
 	}
 
-	auth_status_codes := map[int]bool{
+	authStatusCodes := map[int]bool{
 		401: true,
 		403: true,
 	}
 
-	if auth_status_codes[localVarHTTPResponse.StatusCode] && !ignored_endpoints[endpoint] && authentificator != nil {
+	if authStatusCodes[localVarHTTPResponse.StatusCode] && !ignoredEndpoints[endpoint] && authenticator != nil {
+		// Drain and close the first response body so its connection can be
+		// reused; keep a buffered copy readable in case the retry fails and
+		// this response is returned to the caller.
+		firstRespBody, _ := io.ReadAll(localVarHTTPResponse.Body)
+		localVarHTTPResponse.Body.Close()
+		localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(firstRespBody))
 		// retry with token refresh
-		err = authentificator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
+		err = authenticator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
 		if err != nil {
 			return localVarReturnValue, localVarHTTPResponse, err
 		}
 		// Update auth header
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return localVarReturnValue, localVarHTTPResponse, err
+		}
 		req, err = a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 		if err != nil {
 			return localVarReturnValue, localVarHTTPResponse, err
@@ -922,9 +972,9 @@ func (a *KMIPAPIService) KmipTestGetExecute(r APIKmipTestGetRequest) (*TestResul
 		}
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}

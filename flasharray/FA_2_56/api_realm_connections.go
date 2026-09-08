@@ -13,7 +13,7 @@ package gopureclient
 import (
 	"bytes"
 	"context"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"net/url"
 )
@@ -95,19 +95,21 @@ func (a *RealmConnectionsAPIService) RealmConnectionsConnectionKeysDeleteExecute
 
 	localBasePath := a.client.cfg.ArrayURL
 
-	non_auth_endpoints := map[string]bool{
+	nonAuthEndpoints := map[string]bool{
 		"AuthorizationAPIService.Oauth210TokenPost": true,
 		"AuthorizationAPIService.LoginPost":         true,
 	}
-	var authentificator Authentificator
-	if !non_auth_endpoints[endpoint] {
-		authentificator = a.client.cfg.Authentificator
+	var authenticator Authenticator
+	if !nonAuthEndpoints[endpoint] {
+		authenticator = a.client.cfg.Authenticator
 	} else {
-		authentificator = nil
+		authenticator = nil
 	}
 
-	if authentificator != nil {
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+	if authenticator != nil {
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return nil, err
+		}
 	}
 
 	localVarPath := localBasePath + "/api/2.56/realm-connections/connection-keys"
@@ -142,10 +144,10 @@ func (a *RealmConnectionsAPIService) RealmConnectionsConnectionKeysDeleteExecute
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	if r.authorization != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("Authorization"), r.authorization, "")
 	}
 	if r.xRequestID != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "X-Request-ID", r.xRequestID, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("X-Request-ID"), r.xRequestID, "")
 	}
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
@@ -157,23 +159,30 @@ func (a *RealmConnectionsAPIService) RealmConnectionsConnectionKeysDeleteExecute
 		return localVarHTTPResponse, err
 	}
 
-	ignored_endpoints := map[string]bool{
+	ignoredEndpoints := map[string]bool{
 		"AuthorizationAPIService.LogoutPost": true,
 	}
 
-	auth_status_codes := map[int]bool{
+	authStatusCodes := map[int]bool{
 		401: true,
-		403: true,
 	}
 
-	if auth_status_codes[localVarHTTPResponse.StatusCode] && !ignored_endpoints[endpoint] && authentificator != nil {
+	if authStatusCodes[localVarHTTPResponse.StatusCode] && !ignoredEndpoints[endpoint] && authenticator != nil {
+		// Drain and close the first response body so its connection can be
+		// reused; keep a buffered copy readable in case the retry fails and
+		// this response is returned to the caller.
+		firstRespBody, _ := io.ReadAll(localVarHTTPResponse.Body)
+		localVarHTTPResponse.Body.Close()
+		localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(firstRespBody))
 		// retry with token refresh
-		err = authentificator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
+		err = authenticator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
 		if err != nil {
 			return localVarHTTPResponse, err
 		}
 		// Update auth header
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return localVarHTTPResponse, err
+		}
 		req, err = a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 		if err != nil {
 			return localVarHTTPResponse, err
@@ -184,9 +193,9 @@ func (a *RealmConnectionsAPIService) RealmConnectionsConnectionKeysDeleteExecute
 		}
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarHTTPResponse, err
 	}
@@ -334,19 +343,21 @@ func (a *RealmConnectionsAPIService) RealmConnectionsConnectionKeysGetExecute(r 
 
 	localBasePath := a.client.cfg.ArrayURL
 
-	non_auth_endpoints := map[string]bool{
+	nonAuthEndpoints := map[string]bool{
 		"AuthorizationAPIService.Oauth210TokenPost": true,
 		"AuthorizationAPIService.LoginPost":         true,
 	}
-	var authentificator Authentificator
-	if !non_auth_endpoints[endpoint] {
-		authentificator = a.client.cfg.Authentificator
+	var authenticator Authenticator
+	if !nonAuthEndpoints[endpoint] {
+		authenticator = a.client.cfg.Authenticator
 	} else {
-		authentificator = nil
+		authenticator = nil
 	}
 
-	if authentificator != nil {
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+	if authenticator != nil {
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return localVarReturnValue, nil, err
+		}
 	}
 
 	localVarPath := localBasePath + "/api/2.56/realm-connections/connection-keys"
@@ -402,10 +413,10 @@ func (a *RealmConnectionsAPIService) RealmConnectionsConnectionKeysGetExecute(r 
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	if r.authorization != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("Authorization"), r.authorization, "")
 	}
 	if r.xRequestID != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "X-Request-ID", r.xRequestID, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("X-Request-ID"), r.xRequestID, "")
 	}
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
@@ -417,23 +428,30 @@ func (a *RealmConnectionsAPIService) RealmConnectionsConnectionKeysGetExecute(r 
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	ignored_endpoints := map[string]bool{
+	ignoredEndpoints := map[string]bool{
 		"AuthorizationAPIService.LogoutPost": true,
 	}
 
-	auth_status_codes := map[int]bool{
+	authStatusCodes := map[int]bool{
 		401: true,
-		403: true,
 	}
 
-	if auth_status_codes[localVarHTTPResponse.StatusCode] && !ignored_endpoints[endpoint] && authentificator != nil {
+	if authStatusCodes[localVarHTTPResponse.StatusCode] && !ignoredEndpoints[endpoint] && authenticator != nil {
+		// Drain and close the first response body so its connection can be
+		// reused; keep a buffered copy readable in case the retry fails and
+		// this response is returned to the caller.
+		firstRespBody, _ := io.ReadAll(localVarHTTPResponse.Body)
+		localVarHTTPResponse.Body.Close()
+		localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(firstRespBody))
 		// retry with token refresh
-		err = authentificator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
+		err = authenticator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
 		if err != nil {
 			return localVarReturnValue, localVarHTTPResponse, err
 		}
 		// Update auth header
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return localVarReturnValue, localVarHTTPResponse, err
+		}
 		req, err = a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 		if err != nil {
 			return localVarReturnValue, localVarHTTPResponse, err
@@ -444,9 +462,9 @@ func (a *RealmConnectionsAPIService) RealmConnectionsConnectionKeysGetExecute(r 
 		}
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -561,19 +579,21 @@ func (a *RealmConnectionsAPIService) RealmConnectionsConnectionKeysPostExecute(r
 
 	localBasePath := a.client.cfg.ArrayURL
 
-	non_auth_endpoints := map[string]bool{
+	nonAuthEndpoints := map[string]bool{
 		"AuthorizationAPIService.Oauth210TokenPost": true,
 		"AuthorizationAPIService.LoginPost":         true,
 	}
-	var authentificator Authentificator
-	if !non_auth_endpoints[endpoint] {
-		authentificator = a.client.cfg.Authentificator
+	var authenticator Authenticator
+	if !nonAuthEndpoints[endpoint] {
+		authenticator = a.client.cfg.Authenticator
 	} else {
-		authentificator = nil
+		authenticator = nil
 	}
 
-	if authentificator != nil {
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+	if authenticator != nil {
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return localVarReturnValue, nil, err
+		}
 	}
 
 	localVarPath := localBasePath + "/api/2.56/realm-connections/connection-keys"
@@ -611,10 +631,10 @@ func (a *RealmConnectionsAPIService) RealmConnectionsConnectionKeysPostExecute(r
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	if r.authorization != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("Authorization"), r.authorization, "")
 	}
 	if r.xRequestID != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "X-Request-ID", r.xRequestID, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("X-Request-ID"), r.xRequestID, "")
 	}
 	// body params
 	localVarPostBody = r.connectionKey
@@ -628,23 +648,30 @@ func (a *RealmConnectionsAPIService) RealmConnectionsConnectionKeysPostExecute(r
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	ignored_endpoints := map[string]bool{
+	ignoredEndpoints := map[string]bool{
 		"AuthorizationAPIService.LogoutPost": true,
 	}
 
-	auth_status_codes := map[int]bool{
+	authStatusCodes := map[int]bool{
 		401: true,
-		403: true,
 	}
 
-	if auth_status_codes[localVarHTTPResponse.StatusCode] && !ignored_endpoints[endpoint] && authentificator != nil {
+	if authStatusCodes[localVarHTTPResponse.StatusCode] && !ignoredEndpoints[endpoint] && authenticator != nil {
+		// Drain and close the first response body so its connection can be
+		// reused; keep a buffered copy readable in case the retry fails and
+		// this response is returned to the caller.
+		firstRespBody, _ := io.ReadAll(localVarHTTPResponse.Body)
+		localVarHTTPResponse.Body.Close()
+		localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(firstRespBody))
 		// retry with token refresh
-		err = authentificator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
+		err = authenticator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
 		if err != nil {
 			return localVarReturnValue, localVarHTTPResponse, err
 		}
 		// Update auth header
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return localVarReturnValue, localVarHTTPResponse, err
+		}
 		req, err = a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 		if err != nil {
 			return localVarReturnValue, localVarHTTPResponse, err
@@ -655,9 +682,9 @@ func (a *RealmConnectionsAPIService) RealmConnectionsConnectionKeysPostExecute(r
 		}
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -782,19 +809,21 @@ func (a *RealmConnectionsAPIService) RealmConnectionsDeleteExecute(r APIRealmCon
 
 	localBasePath := a.client.cfg.ArrayURL
 
-	non_auth_endpoints := map[string]bool{
+	nonAuthEndpoints := map[string]bool{
 		"AuthorizationAPIService.Oauth210TokenPost": true,
 		"AuthorizationAPIService.LoginPost":         true,
 	}
-	var authentificator Authentificator
-	if !non_auth_endpoints[endpoint] {
-		authentificator = a.client.cfg.Authentificator
+	var authenticator Authenticator
+	if !nonAuthEndpoints[endpoint] {
+		authenticator = a.client.cfg.Authenticator
 	} else {
-		authentificator = nil
+		authenticator = nil
 	}
 
-	if authentificator != nil {
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+	if authenticator != nil {
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return nil, err
+		}
 	}
 
 	localVarPath := localBasePath + "/api/2.56/realm-connections"
@@ -838,10 +867,10 @@ func (a *RealmConnectionsAPIService) RealmConnectionsDeleteExecute(r APIRealmCon
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	if r.authorization != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("Authorization"), r.authorization, "")
 	}
 	if r.xRequestID != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "X-Request-ID", r.xRequestID, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("X-Request-ID"), r.xRequestID, "")
 	}
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
@@ -853,23 +882,30 @@ func (a *RealmConnectionsAPIService) RealmConnectionsDeleteExecute(r APIRealmCon
 		return localVarHTTPResponse, err
 	}
 
-	ignored_endpoints := map[string]bool{
+	ignoredEndpoints := map[string]bool{
 		"AuthorizationAPIService.LogoutPost": true,
 	}
 
-	auth_status_codes := map[int]bool{
+	authStatusCodes := map[int]bool{
 		401: true,
-		403: true,
 	}
 
-	if auth_status_codes[localVarHTTPResponse.StatusCode] && !ignored_endpoints[endpoint] && authentificator != nil {
+	if authStatusCodes[localVarHTTPResponse.StatusCode] && !ignoredEndpoints[endpoint] && authenticator != nil {
+		// Drain and close the first response body so its connection can be
+		// reused; keep a buffered copy readable in case the retry fails and
+		// this response is returned to the caller.
+		firstRespBody, _ := io.ReadAll(localVarHTTPResponse.Body)
+		localVarHTTPResponse.Body.Close()
+		localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(firstRespBody))
 		// retry with token refresh
-		err = authentificator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
+		err = authenticator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
 		if err != nil {
 			return localVarHTTPResponse, err
 		}
 		// Update auth header
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return localVarHTTPResponse, err
+		}
 		req, err = a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 		if err != nil {
 			return localVarHTTPResponse, err
@@ -880,9 +916,9 @@ func (a *RealmConnectionsAPIService) RealmConnectionsDeleteExecute(r APIRealmCon
 		}
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarHTTPResponse, err
 	}
@@ -1050,19 +1086,21 @@ func (a *RealmConnectionsAPIService) RealmConnectionsGetExecute(r APIRealmConnec
 
 	localBasePath := a.client.cfg.ArrayURL
 
-	non_auth_endpoints := map[string]bool{
+	nonAuthEndpoints := map[string]bool{
 		"AuthorizationAPIService.Oauth210TokenPost": true,
 		"AuthorizationAPIService.LoginPost":         true,
 	}
-	var authentificator Authentificator
-	if !non_auth_endpoints[endpoint] {
-		authentificator = a.client.cfg.Authentificator
+	var authenticator Authenticator
+	if !nonAuthEndpoints[endpoint] {
+		authenticator = a.client.cfg.Authenticator
 	} else {
-		authentificator = nil
+		authenticator = nil
 	}
 
-	if authentificator != nil {
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+	if authenticator != nil {
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return localVarReturnValue, nil, err
+		}
 	}
 
 	localVarPath := localBasePath + "/api/2.56/realm-connections"
@@ -1127,10 +1165,10 @@ func (a *RealmConnectionsAPIService) RealmConnectionsGetExecute(r APIRealmConnec
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	if r.authorization != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("Authorization"), r.authorization, "")
 	}
 	if r.xRequestID != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "X-Request-ID", r.xRequestID, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("X-Request-ID"), r.xRequestID, "")
 	}
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
@@ -1142,23 +1180,30 @@ func (a *RealmConnectionsAPIService) RealmConnectionsGetExecute(r APIRealmConnec
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	ignored_endpoints := map[string]bool{
+	ignoredEndpoints := map[string]bool{
 		"AuthorizationAPIService.LogoutPost": true,
 	}
 
-	auth_status_codes := map[int]bool{
+	authStatusCodes := map[int]bool{
 		401: true,
-		403: true,
 	}
 
-	if auth_status_codes[localVarHTTPResponse.StatusCode] && !ignored_endpoints[endpoint] && authentificator != nil {
+	if authStatusCodes[localVarHTTPResponse.StatusCode] && !ignoredEndpoints[endpoint] && authenticator != nil {
+		// Drain and close the first response body so its connection can be
+		// reused; keep a buffered copy readable in case the retry fails and
+		// this response is returned to the caller.
+		firstRespBody, _ := io.ReadAll(localVarHTTPResponse.Body)
+		localVarHTTPResponse.Body.Close()
+		localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(firstRespBody))
 		// retry with token refresh
-		err = authentificator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
+		err = authenticator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
 		if err != nil {
 			return localVarReturnValue, localVarHTTPResponse, err
 		}
 		// Update auth header
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return localVarReturnValue, localVarHTTPResponse, err
+		}
 		req, err = a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 		if err != nil {
 			return localVarReturnValue, localVarHTTPResponse, err
@@ -1169,9 +1214,9 @@ func (a *RealmConnectionsAPIService) RealmConnectionsGetExecute(r APIRealmConnec
 		}
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -1305,19 +1350,21 @@ func (a *RealmConnectionsAPIService) RealmConnectionsPatchExecute(r APIRealmConn
 
 	localBasePath := a.client.cfg.ArrayURL
 
-	non_auth_endpoints := map[string]bool{
+	nonAuthEndpoints := map[string]bool{
 		"AuthorizationAPIService.Oauth210TokenPost": true,
 		"AuthorizationAPIService.LoginPost":         true,
 	}
-	var authentificator Authentificator
-	if !non_auth_endpoints[endpoint] {
-		authentificator = a.client.cfg.Authentificator
+	var authenticator Authenticator
+	if !nonAuthEndpoints[endpoint] {
+		authenticator = a.client.cfg.Authenticator
 	} else {
-		authentificator = nil
+		authenticator = nil
 	}
 
-	if authentificator != nil {
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+	if authenticator != nil {
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return localVarReturnValue, nil, err
+		}
 	}
 
 	localVarPath := localBasePath + "/api/2.56/realm-connections"
@@ -1364,10 +1411,10 @@ func (a *RealmConnectionsAPIService) RealmConnectionsPatchExecute(r APIRealmConn
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	if r.authorization != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("Authorization"), r.authorization, "")
 	}
 	if r.xRequestID != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "X-Request-ID", r.xRequestID, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("X-Request-ID"), r.xRequestID, "")
 	}
 	// body params
 	localVarPostBody = r.connection
@@ -1381,23 +1428,30 @@ func (a *RealmConnectionsAPIService) RealmConnectionsPatchExecute(r APIRealmConn
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	ignored_endpoints := map[string]bool{
+	ignoredEndpoints := map[string]bool{
 		"AuthorizationAPIService.LogoutPost": true,
 	}
 
-	auth_status_codes := map[int]bool{
+	authStatusCodes := map[int]bool{
 		401: true,
-		403: true,
 	}
 
-	if auth_status_codes[localVarHTTPResponse.StatusCode] && !ignored_endpoints[endpoint] && authentificator != nil {
+	if authStatusCodes[localVarHTTPResponse.StatusCode] && !ignoredEndpoints[endpoint] && authenticator != nil {
+		// Drain and close the first response body so its connection can be
+		// reused; keep a buffered copy readable in case the retry fails and
+		// this response is returned to the caller.
+		firstRespBody, _ := io.ReadAll(localVarHTTPResponse.Body)
+		localVarHTTPResponse.Body.Close()
+		localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(firstRespBody))
 		// retry with token refresh
-		err = authentificator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
+		err = authenticator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
 		if err != nil {
 			return localVarReturnValue, localVarHTTPResponse, err
 		}
 		// Update auth header
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return localVarReturnValue, localVarHTTPResponse, err
+		}
 		req, err = a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 		if err != nil {
 			return localVarReturnValue, localVarHTTPResponse, err
@@ -1408,9 +1462,9 @@ func (a *RealmConnectionsAPIService) RealmConnectionsPatchExecute(r APIRealmConn
 		}
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
@@ -1537,19 +1591,21 @@ func (a *RealmConnectionsAPIService) RealmConnectionsPostExecute(r APIRealmConne
 
 	localBasePath := a.client.cfg.ArrayURL
 
-	non_auth_endpoints := map[string]bool{
+	nonAuthEndpoints := map[string]bool{
 		"AuthorizationAPIService.Oauth210TokenPost": true,
 		"AuthorizationAPIService.LoginPost":         true,
 	}
-	var authentificator Authentificator
-	if !non_auth_endpoints[endpoint] {
-		authentificator = a.client.cfg.Authentificator
+	var authenticator Authenticator
+	if !nonAuthEndpoints[endpoint] {
+		authenticator = a.client.cfg.Authenticator
 	} else {
-		authentificator = nil
+		authenticator = nil
 	}
 
-	if authentificator != nil {
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+	if authenticator != nil {
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return localVarReturnValue, nil, err
+		}
 	}
 
 	localVarPath := localBasePath + "/api/2.56/realm-connections"
@@ -1593,10 +1649,10 @@ func (a *RealmConnectionsAPIService) RealmConnectionsPostExecute(r APIRealmConne
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	if r.authorization != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "Authorization", r.authorization, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("Authorization"), r.authorization, "")
 	}
 	if r.xRequestID != nil {
-		parameterAddToHeaderOrQuery(localVarHeaderParams, "X-Request-ID", r.xRequestID, "")
+		parameterAddToHeaderOrQuery(localVarHeaderParams, http.CanonicalHeaderKey("X-Request-ID"), r.xRequestID, "")
 	}
 	// body params
 	localVarPostBody = r.connection
@@ -1610,23 +1666,30 @@ func (a *RealmConnectionsAPIService) RealmConnectionsPostExecute(r APIRealmConne
 		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
-	ignored_endpoints := map[string]bool{
+	ignoredEndpoints := map[string]bool{
 		"AuthorizationAPIService.LogoutPost": true,
 	}
 
-	auth_status_codes := map[int]bool{
+	authStatusCodes := map[int]bool{
 		401: true,
-		403: true,
 	}
 
-	if auth_status_codes[localVarHTTPResponse.StatusCode] && !ignored_endpoints[endpoint] && authentificator != nil {
+	if authStatusCodes[localVarHTTPResponse.StatusCode] && !ignoredEndpoints[endpoint] && authenticator != nil {
+		// Drain and close the first response body so its connection can be
+		// reused; keep a buffered copy readable in case the retry fails and
+		// this response is returned to the caller.
+		firstRespBody, _ := io.ReadAll(localVarHTTPResponse.Body)
+		localVarHTTPResponse.Body.Close()
+		localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(firstRespBody))
 		// retry with token refresh
-		err = authentificator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
+		err = authenticator.RefreshAccessToken(r.ctx, *a.client.AuthorizationAPI)
 		if err != nil {
 			return localVarReturnValue, localVarHTTPResponse, err
 		}
 		// Update auth header
-		authentificator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams)
+		if err := authenticator.SetAuthHeader(r.ctx, *a.client.AuthorizationAPI, localVarHeaderParams); err != nil {
+			return localVarReturnValue, localVarHTTPResponse, err
+		}
 		req, err = a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 		if err != nil {
 			return localVarReturnValue, localVarHTTPResponse, err
@@ -1637,9 +1700,9 @@ func (a *RealmConnectionsAPIService) RealmConnectionsPostExecute(r APIRealmConne
 		}
 	}
 
-	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
-	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
 		return localVarReturnValue, localVarHTTPResponse, err
 	}

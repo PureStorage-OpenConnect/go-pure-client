@@ -87,7 +87,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+Authorization is handled by the Authenticator specified in the configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
 
 ### HTTP request headers
 
@@ -170,7 +170,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+Authorization is handled by the Authenticator specified in the configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
 
 ### HTTP request headers
 
@@ -246,7 +246,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+Authorization is handled by the Authenticator specified in the configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
 
 ### HTTP request headers
 
@@ -330,7 +330,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+Authorization is handled by the Authenticator specified in the configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
 
 ### HTTP request headers
 
@@ -408,7 +408,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+Authorization is handled by the Authenticator specified in the configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
 
 ### HTTP request headers
 
@@ -486,7 +486,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+Authorization is handled by the Authenticator specified in the configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
 
 ### HTTP request headers
 
@@ -568,7 +568,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+Authorization is handled by the Authenticator specified in the configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
 
 ### HTTP request headers
 
@@ -654,7 +654,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+Authorization is handled by the Authenticator specified in the configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
 
 ### HTTP request headers
 
@@ -740,7 +740,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+Authorization is handled by the Authenticator specified in the configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
 
 ### HTTP request headers
 
@@ -818,7 +818,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+Authorization is handled by the Authenticator specified in the configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
 
 ### HTTP request headers
 
@@ -895,7 +895,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+Authorization is handled by the Authenticator specified in the configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
 
 ### HTTP request headers
 
@@ -980,7 +980,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+Authorization is handled by the Authenticator specified in the configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
 
 ### HTTP request headers
 
@@ -1059,7 +1059,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+Authorization is handled by the Authenticator specified in the configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
 
 ### HTTP request headers
 
@@ -1141,7 +1141,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+Authorization is handled by the Authenticator specified in the configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
 
 ### HTTP request headers
 
@@ -1220,7 +1220,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+Authorization is handled by the Authenticator specified in the configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
 
 ### HTTP request headers
 
@@ -1298,7 +1298,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+Authorization is handled by the Authenticator specified in the configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
 
 ### HTTP request headers
 
@@ -1383,7 +1383,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-Authorization is handled by Authorizer specified in configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
+Authorization is handled by the Authenticator specified in the configuration and data are filled automatically. Use param authorization only when you need to override this behaviour.
 
 ### HTTP request headers
 

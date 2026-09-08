@@ -1,0 +1,66 @@
+# Tags every Go module in this repo for a release.
+#
+# How it works:
+#   - .sdk-version is the source of truth. The sdkator release PR updates it,
+#     and the merge to main triggers this workflow.
+#   - One tag is pushed per Go module, prefixed with the module's directory
+#     (flasharray/FA_2_26/v0.25.0, flashblade/v0.25.0, ...) — the form Go's
+#     multi-module repo rules require for `go get <module>@vX.Y.Z`.
+#   - No bare root vX.Y.Z tag: there is no root go.mod.
+#   - Idempotent: existing tags are never moved.
+#
+# The tagging logic lives in .github/scripts/tag-modules.sh, shared with the
+# integration-repo variant of this workflow (which differs only in the runner
+# and container it uses).
+#
+# Retro-tagging: run workflow_dispatch with the version and the commit of an
+# older release. Modules are discovered at that ref.
+#
+# Dry run: workflow_dispatch with dry_run=true uses `git push --dry-run` to
+# verify auth and output what would happen without making actual changes.
+
+name: Tag Go modules from .sdk-version
+
+on:
+  push:
+    branches: [ main ]
+    paths: [ .sdk-version ]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Release version X.Y.Z (default: read .sdk-version at ref)"
+        type: string
+      ref:
+        description: "Commit SHA / ref to tag (default: main)"
+        type: string
+      dry_run:
+        description: "Verify commands and auth without executing push"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-tag
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  tag-modules:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6.0.2
+        with:
+          ref: ${{ inputs.ref || github.sha }}
+
+      - name: Create and push module tags
+        env:
+          INPUT_VERSION: ${{ inputs.version }}
+          DRY_RUN: ${{ inputs.dry_run == true }}
+        run: bash .github/scripts/tag-modules.sh

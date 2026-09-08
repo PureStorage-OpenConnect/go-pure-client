@@ -29,15 +29,15 @@ import gopureclient "github.com/pure-shared/go-pure-client/flasharray/FA_2_31"
 
 To build configuration use configuration builder. 
 
-An example for OAuth authentification where user is ```pureuser```, issuer is ```go-test```, key id is ```c60ebe19-d938-453a-b633-7a03bef2a925```, client id is ```40894da9-d76f-4e1c-949c-972ef3862f8f```, privateKeyBytes contains RSA private key protected by password ```pwd123```:
+An example for OAuth authentication where user is ```pureuser```, issuer is ```go-test```, key id is ```123e4567-e89b-12d3-a456-426614174000```, client id is ```123e4567-e89b-12d3-a456-426614174000```, privateKeyBytes contains RSA private key protected by password ```pwd123```:
 ```golang
 configuration, err := openapiclient.NewConfigurationBuilder("[ARRAY_URL]").
-	OAuth("pureuser", "go-test", "c60ebe19-d938-453a-b633-7a03bef2a925", "40894da9-d76f-4e1c-949c-972ef3862f8f", "pwd123", privateKeyBytes).
+	OAuth("pureuser", "go-test", "123e4567-e89b-12d3-a456-426614174000", "123e4567-e89b-12d3-a456-426614174000", "pwd123", privateKeyBytes).
 	DisableSSLVerification().
 	Build()
 ```
 
-An example for API token authentification:
+An example for API token authentication:
 ```golang
 configuration, err := openapiclient.NewConfigurationBuilder("[ARRAY_URL]").
 	APIToken(apiToken).
@@ -45,7 +45,7 @@ configuration, err := openapiclient.NewConfigurationBuilder("[ARRAY_URL]").
 	Build()
 ```
 
-An example for anonymous authentification:
+An example for anonymous authentication:
 ```golang
 configuration, err := openapiclient.NewConfigurationBuilder("[ARRAY_URL]").
 	DisableSSLVerification().
@@ -56,13 +56,20 @@ Builder methods:
 
 Method | Description
 --------- | ------------------
-UserAgent | Sets custom user agent 
+UserAgent | Sets custom user agent
 DisableSSLVerification | Disables verification of certificate chain
 DebugMode | Enables debug mode
 HTTPClient | Sets custom HTTPClient
-OAuthWithRawTokenID | Sets OAuth authentification with raw ID token
-OAuth | Sets OAuth authentification with private key
+Timeout | Sets request timeout of the default HTTP client
+OAuthWithRawTokenID | Sets OAuth authentication with raw ID token
+OAuth | Sets OAuth authentication with private key
 APIToken | Sets API token authentication
+
+By default requests time out after 90 seconds, including reading the response
+body. Use `Timeout` to change this, or `Timeout(0)` to disable it. When you
+bring your own client via `HTTPClient`, set the timeout on that client instead;
+combining it with `Timeout` is rejected by `Build`, as is
+`DisableSSLVerification`.
 
 
 ## Documentation for API Endpoints

@@ -18,14 +18,15 @@ import (
 	"errors"
 	"fmt"
 	"reflect"
+	"sync"
 	"time"
 
 	"github.com/golang-jwt/jwt/v5"
 	"golang.org/x/crypto/ssh"
 )
 
-// Authentificator interface
-type Authentificator interface {
+// Authenticator interface
+type Authenticator interface {
 	// Sets authentication header, gets authentication token if required.
 	SetAuthHeader(ctx context.Context, authorizationAPI AuthorizationAPIService, headers map[string]string) error
 
@@ -35,77 +36,145 @@ type Authentificator interface {
 	// Checks if access token is expired
 	IsAccessTokenExpired(ctx context.Context) bool
 
-	// Closes authentificator
+	// Closes authenticator
 	Close(ctx context.Context, authorizationAPI AuthorizationAPIService) error
 }
 
-// OAuth authenticator
-type OAuthTokenAuthentificator struct {
-	token       *string
+// refreshCall represents one in-flight token refresh; err is written before
+// done is closed, so waiters reading err after <-done are synchronized.
+type refreshCall struct {
+	done chan struct{}
+	err  error
+}
+
+// sharedCallRefresher collapses concurrent RefreshAccessToken calls into a single
+// refresh: callers arriving while a refresh is in flight wait for its result
+// instead of starting their own. This prevents a burst of 401s across
+// goroutines from triggering a login storm on the shared authenticator.
+//
+// The refresh runs on the context of the caller that started it: if that
+// context is cancelled, all waiters sharing the call get its error. This coupling is
+// deliberate (the alternative is a refresh per caller); waiters treat the
+// error as transient and their request simply fails, to be retried by the
+// caller. A waiter whose own context is cancelled stops waiting and returns
+// ctx.Err(); the in-flight refresh continues for the remaining callers.
+type sharedCallRefresher struct {
+	mu       sync.Mutex
+	inflight *refreshCall
+}
+
+func (rc *sharedCallRefresher) do(ctx context.Context, refresh func() error) error {
+	rc.mu.Lock()
+	if c := rc.inflight; c != nil {
+		rc.mu.Unlock()
+		select {
+		case <-c.done:
+			return c.err
+		case <-ctx.Done():
+			return ctx.Err()
+		}
+	}
+	c := &refreshCall{done: make(chan struct{})}
+	rc.inflight = c
+	rc.mu.Unlock()
+
+	c.err = refresh()
+
+	rc.mu.Lock()
+	rc.inflight = nil
+	rc.mu.Unlock()
+	close(c.done)
+	return c.err
+}
+
+// OAuth authenticator. Safe for concurrent use by multiple goroutines.
+type OAuthTokenAuthenticator struct {
+	token *string // immutable after construction
+
+	mu          sync.Mutex // guards accessToken
 	accessToken *string
+	refresher   sharedCallRefresher
+}
+
+func (t *OAuthTokenAuthenticator) currentAccessToken() *string {
+	t.mu.Lock()
+	defer t.mu.Unlock()
+	return t.accessToken
 }
 
 // Creates a new OAuth authenticator using private key
-func NewOAuthTokenAuthentificatorWithPrivateKey(userName, issuer string, privateKeyBytes []byte, keyId, clientId, privateKeyPassword string) (*OAuthTokenAuthentificator, error) {
+func NewOAuthTokenAuthenticatorWithPrivateKey(userName, issuer string, privateKeyBytes []byte, keyId, clientId, privateKeyPassword string) (*OAuthTokenAuthenticator, error) {
 	token, err := buildOAuthToken(userName, issuer, keyId, clientId, privateKeyPassword, privateKeyBytes)
 	if err != nil {
 		return nil, err
 	}
-	return &OAuthTokenAuthentificator{
+	return &OAuthTokenAuthenticator{
 		token: &token,
 	}, nil
 }
 
 // Creates a new OAuth authenticator with raw token ID
-func NewOAuthTokenAuthentificatorWithRawTokenID(idToken string) *OAuthTokenAuthentificator {
-	return &OAuthTokenAuthentificator{
+func NewOAuthTokenAuthenticatorWithRawTokenID(idToken string) *OAuthTokenAuthenticator {
+	return &OAuthTokenAuthenticator{
 		token: &idToken,
 	}
 }
 
-// Refreshes OAuth access token
-func (t *OAuthTokenAuthentificator) RefreshAccessToken(ctx context.Context, authorizationAPI AuthorizationAPIService) error {
-	response, _, err := authorizationAPI.Oauth210TokenPost(ctx).
-		SubjectToken(*t.token).
-		SubjectTokenType("urn:ietf:params:oauth:token-type:jwt").
-		GrantType("urn:ietf:params:oauth:grant-type:token-exchange").
-		Execute()
+// Refreshes OAuth access token. Concurrent calls share a single refresh.
+func (t *OAuthTokenAuthenticator) RefreshAccessToken(ctx context.Context, authorizationAPI AuthorizationAPIService) error {
+	return t.refresher.do(ctx, func() error {
+		response, _, err := authorizationAPI.Oauth210TokenPost(ctx).
+			SubjectToken(*t.token).
+			SubjectTokenType("urn:ietf:params:oauth:token-type:jwt").
+			GrantType("urn:ietf:params:oauth:grant-type:token-exchange").
+			Execute()
 
-	if err != nil {
-		return fmt.Errorf("failed to receive access token: %w", err)
-	}
+		if err != nil {
+			return fmt.Errorf("failed to receive access token: %w", err)
+		}
 
-	accessToken := *response.AccessToken
-	t.accessToken = &accessToken
+		accessToken := *response.AccessToken
+		t.mu.Lock()
+		t.accessToken = &accessToken
+		t.mu.Unlock()
 
-	return nil
+		return nil
+	})
 }
 
 // Sets authentication header Authorization, gets authentication token if required.
-func (t *OAuthTokenAuthentificator) SetAuthHeader(ctx context.Context, authorizationAPI AuthorizationAPIService, headers map[string]string) error {
-	if t.accessToken == nil || t.IsAccessTokenExpired(ctx) {
+func (t *OAuthTokenAuthenticator) SetAuthHeader(ctx context.Context, authorizationAPI AuthorizationAPIService, headers map[string]string) error {
+	accessToken := t.currentAccessToken()
+	if accessToken == nil || isJWTExpired(*accessToken) {
 		err := t.RefreshAccessToken(ctx, authorizationAPI)
 		if err != nil {
 			return err
 		}
+		accessToken = t.currentAccessToken()
+		if accessToken == nil {
+			return errors.New("no access token available after refresh")
+		}
 	}
-	headers["Authorization"] = fmt.Sprintf("Bearer %v", *t.accessToken)
+	headers["Authorization"] = fmt.Sprintf("Bearer %v", *accessToken)
 	return nil
 }
 
-// Closes authentificator - no action for OAuth
-func (t *OAuthTokenAuthentificator) Close(ctx context.Context, authorizationAPI AuthorizationAPIService) error {
+// Closes authenticator - no action for OAuth
+func (t *OAuthTokenAuthenticator) Close(ctx context.Context, authorizationAPI AuthorizationAPIService) error {
 	return nil
 }
 
 // Checks if access token is expired - if token is not set or is invalid then it is also marked as expired
 // Expiration is taken from claim "exp" on JWT token.
-func (t *OAuthTokenAuthentificator) IsAccessTokenExpired(ctx context.Context) bool {
-	if t.accessToken == nil {
-		return true
-	}
+func (t *OAuthTokenAuthenticator) IsAccessTokenExpired(ctx context.Context) bool {
+	accessToken := t.currentAccessToken()
+	return accessToken == nil || isJWTExpired(*accessToken)
+}
 
-	token, _, err := new(jwt.Parser).ParseUnverified(*t.accessToken, jwt.MapClaims{})
+// Checks whether a JWT access token is expired based on its "exp" claim.
+// An unparsable token is treated as expired.
+func isJWTExpired(accessToken string) bool {
+	token, _, err := new(jwt.Parser).ParseUnverified(accessToken, jwt.MapClaims{})
 	if err != nil {
 		return true
 	}
@@ -153,76 +222,102 @@ func buildOAuthToken(userName, issuer, keyId, clientId, privateKeyPassword strin
 	}
 	tokenString, err := token.SignedString(key.(*rsa.PrivateKey))
 	if err != nil {
-		return "", fmt.Errorf("failed to sign tplem: %w", err)
+		return "", fmt.Errorf("failed to sign token: %w", err)
 	}
 
 	return tokenString, nil
 }
 
-// API token authenticator
-type APITokenAuthentificator struct {
-	apiToken    *string
+// API token authenticator. Safe for concurrent use by multiple goroutines.
+type APITokenAuthenticator struct {
+	apiToken *string // immutable after construction
+
+	mu          sync.Mutex // guards accessToken
 	accessToken *string
+	refresher   sharedCallRefresher
 }
 
 // Creates a new API token authenticator
-func NewAPITokenAuthentificator(apiToken string) *APITokenAuthentificator {
-	return &APITokenAuthentificator{
+func NewAPITokenAuthenticator(apiToken string) *APITokenAuthenticator {
+	return &APITokenAuthenticator{
 		apiToken: &apiToken,
 	}
 }
 
-// Refreshes API access token
-func (t *APITokenAuthentificator) RefreshAccessToken(ctx context.Context, authorizationAPI AuthorizationAPIService) error {
-	if t.accessToken != nil {
-		t.Close(ctx, authorizationAPI)
-	}
+func (t *APITokenAuthenticator) currentAccessToken() *string {
+	t.mu.Lock()
+	defer t.mu.Unlock()
+	return t.accessToken
+}
 
-	_, response, err := authorizationAPI.LoginPost(ctx).
-		APIToken(*t.apiToken).
-		Execute()
+// Refreshes API access token by logging in again. Concurrent calls share a
+// single refresh.
+//
+// The previous session is deliberately not logged out. A refresh is normally
+// triggered by a 401, so that session is already invalid. When it is still
+// valid (a late 401 for an older token arriving after a newer session was
+// issued, or a 403), logging it out would kill the session other goroutines
+// are using and start a chain of refreshes. A still-valid session is left to
+// expire on the array; Close logs out the current one.
+func (t *APITokenAuthenticator) RefreshAccessToken(ctx context.Context, authorizationAPI AuthorizationAPIService) error {
+	return t.refresher.do(ctx, func() error {
+		_, response, err := authorizationAPI.LoginPost(ctx).
+			APIToken(*t.apiToken).
+			Execute()
 
-	if err != nil {
-		return fmt.Errorf("failed to retrieve access token with error: %w", err)
-	}
+		if err != nil {
+			return fmt.Errorf("failed to retrieve access token with error: %w", err)
+		}
 
-	accessToken := response.Header.Get("x-auth-token")
-	t.accessToken = &accessToken
+		accessToken := response.Header.Get("x-auth-token")
+		t.mu.Lock()
+		t.accessToken = &accessToken
+		t.mu.Unlock()
 
-	return nil
+		return nil
+	})
 }
 
 // Sets authentication header X-Auth-Token, gets authentication token if required.
-func (t *APITokenAuthentificator) SetAuthHeader(ctx context.Context, authorizationAPI AuthorizationAPIService, headers map[string]string) error {
-	if t.accessToken == nil || t.IsAccessTokenExpired(ctx) {
+func (t *APITokenAuthenticator) SetAuthHeader(ctx context.Context, authorizationAPI AuthorizationAPIService, headers map[string]string) error {
+	accessToken := t.currentAccessToken()
+	if accessToken == nil {
 		err := t.RefreshAccessToken(ctx, authorizationAPI)
 		if err != nil {
 			return err
 		}
+		accessToken = t.currentAccessToken()
+		if accessToken == nil {
+			return errors.New("no access token available after refresh")
+		}
 	}
-	headers["X-Auth-Token"] = *t.accessToken
+	headers["X-Auth-Token"] = *accessToken
 	return nil
 }
 
-// Closes authentificator - logs out if a client was previously logged in
-func (t *APITokenAuthentificator) Close(ctx context.Context, authorizationAPI AuthorizationAPIService) error {
-	if t.accessToken == nil {
+// Closes authenticator - logs out if a client was previously logged in
+func (t *APITokenAuthenticator) Close(ctx context.Context, authorizationAPI AuthorizationAPIService) error {
+	token := t.currentAccessToken()
+	if token == nil {
 		return nil
 	}
 	_, err := authorizationAPI.LogoutPost(ctx).Execute()
 	if err != nil {
 		return fmt.Errorf("failed to return access token with error: %w", err)
 	}
-	t.accessToken = nil
+	t.mu.Lock()
+	defer t.mu.Unlock()
+	// A concurrent RefreshAccessToken may have installed a newer token while
+	// LogoutPost was in flight - only clear if it's still the one we logged out.
+	if t.accessToken != nil && t.accessToken == token {
+		t.accessToken = nil
+	}
 	return nil
 }
 
 // Checks if access token is expired - can't check for API token, return true only when token is not set
-func (t *APITokenAuthentificator) IsAccessTokenExpired(ctx context.Context) bool {
-	if t.accessToken == nil {
-		return true
-	}
-	return false
+func (t *APITokenAuthenticator) IsAccessTokenExpired(ctx context.Context) bool {
+	return t.currentAccessToken() == nil
 }
 
 // PtrBool is a helper routine that returns a pointer to given boolean value.
