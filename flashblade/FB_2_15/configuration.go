@@ -16,33 +16,43 @@ import (
 	"fmt"
 	"net/http"
 	"runtime"
+	"time"
 )
+
+// sdkVersion is stamped with the release version at staging time; "dev"
+// identifies locally generated builds.
+const sdkVersion = "0.25.0"
+
+const defaultHTTPTimeout = 90 * time.Second
 
 // Configuration stores the configuration of the API client
 type Configuration struct {
-	ArrayURL        string
-	Authentificator Authentificator
-	Debug           bool
-	HTTPClient      *http.Client
-	UserAgent       string
+	ArrayURL      string
+	Authenticator Authenticator
+	Debug         bool
+	HTTPClient    *http.Client
+	UserAgent     string
 }
 
 type ConfigurationBuilder struct {
-	arrayUrl             string
-	debug                bool
-	httpClient           *http.Client
-	userAgent            string
-	verifySSL            bool
-	buildAuthentificator func() (Authentificator, error)
+	arrayUrl           string
+	debug              bool
+	httpClient         *http.Client
+	userAgent          string
+	verifySSL          bool
+	timeout            time.Duration
+	timeoutSet         bool
+	buildAuthenticator func() (Authenticator, error)
 }
 
 func NewConfigurationBuilder(arrayUrl string) *ConfigurationBuilder {
 	return &ConfigurationBuilder{
-		userAgent:            fmt.Sprintf("pure/go-pure-client/0/%v", runtime.GOOS),
-		debug:                false,
-		verifySSL:            true,
-		arrayUrl:             arrayUrl,
-		buildAuthentificator: func() (Authentificator, error) { return nil, nil },
+		userAgent:          fmt.Sprintf("pure/go-pure-client/%v/%v", sdkVersion, runtime.GOOS),
+		debug:              false,
+		verifySSL:          true,
+		timeout:            defaultHTTPTimeout,
+		arrayUrl:           arrayUrl,
+		buildAuthenticator: func() (Authenticator, error) { return nil, nil },
 	}
 }
 
@@ -78,55 +88,71 @@ func (cb *ConfigurationBuilder) HTTPClient(httpClient *http.Client) *Configurati
 	return cb
 }
 
-// OAuthTokenAuthentificator uses OAuth authentication where ID token is directly provided.
-// A session token is stored in memory and is refreshed when expires.
-func (cb *ConfigurationBuilder) OAuthWithRawTokenID(idToken string) *ConfigurationBuilder {
-	cb.buildAuthentificator = func() (Authentificator, error) { return NewOAuthTokenAuthentificatorWithRawTokenID(idToken), nil }
+// Sets the overall request timeout of the default HTTP client, including
+// reading the response body. Zero disables the timeout; the default is 90
+// seconds. Cannot be combined with a custom HTTP client — set the timeout
+// on that client instead.
+func (cb *ConfigurationBuilder) Timeout(timeout time.Duration) *ConfigurationBuilder {
+	cb.timeout = timeout
+	cb.timeoutSet = true
 	return cb
 }
 
-// OAuthTokenAuthentificator uses OAuth authentication where it accepts a private key and additional parameters to generate an ID token.
+// OAuthTokenAuthenticator uses OAuth authentication where ID token is directly provided.
+// A session token is stored in memory and is refreshed when expires.
+func (cb *ConfigurationBuilder) OAuthWithRawTokenID(idToken string) *ConfigurationBuilder {
+	cb.buildAuthenticator = func() (Authenticator, error) { return NewOAuthTokenAuthenticatorWithRawTokenID(idToken), nil }
+	return cb
+}
+
+// OAuthTokenAuthenticator uses OAuth authentication where it accepts a private key and additional parameters to generate an ID token.
 // When privateKeyPassword is empty, it is expected that privateKeyBytes is not protected.
 // A session token is stored in memory and is refreshed when expires.
 func (cb *ConfigurationBuilder) OAuth(userName, issuer, keyId, clientId, privateKeyPassword string, privateKeyBytes []byte) *ConfigurationBuilder {
-	cb.buildAuthentificator = func() (Authentificator, error) {
-		return NewOAuthTokenAuthentificatorWithPrivateKey(userName, issuer, privateKeyBytes, keyId, clientId, privateKeyPassword)
+	cb.buildAuthenticator = func() (Authenticator, error) {
+		return NewOAuthTokenAuthenticatorWithPrivateKey(userName, issuer, privateKeyBytes, keyId, clientId, privateKeyPassword)
 	}
 	return cb
 }
 
-// APITokenAuthentificator uses api token authentication.
+// APITokenAuthenticator uses api token authentication.
 // A session token is stored in memory and is refreshed when expires. It automatically logs out on close of the client.
 func (cb *ConfigurationBuilder) APIToken(apiToken string) *ConfigurationBuilder {
-	cb.buildAuthentificator = func() (Authentificator, error) { return NewAPITokenAuthentificator(apiToken), nil }
+	cb.buildAuthenticator = func() (Authenticator, error) { return NewAPITokenAuthenticator(apiToken), nil }
 	return cb
 }
 
 // Builds the configuration
 func (cb *ConfigurationBuilder) Build() (*Configuration, error) {
-	authentificator, err := cb.buildAuthentificator()
+	authenticator, err := cb.buildAuthenticator()
 	if err != nil {
 		return nil, fmt.Errorf("failed to build authenticator: %w", err)
 	}
 	httpClient := cb.httpClient
 	if httpClient == nil {
-		if cb.verifySSL {
-			httpClient = http.DefaultClient
-		} else {
-			httpClient = &http.Client{
-				Transport: &http.Transport{
-					TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
-				},
-			}
+		// Clone the default transport so its defaults (proxy, keep-alives)
+		// are kept without mutating the shared http.DefaultTransport.
+		transport := &http.Transport{}
+		if t, ok := http.DefaultTransport.(*http.Transport); ok {
+			transport = t.Clone()
 		}
+		if !cb.verifySSL {
+			if transport.TLSClientConfig == nil {
+				transport.TLSClientConfig = &tls.Config{}
+			}
+			transport.TLSClientConfig.InsecureSkipVerify = true
+		}
+		httpClient = &http.Client{Transport: transport, Timeout: cb.timeout}
 	} else if !cb.verifySSL {
 		return nil, errors.New("cannot disable verification of SSL with custom HTTP client")
+	} else if cb.timeoutSet {
+		return nil, errors.New("cannot set timeout with custom HTTP client, set the timeout on the client instead")
 	}
 	return &Configuration{
-		Authentificator: authentificator,
-		HTTPClient:      httpClient,
-		ArrayURL:        cb.arrayUrl,
-		Debug:           cb.debug,
-		UserAgent:       cb.userAgent,
+		Authenticator: authenticator,
+		HTTPClient:    httpClient,
+		ArrayURL:      cb.arrayUrl,
+		Debug:         cb.debug,
+		UserAgent:     cb.userAgent,
 	}, nil
 }

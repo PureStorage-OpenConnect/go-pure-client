@@ -1,16 +1,20 @@
 # Pure Storage Unified Go SDK
 ## Overview
-The `go-pure-client` Golang module provides clients for FlashArray 2.x API.
+The `go-pure-client` Go module provides clients for the FlashArray 2.x API and the FlashBlade 2.x API (preview).
 ## Requirements
-The module requires go1.13 or higher. Third-party libraries are also required.
+The module requires Go 1.24 or higher.
 ### Installation
-Add the following import:
+Each REST version is its own Go module. Add the import for the REST version you target:
 ```golang
-import gopureclient "github.com/pure-shared/go-pure-client/flasharray/FA_2_0"
+import gopureclient "github.com/pure-shared/go-pure-client/flasharray/FA_2_26"
 ```
-Install it
+Install it pinned to an SDK release:
 ```
-go get github.com/pure-shared/go-pure-client/flasharray/FA_2_0
+go get github.com/pure-shared/go-pure-client/flasharray/FA_2_26@v0.25.0
+```
+or track the latest:
+```
+go get github.com/pure-shared/go-pure-client/flasharray/FA_2_26@latest
 ```
 
 You will need to add package's URL into GOPRIVATE like
@@ -20,16 +24,20 @@ export GOPRIVATE=github.com/pure-shared/go-pure-client
 
 Please note: Specific package might be different depending on the REST version used.
 
+Releases are tagged per module with directory-prefixed tags, as Go's
+multi-module repository rules require (e.g. `flasharray/FA_2_26/v0.25.0`);
+`go get <module>@vX.Y.Z` resolves them automatically.
+
 ## Configuration
 
 To build client's configuration use configuration builder. 
 
 ### OAuth
 
-An example for OAuth authentification where user is ```pureuser```, issuer is ```go-test```, key id is ```c60ebe19-d938-453a-b633-7a03bef2a925```, client id is ```40894da9-d76f-4e1c-949c-972ef3862f8f```, privateKeyBytes contains RSA private key protected by password ```pwd123```:
+An example for OAuth authentication where user is `pureuser`, issuer is `go-test`, key id is `123e4567-e89b-12d3-a456-426614174000`, client id is `123e4567-e89b-12d3-a456-426614174000`, privateKeyBytes contains RSA private key protected by password `pwd123`:
 ```golang
 configuration, err := openapiclient.NewConfigurationBuilder("[ARRAY_URL]").
-	OAuth("pureuser", "go-test", "c60ebe19-d938-453a-b633-7a03bef2a925", "40894da9-d76f-4e1c-949c-972ef3862f8f", "pwd123", privateKeyBytes).
+	OAuth("pureuser", "go-test", "123e4567-e89b-12d3-a456-426614174000", "123e4567-e89b-12d3-a456-426614174000", "pwd123", privateKeyBytes).
 	DisableSSLVerification().
 	Build()
 ```
@@ -37,7 +45,7 @@ configuration, err := openapiclient.NewConfigurationBuilder("[ARRAY_URL]").
 OAuth configuration for FA can be found [here](https://wiki.purestorage.com/display/FAUI/REST+API+2.X+Authentication+Guide).
 
 ### API Token
-An example for API token authentification:
+An example for API token authentication:
 ```golang
 configuration, err := openapiclient.NewConfigurationBuilder("[ARRAY_URL]").
 	APIToken(apiToken).
@@ -45,14 +53,14 @@ configuration, err := openapiclient.NewConfigurationBuilder("[ARRAY_URL]").
 	Build()
 ```
 
-API token can be retrivied via running the following command on the target array:
+API token can be retrieved via running the following command on the target array:
 ```bash
 # pureadmin list --api-token --expose
-username  local  e9353881-b2ba-d71f-18c6-1d26ff2a7be4  2099-12-12 00:00:01 PST  -
+username  local  123e4567-e89b-12d3-a456-426614174000  2099-12-12 00:00:01 PST  -
 ```
 
 ### Anonymous
-An example for anonymous authentification:
+An example for anonymous authentication:
 ```golang
 configuration, err := openapiclient.NewConfigurationBuilder("[ARRAY_URL]").
 	DisableSSLVerification().
@@ -63,13 +71,20 @@ configuration, err := openapiclient.NewConfigurationBuilder("[ARRAY_URL]").
 
 Method | Description
 --------- | ------------------
+UserAgent | Sets custom user agent
 DisableSSLVerification | Disables verification of certificate chain
-Description | Sets array description
 DebugMode | Enables debug mode
 HTTPClient | Sets custom HTTPClient
-OAuthWithRawTokenID | Sets OAuth authentification with raw ID token
-OAuth | Sets OAuth authentification with private key
+Timeout | Sets request timeout of the default HTTP client
+OAuthWithRawTokenID | Sets OAuth authentication with raw ID token
+OAuth | Sets OAuth authentication with private key
 APIToken | Sets API token authentication
+
+By default requests time out after 90 seconds, including reading the response
+body. Use `Timeout` to change this, or `Timeout(0)` to disable it. When you
+bring your own client via `HTTPClient`, set the timeout on that client instead;
+combining it with `Timeout` is rejected by `Build`, as is
+`DisableSSLVerification`.
 
 ### Example
 
@@ -77,40 +92,40 @@ APIToken | Sets API token authentication
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/pure-shared/go-pure-client/flasharray/FA_2_34"
+	"context"
+	"fmt"
+	"os"
+
+	openapiclient "github.com/pure-shared/go-pure-client/flasharray/FA_2_34"
 )
 
 func main() {
-    apiToken := "6c742a65-4f0c-9569-1f50-5dadcc095378"
+	url := "10.0.0.1"
+	apiToken := "123e4567-e89b-12d3-a456-426614174000"
 	configuration, err := openapiclient.NewConfigurationBuilder(url).
 		APIToken(apiToken).
 		DisableSSLVerification().
 		Build()
-
 	if err != nil {
-		fmt.Printf("Failed to create configuration: %v", err)
+		fmt.Fprintf(os.Stderr, "Failed to create configuration: %v\n", err)
 		return
 	}
 
 	client, err := openapiclient.NewClient(configuration)
 	if err != nil {
-		fmt.Println("Failed to create client %w", err)
+		fmt.Fprintf(os.Stderr, "Failed to create client: %v\n", err)
 		return
 	}
-
 	defer client.Close()
 
 	req := client.VolumesApi.VolumesGet(context.Background())
-	resp, _, err := req.Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `VolumesApi.VolumesBatchPost``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-        return
-    }
-    fmt.Fprintf(os.Stdout, "Response from `VolumesApi.VolumesBatchPost`: %v\n", resp)
+	resp, httpResp, err := req.Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `VolumesApi.VolumesGet`: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", httpResp)
+		return
+	}
+	fmt.Fprintf(os.Stdout, "Response from `VolumesApi.VolumesGet`: %v\n", resp)
 }
 ```
 
@@ -173,6 +188,7 @@ func main() {
 * [FA2.54](flasharray/FA_2_54/README.md)
 * [FA2.55](flasharray/FA_2_55/README.md)
 * [FA2.56](flasharray/FA_2_56/README.md)
+* [FA2.57](flasharray/FA_2_57/README.md)
 
 ### Flash Blade - ⚠️ preview
 * [FB2.0](flashblade/FB_2_0/README.md)

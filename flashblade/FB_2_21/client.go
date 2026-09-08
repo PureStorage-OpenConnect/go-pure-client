@@ -18,7 +18,6 @@ import (
 	"errors"
 	"fmt"
 	"io"
-	"io/ioutil"
 	"log"
 	"mime/multipart"
 	"net/http"
@@ -379,18 +378,20 @@ func typeCheckParameter(obj interface{}, expected string, name string) error {
 }
 
 func parameterValueToString(obj interface{}, key string) string {
-	if reflect.TypeOf(obj).Kind() != reflect.Ptr {
-		return fmt.Sprintf("%v", obj)
-	}
-	var param, ok = obj.(MappedNullable)
-	if !ok {
+	if obj == nil {
 		return ""
 	}
-	dataMap, err := param.ToMap()
-	if err != nil {
+	if param, ok := obj.(MappedNullable); ok {
+		dataMap, err := param.ToMap()
+		if err != nil {
+			return ""
+		}
+		if val, exists := dataMap[key]; exists && val != nil {
+			return fmt.Sprintf("%v", val)
+		}
 		return ""
 	}
-	return fmt.Sprintf("%v", dataMap[key])
+	return fmt.Sprintf("%v", obj)
 }
 
 // parameterAddToHeaderOrQuery adds the provided object to the request header or url query
@@ -595,8 +596,8 @@ func (c *Client) prepareRequest(
 		headerParams["Content-Type"] = w.FormDataContentType()
 
 		// Set Content-Length
-		headerParams["Content-Length"] = fmt.Sprintf("%d", body.Len())
 		w.Close()
+		headerParams["Content-Length"] = fmt.Sprintf("%d", body.Len())
 	}
 
 	if strings.HasPrefix(headerParams["Content-Type"], "application/x-www-form-urlencoded") && len(formParams) > 0 {
@@ -664,7 +665,7 @@ func (c *Client) decode(v interface{}, b []byte, contentType string) (err error)
 		return nil
 	}
 	if f, ok := v.(*os.File); ok {
-		f, err = ioutil.TempFile("", "HttpClientFile")
+		f, err = os.CreateTemp("", "HttpClientFile")
 		if err != nil {
 			return
 		}
@@ -676,7 +677,7 @@ func (c *Client) decode(v interface{}, b []byte, contentType string) (err error)
 		return
 	}
 	if f, ok := v.(**os.File); ok {
-		*f, err = ioutil.TempFile("", "HttpClientFile")
+		*f, err = os.CreateTemp("", "HttpClientFile")
 		if err != nil {
 			return
 		}
@@ -904,8 +905,8 @@ func formatErrorMessage(status string, v interface{}) string {
 
 // Closes client
 func (c *Client) Close() {
-	if c.cfg.Authentificator != nil {
-		c.cfg.Authentificator.Close(context.Background(), *c.AuthorizationAPI)
+	if c.cfg.Authenticator != nil {
+		c.cfg.Authenticator.Close(context.Background(), *c.AuthorizationAPI)
 	}
 }
 
@@ -949,14 +950,18 @@ func (c *Client) Call(ctx context.Context, endpoint, method string, query map[st
 	var errUntyped interface{}
 	var response interface{}
 	errUntyped = ret[len(ret)-1].Interface()
-	if errUntyped == nil && len(ret) == 3 {
+
+	errIsNil := IsNil(errUntyped)
+
+	if errIsNil && len(ret) == 3 {
 		if ret[0].Kind() == reflect.Ptr {
 			response = ret[0].Elem().Interface()
 		} else {
 			response = ret[0].Interface()
 		}
 	}
-	if errUntyped != nil {
+
+	if !errIsNil {
 		if err, ok := errUntyped.(error); ok {
 			return nil, nil, err
 		} else {
