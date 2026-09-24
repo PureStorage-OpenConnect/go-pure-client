@@ -26,7 +26,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/pure-shared/go-pure-client/flashblade/FB_2_24"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_24"
 )
 
 func main() {
@@ -108,7 +108,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/pure-shared/go-pure-client/flashblade/FB_2_24"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_24"
 )
 
 func main() {

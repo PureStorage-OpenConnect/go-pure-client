@@ -2,7 +2,8 @@
 # Tags every Go module in this repo for a release. Trigger, inputs, and docs
 # live in .github/workflows/release-tag.yml, which runs this script. The
 # integration-repo variant of that workflow runs the same script, so the
-# tagging logic exists only here.
+# tagging logic exists only here. The GitHub Release for the same version is
+# created afterwards by github-release.sh.
 #
 # Environment:
 #   INPUT_VERSION  release version X.Y.Z; empty = read .sdk-version at HEAD
@@ -24,6 +25,8 @@ if [[ ! "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
   exit 1
 fi
 echo "Target version: v$VERSION"
+# Hand the resolved version to later steps (github-release.sh)
+echo "VERSION=$VERSION" >> "$GITHUB_ENV"
 
 # --- 2. Configure Git ---
 git config --global --add safe.directory "$GITHUB_WORKSPACE"

@@ -1,4 +1,4 @@
-module github.com/pure-shared/go-pure-client/flasharray/FA_2_14
+module github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_14
 
 go 1.24.0
 

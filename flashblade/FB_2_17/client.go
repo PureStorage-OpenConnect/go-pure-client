@@ -19,6 +19,7 @@ import (
 	"fmt"
 	"io"
 	"log"
+	"math/rand/v2"
 	"mime/multipart"
 	"net/http"
 	"net/http/httputil"
@@ -454,8 +455,103 @@ func parameterToJson(obj interface{}) (string, error) {
 	return string(jsonBuf), err
 }
 
-// callAPI do the request.
+const (
+	defaultRateLimitWait      = time.Second
+	maxDefaultRateLimitWait   = 30 * time.Second
+	serverRateLimitWaitJitter = 500 * time.Millisecond
+)
+
 func (c *Client) callAPI(request *http.Request) (*http.Response, error) {
+	for attempt := 0; ; attempt++ {
+		resp, err := c.doRequest(request)
+		if err != nil || resp.StatusCode != http.StatusTooManyRequests || attempt >= c.cfg.RateLimitRetries {
+			return resp, err
+		}
+
+		body, _ := io.ReadAll(resp.Body)
+		resp.Body.Close()
+		resp.Body = io.NopCloser(bytes.NewBuffer(body))
+
+		ctx := request.Context()
+		wait := rateLimitWait(resp.Header, attempt)
+		if !waitFitsContext(ctx, wait) {
+			return resp, nil
+		}
+		if c.cfg.Debug {
+			log.Printf("rate limited (429) by %s %s, retrying in %v", request.Method, request.URL.Path, wait)
+		}
+		if sleepContext(ctx, wait) != nil {
+			return resp, nil
+		}
+		if request.GetBody != nil {
+			request.Body, err = request.GetBody()
+			if err != nil {
+				return resp, err
+			}
+		}
+	}
+}
+
+func rateLimitWait(headers http.Header, attempt int) time.Duration {
+	if wait, ok := serverRateLimitWait(headers); ok {
+		return wait + randomDuration(serverRateLimitWaitJitter)
+	}
+
+	wait := maxDefaultRateLimitWait
+	if attempt < 8 && defaultRateLimitWait<<attempt < maxDefaultRateLimitWait {
+		wait = defaultRateLimitWait << attempt
+	}
+	return wait + randomDuration(wait/2)
+}
+
+// serverRateLimitWait returns the wait the server asked for: Retry-After
+// first, then RateLimit-Reset. ok is false when neither header is usable.
+func serverRateLimitWait(headers http.Header) (wait time.Duration, ok bool) {
+	if wait, ok := parseRetryAfter(headers.Get("Retry-After")); ok {
+		return wait, true
+	}
+	if seconds, err := strconv.Atoi(strings.TrimSpace(headers.Get("RateLimit-Reset"))); err == nil && seconds >= 0 {
+		return time.Duration(seconds) * time.Second, true
+	}
+	return 0, false
+}
+
+// randomDuration returns a duration in [0, limit).
+func randomDuration(limit time.Duration) time.Duration {
+	return time.Duration(rand.Int64N(int64(limit)))
+}
+
+func parseRetryAfter(value string) (time.Duration, bool) {
+	value = strings.TrimSpace(value)
+	if value == "" {
+		return 0, false
+	}
+	if seconds, err := strconv.Atoi(value); err == nil && seconds >= 0 {
+		return time.Duration(seconds) * time.Second, true
+	}
+	if at, err := http.ParseTime(value); err == nil {
+		return max(time.Until(at), 0), true
+	}
+	return 0, false
+}
+
+func waitFitsContext(ctx context.Context, d time.Duration) bool {
+	deadline, ok := ctx.Deadline()
+	return !ok || time.Now().Add(d).Before(deadline)
+}
+
+func sleepContext(ctx context.Context, d time.Duration) error {
+	timer := time.NewTimer(d)
+	defer timer.Stop()
+	select {
+	case <-ctx.Done():
+		return ctx.Err()
+	case <-timer.C:
+		return nil
+	}
+}
+
+func (c *Client) doRequest(request *http.Request) (*http.Response, error) {
 	if c.cfg.Debug {
 		dump, err := httputil.DumpRequestOut(request, true)
 		if err != nil {

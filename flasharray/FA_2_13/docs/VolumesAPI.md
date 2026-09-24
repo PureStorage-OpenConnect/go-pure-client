@@ -39,7 +39,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/pure-shared/go-pure-client/flasharray/FA_2_13"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_13"
 )
 
 func main() {
@@ -115,7 +115,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/pure-shared/go-pure-client/flasharray/FA_2_13"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_13"
 )
 
 func main() {
@@ -204,7 +204,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/pure-shared/go-pure-client/flasharray/FA_2_13"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_13"
 )
 
 func main() {
@@ -290,7 +290,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/pure-shared/go-pure-client/flasharray/FA_2_13"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_13"
 )
 
 func main() {
@@ -370,7 +370,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/pure-shared/go-pure-client/flasharray/FA_2_13"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_13"
 )
 
 func main() {
@@ -458,7 +458,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/pure-shared/go-pure-client/flasharray/FA_2_13"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_13"
 )
 
 func main() {
@@ -546,7 +546,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/pure-shared/go-pure-client/flasharray/FA_2_13"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_13"
 )
 
 func main() {
@@ -625,7 +625,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/pure-shared/go-pure-client/flasharray/FA_2_13"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_13"
 )
 
 func main() {
@@ -702,7 +702,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/pure-shared/go-pure-client/flasharray/FA_2_13"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_13"
 )
 
 func main() {
@@ -788,7 +788,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/pure-shared/go-pure-client/flasharray/FA_2_13"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_13"
 )
 
 func main() {
@@ -867,7 +867,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/pure-shared/go-pure-client/flasharray/FA_2_13"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_13"
 )
 
 func main() {
@@ -955,7 +955,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/pure-shared/go-pure-client/flasharray/FA_2_13"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_13"
 )
 
 func main() {
@@ -1034,7 +1034,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/pure-shared/go-pure-client/flasharray/FA_2_13"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_13"
 )
 
 func main() {
@@ -1112,7 +1112,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/pure-shared/go-pure-client/flasharray/FA_2_13"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_13"
 )
 
 func main() {
@@ -1198,7 +1198,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/pure-shared/go-pure-client/flasharray/FA_2_13"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_13"
 )
 
 func main() {

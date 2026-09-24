@@ -6,21 +6,17 @@ The module requires Go 1.24 or higher.
 ### Installation
 Each REST version is its own Go module. Add the import for the REST version you target:
 ```golang
-import gopureclient "github.com/pure-shared/go-pure-client/flasharray/FA_2_26"
+import gopureclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_26"
 ```
 Install it pinned to an SDK release:
 ```
-go get github.com/pure-shared/go-pure-client/flasharray/FA_2_26@v0.25.0
+go get github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_26@v0.25.0
 ```
 or track the latest:
 ```
-go get github.com/pure-shared/go-pure-client/flasharray/FA_2_26@latest
+go get github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_26@latest
 ```
 
-You will need to add package's URL into GOPRIVATE like
-```
-export GOPRIVATE=github.com/pure-shared/go-pure-client
-```
 
 Please note: Specific package might be different depending on the REST version used.
 
@@ -79,12 +75,38 @@ Timeout | Sets request timeout of the default HTTP client
 OAuthWithRawTokenID | Sets OAuth authentication with raw ID token
 OAuth | Sets OAuth authentication with private key
 APIToken | Sets API token authentication
+RateLimitRetries | Sets maximum number of retries in case of rate limit 429 response
 
 By default requests time out after 90 seconds, including reading the response
 body. Use `Timeout` to change this, or `Timeout(0)` to disable it. When you
 bring your own client via `HTTPClient`, set the timeout on that client instead;
 combining it with `Timeout` is rejected by `Build`, as is
 `DisableSSLVerification`.
+
+
+### Rate limiting
+
+Arrays rate limit the REST API and answer HTTP 429 (Too Many Requests) when
+a client sends too much. The client handles this for you: it waits for the
+time the array asks for in the `Retry-After` header (or `RateLimit-Reset`
+when absent, or a short exponential backoff when neither is sent), adds up
+to half a second of random jitter, and sends the request again up to max
+retries limit (default is 5).
+
+The client never waits past the deadline of the `context.Context` you pass
+to the API call. Use `context.WithTimeout` to cap the total time a call,
+including retries, may take. `RateLimitRetries` caps how many times the
+client retries, and `Timeout` caps each HTTP round trip. Neither caps the
+wait between retries: that is whatever the array asks for. With
+`context.Background()` the total call time is unbounded, so pass a context
+with a deadline when that matters.
+
+```go
+ctx, cancel := context.WithTimeout(context.Background(), 300*time.Second)
+defer cancel()
+
+resp, httpResp, err := client.VolumesApi.VolumesGet(ctx).Execute()
+```
 
 ### Example
 
@@ -96,7 +118,7 @@ import (
 	"fmt"
 	"os"
 
-	openapiclient "github.com/pure-shared/go-pure-client/flasharray/FA_2_34"
+	openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_34"
 )
 
 func main() {
