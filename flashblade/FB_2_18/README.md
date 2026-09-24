@@ -24,7 +24,7 @@ go get github.com/golang-jwt/jwt/v5
 Put the package under your project folder and add the following in import:
 
 ```golang
-import gopureclient "github.com/pure-shared/go-pure-client/flashblade/FB_2_18"
+import gopureclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_18"
 ```
 ## Configuration
 

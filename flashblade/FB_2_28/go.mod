@@ -1,4 +1,4 @@
-module github.com/pure-shared/go-pure-client/flashblade/FB_2_28
+module github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_28
 
 go 1.24.0
 

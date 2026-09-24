@@ -21,17 +21,20 @@ import (
 
 // sdkVersion is stamped with the release version at staging time; "dev"
 // identifies locally generated builds.
-const sdkVersion = "0.25.0"
+const sdkVersion = "0.25.1"
 
 const defaultHTTPTimeout = 90 * time.Second
 
+const defaultRateLimitRetries = 5
+
 // Configuration stores the configuration of the API client
 type Configuration struct {
-	ArrayURL      string
-	Authenticator Authenticator
-	Debug         bool
-	HTTPClient    *http.Client
-	UserAgent     string
+	ArrayURL         string
+	Authenticator    Authenticator
+	Debug            bool
+	HTTPClient       *http.Client
+	UserAgent        string
+	RateLimitRetries int
 }
 
 type ConfigurationBuilder struct {
@@ -42,6 +45,7 @@ type ConfigurationBuilder struct {
 	verifySSL          bool
 	timeout            time.Duration
 	timeoutSet         bool
+	rateLimitRetries   int
 	buildAuthenticator func() (Authenticator, error)
 }
 
@@ -51,6 +55,7 @@ func NewConfigurationBuilder(arrayUrl string) *ConfigurationBuilder {
 		debug:              false,
 		verifySSL:          true,
 		timeout:            defaultHTTPTimeout,
+		rateLimitRetries:   defaultRateLimitRetries,
 		arrayUrl:           arrayUrl,
 		buildAuthenticator: func() (Authenticator, error) { return nil, nil },
 	}
@@ -95,6 +100,11 @@ func (cb *ConfigurationBuilder) HTTPClient(httpClient *http.Client) *Configurati
 func (cb *ConfigurationBuilder) Timeout(timeout time.Duration) *ConfigurationBuilder {
 	cb.timeout = timeout
 	cb.timeoutSet = true
+	return cb
+}
+
+func (cb *ConfigurationBuilder) RateLimitRetries(retries int) *ConfigurationBuilder {
+	cb.rateLimitRetries = retries
 	return cb
 }
 
@@ -148,11 +158,15 @@ func (cb *ConfigurationBuilder) Build() (*Configuration, error) {
 	} else if cb.timeoutSet {
 		return nil, errors.New("cannot set timeout with custom HTTP client, set the timeout on the client instead")
 	}
+	if cb.rateLimitRetries < 0 {
+		return nil, errors.New("rate limit retries must not be negative")
+	}
 	return &Configuration{
-		Authenticator: authenticator,
-		HTTPClient:    httpClient,
-		ArrayURL:      cb.arrayUrl,
-		Debug:         cb.debug,
-		UserAgent:     cb.userAgent,
+		Authenticator:    authenticator,
+		HTTPClient:       httpClient,
+		ArrayURL:         cb.arrayUrl,
+		Debug:            cb.debug,
+		UserAgent:        cb.userAgent,
+		RateLimitRetries: cb.rateLimitRetries,
 	}, nil
 }

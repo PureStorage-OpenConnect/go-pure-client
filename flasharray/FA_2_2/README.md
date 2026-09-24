@@ -23,7 +23,7 @@ go get github.com/golang-jwt/jwt/v5
 Put the package under your project folder and add the following in import:
 
 ```golang
-import gopureclient "github.com/pure-shared/go-pure-client/flasharray/FA_2_2"
+import gopureclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_2"
 ```
 ## Configuration
 
