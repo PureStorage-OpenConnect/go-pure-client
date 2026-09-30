@@ -75,7 +75,7 @@ Timeout | Sets request timeout of the default HTTP client
 OAuthWithRawTokenID | Sets OAuth authentication with raw ID token
 OAuth | Sets OAuth authentication with private key
 APIToken | Sets API token authentication
-RateLimitRetries | Sets maximum number of retries in case of rate limit 429 response
+RateLimitRetries | Sets maximum number of retries while the server is overloaded (429, 503, or 500 "Server is busy")
 
 By default requests time out after 90 seconds, including reading the response
 body. Use `Timeout` to change this, or `Timeout(0)` to disable it. When you
@@ -84,14 +84,16 @@ combining it with `Timeout` is rejected by `Build`, as is
 `DisableSSLVerification`.
 
 
-### Rate limiting
+### Rate limiting and busy arrays
 
 Arrays rate limit the REST API and answer HTTP 429 (Too Many Requests) when
-a client sends too much. The client handles this for you: it waits for the
-time the array asks for in the `Retry-After` header (or `RateLimit-Reset`
-when absent, or a short exponential backoff when neither is sent), adds up
-to half a second of random jitter, and sends the request again up to max
-retries limit (default is 5).
+a client sends too much. An overloaded array answers HTTP 503 (Service
+Unavailable) or HTTP 500 with the error message `Server is busy`. The client
+handles all three for you: it waits for the time the array asks for in the
+`Retry-After` header (or `RateLimit-Reset` when absent, or a short
+exponential backoff when neither is sent), adds up to half a second of
+random jitter, and sends the request again up to max retries limit (default
+is 5). Other HTTP 500 errors are not retried.
 
 The client never waits past the deadline of the `context.Context` you pass
 to the API call. Use `context.WithTimeout` to cap the total time a call,
@@ -105,7 +107,7 @@ with a deadline when that matters.
 ctx, cancel := context.WithTimeout(context.Background(), 300*time.Second)
 defer cancel()
 
-resp, httpResp, err := client.VolumesApi.VolumesGet(ctx).Execute()
+resp, httpResp, err := client.VolumesAPI.VolumesGet(ctx).Execute()
 ```
 
 ### Example
@@ -122,7 +124,7 @@ import (
 )
 
 func main() {
-	url := "10.0.0.1"
+	url := "https://10.0.0.1"
 	apiToken := "123e4567-e89b-12d3-a456-426614174000"
 	configuration, err := openapiclient.NewConfigurationBuilder(url).
 		APIToken(apiToken).
@@ -140,14 +142,14 @@ func main() {
 	}
 	defer client.Close()
 
-	req := client.VolumesApi.VolumesGet(context.Background())
+	req := client.VolumesAPI.VolumesGet(context.Background())
 	resp, httpResp, err := req.Execute()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error when calling `VolumesApi.VolumesGet`: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Error when calling `VolumesAPI.VolumesGet`: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", httpResp)
 		return
 	}
-	fmt.Fprintf(os.Stdout, "Response from `VolumesApi.VolumesGet`: %v\n", resp)
+	fmt.Fprintf(os.Stdout, "Response from `VolumesAPI.VolumesGet`: %v\n", resp)
 }
 ```
 

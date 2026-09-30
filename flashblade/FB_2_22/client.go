@@ -498,18 +498,22 @@ const (
 	defaultRateLimitWait      = time.Second
 	maxDefaultRateLimitWait   = 30 * time.Second
 	serverRateLimitWaitJitter = 500 * time.Millisecond
+	serverBusyMessage         = "Server is busy"
 )
 
+// callAPI sends the request and retries it while the server is overloaded
+// (see isOverloaded), up to RateLimitRetries times, waiting as rateLimitWait
+// says between attempts.
 func (c *Client) callAPI(request *http.Request) (*http.Response, error) {
 	for attempt := 0; ; attempt++ {
 		resp, err := c.doRequest(request)
-		if err != nil || resp.StatusCode != http.StatusTooManyRequests || attempt >= c.cfg.RateLimitRetries {
+		if err != nil || attempt >= c.cfg.RateLimitRetries || !isOverloaded(resp) {
 			return resp, err
 		}
 
-		body, _ := io.ReadAll(resp.Body)
-		resp.Body.Close()
-		resp.Body = io.NopCloser(bytes.NewBuffer(body))
+		// Drain the body so the connection can be reused, but keep it
+		// readable in case this response is the one returned to the caller.
+		bufferBody(resp)
 
 		ctx := request.Context()
 		wait := rateLimitWait(resp.Header, attempt)
@@ -517,7 +521,7 @@ func (c *Client) callAPI(request *http.Request) (*http.Response, error) {
 			return resp, nil
 		}
 		if c.cfg.Debug {
-			log.Printf("rate limited (429) by %s %s, retrying in %v", request.Method, request.URL.Path, wait)
+			log.Printf("%s %s answered %d (server overloaded), retrying in %v", request.Method, request.URL.Path, resp.StatusCode, wait)
 		}
 		if sleepContext(ctx, wait) != nil {
 			return resp, nil
@@ -531,6 +535,48 @@ func (c *Client) callAPI(request *http.Request) (*http.Response, error) {
 	}
 }
 
+// isOverloaded reports whether the server rejected the request because it is
+// overloaded and the request is worth retrying after a wait: HTTP 429 Too
+// Many Requests, HTTP 503 Service Unavailable, or HTTP 500 "Server is busy".
+func isOverloaded(resp *http.Response) bool {
+	switch resp.StatusCode {
+	case http.StatusTooManyRequests, http.StatusServiceUnavailable:
+		return true
+	case http.StatusInternalServerError:
+		return isServerBusy(resp)
+	}
+	return false
+}
+
+// isServerBusy reports whether a 500 response carries Purity's overload
+// rejection, a body like {"errors":[{"message":"Server is busy"}]}.
+// The body stays readable for the caller. Any other body is not busy.
+func isServerBusy(resp *http.Response) bool {
+	var parsed struct {
+		Errors []ErrorResponseItem `json:"errors"`
+	}
+	if json.Unmarshal(bufferBody(resp), &parsed) != nil {
+		return false
+	}
+	for _, e := range parsed.Errors {
+		if e.Message == serverBusyMessage {
+			return true
+		}
+	}
+	return false
+}
+
+// bufferBody reads the whole response body and replaces it with an in-memory
+// copy, so it can be read again. It returns the body bytes.
+func bufferBody(resp *http.Response) []byte {
+	body, _ := io.ReadAll(resp.Body)
+	resp.Body.Close()
+	resp.Body = io.NopCloser(bytes.NewReader(body))
+	return body
+}
+
+// rateLimitWait returns how long to wait before retrying an overloaded
+// response: what the server asked for, or an exponential backoff.
 func rateLimitWait(headers http.Header, attempt int) time.Duration {
 	if wait, ok := serverRateLimitWait(headers); ok {
 		return wait + randomDuration(serverRateLimitWaitJitter)

@@ -21,7 +21,7 @@ import (
 
 // sdkVersion is stamped with the release version at staging time; "dev"
 // identifies locally generated builds.
-const sdkVersion = "0.25.1"
+const sdkVersion = "0.25.2"
 
 const defaultHTTPTimeout = 90 * time.Second
 
@@ -103,6 +103,8 @@ func (cb *ConfigurationBuilder) Timeout(timeout time.Duration) *ConfigurationBui
 	return cb
 }
 
+// RateLimitRetries sets how many times a request is retried while the server
+// is overloaded (HTTP 429, HTTP 503, or HTTP 500 "Server is busy"). Default 5.
 func (cb *ConfigurationBuilder) RateLimitRetries(retries int) *ConfigurationBuilder {
 	cb.rateLimitRetries = retries
 	return cb
