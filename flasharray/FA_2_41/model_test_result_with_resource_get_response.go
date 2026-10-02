@@ -19,6 +19,10 @@ var _ MappedNullable = &TestResultWithResourceGetResponse{}
 
 // TestResultWithResourceGetResponse struct for TestResultWithResourceGetResponse
 type TestResultWithResourceGetResponse struct {
+	// Continuation token that can be provided in the `continuation_token` query param to get the next page of data. If you use the continuation token to page through data you are guaranteed to get all items exactly once regardless of how items are modified. If an item is added or deleted during the pagination then it may or may not be returned. The continuation token is generated if the limit is less than the remaining number of items, and the default sort is used (no sort is specified).
+	ContinuationToken *string `json:"continuation_token,omitempty"`
+	// Returns a value of `true` if subsequent items can be retrieved.
+	MoreItemsRemaining *bool `json:"more_items_remaining,omitempty"`
 	// The total number of records after applying all filter query parameters. The `total_item_count` will be calculated if and only if the corresponding query parameter `total_item_count` is set to `true`. If this query parameter is not set or set to `false`, a value of `null` will be returned.
 	TotalItemCount *int32 `json:"total_item_count,omitempty"`
 	// The list of errors encountered when attempting to perform an operation.
@@ -41,6 +45,70 @@ func NewTestResultWithResourceGetResponse() *TestResultWithResourceGetResponse {
 func NewTestResultWithResourceGetResponseWithDefaults() *TestResultWithResourceGetResponse {
 	this := TestResultWithResourceGetResponse{}
 	return &this
+}
+
+// GetContinuationToken returns the ContinuationToken field value if set, zero value otherwise.
+func (o *TestResultWithResourceGetResponse) GetContinuationToken() string {
+	if o == nil || IsNil(o.ContinuationToken) {
+		var ret string
+		return ret
+	}
+	return *o.ContinuationToken
+}
+
+// GetContinuationTokenOk returns a tuple with the ContinuationToken field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *TestResultWithResourceGetResponse) GetContinuationTokenOk() (*string, bool) {
+	if o == nil || IsNil(o.ContinuationToken) {
+		return nil, false
+	}
+	return o.ContinuationToken, true
+}
+
+// HasContinuationToken returns a boolean if a field has been set.
+func (o *TestResultWithResourceGetResponse) HasContinuationToken() bool {
+	if o != nil && !IsNil(o.ContinuationToken) {
+		return true
+	}
+
+	return false
+}
+
+// SetContinuationToken gets a reference to the given string and assigns it to the ContinuationToken field.
+func (o *TestResultWithResourceGetResponse) SetContinuationToken(v string) {
+	o.ContinuationToken = &v
+}
+
+// GetMoreItemsRemaining returns the MoreItemsRemaining field value if set, zero value otherwise.
+func (o *TestResultWithResourceGetResponse) GetMoreItemsRemaining() bool {
+	if o == nil || IsNil(o.MoreItemsRemaining) {
+		var ret bool
+		return ret
+	}
+	return *o.MoreItemsRemaining
+}
+
+// GetMoreItemsRemainingOk returns a tuple with the MoreItemsRemaining field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *TestResultWithResourceGetResponse) GetMoreItemsRemainingOk() (*bool, bool) {
+	if o == nil || IsNil(o.MoreItemsRemaining) {
+		return nil, false
+	}
+	return o.MoreItemsRemaining, true
+}
+
+// HasMoreItemsRemaining returns a boolean if a field has been set.
+func (o *TestResultWithResourceGetResponse) HasMoreItemsRemaining() bool {
+	if o != nil && !IsNil(o.MoreItemsRemaining) {
+		return true
+	}
+
+	return false
+}
+
+// SetMoreItemsRemaining gets a reference to the given bool and assigns it to the MoreItemsRemaining field.
+func (o *TestResultWithResourceGetResponse) SetMoreItemsRemaining(v bool) {
+	o.MoreItemsRemaining = &v
 }
 
 // GetTotalItemCount returns the TotalItemCount field value if set, zero value otherwise.
@@ -149,6 +217,12 @@ func (o TestResultWithResourceGetResponse) MarshalJSON() ([]byte, error) {
 
 func (o TestResultWithResourceGetResponse) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
+	if !IsNil(o.ContinuationToken) {
+		toSerialize["continuation_token"] = o.ContinuationToken
+	}
+	if !IsNil(o.MoreItemsRemaining) {
+		toSerialize["more_items_remaining"] = o.MoreItemsRemaining
+	}
 	if !IsNil(o.TotalItemCount) {
 		toSerialize["total_item_count"] = o.TotalItemCount
 	}

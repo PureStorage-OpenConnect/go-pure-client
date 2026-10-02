@@ -1217,7 +1217,6 @@ Class | Method | HTTP request | Description
  - [Throttle](docs/Throttle.md)
  - [ThrottleDeprecated](docs/ThrottleDeprecated.md)
  - [TimeWindow](docs/TimeWindow.md)
- - [TotalItemCountResponse](docs/TotalItemCountResponse.md)
  - [Transfer](docs/Transfer.md)
  - [UpgradeParameters](docs/UpgradeParameters.md)
  - [Username](docs/Username.md)
