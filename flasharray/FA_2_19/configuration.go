@@ -21,7 +21,7 @@ import (
 
 // sdkVersion is stamped with the release version at staging time; "dev"
 // identifies locally generated builds.
-const sdkVersion = "0.25.2"
+const sdkVersion = "0.26.0"
 
 const defaultHTTPTimeout = 90 * time.Second
 
