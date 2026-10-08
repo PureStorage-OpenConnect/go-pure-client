@@ -1,75 +1,150 @@
-# API Changelog 2.56 vs. 2.57
+# API Changelog 2.57 vs. 2.58
 
-## GET /active-directory
--  added the optional property 'items/ca_certificate' to the response with the '200' status
--  added the optional property 'items/ca_certificate' to the response with the '207' status
--  added the optional property 'items/ca_certificate_group' to the response with the '200' status
--  added the optional property 'items/ca_certificate_group' to the response with the '207' status
-
-
-## PATCH /active-directory
--  added the new optional request property 'ca_certificate'
--  added the new optional request property 'ca_certificate_group'
--  added the optional property 'items/ca_certificate' to the response with the '200' status
--  added the optional property 'items/ca_certificate_group' to the response with the '200' status
-
-
-## POST /active-directory
--  added the new optional request property 'ca_certificate'
--  added the new optional request property 'ca_certificate_group'
--  added the optional property 'items/ca_certificate' to the response with the '200' status
--  added the optional property 'items/ca_certificate_group' to the response with the '200' status
-
-
-## PATCH /active-directory/test
+## GET /antivirus/targets
 -  endpoint added
 
 
-## POST /data-sealing-keys/revoke
+## DELETE /antivirus/targets/icap
 -  endpoint added
 
 
-## GET /directory-services
--  added the optional property 'items/ca_certificate_group' to the response with the '200' status
--  added the optional property 'items/ca_certificate_group' to the response with the '207' status
-
-
-## PATCH /directory-services
--  added the new optional request property 'ca_certificate_group'
--  added the optional property 'items/ca_certificate_group' to the response with the '200' status
-
-
-## POST /directory-services
--  added the new optional request property 'ca_certificate_group'
--  added the new optional request property 'ca_certificate_ref'
--  added the optional property 'items/ca_certificate_group' to the response with the '200' status
-
-
-## PATCH /directory-services/test
--  added the new optional request property 'ca_certificate_group'
-
-
-## POST /fleets/members/batch
+## GET /antivirus/targets/icap
 -  endpoint added
 
 
-## GET /topology-groups
--  added the new optional 'query' request parameter 'allow_errors'
--  added the success response with the status '207'
+## PATCH /antivirus/targets/icap
+-  endpoint added
 
 
-## GET /topology-groups/arrays
--  added the new optional 'query' request parameter 'allow_errors'
--  added the success response with the status '207'
+## POST /antivirus/targets/icap
+-  endpoint added
 
 
-## GET /topology-groups/members
--  added the new optional 'query' request parameter 'allow_errors'
--  added the success response with the status '207'
+## DELETE /antivirus/targets/icap/scanners
+-  endpoint added
 
 
-## GET /volumes/diff
-- :warning: for the 'query' request parameter 'ids', the maxLength was set to '1'
-- :warning: for the 'query' request parameter 'names', the maxLength was set to '1'
+## GET /antivirus/targets/icap/scanners
+-  endpoint added
+
+
+## PATCH /antivirus/targets/icap/scanners
+-  endpoint added
+
+
+## POST /antivirus/targets/icap/scanners
+-  endpoint added
+
+
+## POST /array-connections/connection-keys
+-  endpoint added
+
+
+## GET /buckets
+-  added the new optional 'query' request parameter 'workload_ids'
+-  added the new optional 'query' request parameter 'workload_names'
+-  added the optional property 'items/workload' to the response with the '200' status
+-  added the optional property 'items/workload' to the response with the '207' status
+-  added the optional property 'total/workload' to the response with the '200' status
+-  added the optional property 'total/workload' to the response with the '207' status
+
+
+## PATCH /buckets
+-  added the new optional request property 'workload'
+-  added the optional property 'items/workload' to the response with the '200' status
+
+
+## POST /buckets
+-  added the new optional request property 'workload'
+-  the 'query' request parameter 'names' became optional
+-  added the optional property 'items/workload' to the response with the '200' status
+
+
+## DELETE /directories/policies/antivirus
+-  endpoint added
+
+
+## GET /directories/policies/antivirus
+-  endpoint added
+
+
+## POST /directories/policies/antivirus
+-  endpoint added
+
+
+## GET /files/antivirus
+-  endpoint added
+
+
+## PATCH /files/antivirus
+-  endpoint added
+
+
+## DELETE /policies/antivirus
+-  endpoint added
+
+
+## GET /policies/antivirus
+-  endpoint added
+
+
+## PATCH /policies/antivirus
+-  endpoint added
+
+
+## POST /policies/antivirus
+-  endpoint added
+
+
+## DELETE /policies/antivirus/members
+-  endpoint added
+
+
+## GET /policies/antivirus/members
+-  endpoint added
+
+
+## POST /policies/antivirus/members
+-  endpoint added
+
+
+## DELETE /policies/antivirus/rules
+-  endpoint added
+
+
+## GET /policies/antivirus/rules
+-  endpoint added
+
+
+## PATCH /policies/antivirus/rules
+-  endpoint added
+
+
+## POST /policies/antivirus/rules
+-  endpoint added
+
+
+## GET /presets/workload
+-  added the optional property 'items/bucket_configurations' to the response with the '200' status
+-  added the optional property 'items/lifecycle_configurations' to the response with the '200' status
+
+
+## PATCH /presets/workload
+-  added the optional property 'items/bucket_configurations' to the response with the '200' status
+-  added the optional property 'items/lifecycle_configurations' to the response with the '200' status
+
+
+## POST /presets/workload
+-  added the new optional request property 'bucket_configurations'
+-  added the new optional request property 'lifecycle_configurations'
+-  added the optional property 'items/bucket_configurations' to the response with the '200' status
+-  added the optional property 'items/lifecycle_configurations' to the response with the '200' status
+
+
+## PUT /presets/workload
+-  added the new optional request property 'bucket_configurations'
+-  added the new optional request property 'lifecycle_configurations'
+-  added the optional property 'items/bucket_configurations' to the response with the '200' status
+-  added the optional property 'items/lifecycle_configurations' to the response with the '200' status
 
 

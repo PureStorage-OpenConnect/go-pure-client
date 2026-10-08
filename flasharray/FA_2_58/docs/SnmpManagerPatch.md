@@ -1,0 +1,186 @@
+# SnmpManagerPatch
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Name** | Pointer to **string** | A user-specified name. The name must be locally unique and can be changed.  | [optional] 
+**Host** | Pointer to **string** | DNS hostname or IP address of a computer that hosts an SNMP manager to which Purity//FA is to send trap messages when it generates alerts.  | [optional] 
+**Notification** | Pointer to **string** | The type of notification the agent will send. Valid values are &#x60;inform&#x60; and &#x60;trap&#x60;.  | [optional] 
+**V2c** | Pointer to [**SnmpV2c**](SnmpV2c.md) |  | [optional] 
+**V3** | Pointer to [**SnmpV3Patch**](SnmpV3Patch.md) |  | [optional] 
+**Version** | Pointer to **string** | Version of the SNMP protocol to be used by Purity//FA to communicate with the specified manager. Valid values are &#x60;v2c&#x60; and &#x60;v3&#x60;.  | [optional] 
+
+## Methods
+
+### NewSnmpManagerPatch
+
+`func NewSnmpManagerPatch() *SnmpManagerPatch`
+
+NewSnmpManagerPatch instantiates a new SnmpManagerPatch object
+This constructor will assign default values to properties that have it defined,
+and makes sure properties required by API are set, but the set of arguments
+will change when the set of required properties is changed
+
+### NewSnmpManagerPatchWithDefaults
+
+`func NewSnmpManagerPatchWithDefaults() *SnmpManagerPatch`
+
+NewSnmpManagerPatchWithDefaults instantiates a new SnmpManagerPatch object
+This constructor will only assign default values to properties that have it defined,
+but it doesn't guarantee that properties required by API are set
+
+### GetName
+
+`func (o *SnmpManagerPatch) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *SnmpManagerPatch) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *SnmpManagerPatch) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *SnmpManagerPatch) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetHost
+
+`func (o *SnmpManagerPatch) GetHost() string`
+
+GetHost returns the Host field if non-nil, zero value otherwise.
+
+### GetHostOk
+
+`func (o *SnmpManagerPatch) GetHostOk() (*string, bool)`
+
+GetHostOk returns a tuple with the Host field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHost
+
+`func (o *SnmpManagerPatch) SetHost(v string)`
+
+SetHost sets Host field to given value.
+
+### HasHost
+
+`func (o *SnmpManagerPatch) HasHost() bool`
+
+HasHost returns a boolean if a field has been set.
+
+### GetNotification
+
+`func (o *SnmpManagerPatch) GetNotification() string`
+
+GetNotification returns the Notification field if non-nil, zero value otherwise.
+
+### GetNotificationOk
+
+`func (o *SnmpManagerPatch) GetNotificationOk() (*string, bool)`
+
+GetNotificationOk returns a tuple with the Notification field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNotification
+
+`func (o *SnmpManagerPatch) SetNotification(v string)`
+
+SetNotification sets Notification field to given value.
+
+### HasNotification
+
+`func (o *SnmpManagerPatch) HasNotification() bool`
+
+HasNotification returns a boolean if a field has been set.
+
+### GetV2c
+
+`func (o *SnmpManagerPatch) GetV2c() SnmpV2c`
+
+GetV2c returns the V2c field if non-nil, zero value otherwise.
+
+### GetV2cOk
+
+`func (o *SnmpManagerPatch) GetV2cOk() (*SnmpV2c, bool)`
+
+GetV2cOk returns a tuple with the V2c field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetV2c
+
+`func (o *SnmpManagerPatch) SetV2c(v SnmpV2c)`
+
+SetV2c sets V2c field to given value.
+
+### HasV2c
+
+`func (o *SnmpManagerPatch) HasV2c() bool`
+
+HasV2c returns a boolean if a field has been set.
+
+### GetV3
+
+`func (o *SnmpManagerPatch) GetV3() SnmpV3Patch`
+
+GetV3 returns the V3 field if non-nil, zero value otherwise.
+
+### GetV3Ok
+
+`func (o *SnmpManagerPatch) GetV3Ok() (*SnmpV3Patch, bool)`
+
+GetV3Ok returns a tuple with the V3 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetV3
+
+`func (o *SnmpManagerPatch) SetV3(v SnmpV3Patch)`
+
+SetV3 sets V3 field to given value.
+
+### HasV3
+
+`func (o *SnmpManagerPatch) HasV3() bool`
+
+HasV3 returns a boolean if a field has been set.
+
+### GetVersion
+
+`func (o *SnmpManagerPatch) GetVersion() string`
+
+GetVersion returns the Version field if non-nil, zero value otherwise.
+
+### GetVersionOk
+
+`func (o *SnmpManagerPatch) GetVersionOk() (*string, bool)`
+
+GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVersion
+
+`func (o *SnmpManagerPatch) SetVersion(v string)`
+
+SetVersion sets Version field to given value.
+
+### HasVersion
+
+`func (o *SnmpManagerPatch) HasVersion() bool`
+
+HasVersion returns a boolean if a field has been set.
+
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
