@@ -4,32 +4,32 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DirectoryServicesGet**](DirectoryServicesAPI.md#DirectoryServicesGet) | **Get** /api/2.29/directory-services | GET directory-services
-[**DirectoryServicesLocalDirectoryServicesDelete**](DirectoryServicesAPI.md#DirectoryServicesLocalDirectoryServicesDelete) | **Delete** /api/2.29/directory-services/local/directory-services | Delete local directory services
-[**DirectoryServicesLocalDirectoryServicesGet**](DirectoryServicesAPI.md#DirectoryServicesLocalDirectoryServicesGet) | **Get** /api/2.29/directory-services/local/directory-services | List local directory services
-[**DirectoryServicesLocalDirectoryServicesPatch**](DirectoryServicesAPI.md#DirectoryServicesLocalDirectoryServicesPatch) | **Patch** /api/2.29/directory-services/local/directory-services | Modify local directory service
-[**DirectoryServicesLocalDirectoryServicesPost**](DirectoryServicesAPI.md#DirectoryServicesLocalDirectoryServicesPost) | **Post** /api/2.29/directory-services/local/directory-services | Create local directory service
-[**DirectoryServicesLocalGroupsDelete**](DirectoryServicesAPI.md#DirectoryServicesLocalGroupsDelete) | **Delete** /api/2.29/directory-services/local/groups | Delete local groups
-[**DirectoryServicesLocalGroupsGet**](DirectoryServicesAPI.md#DirectoryServicesLocalGroupsGet) | **Get** /api/2.29/directory-services/local/groups | List local groups
-[**DirectoryServicesLocalGroupsMembersDelete**](DirectoryServicesAPI.md#DirectoryServicesLocalGroupsMembersDelete) | **Delete** /api/2.29/directory-services/local/groups/members | Delete local group membership
-[**DirectoryServicesLocalGroupsMembersGet**](DirectoryServicesAPI.md#DirectoryServicesLocalGroupsMembersGet) | **Get** /api/2.29/directory-services/local/groups/members | List local group memberships
-[**DirectoryServicesLocalGroupsMembersPost**](DirectoryServicesAPI.md#DirectoryServicesLocalGroupsMembersPost) | **Post** /api/2.29/directory-services/local/groups/members | Create local group membership
-[**DirectoryServicesLocalGroupsPatch**](DirectoryServicesAPI.md#DirectoryServicesLocalGroupsPatch) | **Patch** /api/2.29/directory-services/local/groups | Modify local groups
-[**DirectoryServicesLocalGroupsPost**](DirectoryServicesAPI.md#DirectoryServicesLocalGroupsPost) | **Post** /api/2.29/directory-services/local/groups | Create local group
-[**DirectoryServicesLocalUsersDelete**](DirectoryServicesAPI.md#DirectoryServicesLocalUsersDelete) | **Delete** /api/2.29/directory-services/local/users | Delete local users
-[**DirectoryServicesLocalUsersGet**](DirectoryServicesAPI.md#DirectoryServicesLocalUsersGet) | **Get** /api/2.29/directory-services/local/users | List local users
-[**DirectoryServicesLocalUsersMembersDelete**](DirectoryServicesAPI.md#DirectoryServicesLocalUsersMembersDelete) | **Delete** /api/2.29/directory-services/local/users/members | Delete local user membership
-[**DirectoryServicesLocalUsersMembersGet**](DirectoryServicesAPI.md#DirectoryServicesLocalUsersMembersGet) | **Get** /api/2.29/directory-services/local/users/members | List local user memberships
-[**DirectoryServicesLocalUsersMembersPost**](DirectoryServicesAPI.md#DirectoryServicesLocalUsersMembersPost) | **Post** /api/2.29/directory-services/local/users/members | Create local user membership
-[**DirectoryServicesLocalUsersPatch**](DirectoryServicesAPI.md#DirectoryServicesLocalUsersPatch) | **Patch** /api/2.29/directory-services/local/users | Modify local users
-[**DirectoryServicesLocalUsersPost**](DirectoryServicesAPI.md#DirectoryServicesLocalUsersPost) | **Post** /api/2.29/directory-services/local/users | Create local user
-[**DirectoryServicesPatch**](DirectoryServicesAPI.md#DirectoryServicesPatch) | **Patch** /api/2.29/directory-services | PATCH directory-services
-[**DirectoryServicesRolesDelete**](DirectoryServicesAPI.md#DirectoryServicesRolesDelete) | **Delete** /api/2.29/directory-services/roles | DELETE directory-service/roles
-[**DirectoryServicesRolesGet**](DirectoryServicesAPI.md#DirectoryServicesRolesGet) | **Get** /api/2.29/directory-services/roles | GET directory-service/roles
-[**DirectoryServicesRolesPatch**](DirectoryServicesAPI.md#DirectoryServicesRolesPatch) | **Patch** /api/2.29/directory-services/roles | PATCH directory-service/roles
-[**DirectoryServicesRolesPost**](DirectoryServicesAPI.md#DirectoryServicesRolesPost) | **Post** /api/2.29/directory-services/roles | POST directory-service/roles
-[**DirectoryServicesTestGet**](DirectoryServicesAPI.md#DirectoryServicesTestGet) | **Get** /api/2.29/directory-services/test | GET directory-services/test
-[**DirectoryServicesTestPatch**](DirectoryServicesAPI.md#DirectoryServicesTestPatch) | **Patch** /api/2.29/directory-services/test | PATCH directory-service/test
+[**DirectoryServicesGet**](DirectoryServicesAPI.md#DirectoryServicesGet) | **Get** /api/2.30/directory-services | GET directory-services
+[**DirectoryServicesLocalDirectoryServicesDelete**](DirectoryServicesAPI.md#DirectoryServicesLocalDirectoryServicesDelete) | **Delete** /api/2.30/directory-services/local/directory-services | Delete local directory services
+[**DirectoryServicesLocalDirectoryServicesGet**](DirectoryServicesAPI.md#DirectoryServicesLocalDirectoryServicesGet) | **Get** /api/2.30/directory-services/local/directory-services | List local directory services
+[**DirectoryServicesLocalDirectoryServicesPatch**](DirectoryServicesAPI.md#DirectoryServicesLocalDirectoryServicesPatch) | **Patch** /api/2.30/directory-services/local/directory-services | Modify local directory service
+[**DirectoryServicesLocalDirectoryServicesPost**](DirectoryServicesAPI.md#DirectoryServicesLocalDirectoryServicesPost) | **Post** /api/2.30/directory-services/local/directory-services | Create local directory service
+[**DirectoryServicesLocalGroupsDelete**](DirectoryServicesAPI.md#DirectoryServicesLocalGroupsDelete) | **Delete** /api/2.30/directory-services/local/groups | Delete local groups
+[**DirectoryServicesLocalGroupsGet**](DirectoryServicesAPI.md#DirectoryServicesLocalGroupsGet) | **Get** /api/2.30/directory-services/local/groups | List local groups
+[**DirectoryServicesLocalGroupsMembersDelete**](DirectoryServicesAPI.md#DirectoryServicesLocalGroupsMembersDelete) | **Delete** /api/2.30/directory-services/local/groups/members | Delete local group membership
+[**DirectoryServicesLocalGroupsMembersGet**](DirectoryServicesAPI.md#DirectoryServicesLocalGroupsMembersGet) | **Get** /api/2.30/directory-services/local/groups/members | List local group memberships
+[**DirectoryServicesLocalGroupsMembersPost**](DirectoryServicesAPI.md#DirectoryServicesLocalGroupsMembersPost) | **Post** /api/2.30/directory-services/local/groups/members | Create local group membership
+[**DirectoryServicesLocalGroupsPatch**](DirectoryServicesAPI.md#DirectoryServicesLocalGroupsPatch) | **Patch** /api/2.30/directory-services/local/groups | Modify local groups
+[**DirectoryServicesLocalGroupsPost**](DirectoryServicesAPI.md#DirectoryServicesLocalGroupsPost) | **Post** /api/2.30/directory-services/local/groups | Create local group
+[**DirectoryServicesLocalUsersDelete**](DirectoryServicesAPI.md#DirectoryServicesLocalUsersDelete) | **Delete** /api/2.30/directory-services/local/users | Delete local users
+[**DirectoryServicesLocalUsersGet**](DirectoryServicesAPI.md#DirectoryServicesLocalUsersGet) | **Get** /api/2.30/directory-services/local/users | List local users
+[**DirectoryServicesLocalUsersMembersDelete**](DirectoryServicesAPI.md#DirectoryServicesLocalUsersMembersDelete) | **Delete** /api/2.30/directory-services/local/users/members | Delete local user membership
+[**DirectoryServicesLocalUsersMembersGet**](DirectoryServicesAPI.md#DirectoryServicesLocalUsersMembersGet) | **Get** /api/2.30/directory-services/local/users/members | List local user memberships
+[**DirectoryServicesLocalUsersMembersPost**](DirectoryServicesAPI.md#DirectoryServicesLocalUsersMembersPost) | **Post** /api/2.30/directory-services/local/users/members | Create local user membership
+[**DirectoryServicesLocalUsersPatch**](DirectoryServicesAPI.md#DirectoryServicesLocalUsersPatch) | **Patch** /api/2.30/directory-services/local/users | Modify local users
+[**DirectoryServicesLocalUsersPost**](DirectoryServicesAPI.md#DirectoryServicesLocalUsersPost) | **Post** /api/2.30/directory-services/local/users | Create local user
+[**DirectoryServicesPatch**](DirectoryServicesAPI.md#DirectoryServicesPatch) | **Patch** /api/2.30/directory-services | PATCH directory-services
+[**DirectoryServicesRolesDelete**](DirectoryServicesAPI.md#DirectoryServicesRolesDelete) | **Delete** /api/2.30/directory-services/roles | DELETE directory-service/roles
+[**DirectoryServicesRolesGet**](DirectoryServicesAPI.md#DirectoryServicesRolesGet) | **Get** /api/2.30/directory-services/roles | GET directory-service/roles
+[**DirectoryServicesRolesPatch**](DirectoryServicesAPI.md#DirectoryServicesRolesPatch) | **Patch** /api/2.30/directory-services/roles | PATCH directory-service/roles
+[**DirectoryServicesRolesPost**](DirectoryServicesAPI.md#DirectoryServicesRolesPost) | **Post** /api/2.30/directory-services/roles | POST directory-service/roles
+[**DirectoryServicesTestGet**](DirectoryServicesAPI.md#DirectoryServicesTestGet) | **Get** /api/2.30/directory-services/test | GET directory-services/test
+[**DirectoryServicesTestPatch**](DirectoryServicesAPI.md#DirectoryServicesTestPatch) | **Patch** /api/2.30/directory-services/test | PATCH directory-service/test
 
 
 
@@ -50,7 +50,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -132,7 +132,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -208,7 +208,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -294,7 +294,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -373,7 +373,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -451,7 +451,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -490,8 +490,8 @@ Name | Type | Description  | Notes
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
  **gids** | **[]int32** | Performs the operation on the specified GIDs. Enter multiple GIDs in comma-separated format. For example, &#x60;4234235,9681923&#x60;.  | 
- **localDirectoryServiceIds** | **[]string** | Performs the operation on the specified local directory service. Supports exactly one value. When not specified, the local directory service connected to the &#x60;_array_server&#x60; will be used. This cannot be provided in conjunction with the &#x60;local_directory_service_names&#x60; parameter.  | 
- **localDirectoryServiceNames** | **[]string** | Performs the operation on the specified local directory service. Supports exactly one value. When not specified, the local directory service connected to the &#x60;_array_server&#x60; will be used. This cannot be provided in conjunction with the &#x60;local_directory_service_ids&#x60; parameter.  | 
+ **localDirectoryServiceIds** | **[]string** | Performs the operation on the single local directory service specified by ID. Only one value is supported; specifying multiple IDs in comma- separated format is not allowed. The &#x60;local_directory_service_ids&#x60; or &#x60;local_directory_service_names&#x60; parameter is required, but they cannot be set together.  | 
+ **localDirectoryServiceNames** | **[]string** | Performs the operation on the single local directory service specified. Only one value is supported; specifying multiple values in comma- separated format is not allowed. The &#x60;local_directory_service_ids&#x60; or &#x60;local_directory_service_names&#x60; parameter is required, but they cannot be set together.  | 
  **names** | **[]string** | Performs the operation on the unique name specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  | 
  **sids** | **[]string** | Performs the operation on the object SID specified. Enter multiple SIDs in comma-separated format. For example, &#x60;S-1-2-532-582374278-329482934,S-1-2-532-234235245-423425234&#x60;.  | 
 
@@ -530,7 +530,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -617,7 +617,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -658,8 +658,8 @@ Name | Type | Description  | Notes
  **groupGids** | **[]int32** | Performs the operation on the specified GIDs. Enter multiple GIDs in comma-separated format. For example, &#x60;4234235,9681923&#x60;.  | 
  **groupNames** | **[]string** | Performs the operation on the group names specified. Enter multiple group names in comma-separated format. For example, &#x60;group1,group2&#x60;.  | 
  **groupSids** | **[]string** | Performs the operation on the specified group SID. Enter multiple group SIDs in comma-separated format. For example, &#x60;S-1-2-532-582374278-329482934,S-1-2-532-234235245-423425234&#x60;.  | 
- **localDirectoryServiceIds** | **[]string** | Performs the operation on the specified local directory service. Supports exactly one value. When not specified, the local directory service connected to the &#x60;_array_server&#x60; will be used. This cannot be provided in conjunction with the &#x60;local_directory_service_names&#x60; parameter.  | 
- **localDirectoryServiceNames** | **[]string** | Performs the operation on the specified local directory service. Supports exactly one value. When not specified, the local directory service connected to the &#x60;_array_server&#x60; will be used. This cannot be provided in conjunction with the &#x60;local_directory_service_ids&#x60; parameter.  | 
+ **localDirectoryServiceIds** | **[]string** | Performs the operation on the single local directory service specified by ID. Only one value is supported; specifying multiple IDs in comma- separated format is not allowed. The &#x60;local_directory_service_ids&#x60; or &#x60;local_directory_service_names&#x60; parameter is required, but they cannot be set together.  | 
+ **localDirectoryServiceNames** | **[]string** | Performs the operation on the single local directory service specified. Only one value is supported; specifying multiple values in comma- separated format is not allowed. The &#x60;local_directory_service_ids&#x60; or &#x60;local_directory_service_names&#x60; parameter is required, but they cannot be set together.  | 
  **memberIds** | **[]int32** | Performs the operation on the unique local member IDs specified. Enter multiple member IDs in comma-separated format. For local group IDs refer to group IDs (GID). For local user IDs refer to user IDs (UID). The &#x60;member_ids&#x60; and &#x60;member_names&#x60; parameters cannot be provided together.  | 
  **memberNames** | **[]string** | A comma-separated list of member names.  | 
  **memberSids** | **[]string** | Performs the operation on the specified member SID. Enter multiple member SIDs in comma-separated format. For example, &#x60;S-1-2-532-582374278-329482934,S-1-2-532-234235245-423425234&#x60;.  | 
@@ -700,7 +700,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -790,7 +790,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -834,8 +834,8 @@ Name | Type | Description  | Notes
  **groupGids** | **[]int32** | Performs the operation on the specified GIDs. Enter multiple GIDs in comma-separated format. For example, &#x60;4234235,9681923&#x60;.  | 
  **groupNames** | **[]string** | Performs the operation on the group names specified. Enter multiple group names in comma-separated format. For example, &#x60;group1,group2&#x60;.  | 
  **groupSids** | **[]string** | Performs the operation on the specified group SID. Enter multiple group SIDs in comma-separated format. For example, &#x60;S-1-2-532-582374278-329482934,S-1-2-532-234235245-423425234&#x60;.  | 
- **localDirectoryServiceIds** | **[]string** | Performs the operation on the specified local directory service. Supports exactly one value. When not specified, the local directory service connected to the &#x60;_array_server&#x60; will be used. This cannot be provided in conjunction with the &#x60;local_directory_service_names&#x60; parameter.  | 
- **localDirectoryServiceNames** | **[]string** | Performs the operation on the specified local directory service. Supports exactly one value. When not specified, the local directory service connected to the &#x60;_array_server&#x60; will be used. This cannot be provided in conjunction with the &#x60;local_directory_service_ids&#x60; parameter.  | 
+ **localDirectoryServiceIds** | **[]string** | Performs the operation on the single local directory service specified by ID. Only one value is supported; specifying multiple IDs in comma- separated format is not allowed. The &#x60;local_directory_service_ids&#x60; or &#x60;local_directory_service_names&#x60; parameter is required, but they cannot be set together.  | 
+ **localDirectoryServiceNames** | **[]string** | Performs the operation on the single local directory service specified. Only one value is supported; specifying multiple values in comma- separated format is not allowed. The &#x60;local_directory_service_ids&#x60; or &#x60;local_directory_service_names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 
@@ -872,7 +872,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -914,8 +914,8 @@ Name | Type | Description  | Notes
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
  **gids** | **[]int32** | Performs the operation on the specified GIDs. Enter multiple GIDs in comma-separated format. For example, &#x60;4234235,9681923&#x60;.  | 
- **localDirectoryServiceIds** | **[]string** | Performs the operation on the specified local directory service. Supports exactly one value. When not specified, the local directory service connected to the &#x60;_array_server&#x60; will be used. This cannot be provided in conjunction with the &#x60;local_directory_service_names&#x60; parameter.  | 
- **localDirectoryServiceNames** | **[]string** | Performs the operation on the specified local directory service. Supports exactly one value. When not specified, the local directory service connected to the &#x60;_array_server&#x60; will be used. This cannot be provided in conjunction with the &#x60;local_directory_service_ids&#x60; parameter.  | 
+ **localDirectoryServiceIds** | **[]string** | Performs the operation on the single local directory service specified by ID. Only one value is supported; specifying multiple IDs in comma- separated format is not allowed. The &#x60;local_directory_service_ids&#x60; or &#x60;local_directory_service_names&#x60; parameter is required, but they cannot be set together.  | 
+ **localDirectoryServiceNames** | **[]string** | Performs the operation on the single local directory service specified. Only one value is supported; specifying multiple values in comma- separated format is not allowed. The &#x60;local_directory_service_ids&#x60; or &#x60;local_directory_service_names&#x60; parameter is required, but they cannot be set together.  | 
  **names** | **[]string** | Performs the operation on the unique name specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  | 
  **sids** | **[]string** | Performs the operation on the object SID specified. Enter multiple SIDs in comma-separated format. For example, &#x60;S-1-2-532-582374278-329482934,S-1-2-532-234235245-423425234&#x60;.  | 
 
@@ -954,7 +954,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -995,8 +995,8 @@ Name | Type | Description  | Notes
  **names** | **[]string** | A comma-separated list of resource names.  | 
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
- **localDirectoryServiceIds** | **[]string** | Performs the operation on the specified local directory service. Supports exactly one value. When not specified, the local directory service connected to the &#x60;_array_server&#x60; will be used. This cannot be provided in conjunction with the &#x60;local_directory_service_names&#x60; parameter.  | 
- **localDirectoryServiceNames** | **[]string** | Performs the operation on the specified local directory service. Supports exactly one value. When not specified, the local directory service connected to the &#x60;_array_server&#x60; will be used. This cannot be provided in conjunction with the &#x60;local_directory_service_ids&#x60; parameter.  | 
+ **localDirectoryServiceIds** | **[]string** | Performs the operation on the single local directory service specified by ID. Only one value is supported; specifying multiple IDs in comma- separated format is not allowed. The &#x60;local_directory_service_ids&#x60; or &#x60;local_directory_service_names&#x60; parameter is required, but they cannot be set together.  | 
+ **localDirectoryServiceNames** | **[]string** | Performs the operation on the single local directory service specified. Only one value is supported; specifying multiple values in comma- separated format is not allowed. The &#x60;local_directory_service_ids&#x60; or &#x60;local_directory_service_names&#x60; parameter is required, but they cannot be set together.  | 
  **localGroup** | [**LocalGroupPost**](LocalGroupPost.md) |  | 
 
 ### Return type
@@ -1034,7 +1034,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1072,8 +1072,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
- **localDirectoryServiceIds** | **[]string** | Performs the operation on the specified local directory service. Supports exactly one value. When not specified, the local directory service connected to the &#x60;_array_server&#x60; will be used. This cannot be provided in conjunction with the &#x60;local_directory_service_names&#x60; parameter.  | 
- **localDirectoryServiceNames** | **[]string** | Performs the operation on the specified local directory service. Supports exactly one value. When not specified, the local directory service connected to the &#x60;_array_server&#x60; will be used. This cannot be provided in conjunction with the &#x60;local_directory_service_ids&#x60; parameter.  | 
+ **localDirectoryServiceIds** | **[]string** | Performs the operation on the single local directory service specified by ID. Only one value is supported; specifying multiple IDs in comma- separated format is not allowed. The &#x60;local_directory_service_ids&#x60; or &#x60;local_directory_service_names&#x60; parameter is required, but they cannot be set together.  | 
+ **localDirectoryServiceNames** | **[]string** | Performs the operation on the single local directory service specified. Only one value is supported; specifying multiple values in comma- separated format is not allowed. The &#x60;local_directory_service_ids&#x60; or &#x60;local_directory_service_names&#x60; parameter is required, but they cannot be set together.  | 
  **names** | **[]string** | Performs the operation on the unique name specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  | 
  **sids** | **[]string** | Performs the operation on the object SID specified. Enter multiple SIDs in comma-separated format. For example, &#x60;S-1-2-532-582374278-329482934,S-1-2-532-234235245-423425234&#x60;.  | 
  **uids** | **[]int32** | A comma-separated list of user IDs (UIDs). Enter multiple user IDs in comma-separated format. For example, &#x60;423,51234&#x60;.  | 
@@ -1113,7 +1113,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1200,7 +1200,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1241,8 +1241,8 @@ Name | Type | Description  | Notes
  **groupGids** | **[]int32** | Performs the operation on the specified GIDs. Enter multiple GIDs in comma-separated format. For example, &#x60;4234235,9681923&#x60;.  | 
  **groupNames** | **[]string** | Performs the operation on the group names specified. Enter multiple group names in comma-separated format. For example, &#x60;group1,group2&#x60;.  | 
  **groupSids** | **[]string** | Performs the operation on the specified group SID. Enter multiple group SIDs in comma-separated format. For example, &#x60;S-1-2-532-582374278-329482934,S-1-2-532-234235245-423425234&#x60;.  | 
- **localDirectoryServiceIds** | **[]string** | Performs the operation on the specified local directory service. Supports exactly one value. When not specified, the local directory service connected to the &#x60;_array_server&#x60; will be used. This cannot be provided in conjunction with the &#x60;local_directory_service_names&#x60; parameter.  | 
- **localDirectoryServiceNames** | **[]string** | Performs the operation on the specified local directory service. Supports exactly one value. When not specified, the local directory service connected to the &#x60;_array_server&#x60; will be used. This cannot be provided in conjunction with the &#x60;local_directory_service_ids&#x60; parameter.  | 
+ **localDirectoryServiceIds** | **[]string** | Performs the operation on the single local directory service specified by ID. Only one value is supported; specifying multiple IDs in comma- separated format is not allowed. The &#x60;local_directory_service_ids&#x60; or &#x60;local_directory_service_names&#x60; parameter is required, but they cannot be set together.  | 
+ **localDirectoryServiceNames** | **[]string** | Performs the operation on the single local directory service specified. Only one value is supported; specifying multiple values in comma- separated format is not allowed. The &#x60;local_directory_service_ids&#x60; or &#x60;local_directory_service_names&#x60; parameter is required, but they cannot be set together.  | 
  **memberIds** | **[]int32** | Performs the operation on the unique local member IDs specified. Enter multiple member IDs in comma-separated format. For local group IDs refer to group IDs (GID). For local user IDs refer to user IDs (UID). The &#x60;member_ids&#x60; and &#x60;member_names&#x60; parameters cannot be provided together.  | 
  **memberNames** | **[]string** | A comma-separated list of member names.  | 
  **memberSids** | **[]string** | Performs the operation on the specified member SID. Enter multiple member SIDs in comma-separated format. For example, &#x60;S-1-2-532-582374278-329482934,S-1-2-532-234235245-423425234&#x60;.  | 
@@ -1283,7 +1283,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1372,7 +1372,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1413,8 +1413,8 @@ Name | Type | Description  | Notes
  **localMembership** | [**LocalUserMembershipPost**](LocalUserMembershipPost.md) | The &#x60;group_names&#x60;, &#x60;group_sids&#x60;, or &#x60;group_gids&#x60; parameter is required, but cannot be set together.  | 
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
- **localDirectoryServiceIds** | **[]string** | Performs the operation on the specified local directory service. Supports exactly one value. When not specified, the local directory service connected to the &#x60;_array_server&#x60; will be used. This cannot be provided in conjunction with the &#x60;local_directory_service_names&#x60; parameter.  | 
- **localDirectoryServiceNames** | **[]string** | Performs the operation on the specified local directory service. Supports exactly one value. When not specified, the local directory service connected to the &#x60;_array_server&#x60; will be used. This cannot be provided in conjunction with the &#x60;local_directory_service_ids&#x60; parameter.  | 
+ **localDirectoryServiceIds** | **[]string** | Performs the operation on the single local directory service specified by ID. Only one value is supported; specifying multiple IDs in comma- separated format is not allowed. The &#x60;local_directory_service_ids&#x60; or &#x60;local_directory_service_names&#x60; parameter is required, but they cannot be set together.  | 
+ **localDirectoryServiceNames** | **[]string** | Performs the operation on the single local directory service specified. Only one value is supported; specifying multiple values in comma- separated format is not allowed. The &#x60;local_directory_service_ids&#x60; or &#x60;local_directory_service_names&#x60; parameter is required, but they cannot be set together.  | 
  **memberIds** | **[]int32** | Performs the operation on the unique local member IDs specified. Enter multiple member IDs in comma-separated format. For local group IDs refer to group IDs (GID). For local user IDs refer to user IDs (UID). The &#x60;member_ids&#x60; and &#x60;member_names&#x60; parameters cannot be provided together.  | 
  **memberNames** | **[]string** | A comma-separated list of member names.  | 
  **memberSids** | **[]string** | Performs the operation on the specified member SID. Enter multiple member SIDs in comma-separated format. For example, &#x60;S-1-2-532-582374278-329482934,S-1-2-532-234235245-423425234&#x60;.  | 
@@ -1454,7 +1454,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1495,8 +1495,8 @@ Name | Type | Description  | Notes
  **localUser** | [**LocalUserPatch**](LocalUserPatch.md) |  | 
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
- **localDirectoryServiceIds** | **[]string** | Performs the operation on the specified local directory service. Supports exactly one value. When not specified, the local directory service connected to the &#x60;_array_server&#x60; will be used. This cannot be provided in conjunction with the &#x60;local_directory_service_names&#x60; parameter.  | 
- **localDirectoryServiceNames** | **[]string** | Performs the operation on the specified local directory service. Supports exactly one value. When not specified, the local directory service connected to the &#x60;_array_server&#x60; will be used. This cannot be provided in conjunction with the &#x60;local_directory_service_ids&#x60; parameter.  | 
+ **localDirectoryServiceIds** | **[]string** | Performs the operation on the single local directory service specified by ID. Only one value is supported; specifying multiple IDs in comma- separated format is not allowed. The &#x60;local_directory_service_ids&#x60; or &#x60;local_directory_service_names&#x60; parameter is required, but they cannot be set together.  | 
+ **localDirectoryServiceNames** | **[]string** | Performs the operation on the single local directory service specified. Only one value is supported; specifying multiple values in comma- separated format is not allowed. The &#x60;local_directory_service_ids&#x60; or &#x60;local_directory_service_names&#x60; parameter is required, but they cannot be set together.  | 
  **names** | **[]string** | Performs the operation on the unique name specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  | 
  **sids** | **[]string** | Performs the operation on the object SID specified. Enter multiple SIDs in comma-separated format. For example, &#x60;S-1-2-532-582374278-329482934,S-1-2-532-234235245-423425234&#x60;.  | 
  **uids** | **[]int32** | A comma-separated list of user IDs (UIDs). Enter multiple user IDs in comma-separated format. For example, &#x60;423,51234&#x60;.  | 
@@ -1536,7 +1536,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1577,8 +1577,8 @@ Name | Type | Description  | Notes
  **names** | **[]string** | A comma-separated list of resource names.  | 
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
- **localDirectoryServiceIds** | **[]string** | Performs the operation on the specified local directory service. Supports exactly one value. When not specified, the local directory service connected to the &#x60;_array_server&#x60; will be used. This cannot be provided in conjunction with the &#x60;local_directory_service_names&#x60; parameter.  | 
- **localDirectoryServiceNames** | **[]string** | Performs the operation on the specified local directory service. Supports exactly one value. When not specified, the local directory service connected to the &#x60;_array_server&#x60; will be used. This cannot be provided in conjunction with the &#x60;local_directory_service_ids&#x60; parameter.  | 
+ **localDirectoryServiceIds** | **[]string** | Performs the operation on the single local directory service specified by ID. Only one value is supported; specifying multiple IDs in comma- separated format is not allowed. The &#x60;local_directory_service_ids&#x60; or &#x60;local_directory_service_names&#x60; parameter is required, but they cannot be set together.  | 
+ **localDirectoryServiceNames** | **[]string** | Performs the operation on the single local directory service specified. Only one value is supported; specifying multiple values in comma- separated format is not allowed. The &#x60;local_directory_service_ids&#x60; or &#x60;local_directory_service_names&#x60; parameter is required, but they cannot be set together.  | 
  **localUser** | [**LocalUserPost**](LocalUserPost.md) |  | 
 
 ### Return type
@@ -1616,7 +1616,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1656,8 +1656,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **directoryService** | [**DirectoryService**](DirectoryService.md) |  | 
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
- **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;name&#x60; or &#x60;names&#x60; query parameters.  | 
- **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
+ **ids** | **[]string** | Performs the operation on the single resource specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
+ **names** | **[]string** | Performs the operation on the single resource specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 
@@ -1694,7 +1694,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1731,8 +1731,8 @@ Other parameters are passed through a pointer to a apiDirectoryServicesRolesDele
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
- **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;name&#x60; or &#x60;names&#x60; query parameters.  | 
- **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
+ **ids** | **[]string** | Performs the operation on the single resource specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
+ **names** | **[]string** | Performs the operation on the single resource specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 
@@ -1769,7 +1769,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1853,7 +1853,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1895,8 +1895,8 @@ Name | Type | Description  | Notes
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
  **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;names&#x60;, &#x60;role_names&#x60;, or &#x60;role_ids&#x60; query parameters.  | 
  **names** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned. This cannot be provided together with the &#x60;ids&#x60;, &#x60;role_names&#x60;, or &#x60;role_ids&#x60; query parameters.  | 
- **roleIds** | **[]string** | A comma-separated list of role_ids. If after filtering, there is not at least one resource that matches each of the elements of &#x60;role_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;ids&#x60;, &#x60;names&#x60; or &#x60;role_names&#x60; query parameters. This query parameter is deprecated for use with directory service roles. If this parameter is used to query or modify directory service roles, but more than 1 configuration exists with a given role id, an error will be returned in order to avoid ambiguous operation.  | 
- **roleNames** | **[]string** | A comma-separated list of role_names. If there is not at least one resource that matches each of the elements of &#x60;role_names&#x60;, then an error is returned. This cannot be provided together with the &#x60;ids&#x60;, &#x60;names&#x60;, or &#x60;role_ids&#x60; query parameters. This query parameter is deprecated for use with directory service roles. If this parameter is used to query or modify directory service roles, but more than 1 configuration exists with a given role name, an error will be returned in order to avoid ambiguous operation.  | 
+ **roleIds** | **[]string** | Performs the operation on the single role specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;role_ids&#x60; or &#x60;role_names&#x60; parameter is required, but they cannot be set together.  | 
+ **roleNames** | **[]string** | Performs the operation on the single role specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;role_ids&#x60; or &#x60;role_names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 
@@ -1933,7 +1933,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1973,7 +1973,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **directoryServiceRoles** | [**DirectoryServiceRolePost**](DirectoryServiceRolePost.md) |  | 
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
- **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
+ **names** | **[]string** | Performs the operation on the single resource specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 
@@ -2010,7 +2010,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -2093,7 +2093,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {

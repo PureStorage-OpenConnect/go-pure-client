@@ -4,38 +4,38 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**FileSystemsAuditPoliciesDelete**](FileSystemsAPI.md#FileSystemsAuditPoliciesDelete) | **Delete** /api/2.29/file-systems/audit-policies | DELETE file-systems/audit-policies
-[**FileSystemsAuditPoliciesGet**](FileSystemsAPI.md#FileSystemsAuditPoliciesGet) | **Get** /api/2.29/file-systems/audit-policies | GET file-systems/audit-policies
-[**FileSystemsAuditPoliciesPost**](FileSystemsAPI.md#FileSystemsAuditPoliciesPost) | **Post** /api/2.29/file-systems/audit-policies | POST file-systems/audit-policies
-[**FileSystemsDataEvictionPoliciesDelete**](FileSystemsAPI.md#FileSystemsDataEvictionPoliciesDelete) | **Delete** /api/2.29/file-systems/data-eviction-policies | DELETE file-systems/data-eviction-policies
-[**FileSystemsDataEvictionPoliciesGet**](FileSystemsAPI.md#FileSystemsDataEvictionPoliciesGet) | **Get** /api/2.29/file-systems/data-eviction-policies | GET file-systems/data-eviction-policies
-[**FileSystemsDataEvictionPoliciesPost**](FileSystemsAPI.md#FileSystemsDataEvictionPoliciesPost) | **Post** /api/2.29/file-systems/data-eviction-policies | POST file-systems/data-eviction-policies
-[**FileSystemsDelete**](FileSystemsAPI.md#FileSystemsDelete) | **Delete** /api/2.29/file-systems | DELETE file-systems
-[**FileSystemsGet**](FileSystemsAPI.md#FileSystemsGet) | **Get** /api/2.29/file-systems | GET file-systems
-[**FileSystemsGroupsGet**](FileSystemsAPI.md#FileSystemsGroupsGet) | **Get** /api/2.29/file-systems/groups | GET file-systems/groups
-[**FileSystemsGroupsPerformanceGet**](FileSystemsAPI.md#FileSystemsGroupsPerformanceGet) | **Get** /api/2.29/file-systems/groups/performance | GET file-systems/groups/performance
-[**FileSystemsLocksClientsGet**](FileSystemsAPI.md#FileSystemsLocksClientsGet) | **Get** /api/2.29/file-systems/locks/clients | Get a list of clients that hold active file locks
-[**FileSystemsLocksDelete**](FileSystemsAPI.md#FileSystemsLocksDelete) | **Delete** /api/2.29/file-systems/locks | Invalidate file locks
-[**FileSystemsLocksGet**](FileSystemsAPI.md#FileSystemsLocksGet) | **Get** /api/2.29/file-systems/locks | Get a list of active file locks
-[**FileSystemsLocksNlmReclamationsPost**](FileSystemsAPI.md#FileSystemsLocksNlmReclamationsPost) | **Post** /api/2.29/file-systems/locks/nlm-reclamations | Initiate NLM reclamation.
-[**FileSystemsOpenFilesDelete**](FileSystemsAPI.md#FileSystemsOpenFilesDelete) | **Delete** /api/2.29/file-systems/open-files | DELETE file-systems/open-files
-[**FileSystemsOpenFilesGet**](FileSystemsAPI.md#FileSystemsOpenFilesGet) | **Get** /api/2.29/file-systems/open-files | GET file-systems/open-files
-[**FileSystemsPatch**](FileSystemsAPI.md#FileSystemsPatch) | **Patch** /api/2.29/file-systems | PATCH file-systems
-[**FileSystemsPerformanceGet**](FileSystemsAPI.md#FileSystemsPerformanceGet) | **Get** /api/2.29/file-systems/performance | GET file-systems/performance
-[**FileSystemsPoliciesAllGet**](FileSystemsAPI.md#FileSystemsPoliciesAllGet) | **Get** /api/2.29/file-systems/policies-all | GET file-systems/policies-all
-[**FileSystemsPoliciesDelete**](FileSystemsAPI.md#FileSystemsPoliciesDelete) | **Delete** /api/2.29/file-systems/policies | DELETE file-systems/policies
-[**FileSystemsPoliciesGet**](FileSystemsAPI.md#FileSystemsPoliciesGet) | **Get** /api/2.29/file-systems/policies | GET file-systems/policies
-[**FileSystemsPoliciesPost**](FileSystemsAPI.md#FileSystemsPoliciesPost) | **Post** /api/2.29/file-systems/policies | POST file-systems/policies
-[**FileSystemsPost**](FileSystemsAPI.md#FileSystemsPost) | **Post** /api/2.29/file-systems | POST file-systems
-[**FileSystemsSessionsDelete**](FileSystemsAPI.md#FileSystemsSessionsDelete) | **Delete** /api/2.29/file-systems/sessions | Delete sessions
-[**FileSystemsSessionsGet**](FileSystemsAPI.md#FileSystemsSessionsGet) | **Get** /api/2.29/file-systems/sessions | Get a list of active sessions
-[**FileSystemsSpaceStorageClassesGet**](FileSystemsAPI.md#FileSystemsSpaceStorageClassesGet) | **Get** /api/2.29/file-systems/space/storage-classes | GET file-systems/space/storage-classes
-[**FileSystemsUserGroupQuotaPoliciesDelete**](FileSystemsAPI.md#FileSystemsUserGroupQuotaPoliciesDelete) | **Delete** /api/2.29/file-systems/user-group-quota-policies | DELETE file-systems/user-group-quota-policies
-[**FileSystemsUserGroupQuotaPoliciesGet**](FileSystemsAPI.md#FileSystemsUserGroupQuotaPoliciesGet) | **Get** /api/2.29/file-systems/user-group-quota-policies | GET file-systems/user-group-quota-policies
-[**FileSystemsUserGroupQuotaPoliciesPost**](FileSystemsAPI.md#FileSystemsUserGroupQuotaPoliciesPost) | **Post** /api/2.29/file-systems/user-group-quota-policies | POST file-systems/user-group-quota-policies
-[**FileSystemsUsersGet**](FileSystemsAPI.md#FileSystemsUsersGet) | **Get** /api/2.29/file-systems/users | GET file-systems/users
-[**FileSystemsUsersPerformanceGet**](FileSystemsAPI.md#FileSystemsUsersPerformanceGet) | **Get** /api/2.29/file-systems/users/performance | GET file-systems/users/performance
-[**FileSystemsWormDataPoliciesGet**](FileSystemsAPI.md#FileSystemsWormDataPoliciesGet) | **Get** /api/2.29/file-systems/worm-data-policies | GET file-systems/worm-data-policies
+[**FileSystemsAuditPoliciesDelete**](FileSystemsAPI.md#FileSystemsAuditPoliciesDelete) | **Delete** /api/2.30/file-systems/audit-policies | DELETE file-systems/audit-policies
+[**FileSystemsAuditPoliciesGet**](FileSystemsAPI.md#FileSystemsAuditPoliciesGet) | **Get** /api/2.30/file-systems/audit-policies | GET file-systems/audit-policies
+[**FileSystemsAuditPoliciesPost**](FileSystemsAPI.md#FileSystemsAuditPoliciesPost) | **Post** /api/2.30/file-systems/audit-policies | POST file-systems/audit-policies
+[**FileSystemsDataEvictionPoliciesDelete**](FileSystemsAPI.md#FileSystemsDataEvictionPoliciesDelete) | **Delete** /api/2.30/file-systems/data-eviction-policies | DELETE file-systems/data-eviction-policies
+[**FileSystemsDataEvictionPoliciesGet**](FileSystemsAPI.md#FileSystemsDataEvictionPoliciesGet) | **Get** /api/2.30/file-systems/data-eviction-policies | GET file-systems/data-eviction-policies
+[**FileSystemsDataEvictionPoliciesPost**](FileSystemsAPI.md#FileSystemsDataEvictionPoliciesPost) | **Post** /api/2.30/file-systems/data-eviction-policies | POST file-systems/data-eviction-policies
+[**FileSystemsDelete**](FileSystemsAPI.md#FileSystemsDelete) | **Delete** /api/2.30/file-systems | DELETE file-systems
+[**FileSystemsGet**](FileSystemsAPI.md#FileSystemsGet) | **Get** /api/2.30/file-systems | GET file-systems
+[**FileSystemsGroupsGet**](FileSystemsAPI.md#FileSystemsGroupsGet) | **Get** /api/2.30/file-systems/groups | GET file-systems/groups
+[**FileSystemsGroupsPerformanceGet**](FileSystemsAPI.md#FileSystemsGroupsPerformanceGet) | **Get** /api/2.30/file-systems/groups/performance | GET file-systems/groups/performance
+[**FileSystemsLocksClientsGet**](FileSystemsAPI.md#FileSystemsLocksClientsGet) | **Get** /api/2.30/file-systems/locks/clients | Get a list of clients that hold active file locks
+[**FileSystemsLocksDelete**](FileSystemsAPI.md#FileSystemsLocksDelete) | **Delete** /api/2.30/file-systems/locks | Invalidate file locks
+[**FileSystemsLocksGet**](FileSystemsAPI.md#FileSystemsLocksGet) | **Get** /api/2.30/file-systems/locks | Get a list of active file locks
+[**FileSystemsLocksNlmReclamationsPost**](FileSystemsAPI.md#FileSystemsLocksNlmReclamationsPost) | **Post** /api/2.30/file-systems/locks/nlm-reclamations | Initiate NLM reclamation.
+[**FileSystemsOpenFilesDelete**](FileSystemsAPI.md#FileSystemsOpenFilesDelete) | **Delete** /api/2.30/file-systems/open-files | DELETE file-systems/open-files
+[**FileSystemsOpenFilesGet**](FileSystemsAPI.md#FileSystemsOpenFilesGet) | **Get** /api/2.30/file-systems/open-files | GET file-systems/open-files
+[**FileSystemsPatch**](FileSystemsAPI.md#FileSystemsPatch) | **Patch** /api/2.30/file-systems | PATCH file-systems
+[**FileSystemsPerformanceGet**](FileSystemsAPI.md#FileSystemsPerformanceGet) | **Get** /api/2.30/file-systems/performance | GET file-systems/performance
+[**FileSystemsPoliciesAllGet**](FileSystemsAPI.md#FileSystemsPoliciesAllGet) | **Get** /api/2.30/file-systems/policies-all | GET file-systems/policies-all
+[**FileSystemsPoliciesDelete**](FileSystemsAPI.md#FileSystemsPoliciesDelete) | **Delete** /api/2.30/file-systems/policies | DELETE file-systems/policies
+[**FileSystemsPoliciesGet**](FileSystemsAPI.md#FileSystemsPoliciesGet) | **Get** /api/2.30/file-systems/policies | GET file-systems/policies
+[**FileSystemsPoliciesPost**](FileSystemsAPI.md#FileSystemsPoliciesPost) | **Post** /api/2.30/file-systems/policies | POST file-systems/policies
+[**FileSystemsPost**](FileSystemsAPI.md#FileSystemsPost) | **Post** /api/2.30/file-systems | POST file-systems
+[**FileSystemsSessionsDelete**](FileSystemsAPI.md#FileSystemsSessionsDelete) | **Delete** /api/2.30/file-systems/sessions | Delete sessions
+[**FileSystemsSessionsGet**](FileSystemsAPI.md#FileSystemsSessionsGet) | **Get** /api/2.30/file-systems/sessions | Get a list of active sessions
+[**FileSystemsSpaceStorageClassesGet**](FileSystemsAPI.md#FileSystemsSpaceStorageClassesGet) | **Get** /api/2.30/file-systems/space/storage-classes | GET file-systems/space/storage-classes
+[**FileSystemsUserGroupQuotaPoliciesDelete**](FileSystemsAPI.md#FileSystemsUserGroupQuotaPoliciesDelete) | **Delete** /api/2.30/file-systems/user-group-quota-policies | DELETE file-systems/user-group-quota-policies
+[**FileSystemsUserGroupQuotaPoliciesGet**](FileSystemsAPI.md#FileSystemsUserGroupQuotaPoliciesGet) | **Get** /api/2.30/file-systems/user-group-quota-policies | GET file-systems/user-group-quota-policies
+[**FileSystemsUserGroupQuotaPoliciesPost**](FileSystemsAPI.md#FileSystemsUserGroupQuotaPoliciesPost) | **Post** /api/2.30/file-systems/user-group-quota-policies | POST file-systems/user-group-quota-policies
+[**FileSystemsUsersGet**](FileSystemsAPI.md#FileSystemsUsersGet) | **Get** /api/2.30/file-systems/users | GET file-systems/users
+[**FileSystemsUsersPerformanceGet**](FileSystemsAPI.md#FileSystemsUsersPerformanceGet) | **Get** /api/2.30/file-systems/users/performance | GET file-systems/users/performance
+[**FileSystemsWormDataPoliciesGet**](FileSystemsAPI.md#FileSystemsWormDataPoliciesGet) | **Get** /api/2.30/file-systems/worm-data-policies | GET file-systems/worm-data-policies
 
 
 
@@ -56,7 +56,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -134,7 +134,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -220,7 +220,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -300,7 +300,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -378,7 +378,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -464,7 +464,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -544,7 +544,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -582,8 +582,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
- **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;name&#x60; or &#x60;names&#x60; query parameters.  | 
- **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
+ **ids** | **[]string** | Performs the operation on the single resource specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
+ **names** | **[]string** | Performs the operation on the single resource specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 
@@ -620,7 +620,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -708,7 +708,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -794,7 +794,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -878,7 +878,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -958,7 +958,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1039,7 +1039,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1125,7 +1125,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1201,7 +1201,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1275,7 +1275,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1360,7 +1360,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1405,9 +1405,9 @@ Name | Type | Description  | Notes
  **deleteLinkOnEradication** | **bool** | If set to &#x60;true&#x60;, the file system can be destroyed, even if it has a replica link. If set to &#x60;false&#x60;, the file system cannot be destroyed if it has a replica link. Defaults to &#x60;false&#x60;.  | 
  **discardDetailedPermissions** | **bool** | This parameter must be set to &#x60;true&#x60; in order to change a file system&#39;s &#x60;access_control_style&#x60; from a style that supports more detailed access control lists to a style that only supports less detailed mode bits as a form of permission control. This parameter may not be set to &#x60;true&#x60; any other time. Setting this parameter to &#x60;true&#x60; is acknowledgement that any more detailed access control lists currently set within the file system will be lost, and NFS permission controls will only be enforced at the granularity level of NFS mode bits.  | 
  **discardNonSnapshottedData** | **bool** | This parameter must be set to &#x60;true&#x60; in order to restore a file system from a snapshot or to demote a file system (which restores the file system from the common baseline snapshot). Setting this parameter to &#x60;true&#x60; is acknowledgement that any non-snapshotted data currently in the file system will be irretrievably lost.  | 
- **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;name&#x60; or &#x60;names&#x60; query parameters.  | 
+ **ids** | **[]string** | Performs the operation on the single resource specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
  **ignoreUsage** | **bool** | Allow update operations that lead to a &#x60;hard_limit_enabled&#x60; object store account, bucket, or file system with usage over its limiting value. For object store accounts and buckets, the limiting value is that of &#x60;quota_limit&#x60;, and for file systems it is that of &#x60;provisioned&#x60;. The operation can be setting &#x60;hard_limit_enabled&#x60; when usage is higher than the limiting value, modifying the limiting value to a value under usage when &#x60;hard_limit_enabled&#x60;, recovering a destroyed bucket of an object store account that causes an account&#39;s space usage to go over its hard &#x60;quota_limit&#x60;. Also allows update operations that would cause usage of the requested storage class to go over its warning threshold.  | 
- **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
+ **names** | **[]string** | Performs the operation on the single resource specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 
@@ -1444,7 +1444,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1531,7 +1531,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1617,7 +1617,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1695,7 +1695,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1781,7 +1781,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1861,7 +1861,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1905,7 +1905,7 @@ Name | Type | Description  | Notes
  **defaultExports** | **[]string** | A comma-separated list of export types to be created using default access. Creating a file system with an explicit &#x60;nfs.rules&#x60; or &#x60;nfs.export_policy&#x60; value will always create a NFS export to the default server regardless of this flag. If these are not set and &#x60;default_exports&#x60; includes &#x60;nfs&#x60;, then &#x60;nfs.rules&#x60; will be set to \&quot;*(rw,no_root_squash)\&quot; and a NFS export to the default server will be created. Otherwise &#x60;nfs.rules&#x60; will be set to \&quot;\&quot; and no NFS export will be created. Creating a file system with an explicit &#x60;smb.client_policy&#x60; or &#x60;smb.share_policy&#x60; value will always create a SMB export to the default server regardless of this flag. If these are not set and &#x60;default_exports&#x60; includes &#x60;smb&#x60;, then a SMB export to the default server will be created with default policies. Otherwise no SMB export will be created. Use empty string (\&quot;\&quot;) to not create these default exports. Default is &#x60;nfs,smb&#x60;.  | 
  **discardNonSnapshottedData** | **bool** | This parameter must be set to &#x60;true&#x60; in order to restore a file system from a snapshot or to demote a file system (which restores the file system from the common baseline snapshot). Setting this parameter to &#x60;true&#x60; is acknowledgement that any non-snapshotted data currently in the file system will be irretrievably lost.  | 
  **includeSnapshot** | **bool** | This parameter must be set to &#x60;true&#x60; in order to copy an existing snapshot to a new file system. If not specified, the default value is &#x60;false&#x60;.  | 
- **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
+ **names** | **[]string** | Performs the operation on the single resource specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
  **overwrite** | **bool** | When used for snapshot restore, overwrites (&#x60;true&#x60;) an existing file system.  | 
  **policyIds** | **[]string** | A comma-separated list of policy IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;policy_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;policy_names&#x60; query parameter.  | 
  **policyNames** | **[]string** | A comma-separated list of policy names.  | 
@@ -1945,7 +1945,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -2024,7 +2024,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -2107,7 +2107,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -2191,7 +2191,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -2229,10 +2229,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
- **memberIds** | **[]string** | A comma-separated list of member IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;member_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;member_names&#x60; query parameter.  | 
- **memberNames** | **[]string** | A comma-separated list of member names.  | 
- **policyIds** | **[]string** | A comma-separated list of policy IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;policy_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;policy_names&#x60; query parameter.  | 
- **policyNames** | **[]string** | A comma-separated list of policy names.  | 
+ **memberIds** | **[]string** | Performs the operation on the single member specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;member_ids&#x60; or &#x60;member_names&#x60; parameter is required, but they cannot be set together.  | 
+ **memberNames** | **[]string** | Performs the operation on the single member specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;member_ids&#x60; or &#x60;member_names&#x60; parameter is required, but they cannot be set together.  | 
+ **policyIds** | **[]string** | Performs the operation on the single policy specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;policy_ids&#x60; or &#x60;policy_names&#x60; parameter is required, but they cannot be set together.  | 
+ **policyNames** | **[]string** | Performs the operation on the single policy specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;policy_ids&#x60; or &#x60;policy_names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 
@@ -2269,7 +2269,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -2355,7 +2355,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -2397,10 +2397,10 @@ Name | Type | Description  | Notes
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
  **deleteExistingUserGroupQuotaSettings** | **bool** | This parameter must be set to &#x60;true&#x60; in order to delete existing quota configurations(default_group_quota, default_user_quota or specific quotas) set on a file system using either using &#x60;quotas/users&#x60;, &#x60;quotas/groups&#x60; or &#x60;/file-systems&#x60;. Setting this parameter to &#x60;true&#x60; is acknowledgement that the currently configured quotas would be erased before attaching the policy. Defaults to &#x60;false&#x60;.  | 
  **ignoreUsage** | **bool** | Flag used to override checks for user-group-quota management operations. If set to &#x60;true&#x60;, user/group usage is not checked against the &#x60;quota_limits&#x60; of user-group-quota rules.  | 
- **memberIds** | **[]string** | A comma-separated list of member IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;member_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;member_names&#x60; query parameter.  | 
- **memberNames** | **[]string** | A comma-separated list of member names.  | 
- **policyIds** | **[]string** | A comma-separated list of policy IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;policy_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;policy_names&#x60; query parameter.  | 
- **policyNames** | **[]string** | A comma-separated list of policy names.  | 
+ **memberIds** | **[]string** | Performs the operation on the single member specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;member_ids&#x60; or &#x60;member_names&#x60; parameter is required, but they cannot be set together.  | 
+ **memberNames** | **[]string** | Performs the operation on the single member specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;member_ids&#x60; or &#x60;member_names&#x60; parameter is required, but they cannot be set together.  | 
+ **policyIds** | **[]string** | Performs the operation on the single policy specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;policy_ids&#x60; or &#x60;policy_names&#x60; parameter is required, but they cannot be set together.  | 
+ **policyNames** | **[]string** | Performs the operation on the single policy specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;policy_ids&#x60; or &#x60;policy_names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 
@@ -2437,7 +2437,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -2524,7 +2524,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -2608,7 +2608,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {

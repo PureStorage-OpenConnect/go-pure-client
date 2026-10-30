@@ -4,14 +4,14 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**TopologyGroupsArraysGet**](TopologyGroupsAPI.md#TopologyGroupsArraysGet) | **Get** /api/2.29/topology-groups/arrays | List topology group arrays
-[**TopologyGroupsDelete**](TopologyGroupsAPI.md#TopologyGroupsDelete) | **Delete** /api/2.29/topology-groups | Delete topology groups
-[**TopologyGroupsGet**](TopologyGroupsAPI.md#TopologyGroupsGet) | **Get** /api/2.29/topology-groups | List topology groups
-[**TopologyGroupsMembersDelete**](TopologyGroupsAPI.md#TopologyGroupsMembersDelete) | **Delete** /api/2.29/topology-groups/members | Remove topology group members
-[**TopologyGroupsMembersGet**](TopologyGroupsAPI.md#TopologyGroupsMembersGet) | **Get** /api/2.29/topology-groups/members | List topology group members
-[**TopologyGroupsMembersPost**](TopologyGroupsAPI.md#TopologyGroupsMembersPost) | **Post** /api/2.29/topology-groups/members | Add topology group members
-[**TopologyGroupsPatch**](TopologyGroupsAPI.md#TopologyGroupsPatch) | **Patch** /api/2.29/topology-groups | Modify topology groups
-[**TopologyGroupsPost**](TopologyGroupsAPI.md#TopologyGroupsPost) | **Post** /api/2.29/topology-groups | Create topology groups
+[**TopologyGroupsArraysGet**](TopologyGroupsAPI.md#TopologyGroupsArraysGet) | **Get** /api/2.30/topology-groups/arrays | List topology group arrays
+[**TopologyGroupsDelete**](TopologyGroupsAPI.md#TopologyGroupsDelete) | **Delete** /api/2.30/topology-groups | Delete topology groups
+[**TopologyGroupsGet**](TopologyGroupsAPI.md#TopologyGroupsGet) | **Get** /api/2.30/topology-groups | List topology groups
+[**TopologyGroupsMembersDelete**](TopologyGroupsAPI.md#TopologyGroupsMembersDelete) | **Delete** /api/2.30/topology-groups/members | Remove topology group members
+[**TopologyGroupsMembersGet**](TopologyGroupsAPI.md#TopologyGroupsMembersGet) | **Get** /api/2.30/topology-groups/members | List topology group members
+[**TopologyGroupsMembersPost**](TopologyGroupsAPI.md#TopologyGroupsMembersPost) | **Post** /api/2.30/topology-groups/members | Add topology group members
+[**TopologyGroupsPatch**](TopologyGroupsAPI.md#TopologyGroupsPatch) | **Patch** /api/2.30/topology-groups | Modify topology groups
+[**TopologyGroupsPost**](TopologyGroupsAPI.md#TopologyGroupsPost) | **Post** /api/2.30/topology-groups | Create topology groups
 
 
 
@@ -32,7 +32,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -118,7 +118,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -194,7 +194,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -279,7 +279,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -357,7 +357,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -444,7 +444,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -523,7 +523,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -604,7 +604,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {

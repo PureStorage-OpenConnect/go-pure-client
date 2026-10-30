@@ -4,14 +4,14 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**FileSystemReplicaLinksDelete**](FileSystemReplicaLinksAPI.md#FileSystemReplicaLinksDelete) | **Delete** /api/2.29/file-system-replica-links | DELETE file-system-replica-links
-[**FileSystemReplicaLinksGet**](FileSystemReplicaLinksAPI.md#FileSystemReplicaLinksGet) | **Get** /api/2.29/file-system-replica-links | GET file-system-replica-links
-[**FileSystemReplicaLinksPatch**](FileSystemReplicaLinksAPI.md#FileSystemReplicaLinksPatch) | **Patch** /api/2.29/file-system-replica-links | PATCH file-system-replica-links
-[**FileSystemReplicaLinksPoliciesDelete**](FileSystemReplicaLinksAPI.md#FileSystemReplicaLinksPoliciesDelete) | **Delete** /api/2.29/file-system-replica-links/policies | DELETE file-system-replica-links/policies
-[**FileSystemReplicaLinksPoliciesGet**](FileSystemReplicaLinksAPI.md#FileSystemReplicaLinksPoliciesGet) | **Get** /api/2.29/file-system-replica-links/policies | GET file-system-replica-links/policies
-[**FileSystemReplicaLinksPoliciesPost**](FileSystemReplicaLinksAPI.md#FileSystemReplicaLinksPoliciesPost) | **Post** /api/2.29/file-system-replica-links/policies | POST file-system-replica-links/policies
-[**FileSystemReplicaLinksPost**](FileSystemReplicaLinksAPI.md#FileSystemReplicaLinksPost) | **Post** /api/2.29/file-system-replica-links | POST file-system-replica-links
-[**FileSystemReplicaLinksTransferGet**](FileSystemReplicaLinksAPI.md#FileSystemReplicaLinksTransferGet) | **Get** /api/2.29/file-system-replica-links/transfer | GET file-system-replica-links/transfer
+[**FileSystemReplicaLinksDelete**](FileSystemReplicaLinksAPI.md#FileSystemReplicaLinksDelete) | **Delete** /api/2.30/file-system-replica-links | DELETE file-system-replica-links
+[**FileSystemReplicaLinksGet**](FileSystemReplicaLinksAPI.md#FileSystemReplicaLinksGet) | **Get** /api/2.30/file-system-replica-links | GET file-system-replica-links
+[**FileSystemReplicaLinksPatch**](FileSystemReplicaLinksAPI.md#FileSystemReplicaLinksPatch) | **Patch** /api/2.30/file-system-replica-links | PATCH file-system-replica-links
+[**FileSystemReplicaLinksPoliciesDelete**](FileSystemReplicaLinksAPI.md#FileSystemReplicaLinksPoliciesDelete) | **Delete** /api/2.30/file-system-replica-links/policies | DELETE file-system-replica-links/policies
+[**FileSystemReplicaLinksPoliciesGet**](FileSystemReplicaLinksAPI.md#FileSystemReplicaLinksPoliciesGet) | **Get** /api/2.30/file-system-replica-links/policies | GET file-system-replica-links/policies
+[**FileSystemReplicaLinksPoliciesPost**](FileSystemReplicaLinksAPI.md#FileSystemReplicaLinksPoliciesPost) | **Post** /api/2.30/file-system-replica-links/policies | POST file-system-replica-links/policies
+[**FileSystemReplicaLinksPost**](FileSystemReplicaLinksAPI.md#FileSystemReplicaLinksPost) | **Post** /api/2.30/file-system-replica-links | POST file-system-replica-links
+[**FileSystemReplicaLinksTransferGet**](FileSystemReplicaLinksAPI.md#FileSystemReplicaLinksTransferGet) | **Get** /api/2.30/file-system-replica-links/transfer | GET file-system-replica-links/transfer
 
 
 
@@ -32,7 +32,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -72,12 +72,12 @@ Name | Type | Description  | Notes
  **cancelInProgressTransfers** | **bool** | This parameter must be set to &#x60;true&#x60; in order to delete a file system replication link (which can cancel any in-progress replication transfers). Setting this parameter to &#x60;true&#x60; is acknowledgement that any in-progress replication transfers on the specified links will be cancelled when this request is fulfilled.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
  **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;name&#x60; or &#x60;names&#x60; query parameters.  | 
- **localFileSystemIds** | **[]string** | A comma-separated list of local file system IDs. If after filtering, there is not at least one resource that matches each of the elements, then an error is returned. This cannot be provided together with the &#x60;local_file_system_names&#x60; query parameter.  | 
- **localFileSystemNames** | **[]string** | A comma-separated list of local file system names. If there is not at least one resource that matches each of the elements, then an error is returned. This cannot be provided together with &#x60;local_file_system_ids&#x60; query parameter.  | 
- **remoteFileSystemIds** | **[]string** | A comma-separated list of remote file system IDs. If there is not at least one resource that matches each of the elements, then an error is returned. This cannot be provided together with the &#x60;remote_file_system_names&#x60; query parameter.  | 
- **remoteFileSystemNames** | **[]string** | A comma-separated list of remote file system names. If there is not at least one resource that matches each of the elements, then an error is returned. This cannot be provided together with the &#x60;remote_file_system_ids&#x60; query parameter.  | 
- **remoteIds** | **[]string** | A comma-separated list of remote array IDs. If, after filtering, there is not at least one resource that matches each of the elements, then an error is returned. This cannot be provided together with the &#x60;remote_names&#x60; query parameter.  | 
- **remoteNames** | **[]string** | A comma-separated list of remote array names. If, after filtering, there is not at least one resource that matches each of the elements, then an error is returned. This cannot be provided together with the &#x60;remote_ids&#x60; query parameter.  | 
+ **localFileSystemIds** | **[]string** | Performs the operation on the single local file system specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;local_file_system_ids&#x60; or &#x60;local_file_system_names&#x60; parameter is required, but they cannot be set together.  | 
+ **localFileSystemNames** | **[]string** | Performs the operation on the single local file system specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;local_file_system_ids&#x60; or &#x60;local_file_system_names&#x60; parameter is required, but they cannot be set together.  | 
+ **remoteFileSystemIds** | **[]string** | Performs the operation on the single remote file system specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;remote_file_system_ids&#x60; or &#x60;remote_file_system_names&#x60; parameter is required, but they cannot be set together.  | 
+ **remoteFileSystemNames** | **[]string** | Performs the operation on the single remote file system specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;remote_file_system_ids&#x60; or &#x60;remote_file_system_names&#x60; parameter is required, but they cannot be set together.  | 
+ **remoteIds** | **[]string** | Performs the operation on the single remote specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;remote_ids&#x60; or &#x60;remote_names&#x60; parameter is required, but they cannot be set together.  | 
+ **remoteNames** | **[]string** | Performs the operation on the single remote specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;remote_ids&#x60; or &#x60;remote_names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 
@@ -114,7 +114,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -203,7 +203,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -244,10 +244,10 @@ Name | Type | Description  | Notes
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
  **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;name&#x60; or &#x60;names&#x60; query parameters.  | 
- **localFileSystemIds** | **[]string** | A comma-separated list of local file system IDs. If after filtering, there is not at least one resource that matches each of the elements, then an error is returned. This cannot be provided together with the &#x60;local_file_system_names&#x60; query parameter.  | 
- **localFileSystemNames** | **[]string** | A comma-separated list of local file system names. If there is not at least one resource that matches each of the elements, then an error is returned. This cannot be provided together with &#x60;local_file_system_ids&#x60; query parameter.  | 
- **remoteIds** | **[]string** | A comma-separated list of remote array IDs. If, after filtering, there is not at least one resource that matches each of the elements, then an error is returned. This cannot be provided together with the &#x60;remote_names&#x60; query parameter.  | 
- **remoteNames** | **[]string** | A comma-separated list of remote array names. If, after filtering, there is not at least one resource that matches each of the elements, then an error is returned. This cannot be provided together with the &#x60;remote_ids&#x60; query parameter.  | 
+ **localFileSystemIds** | **[]string** | Performs the operation on the single local file system specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;local_file_system_ids&#x60; or &#x60;local_file_system_names&#x60; parameter is required, but they cannot be set together.  | 
+ **localFileSystemNames** | **[]string** | Performs the operation on the single local file system specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;local_file_system_ids&#x60; or &#x60;local_file_system_names&#x60; parameter is required, but they cannot be set together.  | 
+ **remoteIds** | **[]string** | Performs the operation on the single remote specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;remote_ids&#x60; or &#x60;remote_names&#x60; parameter is required, but they cannot be set together.  | 
+ **remoteNames** | **[]string** | Performs the operation on the single remote specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;remote_ids&#x60; or &#x60;remote_names&#x60; parameter is required, but they cannot be set together.  | 
  **replicateNow** | **bool** | If set to &#x60;true&#x60;, replicates the contents to the specified targets. The &#x60;replicate_now&#x60; parameters can only be &#x60;true&#x60; with the partial-replica file system links.  | 
 
 ### Return type
@@ -285,7 +285,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -366,7 +366,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -457,7 +457,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -540,7 +540,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -582,12 +582,12 @@ Name | Type | Description  | Notes
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
  **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;name&#x60; or &#x60;names&#x60; query parameters.  | 
- **localFileSystemIds** | **[]string** | A comma-separated list of local file system IDs. If after filtering, there is not at least one resource that matches each of the elements, then an error is returned. This cannot be provided together with the &#x60;local_file_system_names&#x60; query parameter.  | 
- **localFileSystemNames** | **[]string** | A comma-separated list of local file system names. If there is not at least one resource that matches each of the elements, then an error is returned. This cannot be provided together with &#x60;local_file_system_ids&#x60; query parameter.  | 
+ **localFileSystemIds** | **[]string** | Performs the operation on the single local file system specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;local_file_system_ids&#x60; or &#x60;local_file_system_names&#x60; parameter is required, but they cannot be set together.  | 
+ **localFileSystemNames** | **[]string** | Performs the operation on the single local file system specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;local_file_system_ids&#x60; or &#x60;local_file_system_names&#x60; parameter is required, but they cannot be set together.  | 
  **remoteDefaultExports** | **[]string** | A comma-separated list of export types to be created using default access of the replicated filesystem. Exports will always be created to the array level default server. &#x60;nfs.rules&#x60; will be set to &#x60;\&quot;*(rw,no_root_squash)\&quot;&#x60;. An SMB export to the default server will be created with default policies. Use empty string (&#x60;\&quot;\&quot;&#x60;) to not create these default exports. Acceptable values: &#x60;nfs&#x60;, &#x60;smb&#x60;, &#x60;nfs,smb&#x60; and &#x60;\&quot;\&quot;&#x60;. Default is &#x60;nfs,smb&#x60;.  | 
- **remoteFileSystemNames** | **[]string** | A comma-separated list of remote file system names. If there is not at least one resource that matches each of the elements, then an error is returned. This cannot be provided together with the &#x60;remote_file_system_ids&#x60; query parameter.  | 
- **remoteIds** | **[]string** | A comma-separated list of remote array IDs. If, after filtering, there is not at least one resource that matches each of the elements, then an error is returned. This cannot be provided together with the &#x60;remote_names&#x60; query parameter.  | 
- **remoteNames** | **[]string** | A comma-separated list of remote array names. If, after filtering, there is not at least one resource that matches each of the elements, then an error is returned. This cannot be provided together with the &#x60;remote_ids&#x60; query parameter.  | 
+ **remoteFileSystemNames** | **[]string** | Performs the operation on the single remote file system specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;remote_file_system_ids&#x60; or &#x60;remote_file_system_names&#x60; parameter is required, but they cannot be set together.  | 
+ **remoteIds** | **[]string** | Performs the operation on the single remote specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;remote_ids&#x60; or &#x60;remote_names&#x60; parameter is required, but they cannot be set together.  | 
+ **remoteNames** | **[]string** | Performs the operation on the single remote specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;remote_ids&#x60; or &#x60;remote_names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 
@@ -624,7 +624,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {

@@ -4,18 +4,18 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**UserGroupQuotaPoliciesDelete**](PoliciesUserAndGroupQuotaPolicyAPI.md#UserGroupQuotaPoliciesDelete) | **Delete** /api/2.29/user-group-quota-policies | DELETE user-group-quota-policies
-[**UserGroupQuotaPoliciesFileSystemsDelete**](PoliciesUserAndGroupQuotaPolicyAPI.md#UserGroupQuotaPoliciesFileSystemsDelete) | **Delete** /api/2.29/user-group-quota-policies/file-systems | DELETE user-group-quota-policies/file-systems
-[**UserGroupQuotaPoliciesFileSystemsGet**](PoliciesUserAndGroupQuotaPolicyAPI.md#UserGroupQuotaPoliciesFileSystemsGet) | **Get** /api/2.29/user-group-quota-policies/file-systems | GET user-group-quota-policies/file-systems
-[**UserGroupQuotaPoliciesFileSystemsPost**](PoliciesUserAndGroupQuotaPolicyAPI.md#UserGroupQuotaPoliciesFileSystemsPost) | **Post** /api/2.29/user-group-quota-policies/file-systems | POST user-group-quota-policies/file-systems
-[**UserGroupQuotaPoliciesGet**](PoliciesUserAndGroupQuotaPolicyAPI.md#UserGroupQuotaPoliciesGet) | **Get** /api/2.29/user-group-quota-policies | GET user-group-quota-policies
-[**UserGroupQuotaPoliciesMembersGet**](PoliciesUserAndGroupQuotaPolicyAPI.md#UserGroupQuotaPoliciesMembersGet) | **Get** /api/2.29/user-group-quota-policies/members | GET user-group-quota-policies/members
-[**UserGroupQuotaPoliciesPatch**](PoliciesUserAndGroupQuotaPolicyAPI.md#UserGroupQuotaPoliciesPatch) | **Patch** /api/2.29/user-group-quota-policies | PATCH user-group-quota-policies
-[**UserGroupQuotaPoliciesPost**](PoliciesUserAndGroupQuotaPolicyAPI.md#UserGroupQuotaPoliciesPost) | **Post** /api/2.29/user-group-quota-policies | POST user-group-quota-policies
-[**UserGroupQuotaPoliciesRulesDelete**](PoliciesUserAndGroupQuotaPolicyAPI.md#UserGroupQuotaPoliciesRulesDelete) | **Delete** /api/2.29/user-group-quota-policies/rules | DELETE user-group-quota-policies/rules
-[**UserGroupQuotaPoliciesRulesGet**](PoliciesUserAndGroupQuotaPolicyAPI.md#UserGroupQuotaPoliciesRulesGet) | **Get** /api/2.29/user-group-quota-policies/rules | GET user-group-quota-policies/rules
-[**UserGroupQuotaPoliciesRulesPatch**](PoliciesUserAndGroupQuotaPolicyAPI.md#UserGroupQuotaPoliciesRulesPatch) | **Patch** /api/2.29/user-group-quota-policies/rules | PATCH user-group-quota-policies/rules
-[**UserGroupQuotaPoliciesRulesPost**](PoliciesUserAndGroupQuotaPolicyAPI.md#UserGroupQuotaPoliciesRulesPost) | **Post** /api/2.29/user-group-quota-policies/rules | POST user-group-quota-policies/rules
+[**UserGroupQuotaPoliciesDelete**](PoliciesUserAndGroupQuotaPolicyAPI.md#UserGroupQuotaPoliciesDelete) | **Delete** /api/2.30/user-group-quota-policies | DELETE user-group-quota-policies
+[**UserGroupQuotaPoliciesFileSystemsDelete**](PoliciesUserAndGroupQuotaPolicyAPI.md#UserGroupQuotaPoliciesFileSystemsDelete) | **Delete** /api/2.30/user-group-quota-policies/file-systems | DELETE user-group-quota-policies/file-systems
+[**UserGroupQuotaPoliciesFileSystemsGet**](PoliciesUserAndGroupQuotaPolicyAPI.md#UserGroupQuotaPoliciesFileSystemsGet) | **Get** /api/2.30/user-group-quota-policies/file-systems | GET user-group-quota-policies/file-systems
+[**UserGroupQuotaPoliciesFileSystemsPost**](PoliciesUserAndGroupQuotaPolicyAPI.md#UserGroupQuotaPoliciesFileSystemsPost) | **Post** /api/2.30/user-group-quota-policies/file-systems | POST user-group-quota-policies/file-systems
+[**UserGroupQuotaPoliciesGet**](PoliciesUserAndGroupQuotaPolicyAPI.md#UserGroupQuotaPoliciesGet) | **Get** /api/2.30/user-group-quota-policies | GET user-group-quota-policies
+[**UserGroupQuotaPoliciesMembersGet**](PoliciesUserAndGroupQuotaPolicyAPI.md#UserGroupQuotaPoliciesMembersGet) | **Get** /api/2.30/user-group-quota-policies/members | GET user-group-quota-policies/members
+[**UserGroupQuotaPoliciesPatch**](PoliciesUserAndGroupQuotaPolicyAPI.md#UserGroupQuotaPoliciesPatch) | **Patch** /api/2.30/user-group-quota-policies | PATCH user-group-quota-policies
+[**UserGroupQuotaPoliciesPost**](PoliciesUserAndGroupQuotaPolicyAPI.md#UserGroupQuotaPoliciesPost) | **Post** /api/2.30/user-group-quota-policies | POST user-group-quota-policies
+[**UserGroupQuotaPoliciesRulesDelete**](PoliciesUserAndGroupQuotaPolicyAPI.md#UserGroupQuotaPoliciesRulesDelete) | **Delete** /api/2.30/user-group-quota-policies/rules | DELETE user-group-quota-policies/rules
+[**UserGroupQuotaPoliciesRulesGet**](PoliciesUserAndGroupQuotaPolicyAPI.md#UserGroupQuotaPoliciesRulesGet) | **Get** /api/2.30/user-group-quota-policies/rules | GET user-group-quota-policies/rules
+[**UserGroupQuotaPoliciesRulesPatch**](PoliciesUserAndGroupQuotaPolicyAPI.md#UserGroupQuotaPoliciesRulesPatch) | **Patch** /api/2.30/user-group-quota-policies/rules | PATCH user-group-quota-policies/rules
+[**UserGroupQuotaPoliciesRulesPost**](PoliciesUserAndGroupQuotaPolicyAPI.md#UserGroupQuotaPoliciesRulesPost) | **Post** /api/2.30/user-group-quota-policies/rules | POST user-group-quota-policies/rules
 
 
 
@@ -36,7 +36,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -74,8 +74,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
- **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;name&#x60; or &#x60;names&#x60; query parameters.  | 
- **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
+ **ids** | **[]string** | Performs the operation on the single resource specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
+ **names** | **[]string** | Performs the operation on the single resource specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
  **versions** | **[]string** | A comma-separated list of versions. This is an optional query param used for concurrency control. The ordering should match the names or ids query param. This will fail with a 412 Precondition failed if the resource was changed and the current version of the resource doesn&#39;t match the value in the query param.  | 
 
 ### Return type
@@ -113,7 +113,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -151,10 +151,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
- **memberIds** | **[]string** | A comma-separated list of member IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;member_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;member_names&#x60; query parameter.  | 
- **memberNames** | **[]string** | A comma-separated list of member names.  | 
- **policyIds** | **[]string** | A comma-separated list of policy IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;policy_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;policy_names&#x60; query parameter.  | 
- **policyNames** | **[]string** | A comma-separated list of policy names.  | 
+ **memberIds** | **[]string** | Performs the operation on the single member specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;member_ids&#x60; or &#x60;member_names&#x60; parameter is required, but they cannot be set together.  | 
+ **memberNames** | **[]string** | Performs the operation on the single member specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;member_ids&#x60; or &#x60;member_names&#x60; parameter is required, but they cannot be set together.  | 
+ **policyIds** | **[]string** | Performs the operation on the single policy specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;policy_ids&#x60; or &#x60;policy_names&#x60; parameter is required, but they cannot be set together.  | 
+ **policyNames** | **[]string** | Performs the operation on the single policy specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;policy_ids&#x60; or &#x60;policy_names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 
@@ -191,7 +191,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -277,7 +277,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -319,10 +319,10 @@ Name | Type | Description  | Notes
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
  **deleteExistingUserGroupQuotaSettings** | **bool** | This parameter must be set to &#x60;true&#x60; in order to delete existing quota configurations(default_group_quota, default_user_quota or specific quotas) set on a file system using either using &#x60;quotas/users&#x60;, &#x60;quotas/groups&#x60; or &#x60;/file-systems&#x60;. Setting this parameter to &#x60;true&#x60; is acknowledgement that the currently configured quotas would be erased before attaching the policy. Defaults to &#x60;false&#x60;.  | 
  **ignoreUsage** | **bool** | Flag used to override checks for user-group-quota management operations. If set to &#x60;true&#x60;, user/group usage is not checked against the &#x60;quota_limits&#x60; of user-group-quota rules.  | 
- **memberIds** | **[]string** | A comma-separated list of member IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;member_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;member_names&#x60; query parameter.  | 
- **memberNames** | **[]string** | A comma-separated list of member names.  | 
- **policyIds** | **[]string** | A comma-separated list of policy IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;policy_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;policy_names&#x60; query parameter.  | 
- **policyNames** | **[]string** | A comma-separated list of policy names.  | 
+ **memberIds** | **[]string** | Performs the operation on the single member specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;member_ids&#x60; or &#x60;member_names&#x60; parameter is required, but they cannot be set together.  | 
+ **memberNames** | **[]string** | Performs the operation on the single member specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;member_ids&#x60; or &#x60;member_names&#x60; parameter is required, but they cannot be set together.  | 
+ **policyIds** | **[]string** | Performs the operation on the single policy specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;policy_ids&#x60; or &#x60;policy_names&#x60; parameter is required, but they cannot be set together.  | 
+ **policyNames** | **[]string** | Performs the operation on the single policy specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;policy_ids&#x60; or &#x60;policy_names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 
@@ -359,7 +359,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -443,7 +443,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -529,7 +529,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -570,9 +570,9 @@ Name | Type | Description  | Notes
  **policy** | [**UserGroupQuotaPolicy**](UserGroupQuotaPolicy.md) |  | 
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
- **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;name&#x60; or &#x60;names&#x60; query parameters.  | 
+ **ids** | **[]string** | Performs the operation on the single resource specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
  **ignoreUsage** | **bool** | Flag used to override checks for user-group-quota management operations. If set to &#x60;true&#x60;, user/group usage is not checked against the &#x60;quota_limits&#x60; of user-group-quota rules.  | 
- **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
+ **names** | **[]string** | Performs the operation on the single resource specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
  **versions** | **[]string** | A comma-separated list of versions. This is an optional query param used for concurrency control. The ordering should match the names or ids query param. This will fail with a 412 Precondition failed if the resource was changed and the current version of the resource doesn&#39;t match the value in the query param.  | 
 
 ### Return type
@@ -610,7 +610,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -648,12 +648,12 @@ Other parameters are passed through a pointer to a apiUserGroupQuotaPoliciesPost
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **names** | **[]string** | A comma-separated list of resource names.  | 
+ **names** | **[]string** | Performs the operation on the unique name specified. Only a single name is supported; specifying multiple names in comma-separated format is not allowed.  If there is not a resource that matches the specified name, then an error is returned, except when creating a new resource.  | 
  **policy** | [**UserGroupQuotaPolicyPost**](UserGroupQuotaPolicyPost.md) |  | 
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
- **fileSystemIds** | **[]string** | A comma-separated list of file system IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;file_system_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;file_system_names&#x60; query parameter.  | 
- **fileSystemNames** | **[]string** | A comma-separated list of file system names. If there is not at least one resource that matches each of the elements of &#x60;file_system_names&#x60;, then an error is returned.  | 
+ **fileSystemIds** | **[]string** | Performs the operation on the single file system specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;file_system_ids&#x60; or &#x60;file_system_names&#x60; parameter is required, but they cannot be set together.  | 
+ **fileSystemNames** | **[]string** | Performs the operation on the single file system specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;file_system_ids&#x60; or &#x60;file_system_names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 
@@ -690,7 +690,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -728,10 +728,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
- **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;name&#x60; or &#x60;names&#x60; query parameters.  | 
- **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
- **policyIds** | **[]string** | A comma-separated list of policy IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;policy_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;policy_names&#x60; query parameter.  | 
- **policyNames** | **[]string** | A comma-separated list of policy names.  | 
+ **ids** | **[]string** | Performs the operation on the single resource specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
+ **names** | **[]string** | Performs the operation on the single resource specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
+ **policyIds** | **[]string** | Performs the operation on the single policy specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;policy_ids&#x60; or &#x60;policy_names&#x60; parameter is required, but they cannot be set together.  | 
+ **policyNames** | **[]string** | Performs the operation on the single policy specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;policy_ids&#x60; or &#x60;policy_names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 
@@ -768,7 +768,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -852,7 +852,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -892,9 +892,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **rule** | [**UserGroupQuotaPolicyRulePatch**](UserGroupQuotaPolicyRulePatch.md) |  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
- **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;name&#x60; or &#x60;names&#x60; query parameters.  | 
+ **ids** | **[]string** | Performs the operation on the single resource specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
  **ignoreUsage** | **bool** | Flag used to override checks for user-group-quota management operations. If set to &#x60;true&#x60;, user/group usage is not checked against the &#x60;quota_limits&#x60; of user-group-quota rules.  | 
- **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
+ **names** | **[]string** | Performs the operation on the single resource specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 
@@ -931,7 +931,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -973,8 +973,8 @@ Name | Type | Description  | Notes
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
  **ignoreUsage** | **bool** | Flag used to override checks for user-group-quota management operations. If set to &#x60;true&#x60;, user/group usage is not checked against the &#x60;quota_limits&#x60; of user-group-quota rules.  | 
- **policyIds** | **[]string** | A comma-separated list of policy IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;policy_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;policy_names&#x60; query parameter.  | 
- **policyNames** | **[]string** | A comma-separated list of policy names.  | 
+ **policyIds** | **[]string** | Performs the operation on the single policy specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;policy_ids&#x60; or &#x60;policy_names&#x60; parameter is required, but they cannot be set together.  | 
+ **policyNames** | **[]string** | Performs the operation on the single policy specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;policy_ids&#x60; or &#x60;policy_names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 

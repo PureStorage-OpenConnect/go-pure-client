@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **Created** | Pointer to **int64** | The workload creation time, measured in milliseconds since the UNIX epoch. | [optional] [readonly] 
 **Destroyed** | Pointer to **bool** | Returns a value of &#x60;true&#x60; if the workload has been destroyed and is pending eradication. The &#x60;time_remaining&#x60; displays the amount of time left until the destroyed workload is permanently eradicated. Before the &#x60;time_remaining&#x60; period has elapsed, the destroyed workload can be recovered by setting &#x60;destroyed&#x3D;false&#x60;. Once the &#x60;time_remaining&#x60; period has elapsed, the workload is permanently eradicated and can no longer be recovered.  | [optional] [readonly] 
 **Preset** | Pointer to [**WorkloadPreset**](WorkloadPreset.md) | A reference to the preset the workload was deployed from. If the preset has since been destroyed, &#x60;name&#x60; will be &#x60;null&#x60;.  | [optional] 
+**Space** | Pointer to [**WorkloadSpace**](WorkloadSpace.md) | The current space utilization metrics for the workload, aggregated across all storage objects within the workload.  | [optional] [readonly] 
 **Status** | Pointer to **string** | The status of the workload. Supported values are &#x60;creating&#x60;, &#x60;ready&#x60;, &#x60;destroying&#x60;, &#x60;destroyed&#x60;, &#x60;eradicating&#x60; and &#x60;recovering&#x60;.  | [optional] [readonly] 
 **StatusDetails** | Pointer to **[]string** | Additional information about the workload status. For example, if the workload status is &#x60;creating&#x60;, status details might describe what resources are currently being created.  | [optional] [readonly] 
 **TimeRemaining** | Pointer to **int64** | The amount of time left until the destroyed workload is permanently eradicated, measured in milliseconds. Before the &#x60;time_remaining&#x60; period has elapsed, the destroyed workload can be recovered by setting &#x60;destroyed&#x3D;false&#x60;.  | [optional] [readonly] 
@@ -182,6 +183,31 @@ SetPreset sets Preset field to given value.
 `func (o *Workload) HasPreset() bool`
 
 HasPreset returns a boolean if a field has been set.
+
+### GetSpace
+
+`func (o *Workload) GetSpace() WorkloadSpace`
+
+GetSpace returns the Space field if non-nil, zero value otherwise.
+
+### GetSpaceOk
+
+`func (o *Workload) GetSpaceOk() (*WorkloadSpace, bool)`
+
+GetSpaceOk returns a tuple with the Space field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSpace
+
+`func (o *Workload) SetSpace(v WorkloadSpace)`
+
+SetSpace sets Space field to given value.
+
+### HasSpace
+
+`func (o *Workload) HasSpace() bool`
+
+HasSpace returns a boolean if a field has been set.
 
 ### GetStatus
 

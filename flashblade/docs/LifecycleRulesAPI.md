@@ -4,10 +4,10 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**LifecycleRulesDelete**](LifecycleRulesAPI.md#LifecycleRulesDelete) | **Delete** /api/2.29/lifecycle-rules | DELETE lifecycle-rules
-[**LifecycleRulesGet**](LifecycleRulesAPI.md#LifecycleRulesGet) | **Get** /api/2.29/lifecycle-rules | GET lifecycle-rules
-[**LifecycleRulesPatch**](LifecycleRulesAPI.md#LifecycleRulesPatch) | **Patch** /api/2.29/lifecycle-rules | PATCH lifecycle-rules
-[**LifecycleRulesPost**](LifecycleRulesAPI.md#LifecycleRulesPost) | **Post** /api/2.29/lifecycle-rules | POST lifecycle-rules
+[**LifecycleRulesDelete**](LifecycleRulesAPI.md#LifecycleRulesDelete) | **Delete** /api/2.30/lifecycle-rules | DELETE lifecycle-rules
+[**LifecycleRulesGet**](LifecycleRulesAPI.md#LifecycleRulesGet) | **Get** /api/2.30/lifecycle-rules | GET lifecycle-rules
+[**LifecycleRulesPatch**](LifecycleRulesAPI.md#LifecycleRulesPatch) | **Patch** /api/2.30/lifecycle-rules | PATCH lifecycle-rules
+[**LifecycleRulesPost**](LifecycleRulesAPI.md#LifecycleRulesPost) | **Post** /api/2.30/lifecycle-rules | POST lifecycle-rules
 
 
 
@@ -28,7 +28,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -106,7 +106,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -192,7 +192,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -236,8 +236,8 @@ Name | Type | Description  | Notes
  **bucketNames** | **[]string** | A comma-separated list of bucket names. If there is not at least one resource that matches each of the elements of &#x60;bucket_names&#x60;, then an error is returned. This cannot be provided together with the &#x60;bucket_ids&#x60; query parameter. This can be provided with the &#x60;ids&#x60; query parameter but not with &#x60;names&#x60;.  | 
  **confirmDate** | **bool** | If set to &#x60;true&#x60;, then confirm the date of &#x60;keep_current_version_until&#x60; is correct.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
- **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;name&#x60; or &#x60;names&#x60; query parameters.  | 
- **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
+ **ids** | **[]string** | Performs the operation on the single resource specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
+ **names** | **[]string** | Performs the operation on the single resource specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 
@@ -274,7 +274,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {

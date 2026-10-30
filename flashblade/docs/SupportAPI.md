@@ -4,10 +4,10 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**SupportGet**](SupportAPI.md#SupportGet) | **Get** /api/2.29/support | GET support
-[**SupportPatch**](SupportAPI.md#SupportPatch) | **Patch** /api/2.29/support | PATCH support
-[**SupportSystemManifestGet**](SupportAPI.md#SupportSystemManifestGet) | **Get** /api/2.29/support/system-manifest | List the system manifest
-[**SupportTestGet**](SupportAPI.md#SupportTestGet) | **Get** /api/2.29/support/test | GET support-test
+[**SupportGet**](SupportAPI.md#SupportGet) | **Get** /api/2.30/support | GET support
+[**SupportPatch**](SupportAPI.md#SupportPatch) | **Patch** /api/2.30/support | PATCH support
+[**SupportSystemManifestGet**](SupportAPI.md#SupportSystemManifestGet) | **Get** /api/2.30/support/system-manifest | List the system manifest
+[**SupportTestGet**](SupportAPI.md#SupportTestGet) | **Get** /api/2.30/support/test | GET support-test
 
 
 
@@ -28,7 +28,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -105,7 +105,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -181,7 +181,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -264,7 +264,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {

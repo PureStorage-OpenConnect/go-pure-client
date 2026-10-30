@@ -4,19 +4,19 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AdminsManagementAuthenticationPoliciesDelete**](PoliciesManagementAuthenticationAPI.md#AdminsManagementAuthenticationPoliciesDelete) | **Delete** /api/2.29/admins/management-authentication-policies | DELETE admins/management-authentication-policies
-[**AdminsManagementAuthenticationPoliciesGet**](PoliciesManagementAuthenticationAPI.md#AdminsManagementAuthenticationPoliciesGet) | **Get** /api/2.29/admins/management-authentication-policies | GET admins/management-authentication-policies
-[**AdminsManagementAuthenticationPoliciesPost**](PoliciesManagementAuthenticationAPI.md#AdminsManagementAuthenticationPoliciesPost) | **Post** /api/2.29/admins/management-authentication-policies | POST admins/management-authentication-policies
-[**ArraysManagementAuthenticationPoliciesDelete**](PoliciesManagementAuthenticationAPI.md#ArraysManagementAuthenticationPoliciesDelete) | **Delete** /api/2.29/arrays/management-authentication-policies | DELETE arrays/management-authentication-policies
-[**ArraysManagementAuthenticationPoliciesGet**](PoliciesManagementAuthenticationAPI.md#ArraysManagementAuthenticationPoliciesGet) | **Get** /api/2.29/arrays/management-authentication-policies | GET arrays/management-authentication-policies
-[**ArraysManagementAuthenticationPoliciesPost**](PoliciesManagementAuthenticationAPI.md#ArraysManagementAuthenticationPoliciesPost) | **Post** /api/2.29/arrays/management-authentication-policies | POST arrays/management-authentication-policies
-[**ManagementAuthenticationPoliciesDelete**](PoliciesManagementAuthenticationAPI.md#ManagementAuthenticationPoliciesDelete) | **Delete** /api/2.29/management-authentication-policies | DELETE management-authentication-policies
-[**ManagementAuthenticationPoliciesGet**](PoliciesManagementAuthenticationAPI.md#ManagementAuthenticationPoliciesGet) | **Get** /api/2.29/management-authentication-policies | GET management-authentication-policies
-[**ManagementAuthenticationPoliciesMembersDelete**](PoliciesManagementAuthenticationAPI.md#ManagementAuthenticationPoliciesMembersDelete) | **Delete** /api/2.29/management-authentication-policies/members | DELETE management-authentication-policies/members
-[**ManagementAuthenticationPoliciesMembersGet**](PoliciesManagementAuthenticationAPI.md#ManagementAuthenticationPoliciesMembersGet) | **Get** /api/2.29/management-authentication-policies/members | GET management-authentication-policies/members
-[**ManagementAuthenticationPoliciesMembersPost**](PoliciesManagementAuthenticationAPI.md#ManagementAuthenticationPoliciesMembersPost) | **Post** /api/2.29/management-authentication-policies/members | POST management-authentication-policies/members
-[**ManagementAuthenticationPoliciesPatch**](PoliciesManagementAuthenticationAPI.md#ManagementAuthenticationPoliciesPatch) | **Patch** /api/2.29/management-authentication-policies | PATCH management-authentication-policies
-[**ManagementAuthenticationPoliciesPost**](PoliciesManagementAuthenticationAPI.md#ManagementAuthenticationPoliciesPost) | **Post** /api/2.29/management-authentication-policies | POST management-authentication-policies
+[**AdminsManagementAuthenticationPoliciesDelete**](PoliciesManagementAuthenticationAPI.md#AdminsManagementAuthenticationPoliciesDelete) | **Delete** /api/2.30/admins/management-authentication-policies | DELETE admins/management-authentication-policies
+[**AdminsManagementAuthenticationPoliciesGet**](PoliciesManagementAuthenticationAPI.md#AdminsManagementAuthenticationPoliciesGet) | **Get** /api/2.30/admins/management-authentication-policies | GET admins/management-authentication-policies
+[**AdminsManagementAuthenticationPoliciesPost**](PoliciesManagementAuthenticationAPI.md#AdminsManagementAuthenticationPoliciesPost) | **Post** /api/2.30/admins/management-authentication-policies | POST admins/management-authentication-policies
+[**ArraysManagementAuthenticationPoliciesDelete**](PoliciesManagementAuthenticationAPI.md#ArraysManagementAuthenticationPoliciesDelete) | **Delete** /api/2.30/arrays/management-authentication-policies | DELETE arrays/management-authentication-policies
+[**ArraysManagementAuthenticationPoliciesGet**](PoliciesManagementAuthenticationAPI.md#ArraysManagementAuthenticationPoliciesGet) | **Get** /api/2.30/arrays/management-authentication-policies | GET arrays/management-authentication-policies
+[**ArraysManagementAuthenticationPoliciesPost**](PoliciesManagementAuthenticationAPI.md#ArraysManagementAuthenticationPoliciesPost) | **Post** /api/2.30/arrays/management-authentication-policies | POST arrays/management-authentication-policies
+[**ManagementAuthenticationPoliciesDelete**](PoliciesManagementAuthenticationAPI.md#ManagementAuthenticationPoliciesDelete) | **Delete** /api/2.30/management-authentication-policies | DELETE management-authentication-policies
+[**ManagementAuthenticationPoliciesGet**](PoliciesManagementAuthenticationAPI.md#ManagementAuthenticationPoliciesGet) | **Get** /api/2.30/management-authentication-policies | GET management-authentication-policies
+[**ManagementAuthenticationPoliciesMembersDelete**](PoliciesManagementAuthenticationAPI.md#ManagementAuthenticationPoliciesMembersDelete) | **Delete** /api/2.30/management-authentication-policies/members | DELETE management-authentication-policies/members
+[**ManagementAuthenticationPoliciesMembersGet**](PoliciesManagementAuthenticationAPI.md#ManagementAuthenticationPoliciesMembersGet) | **Get** /api/2.30/management-authentication-policies/members | GET management-authentication-policies/members
+[**ManagementAuthenticationPoliciesMembersPost**](PoliciesManagementAuthenticationAPI.md#ManagementAuthenticationPoliciesMembersPost) | **Post** /api/2.30/management-authentication-policies/members | POST management-authentication-policies/members
+[**ManagementAuthenticationPoliciesPatch**](PoliciesManagementAuthenticationAPI.md#ManagementAuthenticationPoliciesPatch) | **Patch** /api/2.30/management-authentication-policies | PATCH management-authentication-policies
+[**ManagementAuthenticationPoliciesPost**](PoliciesManagementAuthenticationAPI.md#ManagementAuthenticationPoliciesPost) | **Post** /api/2.30/management-authentication-policies | POST management-authentication-policies
 
 
 
@@ -37,7 +37,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -115,7 +115,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -201,7 +201,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -281,7 +281,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -359,7 +359,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -445,7 +445,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -525,7 +525,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -563,8 +563,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
- **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;name&#x60; or &#x60;names&#x60; query parameters.  | 
- **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
+ **ids** | **[]string** | Performs the operation on the single resource specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
+ **names** | **[]string** | Performs the operation on the single resource specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 
@@ -601,7 +601,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -685,7 +685,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -764,7 +764,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -851,7 +851,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -932,7 +932,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -973,8 +973,8 @@ Name | Type | Description  | Notes
  **policy** | [**ManagementAuthenticationPolicy**](ManagementAuthenticationPolicy.md) |  | 
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
- **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;name&#x60; or &#x60;names&#x60; query parameters.  | 
- **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
+ **ids** | **[]string** | Performs the operation on the single resource specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
+ **names** | **[]string** | Performs the operation on the single resource specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 
@@ -1011,7 +1011,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1049,7 +1049,7 @@ Other parameters are passed through a pointer to a apiManagementAuthenticationPo
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **names** | **[]string** | A comma-separated list of resource names.  | 
+ **names** | **[]string** | Performs the operation on the unique name specified. Only a single name is supported; specifying multiple names in comma-separated format is not allowed.  If there is not a resource that matches the specified name, then an error is returned, except when creating a new resource.  | 
  **policy** | [**ManagementAuthenticationPolicyPost**](ManagementAuthenticationPolicyPost.md) |  | 
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 

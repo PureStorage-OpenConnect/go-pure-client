@@ -4,28 +4,28 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ArraysDefaultsGet**](ArraysAPI.md#ArraysDefaultsGet) | **Get** /api/2.29/arrays/defaults | GET arrays/defaults
-[**ArraysDefaultsPatch**](ArraysAPI.md#ArraysDefaultsPatch) | **Patch** /api/2.29/arrays/defaults | PATCH arrays/defaults
-[**ArraysErasuresDelete**](ArraysAPI.md#ArraysErasuresDelete) | **Delete** /api/2.29/arrays/erasures | Stop factory reset
-[**ArraysErasuresGet**](ArraysAPI.md#ArraysErasuresGet) | **Get** /api/2.29/arrays/erasures | Get factory reset status
-[**ArraysErasuresPatch**](ArraysAPI.md#ArraysErasuresPatch) | **Patch** /api/2.29/arrays/erasures | Factory reset - finalize
-[**ArraysErasuresPost**](ArraysAPI.md#ArraysErasuresPost) | **Post** /api/2.29/arrays/erasures | Create a process for factory reset
-[**ArraysEulaGet**](ArraysAPI.md#ArraysEulaGet) | **Get** /api/2.29/arrays/eula | GET arrays/eula
-[**ArraysEulaPatch**](ArraysAPI.md#ArraysEulaPatch) | **Patch** /api/2.29/arrays/eula | PATCH arrays/eula
-[**ArraysFactoryResetTokenDelete**](ArraysAPI.md#ArraysFactoryResetTokenDelete) | **Delete** /api/2.29/arrays/factory-reset-token | Delete a factory reset token
-[**ArraysFactoryResetTokenGet**](ArraysAPI.md#ArraysFactoryResetTokenGet) | **Get** /api/2.29/arrays/factory-reset-token | List factory reset tokens
-[**ArraysFactoryResetTokenPost**](ArraysAPI.md#ArraysFactoryResetTokenPost) | **Post** /api/2.29/arrays/factory-reset-token | Create a factory reset token
-[**ArraysGet**](ArraysAPI.md#ArraysGet) | **Get** /api/2.29/arrays | GET arrays
-[**ArraysHttpSpecificPerformanceGet**](ArraysAPI.md#ArraysHttpSpecificPerformanceGet) | **Get** /api/2.29/arrays/http-specific-performance | GET arrays/http-specific-performance
-[**ArraysNfsSpecificPerformanceGet**](ArraysAPI.md#ArraysNfsSpecificPerformanceGet) | **Get** /api/2.29/arrays/nfs-specific-performance | GET arrays/nfs-specific-performance
-[**ArraysPatch**](ArraysAPI.md#ArraysPatch) | **Patch** /api/2.29/arrays | PATCH arrays
-[**ArraysPerformanceGet**](ArraysAPI.md#ArraysPerformanceGet) | **Get** /api/2.29/arrays/performance | GET arrays/performance
-[**ArraysPerformanceReplicationGet**](ArraysAPI.md#ArraysPerformanceReplicationGet) | **Get** /api/2.29/arrays/performance/replication | GET arrays/performance/replication
-[**ArraysS3SpecificPerformanceGet**](ArraysAPI.md#ArraysS3SpecificPerformanceGet) | **Get** /api/2.29/arrays/s3-specific-performance | GET arrays/s3-specific-performance
-[**ArraysSpaceGet**](ArraysAPI.md#ArraysSpaceGet) | **Get** /api/2.29/arrays/space | GET arrays/space
-[**ArraysSpaceStorageClassesGet**](ArraysAPI.md#ArraysSpaceStorageClassesGet) | **Get** /api/2.29/arrays/space/storage-classes | GET arrays/space/storage-classes
-[**ArraysSupportedTimeZonesGet**](ArraysAPI.md#ArraysSupportedTimeZonesGet) | **Get** /api/2.29/arrays/supported-time-zones | GET arrays/supported-time-zones
-[**ArraysTelemetryMetricsPoliciesGet**](ArraysAPI.md#ArraysTelemetryMetricsPoliciesGet) | **Get** /api/2.29/arrays/telemetry-metrics-policies | GET arrays/telemetry-metrics-policies
+[**ArraysDefaultsGet**](ArraysAPI.md#ArraysDefaultsGet) | **Get** /api/2.30/arrays/defaults | GET arrays/defaults
+[**ArraysDefaultsPatch**](ArraysAPI.md#ArraysDefaultsPatch) | **Patch** /api/2.30/arrays/defaults | PATCH arrays/defaults
+[**ArraysErasuresDelete**](ArraysAPI.md#ArraysErasuresDelete) | **Delete** /api/2.30/arrays/erasures | Stop factory reset
+[**ArraysErasuresGet**](ArraysAPI.md#ArraysErasuresGet) | **Get** /api/2.30/arrays/erasures | Get factory reset status
+[**ArraysErasuresPatch**](ArraysAPI.md#ArraysErasuresPatch) | **Patch** /api/2.30/arrays/erasures | Factory reset - finalize
+[**ArraysErasuresPost**](ArraysAPI.md#ArraysErasuresPost) | **Post** /api/2.30/arrays/erasures | Create a process for factory reset
+[**ArraysEulaGet**](ArraysAPI.md#ArraysEulaGet) | **Get** /api/2.30/arrays/eula | GET arrays/eula
+[**ArraysEulaPatch**](ArraysAPI.md#ArraysEulaPatch) | **Patch** /api/2.30/arrays/eula | PATCH arrays/eula
+[**ArraysFactoryResetTokenDelete**](ArraysAPI.md#ArraysFactoryResetTokenDelete) | **Delete** /api/2.30/arrays/factory-reset-token | Delete a factory reset token
+[**ArraysFactoryResetTokenGet**](ArraysAPI.md#ArraysFactoryResetTokenGet) | **Get** /api/2.30/arrays/factory-reset-token | List factory reset tokens
+[**ArraysFactoryResetTokenPost**](ArraysAPI.md#ArraysFactoryResetTokenPost) | **Post** /api/2.30/arrays/factory-reset-token | Create a factory reset token
+[**ArraysGet**](ArraysAPI.md#ArraysGet) | **Get** /api/2.30/arrays | GET arrays
+[**ArraysHttpSpecificPerformanceGet**](ArraysAPI.md#ArraysHttpSpecificPerformanceGet) | **Get** /api/2.30/arrays/http-specific-performance | GET arrays/http-specific-performance
+[**ArraysNfsSpecificPerformanceGet**](ArraysAPI.md#ArraysNfsSpecificPerformanceGet) | **Get** /api/2.30/arrays/nfs-specific-performance | GET arrays/nfs-specific-performance
+[**ArraysPatch**](ArraysAPI.md#ArraysPatch) | **Patch** /api/2.30/arrays | PATCH arrays
+[**ArraysPerformanceGet**](ArraysAPI.md#ArraysPerformanceGet) | **Get** /api/2.30/arrays/performance | GET arrays/performance
+[**ArraysPerformanceReplicationGet**](ArraysAPI.md#ArraysPerformanceReplicationGet) | **Get** /api/2.30/arrays/performance/replication | GET arrays/performance/replication
+[**ArraysS3SpecificPerformanceGet**](ArraysAPI.md#ArraysS3SpecificPerformanceGet) | **Get** /api/2.30/arrays/s3-specific-performance | GET arrays/s3-specific-performance
+[**ArraysSpaceGet**](ArraysAPI.md#ArraysSpaceGet) | **Get** /api/2.30/arrays/space | GET arrays/space
+[**ArraysSpaceStorageClassesGet**](ArraysAPI.md#ArraysSpaceStorageClassesGet) | **Get** /api/2.30/arrays/space/storage-classes | GET arrays/space/storage-classes
+[**ArraysSupportedTimeZonesGet**](ArraysAPI.md#ArraysSupportedTimeZonesGet) | **Get** /api/2.30/arrays/supported-time-zones | GET arrays/supported-time-zones
+[**ArraysTelemetryMetricsPoliciesGet**](ArraysAPI.md#ArraysTelemetryMetricsPoliciesGet) | **Get** /api/2.30/arrays/telemetry-metrics-policies | GET arrays/telemetry-metrics-policies
 
 
 
@@ -46,7 +46,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -128,7 +128,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -205,7 +205,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -278,7 +278,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -353,7 +353,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -431,7 +431,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -509,7 +509,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -589,7 +589,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -665,7 +665,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -738,7 +738,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -818,7 +818,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -893,7 +893,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -975,7 +975,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1055,7 +1055,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1120,7 +1120,7 @@ Authorization is handled by the Authenticator specified in the configuration and
 
 ## ArraysPatch
 
-> ArrayResponse ArraysPatch(ctx).Array(array).XRequestID(xRequestID).Execute()
+> ArrayResponse ArraysPatch(ctx).Array(array).XRequestID(xRequestID).ContextNames(contextNames).Execute()
 
 PATCH arrays
 
@@ -1135,7 +1135,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1175,6 +1175,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **array** | [**Array**](Array.md) |  | 
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
+ **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
 
 ### Return type
 
@@ -1211,7 +1212,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1292,7 +1293,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1373,7 +1374,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1453,7 +1454,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1534,7 +1535,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1619,7 +1620,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1700,7 +1701,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {

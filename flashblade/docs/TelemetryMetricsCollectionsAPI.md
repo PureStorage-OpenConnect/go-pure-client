@@ -4,8 +4,8 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**TelemetryMetricsCollectionsGet**](TelemetryMetricsCollectionsAPI.md#TelemetryMetricsCollectionsGet) | **Get** /api/2.29/telemetry-metrics-collections | GET telemetry-metrics-collections
-[**TelemetryMetricsCollectionsMetricsGet**](TelemetryMetricsCollectionsAPI.md#TelemetryMetricsCollectionsMetricsGet) | **Get** /api/2.29/telemetry-metrics-collections/metrics | GET telemetry-metrics-collections/metrics
+[**TelemetryMetricsCollectionsGet**](TelemetryMetricsCollectionsAPI.md#TelemetryMetricsCollectionsGet) | **Get** /api/2.30/telemetry-metrics-collections | GET telemetry-metrics-collections
+[**TelemetryMetricsCollectionsMetricsGet**](TelemetryMetricsCollectionsAPI.md#TelemetryMetricsCollectionsMetricsGet) | **Get** /api/2.30/telemetry-metrics-collections/metrics | GET telemetry-metrics-collections/metrics
 
 
 
@@ -26,7 +26,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -110,7 +110,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {

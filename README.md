@@ -2,7 +2,7 @@
 ## Overview
 The `go-pure-client` Go module provides clients for the FlashArray 2.x API and the FlashBlade 2.x API (preview).
 ## Requirements
-The module requires Go 1.24 or higher.
+The module requires Go 1.26 or higher.
 ### Installation
 Each REST version is its own Go module. Add the import for the REST version you target:
 ```golang
@@ -246,3 +246,4 @@ func main() {
 * [FB2.27](flashblade/FB_2_27/README.md)
 * [FB2.28](flashblade/FB_2_28/README.md)
 * [FB2.29](flashblade/FB_2_29/README.md)
+* [FB2.30](flashblade/FB_2_30/README.md)

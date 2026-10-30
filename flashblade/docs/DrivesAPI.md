@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DrivesGet**](DrivesAPI.md#DrivesGet) | **Get** /api/2.29/drives | GET drives
+[**DrivesGet**](DrivesAPI.md#DrivesGet) | **Get** /api/2.30/drives | GET drives
 
 
 
@@ -25,7 +25,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {

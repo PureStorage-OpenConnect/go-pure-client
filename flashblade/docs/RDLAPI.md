@@ -4,10 +4,10 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**RapidDataLockingGet**](RDLAPI.md#RapidDataLockingGet) | **Get** /api/2.29/rapid-data-locking | Get the status of the Rapid Data Locking feature.
-[**RapidDataLockingPatch**](RDLAPI.md#RapidDataLockingPatch) | **Patch** /api/2.29/rapid-data-locking | Modifies the Rapid Data Locking feature.
-[**RapidDataLockingRotatePost**](RDLAPI.md#RapidDataLockingRotatePost) | **Post** /api/2.29/rapid-data-locking/rotate | Rotates the external keys on the associated EKM appliance.
-[**RapidDataLockingTestGet**](RDLAPI.md#RapidDataLockingTestGet) | **Get** /api/2.29/rapid-data-locking/test | Displays Rapid Data Locking test results.
+[**RapidDataLockingGet**](RDLAPI.md#RapidDataLockingGet) | **Get** /api/2.30/rapid-data-locking | Get the status of the Rapid Data Locking feature.
+[**RapidDataLockingPatch**](RDLAPI.md#RapidDataLockingPatch) | **Patch** /api/2.30/rapid-data-locking | Modifies the Rapid Data Locking feature.
+[**RapidDataLockingRotatePost**](RDLAPI.md#RapidDataLockingRotatePost) | **Post** /api/2.30/rapid-data-locking/rotate | Rotates the external keys on the associated EKM appliance.
+[**RapidDataLockingTestGet**](RDLAPI.md#RapidDataLockingTestGet) | **Get** /api/2.30/rapid-data-locking/test | Displays Rapid Data Locking test results.
 
 
 
@@ -28,7 +28,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -103,7 +103,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -179,7 +179,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -252,7 +252,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {

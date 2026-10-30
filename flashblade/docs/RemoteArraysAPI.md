@@ -4,8 +4,8 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**RemoteArraysGet**](RemoteArraysAPI.md#RemoteArraysGet) | **Get** /api/2.29/remote-arrays | List remote arrays
-[**RemoteArraysPatch**](RemoteArraysAPI.md#RemoteArraysPatch) | **Patch** /api/2.29/remote-arrays | Modify remote arrays
+[**RemoteArraysGet**](RemoteArraysAPI.md#RemoteArraysGet) | **Get** /api/2.30/remote-arrays | List remote arrays
+[**RemoteArraysPatch**](RemoteArraysAPI.md#RemoteArraysPatch) | **Patch** /api/2.30/remote-arrays | Modify remote arrays
 
 
 
@@ -26,7 +26,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -110,7 +110,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {

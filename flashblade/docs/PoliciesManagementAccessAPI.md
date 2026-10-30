@@ -4,35 +4,35 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AdminsManagementAccessPoliciesDelete**](PoliciesManagementAccessAPI.md#AdminsManagementAccessPoliciesDelete) | **Delete** /api/2.29/admins/management-access-policies | DELETE admins/management-access-policies
-[**AdminsManagementAccessPoliciesGet**](PoliciesManagementAccessAPI.md#AdminsManagementAccessPoliciesGet) | **Get** /api/2.29/admins/management-access-policies | GET admins/management-access-policies
-[**AdminsManagementAccessPoliciesPost**](PoliciesManagementAccessAPI.md#AdminsManagementAccessPoliciesPost) | **Post** /api/2.29/admins/management-access-policies | POST admins/management-access-policies
-[**DirectoryServicesRolesManagementAccessPoliciesDelete**](PoliciesManagementAccessAPI.md#DirectoryServicesRolesManagementAccessPoliciesDelete) | **Delete** /api/2.29/directory-services/roles/management-access-policies | DELETE directory-services/roles/management-access-policies
-[**DirectoryServicesRolesManagementAccessPoliciesGet**](PoliciesManagementAccessAPI.md#DirectoryServicesRolesManagementAccessPoliciesGet) | **Get** /api/2.29/directory-services/roles/management-access-policies | GET directory-services/roles/management-access-policies
-[**DirectoryServicesRolesManagementAccessPoliciesPost**](PoliciesManagementAccessAPI.md#DirectoryServicesRolesManagementAccessPoliciesPost) | **Post** /api/2.29/directory-services/roles/management-access-policies | POST directory-services/roles/management-access-policies
-[**ManagementAccessPoliciesAdminsDelete**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesAdminsDelete) | **Delete** /api/2.29/management-access-policies/admins | DELETE management-access-policies/admins
-[**ManagementAccessPoliciesAdminsGet**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesAdminsGet) | **Get** /api/2.29/management-access-policies/admins | GET management-access-policies/admins
-[**ManagementAccessPoliciesAdminsPost**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesAdminsPost) | **Post** /api/2.29/management-access-policies/admins | POST management-access-policies/admins
-[**ManagementAccessPoliciesDelete**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesDelete) | **Delete** /api/2.29/management-access-policies | DELETE management-access-policies
-[**ManagementAccessPoliciesDirectoryServicesRolesDelete**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesDirectoryServicesRolesDelete) | **Delete** /api/2.29/management-access-policies/directory-services/roles | DELETE management-access-policies/directory-services/roles
-[**ManagementAccessPoliciesDirectoryServicesRolesGet**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesDirectoryServicesRolesGet) | **Get** /api/2.29/management-access-policies/directory-services/roles | GET management-access-policies/directory-services/roles
-[**ManagementAccessPoliciesDirectoryServicesRolesPost**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesDirectoryServicesRolesPost) | **Post** /api/2.29/management-access-policies/directory-services/roles | POST management-access-policies/directory-services/roles
-[**ManagementAccessPoliciesGet**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesGet) | **Get** /api/2.29/management-access-policies | GET management-access-policies
-[**ManagementAccessPoliciesMembersGet**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesMembersGet) | **Get** /api/2.29/management-access-policies/members | GET management-access-policies/members
-[**ManagementAccessPoliciesPatch**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesPatch) | **Patch** /api/2.29/management-access-policies | PATCH management-access-policies
-[**ManagementAccessPoliciesPost**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesPost) | **Post** /api/2.29/management-access-policies | POST management-access-policies
-[**ManagementAccessPoliciesRolesDelete**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesRolesDelete) | **Delete** /api/2.29/management-access-policies/roles | DELETE management-access-policies/roles
-[**ManagementAccessPoliciesRolesGet**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesRolesGet) | **Get** /api/2.29/management-access-policies/roles | GET management-access-policies/roles
-[**ManagementAccessPoliciesRolesPermissionsDelete**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesRolesPermissionsDelete) | **Delete** /api/2.29/management-access-policies/roles/permissions | DELETE management-access-policies/roles/permissions
-[**ManagementAccessPoliciesRolesPermissionsGet**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesRolesPermissionsGet) | **Get** /api/2.29/management-access-policies/roles/permissions | GET management-access-policies/roles/permissions
-[**ManagementAccessPoliciesRolesPermissionsPatch**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesRolesPermissionsPatch) | **Patch** /api/2.29/management-access-policies/roles/permissions | PATCH management-access-policies/roles/permissions
-[**ManagementAccessPoliciesRolesPermissionsPost**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesRolesPermissionsPost) | **Post** /api/2.29/management-access-policies/roles/permissions | POST management-access-policies/roles/permissions
-[**ManagementAccessPoliciesRolesPermissionsSupportedResourcesGet**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesRolesPermissionsSupportedResourcesGet) | **Get** /api/2.29/management-access-policies/roles/permissions/supported-resources | GET management-access-policies/roles/permissions/supported-resources
-[**ManagementAccessPoliciesRolesPost**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesRolesPost) | **Post** /api/2.29/management-access-policies/roles | POST management-access-policies/roles
-[**ManagementAccessPoliciesRulesDelete**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesRulesDelete) | **Delete** /api/2.29/management-access-policies/rules | DELETE management-access-policies/rules
-[**ManagementAccessPoliciesRulesGet**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesRulesGet) | **Get** /api/2.29/management-access-policies/rules | GET management-access-policies/rules
-[**ManagementAccessPoliciesRulesPatch**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesRulesPatch) | **Patch** /api/2.29/management-access-policies/rules | PATCH management-access-policies/rules
-[**ManagementAccessPoliciesRulesPost**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesRulesPost) | **Post** /api/2.29/management-access-policies/rules | POST management-access-policies/rules
+[**AdminsManagementAccessPoliciesDelete**](PoliciesManagementAccessAPI.md#AdminsManagementAccessPoliciesDelete) | **Delete** /api/2.30/admins/management-access-policies | DELETE admins/management-access-policies
+[**AdminsManagementAccessPoliciesGet**](PoliciesManagementAccessAPI.md#AdminsManagementAccessPoliciesGet) | **Get** /api/2.30/admins/management-access-policies | GET admins/management-access-policies
+[**AdminsManagementAccessPoliciesPost**](PoliciesManagementAccessAPI.md#AdminsManagementAccessPoliciesPost) | **Post** /api/2.30/admins/management-access-policies | POST admins/management-access-policies
+[**DirectoryServicesRolesManagementAccessPoliciesDelete**](PoliciesManagementAccessAPI.md#DirectoryServicesRolesManagementAccessPoliciesDelete) | **Delete** /api/2.30/directory-services/roles/management-access-policies | DELETE directory-services/roles/management-access-policies
+[**DirectoryServicesRolesManagementAccessPoliciesGet**](PoliciesManagementAccessAPI.md#DirectoryServicesRolesManagementAccessPoliciesGet) | **Get** /api/2.30/directory-services/roles/management-access-policies | GET directory-services/roles/management-access-policies
+[**DirectoryServicesRolesManagementAccessPoliciesPost**](PoliciesManagementAccessAPI.md#DirectoryServicesRolesManagementAccessPoliciesPost) | **Post** /api/2.30/directory-services/roles/management-access-policies | POST directory-services/roles/management-access-policies
+[**ManagementAccessPoliciesAdminsDelete**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesAdminsDelete) | **Delete** /api/2.30/management-access-policies/admins | DELETE management-access-policies/admins
+[**ManagementAccessPoliciesAdminsGet**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesAdminsGet) | **Get** /api/2.30/management-access-policies/admins | GET management-access-policies/admins
+[**ManagementAccessPoliciesAdminsPost**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesAdminsPost) | **Post** /api/2.30/management-access-policies/admins | POST management-access-policies/admins
+[**ManagementAccessPoliciesDelete**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesDelete) | **Delete** /api/2.30/management-access-policies | DELETE management-access-policies
+[**ManagementAccessPoliciesDirectoryServicesRolesDelete**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesDirectoryServicesRolesDelete) | **Delete** /api/2.30/management-access-policies/directory-services/roles | DELETE management-access-policies/directory-services/roles
+[**ManagementAccessPoliciesDirectoryServicesRolesGet**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesDirectoryServicesRolesGet) | **Get** /api/2.30/management-access-policies/directory-services/roles | GET management-access-policies/directory-services/roles
+[**ManagementAccessPoliciesDirectoryServicesRolesPost**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesDirectoryServicesRolesPost) | **Post** /api/2.30/management-access-policies/directory-services/roles | POST management-access-policies/directory-services/roles
+[**ManagementAccessPoliciesGet**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesGet) | **Get** /api/2.30/management-access-policies | GET management-access-policies
+[**ManagementAccessPoliciesMembersGet**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesMembersGet) | **Get** /api/2.30/management-access-policies/members | GET management-access-policies/members
+[**ManagementAccessPoliciesPatch**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesPatch) | **Patch** /api/2.30/management-access-policies | PATCH management-access-policies
+[**ManagementAccessPoliciesPost**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesPost) | **Post** /api/2.30/management-access-policies | POST management-access-policies
+[**ManagementAccessPoliciesRolesDelete**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesRolesDelete) | **Delete** /api/2.30/management-access-policies/roles | DELETE management-access-policies/roles
+[**ManagementAccessPoliciesRolesGet**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesRolesGet) | **Get** /api/2.30/management-access-policies/roles | GET management-access-policies/roles
+[**ManagementAccessPoliciesRolesPermissionsDelete**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesRolesPermissionsDelete) | **Delete** /api/2.30/management-access-policies/roles/permissions | DELETE management-access-policies/roles/permissions
+[**ManagementAccessPoliciesRolesPermissionsGet**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesRolesPermissionsGet) | **Get** /api/2.30/management-access-policies/roles/permissions | GET management-access-policies/roles/permissions
+[**ManagementAccessPoliciesRolesPermissionsPatch**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesRolesPermissionsPatch) | **Patch** /api/2.30/management-access-policies/roles/permissions | PATCH management-access-policies/roles/permissions
+[**ManagementAccessPoliciesRolesPermissionsPost**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesRolesPermissionsPost) | **Post** /api/2.30/management-access-policies/roles/permissions | POST management-access-policies/roles/permissions
+[**ManagementAccessPoliciesRolesPermissionsSupportedResourcesGet**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesRolesPermissionsSupportedResourcesGet) | **Get** /api/2.30/management-access-policies/roles/permissions/supported-resources | GET management-access-policies/roles/permissions/supported-resources
+[**ManagementAccessPoliciesRolesPost**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesRolesPost) | **Post** /api/2.30/management-access-policies/roles | POST management-access-policies/roles
+[**ManagementAccessPoliciesRulesDelete**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesRulesDelete) | **Delete** /api/2.30/management-access-policies/rules | DELETE management-access-policies/rules
+[**ManagementAccessPoliciesRulesGet**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesRulesGet) | **Get** /api/2.30/management-access-policies/rules | GET management-access-policies/rules
+[**ManagementAccessPoliciesRulesPatch**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesRulesPatch) | **Patch** /api/2.30/management-access-policies/rules | PATCH management-access-policies/rules
+[**ManagementAccessPoliciesRulesPost**](PoliciesManagementAccessAPI.md#ManagementAccessPoliciesRulesPost) | **Post** /api/2.30/management-access-policies/rules | POST management-access-policies/rules
 
 
 
@@ -53,7 +53,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -131,7 +131,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -217,7 +217,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -297,7 +297,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -374,7 +374,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -458,7 +458,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -537,7 +537,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -615,7 +615,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -701,7 +701,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -781,7 +781,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -819,8 +819,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
- **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;name&#x60; or &#x60;names&#x60; query parameters.  | 
- **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
+ **ids** | **[]string** | Performs the operation on the single resource specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
+ **names** | **[]string** | Performs the operation on the single resource specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 
@@ -857,7 +857,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -934,7 +934,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1018,7 +1018,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1097,7 +1097,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1181,7 +1181,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1267,7 +1267,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1308,8 +1308,8 @@ Name | Type | Description  | Notes
  **policy** | [**ManagementAccessPolicy**](ManagementAccessPolicy.md) |  | 
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
- **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;name&#x60; or &#x60;names&#x60; query parameters.  | 
- **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
+ **ids** | **[]string** | Performs the operation on the single resource specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
+ **names** | **[]string** | Performs the operation on the single resource specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 
@@ -1346,7 +1346,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1384,7 +1384,7 @@ Other parameters are passed through a pointer to a apiManagementAccessPoliciesPo
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **names** | **[]string** | A comma-separated list of resource names.  | 
+ **names** | **[]string** | Performs the operation on the unique name specified. Only a single name is supported; specifying multiple names in comma-separated format is not allowed.  If there is not a resource that matches the specified name, then an error is returned, except when creating a new resource.  | 
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
  **policy** | [**ManagementAccessPolicyPost**](ManagementAccessPolicyPost.md) |  | 
@@ -1424,7 +1424,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1462,8 +1462,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
- **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;name&#x60; or &#x60;names&#x60; query parameters.  | 
- **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
+ **ids** | **[]string** | Performs the operation on the single resource specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
+ **names** | **[]string** | Performs the operation on the single resource specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 
@@ -1500,7 +1500,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1584,7 +1584,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1622,8 +1622,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
- **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;name&#x60; or &#x60;names&#x60; query parameters.  | 
- **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
+ **ids** | **[]string** | Performs the operation on the single resource specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
+ **names** | **[]string** | Performs the operation on the single resource specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 
@@ -1660,7 +1660,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1746,7 +1746,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1787,8 +1787,8 @@ Name | Type | Description  | Notes
  **permission** | [**ManagementAccessPolicyRolePermissionPatch**](ManagementAccessPolicyRolePermissionPatch.md) |  | 
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
- **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;name&#x60; or &#x60;names&#x60; query parameters.  | 
- **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
+ **ids** | **[]string** | Performs the operation on the single resource specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
+ **names** | **[]string** | Performs the operation on the single resource specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 
@@ -1825,7 +1825,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1866,8 +1866,8 @@ Name | Type | Description  | Notes
  **permission** | [**ManagementAccessPolicyRolePermissionPost**](ManagementAccessPolicyRolePermissionPost.md) |  | 
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
- **roleIds** | **[]string** | A comma-separated list of management access policy roles ids. If after filtering, there is not at least one resource that matches each of the elements of &#x60;role_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;ids&#x60;, &#x60;names&#x60; or &#x60;role_names&#x60; query parameters.  | 
- **roleNames** | **[]string** | A comma-separated list of management access policy roles names. If there is not at least one resource that matches each of the elements of &#x60;role_names&#x60;, then an error is returned. This cannot be provided together with the &#x60;ids&#x60;, &#x60;names&#x60;, or &#x60;role_ids&#x60; query parameters.  | 
+ **roleIds** | **[]string** | Performs the operation on the single management access role specified by ID. Only one value is supported; specifying multiple IDs in comma- separated format is not allowed. The &#x60;role_ids&#x60; or &#x60;role_names&#x60; parameter is required, but they cannot be set together.  | 
+ **roleNames** | **[]string** | Performs the operation on the single management access role specified. Only one value is supported; specifying multiple values in comma- separated format is not allowed. The &#x60;role_ids&#x60; or &#x60;role_names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 
@@ -1904,7 +1904,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1987,7 +1987,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -2025,7 +2025,7 @@ Other parameters are passed through a pointer to a apiManagementAccessPoliciesRo
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **names** | **[]string** | A comma-separated list of resource names.  | 
+ **names** | **[]string** | Performs the operation on the unique name specified. Only a single name is supported; specifying multiple names in comma-separated format is not allowed.  If there is not a resource that matches the specified name, then an error is returned, except when creating a new resource.  | 
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
  **role** | [**ManagementAccessPolicyRolePost**](ManagementAccessPolicyRolePost.md) |  | 
@@ -2065,7 +2065,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -2103,8 +2103,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
- **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;name&#x60; or &#x60;names&#x60; query parameters.  | 
- **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
+ **ids** | **[]string** | Performs the operation on the single resource specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
+ **names** | **[]string** | Performs the operation on the single resource specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
  **versions** | **[]string** | A comma-separated list of versions. This is an optional query param used for concurrency control. The ordering should match the names or ids query param. This will fail with a 412 Precondition failed if the resource was changed and the current version of the resource doesn&#39;t match the value in the query param.  | 
 
 ### Return type
@@ -2142,7 +2142,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -2228,7 +2228,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -2271,8 +2271,8 @@ Name | Type | Description  | Notes
  **beforeRuleId** | **string** | The id of the rule to insert or move a rule before. This cannot be provided together with the &#x60;before_rule_name&#x60; query parameter.  | 
  **beforeRuleName** | **string** | The name of the rule to insert or move a rule before. This cannot be provided together with the &#x60;before_rule_id&#x60; query parameter.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
- **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;name&#x60; or &#x60;names&#x60; query parameters.  | 
- **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
+ **ids** | **[]string** | Performs the operation on the single resource specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
+ **names** | **[]string** | Performs the operation on the single resource specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
  **versions** | **[]string** | A comma-separated list of versions. This is an optional query param used for concurrency control. The ordering should match the names or ids query param. This will fail with a 412 Precondition failed if the resource was changed and the current version of the resource doesn&#39;t match the value in the query param.  | 
 
 ### Return type
@@ -2310,7 +2310,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -2353,8 +2353,8 @@ Name | Type | Description  | Notes
  **beforeRuleId** | **string** | The id of the rule to insert or move a rule before. This cannot be provided together with the &#x60;before_rule_name&#x60; query parameter.  | 
  **beforeRuleName** | **string** | The name of the rule to insert or move a rule before. This cannot be provided together with the &#x60;before_rule_id&#x60; query parameter.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
- **policyIds** | **[]string** | A comma-separated list of policy IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;policy_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;policy_names&#x60; query parameter.  | 
- **policyNames** | **[]string** | A comma-separated list of policy names.  | 
+ **policyIds** | **[]string** | Performs the operation on the single policy specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;policy_ids&#x60; or &#x60;policy_names&#x60; parameter is required, but they cannot be set together.  | 
+ **policyNames** | **[]string** | Performs the operation on the single policy specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;policy_ids&#x60; or &#x60;policy_names&#x60; parameter is required, but they cannot be set together.  | 
  **versions** | **[]string** | A comma-separated list of versions. This is an optional query param used for concurrency control. The ordering should match the names or ids query param. This will fail with a 412 Precondition failed if the resource was changed and the current version of the resource doesn&#39;t match the value in the query param.  | 
 
 ### Return type

@@ -4,23 +4,23 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AdminsSshCertificateAuthorityPoliciesDelete**](PoliciesSSHCertificateAuthorityAPI.md#AdminsSshCertificateAuthorityPoliciesDelete) | **Delete** /api/2.29/admins/ssh-certificate-authority-policies | DELETE admins/ssh-certificate-authority-policies
-[**AdminsSshCertificateAuthorityPoliciesGet**](PoliciesSSHCertificateAuthorityAPI.md#AdminsSshCertificateAuthorityPoliciesGet) | **Get** /api/2.29/admins/ssh-certificate-authority-policies | GET admins/ssh-certificate-authority-policies
-[**AdminsSshCertificateAuthorityPoliciesPost**](PoliciesSSHCertificateAuthorityAPI.md#AdminsSshCertificateAuthorityPoliciesPost) | **Post** /api/2.29/admins/ssh-certificate-authority-policies | POST admins/ssh-certificate-authority-policies
-[**ArraysSshCertificateAuthorityPoliciesDelete**](PoliciesSSHCertificateAuthorityAPI.md#ArraysSshCertificateAuthorityPoliciesDelete) | **Delete** /api/2.29/arrays/ssh-certificate-authority-policies | DELETE admins/settings/ssh-certificate-authority-policies
-[**ArraysSshCertificateAuthorityPoliciesGet**](PoliciesSSHCertificateAuthorityAPI.md#ArraysSshCertificateAuthorityPoliciesGet) | **Get** /api/2.29/arrays/ssh-certificate-authority-policies | GET admins/settings/ssh-certificate-authority-policies
-[**ArraysSshCertificateAuthorityPoliciesPost**](PoliciesSSHCertificateAuthorityAPI.md#ArraysSshCertificateAuthorityPoliciesPost) | **Post** /api/2.29/arrays/ssh-certificate-authority-policies | POST admins/settings/ssh-certificate-authority-policies
-[**SshCertificateAuthorityPoliciesAdminsDelete**](PoliciesSSHCertificateAuthorityAPI.md#SshCertificateAuthorityPoliciesAdminsDelete) | **Delete** /api/2.29/ssh-certificate-authority-policies/admins | DELETE ssh-certificate-authority-policies/admins
-[**SshCertificateAuthorityPoliciesAdminsGet**](PoliciesSSHCertificateAuthorityAPI.md#SshCertificateAuthorityPoliciesAdminsGet) | **Get** /api/2.29/ssh-certificate-authority-policies/admins | GET ssh-certificate-authority-policies/admins
-[**SshCertificateAuthorityPoliciesAdminsPost**](PoliciesSSHCertificateAuthorityAPI.md#SshCertificateAuthorityPoliciesAdminsPost) | **Post** /api/2.29/ssh-certificate-authority-policies/admins | POST ssh-certificate-authority-policies/admins
-[**SshCertificateAuthorityPoliciesArraysDelete**](PoliciesSSHCertificateAuthorityAPI.md#SshCertificateAuthorityPoliciesArraysDelete) | **Delete** /api/2.29/ssh-certificate-authority-policies/arrays | DELETE ssh-certificate-authority-policies/arrays
-[**SshCertificateAuthorityPoliciesArraysGet**](PoliciesSSHCertificateAuthorityAPI.md#SshCertificateAuthorityPoliciesArraysGet) | **Get** /api/2.29/ssh-certificate-authority-policies/arrays | GET ssh-certificate-authority-policies/arrays
-[**SshCertificateAuthorityPoliciesArraysPost**](PoliciesSSHCertificateAuthorityAPI.md#SshCertificateAuthorityPoliciesArraysPost) | **Post** /api/2.29/ssh-certificate-authority-policies/arrays | POST ssh-certificate-authority-policies/arrays
-[**SshCertificateAuthorityPoliciesDelete**](PoliciesSSHCertificateAuthorityAPI.md#SshCertificateAuthorityPoliciesDelete) | **Delete** /api/2.29/ssh-certificate-authority-policies | Delete SSH Certificate Authority configurations
-[**SshCertificateAuthorityPoliciesGet**](PoliciesSSHCertificateAuthorityAPI.md#SshCertificateAuthorityPoliciesGet) | **Get** /api/2.29/ssh-certificate-authority-policies | List SSH Certificate Authority configurations
-[**SshCertificateAuthorityPoliciesMembersGet**](PoliciesSSHCertificateAuthorityAPI.md#SshCertificateAuthorityPoliciesMembersGet) | **Get** /api/2.29/ssh-certificate-authority-policies/members | GET ssh-certificate-authority-policies/members
-[**SshCertificateAuthorityPoliciesPatch**](PoliciesSSHCertificateAuthorityAPI.md#SshCertificateAuthorityPoliciesPatch) | **Patch** /api/2.29/ssh-certificate-authority-policies | Modify SSH Certificate Authority configurations
-[**SshCertificateAuthorityPoliciesPost**](PoliciesSSHCertificateAuthorityAPI.md#SshCertificateAuthorityPoliciesPost) | **Post** /api/2.29/ssh-certificate-authority-policies | Create SSH Certificate Authority configurations
+[**AdminsSshCertificateAuthorityPoliciesDelete**](PoliciesSSHCertificateAuthorityAPI.md#AdminsSshCertificateAuthorityPoliciesDelete) | **Delete** /api/2.30/admins/ssh-certificate-authority-policies | DELETE admins/ssh-certificate-authority-policies
+[**AdminsSshCertificateAuthorityPoliciesGet**](PoliciesSSHCertificateAuthorityAPI.md#AdminsSshCertificateAuthorityPoliciesGet) | **Get** /api/2.30/admins/ssh-certificate-authority-policies | GET admins/ssh-certificate-authority-policies
+[**AdminsSshCertificateAuthorityPoliciesPost**](PoliciesSSHCertificateAuthorityAPI.md#AdminsSshCertificateAuthorityPoliciesPost) | **Post** /api/2.30/admins/ssh-certificate-authority-policies | POST admins/ssh-certificate-authority-policies
+[**ArraysSshCertificateAuthorityPoliciesDelete**](PoliciesSSHCertificateAuthorityAPI.md#ArraysSshCertificateAuthorityPoliciesDelete) | **Delete** /api/2.30/arrays/ssh-certificate-authority-policies | DELETE admins/settings/ssh-certificate-authority-policies
+[**ArraysSshCertificateAuthorityPoliciesGet**](PoliciesSSHCertificateAuthorityAPI.md#ArraysSshCertificateAuthorityPoliciesGet) | **Get** /api/2.30/arrays/ssh-certificate-authority-policies | GET admins/settings/ssh-certificate-authority-policies
+[**ArraysSshCertificateAuthorityPoliciesPost**](PoliciesSSHCertificateAuthorityAPI.md#ArraysSshCertificateAuthorityPoliciesPost) | **Post** /api/2.30/arrays/ssh-certificate-authority-policies | POST admins/settings/ssh-certificate-authority-policies
+[**SshCertificateAuthorityPoliciesAdminsDelete**](PoliciesSSHCertificateAuthorityAPI.md#SshCertificateAuthorityPoliciesAdminsDelete) | **Delete** /api/2.30/ssh-certificate-authority-policies/admins | DELETE ssh-certificate-authority-policies/admins
+[**SshCertificateAuthorityPoliciesAdminsGet**](PoliciesSSHCertificateAuthorityAPI.md#SshCertificateAuthorityPoliciesAdminsGet) | **Get** /api/2.30/ssh-certificate-authority-policies/admins | GET ssh-certificate-authority-policies/admins
+[**SshCertificateAuthorityPoliciesAdminsPost**](PoliciesSSHCertificateAuthorityAPI.md#SshCertificateAuthorityPoliciesAdminsPost) | **Post** /api/2.30/ssh-certificate-authority-policies/admins | POST ssh-certificate-authority-policies/admins
+[**SshCertificateAuthorityPoliciesArraysDelete**](PoliciesSSHCertificateAuthorityAPI.md#SshCertificateAuthorityPoliciesArraysDelete) | **Delete** /api/2.30/ssh-certificate-authority-policies/arrays | DELETE ssh-certificate-authority-policies/arrays
+[**SshCertificateAuthorityPoliciesArraysGet**](PoliciesSSHCertificateAuthorityAPI.md#SshCertificateAuthorityPoliciesArraysGet) | **Get** /api/2.30/ssh-certificate-authority-policies/arrays | GET ssh-certificate-authority-policies/arrays
+[**SshCertificateAuthorityPoliciesArraysPost**](PoliciesSSHCertificateAuthorityAPI.md#SshCertificateAuthorityPoliciesArraysPost) | **Post** /api/2.30/ssh-certificate-authority-policies/arrays | POST ssh-certificate-authority-policies/arrays
+[**SshCertificateAuthorityPoliciesDelete**](PoliciesSSHCertificateAuthorityAPI.md#SshCertificateAuthorityPoliciesDelete) | **Delete** /api/2.30/ssh-certificate-authority-policies | Delete SSH Certificate Authority configurations
+[**SshCertificateAuthorityPoliciesGet**](PoliciesSSHCertificateAuthorityAPI.md#SshCertificateAuthorityPoliciesGet) | **Get** /api/2.30/ssh-certificate-authority-policies | List SSH Certificate Authority configurations
+[**SshCertificateAuthorityPoliciesMembersGet**](PoliciesSSHCertificateAuthorityAPI.md#SshCertificateAuthorityPoliciesMembersGet) | **Get** /api/2.30/ssh-certificate-authority-policies/members | GET ssh-certificate-authority-policies/members
+[**SshCertificateAuthorityPoliciesPatch**](PoliciesSSHCertificateAuthorityAPI.md#SshCertificateAuthorityPoliciesPatch) | **Patch** /api/2.30/ssh-certificate-authority-policies | Modify SSH Certificate Authority configurations
+[**SshCertificateAuthorityPoliciesPost**](PoliciesSSHCertificateAuthorityAPI.md#SshCertificateAuthorityPoliciesPost) | **Post** /api/2.30/ssh-certificate-authority-policies | Create SSH Certificate Authority configurations
 
 
 
@@ -41,7 +41,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -119,7 +119,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -205,7 +205,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -285,7 +285,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -363,7 +363,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -449,7 +449,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -529,7 +529,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -607,7 +607,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -693,7 +693,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -773,7 +773,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -851,7 +851,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -937,7 +937,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1002,7 +1002,7 @@ Authorization is handled by the Authenticator specified in the configuration and
 
 ## SshCertificateAuthorityPoliciesDelete
 
-> SshCertificateAuthorityPoliciesDelete(ctx).XRequestID(xRequestID).Ids(ids).Names(names).Execute()
+> SshCertificateAuthorityPoliciesDelete(ctx).XRequestID(xRequestID).ContextNames(contextNames).Ids(ids).Names(names).Execute()
 
 Delete SSH Certificate Authority configurations
 
@@ -1017,7 +1017,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1054,8 +1054,9 @@ Other parameters are passed through a pointer to a apiSshCertificateAuthorityPol
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
- **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;name&#x60; or &#x60;names&#x60; query parameters.  | 
- **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
+ **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
+ **ids** | **[]string** | Performs the operation on the single resource specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
+ **names** | **[]string** | Performs the operation on the single resource specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 
@@ -1092,7 +1093,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1176,7 +1177,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1247,7 +1248,7 @@ Authorization is handled by the Authenticator specified in the configuration and
 
 ## SshCertificateAuthorityPoliciesPatch
 
-> SshCertificateAuthorityPolicyResponse SshCertificateAuthorityPoliciesPatch(ctx).Policy(policy).XRequestID(xRequestID).Ids(ids).Names(names).Execute()
+> SshCertificateAuthorityPolicyResponse SshCertificateAuthorityPoliciesPatch(ctx).Policy(policy).XRequestID(xRequestID).ContextNames(contextNames).Ids(ids).Names(names).Execute()
 
 Modify SSH Certificate Authority configurations
 
@@ -1262,7 +1263,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1302,8 +1303,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **policy** | [**SshCertificateAuthorityPolicy**](SshCertificateAuthorityPolicy.md) |  | 
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
- **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;name&#x60; or &#x60;names&#x60; query parameters.  | 
- **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
+ **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
+ **ids** | **[]string** | Performs the operation on the single resource specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
+ **names** | **[]string** | Performs the operation on the single resource specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 
@@ -1325,7 +1327,7 @@ Authorization is handled by the Authenticator specified in the configuration and
 
 ## SshCertificateAuthorityPoliciesPost
 
-> SshCertificateAuthorityPolicyResponse SshCertificateAuthorityPoliciesPost(ctx).Names(names).Policy(policy).XRequestID(xRequestID).Execute()
+> SshCertificateAuthorityPolicyResponse SshCertificateAuthorityPoliciesPost(ctx).Names(names).Policy(policy).XRequestID(xRequestID).ContextNames(contextNames).Execute()
 
 Create SSH Certificate Authority configurations
 
@@ -1340,7 +1342,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1378,9 +1380,10 @@ Other parameters are passed through a pointer to a apiSshCertificateAuthorityPol
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **names** | **[]string** | A comma-separated list of resource names.  | 
+ **names** | **[]string** | Performs the operation on the unique name specified. Only a single name is supported; specifying multiple names in comma-separated format is not allowed.  If there is not a resource that matches the specified name, then an error is returned, except when creating a new resource.  | 
  **policy** | [**SshCertificateAuthorityPolicyPost**](SshCertificateAuthorityPolicyPost.md) |  | 
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
+ **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
 
 ### Return type
 

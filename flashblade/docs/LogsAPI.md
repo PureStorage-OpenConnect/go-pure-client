@@ -4,10 +4,10 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**LogsAsyncDownloadGet**](LogsAPI.md#LogsAsyncDownloadGet) | **Get** /api/2.29/logs-async/download | GET logs-async/download
-[**LogsAsyncGet**](LogsAPI.md#LogsAsyncGet) | **Get** /api/2.29/logs-async | GET logs-async
-[**LogsAsyncPatch**](LogsAPI.md#LogsAsyncPatch) | **Patch** /api/2.29/logs-async | PATCH logs-async
-[**LogsGet**](LogsAPI.md#LogsGet) | **Get** /api/2.29/logs | GET logs
+[**LogsAsyncDownloadGet**](LogsAPI.md#LogsAsyncDownloadGet) | **Get** /api/2.30/logs-async/download | GET logs-async/download
+[**LogsAsyncGet**](LogsAPI.md#LogsAsyncGet) | **Get** /api/2.30/logs-async | GET logs-async
+[**LogsAsyncPatch**](LogsAPI.md#LogsAsyncPatch) | **Patch** /api/2.30/logs-async | PATCH logs-async
+[**LogsGet**](LogsAPI.md#LogsGet) | **Get** /api/2.30/logs | GET logs
 
 
 
@@ -28,7 +28,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -104,7 +104,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -186,7 +186,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -262,7 +262,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
