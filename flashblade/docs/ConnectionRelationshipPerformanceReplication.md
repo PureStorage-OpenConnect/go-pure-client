@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | Pointer to **string** | A non-modifiable, globally unique ID chosen by the system.  | [optional] [readonly] 
+**Context** | Pointer to [**FixedReference**](FixedReference.md) | The context in which the operation was performed.  Valid values include a reference to any array which is a member of the same fleet or to the fleet itself.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | [optional] [readonly] 
 **Aggregate** | Pointer to [**ReplicationPerformance**](ReplicationPerformance.md) | Total bytes transmitted or received per second for all types of replication.  | [optional] 
 **Continuous** | Pointer to [**ContinuousReplicationPerformance**](ContinuousReplicationPerformance.md) | Object backlog information and total bytes transmitted or received per second for continuous replication. Continuous replication includes object replication.  | [optional] 
 **Periodic** | Pointer to [**ReplicationPerformance**](ReplicationPerformance.md) | Total bytes transmitted or received per second for periodic replication. Periodic replication includes file system replication, which is snapshot based.  | [optional] 
@@ -54,6 +55,31 @@ SetId sets Id field to given value.
 `func (o *ConnectionRelationshipPerformanceReplication) HasId() bool`
 
 HasId returns a boolean if a field has been set.
+
+### GetContext
+
+`func (o *ConnectionRelationshipPerformanceReplication) GetContext() FixedReference`
+
+GetContext returns the Context field if non-nil, zero value otherwise.
+
+### GetContextOk
+
+`func (o *ConnectionRelationshipPerformanceReplication) GetContextOk() (*FixedReference, bool)`
+
+GetContextOk returns a tuple with the Context field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetContext
+
+`func (o *ConnectionRelationshipPerformanceReplication) SetContext(v FixedReference)`
+
+SetContext sets Context field to given value.
+
+### HasContext
+
+`func (o *ConnectionRelationshipPerformanceReplication) HasContext() bool`
+
+HasContext returns a boolean if a field has been set.
 
 ### GetAggregate
 

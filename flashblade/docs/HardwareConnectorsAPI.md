@@ -4,9 +4,9 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**HardwareConnectorsGet**](HardwareConnectorsAPI.md#HardwareConnectorsGet) | **Get** /api/2.29/hardware-connectors | GET hardware-connectors
-[**HardwareConnectorsPatch**](HardwareConnectorsAPI.md#HardwareConnectorsPatch) | **Patch** /api/2.29/hardware-connectors | PATCH hardware-connectors
-[**HardwareConnectorsPerformanceGet**](HardwareConnectorsAPI.md#HardwareConnectorsPerformanceGet) | **Get** /api/2.29/hardware-connectors/performance | GET hardware-connectors/performance
+[**HardwareConnectorsGet**](HardwareConnectorsAPI.md#HardwareConnectorsGet) | **Get** /api/2.30/hardware-connectors | GET hardware-connectors
+[**HardwareConnectorsPatch**](HardwareConnectorsAPI.md#HardwareConnectorsPatch) | **Patch** /api/2.30/hardware-connectors | PATCH hardware-connectors
+[**HardwareConnectorsPerformanceGet**](HardwareConnectorsAPI.md#HardwareConnectorsPerformanceGet) | **Get** /api/2.30/hardware-connectors/performance | GET hardware-connectors/performance
 
 
 
@@ -27,7 +27,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -109,7 +109,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -187,7 +187,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {

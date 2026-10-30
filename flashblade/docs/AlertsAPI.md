@@ -4,8 +4,8 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AlertsGet**](AlertsAPI.md#AlertsGet) | **Get** /api/2.29/alerts | GET alerts
-[**AlertsPatch**](AlertsAPI.md#AlertsPatch) | **Patch** /api/2.29/alerts | PATCH alerts
+[**AlertsGet**](AlertsAPI.md#AlertsGet) | **Get** /api/2.30/alerts | GET alerts
+[**AlertsPatch**](AlertsAPI.md#AlertsPatch) | **Patch** /api/2.30/alerts | PATCH alerts
 
 
 
@@ -26,7 +26,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -108,7 +108,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {

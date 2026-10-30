@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]PolicyMember**](PolicyMember.md) | A list of members for storage class tiering policies. | [optional] 
+**Items** | Pointer to [**[]PolicyMemberContext**](PolicyMemberContext.md) | A list of members for storage class tiering policies. | [optional] 
 
 ## Methods
 
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetItems
 
-`func (o *StorageClassTieringPoliciesMembersResponse) GetItems() []PolicyMember`
+`func (o *StorageClassTieringPoliciesMembersResponse) GetItems() []PolicyMemberContext`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *StorageClassTieringPoliciesMembersResponse) GetItemsOk() (*[]PolicyMember, bool)`
+`func (o *StorageClassTieringPoliciesMembersResponse) GetItemsOk() (*[]PolicyMemberContext, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *StorageClassTieringPoliciesMembersResponse) SetItems(v []PolicyMember)`
+`func (o *StorageClassTieringPoliciesMembersResponse) SetItems(v []PolicyMemberContext)`
 
 SetItems sets Items field to given value.
 

@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**StorageClassesMembersGet**](StorageClassesAPI.md#StorageClassesMembersGet) | **Get** /api/2.29/storage-classes/members | GET storage-classes/members
+[**StorageClassesMembersGet**](StorageClassesAPI.md#StorageClassesMembersGet) | **Get** /api/2.30/storage-classes/members | GET storage-classes/members
 
 
 
@@ -25,7 +25,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {

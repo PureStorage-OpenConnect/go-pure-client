@@ -4,9 +4,9 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**SnmpAgentsGet**](SNMPAgentsAPI.md#SnmpAgentsGet) | **Get** /api/2.29/snmp-agents | GET snmp-agents
-[**SnmpAgentsMibGet**](SNMPAgentsAPI.md#SnmpAgentsMibGet) | **Get** /api/2.29/snmp-agents/mib | GET snmp-agents-mib
-[**SnmpAgentsPatch**](SNMPAgentsAPI.md#SnmpAgentsPatch) | **Patch** /api/2.29/snmp-agents | PATCH snmp-agents
+[**SnmpAgentsGet**](SNMPAgentsAPI.md#SnmpAgentsGet) | **Get** /api/2.30/snmp-agents | GET snmp-agents
+[**SnmpAgentsMibGet**](SNMPAgentsAPI.md#SnmpAgentsMibGet) | **Get** /api/2.30/snmp-agents/mib | GET snmp-agents-mib
+[**SnmpAgentsPatch**](SNMPAgentsAPI.md#SnmpAgentsPatch) | **Patch** /api/2.30/snmp-agents | PATCH snmp-agents
 
 
 
@@ -27,7 +27,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -109,7 +109,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -184,7 +184,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {

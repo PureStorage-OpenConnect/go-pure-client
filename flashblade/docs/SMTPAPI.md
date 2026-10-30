@@ -4,8 +4,8 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**SmtpServersGet**](SMTPAPI.md#SmtpServersGet) | **Get** /api/2.29/smtp-servers | GET smtp-servers
-[**SmtpServersPatch**](SMTPAPI.md#SmtpServersPatch) | **Patch** /api/2.29/smtp-servers | PATCH smtp-servers
+[**SmtpServersGet**](SMTPAPI.md#SmtpServersGet) | **Get** /api/2.30/smtp-servers | GET smtp-servers
+[**SmtpServersPatch**](SMTPAPI.md#SmtpServersPatch) | **Patch** /api/2.30/smtp-servers | PATCH smtp-servers
 
 
 
@@ -26,7 +26,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -108,7 +108,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {

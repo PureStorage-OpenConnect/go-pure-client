@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | Pointer to **string** | Name of the object (e.g., a file system or snapshot). | [optional] [readonly] 
+**Context** | Pointer to [**FixedReference**](FixedReference.md) | The context in which the operation was performed.  Valid values include a reference to any array which is a member of the same fleet or to the fleet itself.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | [optional] [readonly] 
 **Description** | Pointer to **string** | A description of the operation.  | [optional] [readonly] 
 
 ## Methods
@@ -50,6 +51,31 @@ SetName sets Name field to given value.
 `func (o *AuditFileSystemsPolicyOperation) HasName() bool`
 
 HasName returns a boolean if a field has been set.
+
+### GetContext
+
+`func (o *AuditFileSystemsPolicyOperation) GetContext() FixedReference`
+
+GetContext returns the Context field if non-nil, zero value otherwise.
+
+### GetContextOk
+
+`func (o *AuditFileSystemsPolicyOperation) GetContextOk() (*FixedReference, bool)`
+
+GetContextOk returns a tuple with the Context field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetContext
+
+`func (o *AuditFileSystemsPolicyOperation) SetContext(v FixedReference)`
+
+SetContext sets Context field to given value.
+
+### HasContext
+
+`func (o *AuditFileSystemsPolicyOperation) HasContext() bool`
+
+HasContext returns a boolean if a field has been set.
 
 ### GetDescription
 

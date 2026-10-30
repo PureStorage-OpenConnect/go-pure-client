@@ -4,8 +4,8 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**PoliciesAllGet**](PoliciesAllAPI.md#PoliciesAllGet) | **Get** /api/2.29/policies-all | GET policies-all
-[**PoliciesAllMembersGet**](PoliciesAllAPI.md#PoliciesAllMembersGet) | **Get** /api/2.29/policies-all/members | GET policies-all/members
+[**PoliciesAllGet**](PoliciesAllAPI.md#PoliciesAllGet) | **Get** /api/2.30/policies-all | GET policies-all
+[**PoliciesAllMembersGet**](PoliciesAllAPI.md#PoliciesAllMembersGet) | **Get** /api/2.30/policies-all/members | GET policies-all/members
 
 
 
@@ -26,7 +26,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -110,7 +110,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {

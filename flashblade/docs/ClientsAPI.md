@@ -4,8 +4,8 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ArraysClientsPerformanceGet**](ClientsAPI.md#ArraysClientsPerformanceGet) | **Get** /api/2.29/arrays/clients/performance | GET clients-performance
-[**ArraysClientsS3SpecificPerformanceGet**](ClientsAPI.md#ArraysClientsS3SpecificPerformanceGet) | **Get** /api/2.29/arrays/clients/s3-specific-performance | GET clients-performance
+[**ArraysClientsPerformanceGet**](ClientsAPI.md#ArraysClientsPerformanceGet) | **Get** /api/2.30/arrays/clients/performance | GET clients-performance
+[**ArraysClientsS3SpecificPerformanceGet**](ClientsAPI.md#ArraysClientsS3SpecificPerformanceGet) | **Get** /api/2.30/arrays/clients/s3-specific-performance | GET clients-performance
 
 
 
@@ -26,7 +26,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -107,7 +107,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {

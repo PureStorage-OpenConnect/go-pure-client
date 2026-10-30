@@ -5,9 +5,13 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | Pointer to **string** | A non-modifiable, globally unique ID chosen by the system.  | [optional] [readonly] 
-**Created** | Pointer to **float32** | Creation time in milliseconds since the UNIX epoch.  | [optional] 
+**BytesDownloaded** | Pointer to **int64** | The number of bytes downloaded.  | [optional] 
+**BytesTotal** | Pointer to **int64** | The total number of bytes to download.  | [optional] 
+**Created** | Pointer to **float32** | The creation time in milliseconds since the UNIX epoch.  | [optional] 
 **Details** | Pointer to **string** | The detailed reason for the &#x60;status&#x60;. This field gets updated in real time independent of the &#x60;status&#x60;. It can be updated multiple times for the same &#x60;status&#x60;.  | [optional] 
-**DownloadProgress** | Pointer to **float32** | The progress of the download. Displayed in decimal format.  | [optional] 
+**DownloadProgress** | Pointer to **float32** | The download progress in decimal format.  | [optional] 
+**SoftwareName** | Pointer to **string** | The name of the software bundle.  | [optional] 
+**SoftwareVersion** | Pointer to **string** | The version of the software bundle.  | [optional] 
 **Source** | Pointer to **string** | The location of the upgrade bundle.  | [optional] 
 **Status** | Pointer to **string** | The status of the software bundle. Valid values are &#x60;downloading&#x60;, &#x60;failed&#x60;, &#x60;ready&#x60;, and &#x60;verifying&#x60;. A status of &#x60;downloading&#x60; indicates that the appliance is downloading the upgrade bundle. A status of &#x60;failed&#x60; indicates that the appliance has failed to download the upgrade bundle. A status of &#x60;ready&#x60; indicates that the upgrade bundle is ready to be installed. A status of &#x60;verifying&#x60; indicates that the appliance is verifying the upgrade bundle.  | [optional] 
 
@@ -54,6 +58,56 @@ SetId sets Id field to given value.
 `func (o *SoftwareBundle) HasId() bool`
 
 HasId returns a boolean if a field has been set.
+
+### GetBytesDownloaded
+
+`func (o *SoftwareBundle) GetBytesDownloaded() int64`
+
+GetBytesDownloaded returns the BytesDownloaded field if non-nil, zero value otherwise.
+
+### GetBytesDownloadedOk
+
+`func (o *SoftwareBundle) GetBytesDownloadedOk() (*int64, bool)`
+
+GetBytesDownloadedOk returns a tuple with the BytesDownloaded field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBytesDownloaded
+
+`func (o *SoftwareBundle) SetBytesDownloaded(v int64)`
+
+SetBytesDownloaded sets BytesDownloaded field to given value.
+
+### HasBytesDownloaded
+
+`func (o *SoftwareBundle) HasBytesDownloaded() bool`
+
+HasBytesDownloaded returns a boolean if a field has been set.
+
+### GetBytesTotal
+
+`func (o *SoftwareBundle) GetBytesTotal() int64`
+
+GetBytesTotal returns the BytesTotal field if non-nil, zero value otherwise.
+
+### GetBytesTotalOk
+
+`func (o *SoftwareBundle) GetBytesTotalOk() (*int64, bool)`
+
+GetBytesTotalOk returns a tuple with the BytesTotal field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBytesTotal
+
+`func (o *SoftwareBundle) SetBytesTotal(v int64)`
+
+SetBytesTotal sets BytesTotal field to given value.
+
+### HasBytesTotal
+
+`func (o *SoftwareBundle) HasBytesTotal() bool`
+
+HasBytesTotal returns a boolean if a field has been set.
 
 ### GetCreated
 
@@ -129,6 +183,56 @@ SetDownloadProgress sets DownloadProgress field to given value.
 `func (o *SoftwareBundle) HasDownloadProgress() bool`
 
 HasDownloadProgress returns a boolean if a field has been set.
+
+### GetSoftwareName
+
+`func (o *SoftwareBundle) GetSoftwareName() string`
+
+GetSoftwareName returns the SoftwareName field if non-nil, zero value otherwise.
+
+### GetSoftwareNameOk
+
+`func (o *SoftwareBundle) GetSoftwareNameOk() (*string, bool)`
+
+GetSoftwareNameOk returns a tuple with the SoftwareName field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSoftwareName
+
+`func (o *SoftwareBundle) SetSoftwareName(v string)`
+
+SetSoftwareName sets SoftwareName field to given value.
+
+### HasSoftwareName
+
+`func (o *SoftwareBundle) HasSoftwareName() bool`
+
+HasSoftwareName returns a boolean if a field has been set.
+
+### GetSoftwareVersion
+
+`func (o *SoftwareBundle) GetSoftwareVersion() string`
+
+GetSoftwareVersion returns the SoftwareVersion field if non-nil, zero value otherwise.
+
+### GetSoftwareVersionOk
+
+`func (o *SoftwareBundle) GetSoftwareVersionOk() (*string, bool)`
+
+GetSoftwareVersionOk returns a tuple with the SoftwareVersion field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSoftwareVersion
+
+`func (o *SoftwareBundle) SetSoftwareVersion(v string)`
+
+SetSoftwareVersion sets SoftwareVersion field to given value.
+
+### HasSoftwareVersion
+
+`func (o *SoftwareBundle) HasSoftwareVersion() bool`
+
+HasSoftwareVersion returns a boolean if a field has been set.
 
 ### GetSource
 

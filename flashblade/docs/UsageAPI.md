@@ -4,8 +4,8 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**UsageGroupsGet**](UsageAPI.md#UsageGroupsGet) | **Get** /api/2.29/usage/groups | GET usage/groups
-[**UsageUsersGet**](UsageAPI.md#UsageUsersGet) | **Get** /api/2.29/usage/users | GET usage/users
+[**UsageGroupsGet**](UsageAPI.md#UsageGroupsGet) | **Get** /api/2.30/usage/groups | GET usage/groups
+[**UsageUsersGet**](UsageAPI.md#UsageUsersGet) | **Get** /api/2.30/usage/users | GET usage/users
 
 
 
@@ -26,7 +26,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -112,7 +112,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {

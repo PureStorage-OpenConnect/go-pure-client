@@ -4,20 +4,20 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ObjectStoreRolesDelete**](ObjectStoreRolesAPI.md#ObjectStoreRolesDelete) | **Delete** /api/2.29/object-store-roles | DELETE object-store-roles
-[**ObjectStoreRolesGet**](ObjectStoreRolesAPI.md#ObjectStoreRolesGet) | **Get** /api/2.29/object-store-roles | GET object-store-roles
-[**ObjectStoreRolesObjectStoreAccessPoliciesDelete**](ObjectStoreRolesAPI.md#ObjectStoreRolesObjectStoreAccessPoliciesDelete) | **Delete** /api/2.29/object-store-roles/object-store-access-policies | DELETE object-store-roles/object-store-access-policies
-[**ObjectStoreRolesObjectStoreAccessPoliciesGet**](ObjectStoreRolesAPI.md#ObjectStoreRolesObjectStoreAccessPoliciesGet) | **Get** /api/2.29/object-store-roles/object-store-access-policies | GET object-store-roles/object-store-access-policies
-[**ObjectStoreRolesObjectStoreAccessPoliciesPost**](ObjectStoreRolesAPI.md#ObjectStoreRolesObjectStoreAccessPoliciesPost) | **Post** /api/2.29/object-store-roles/object-store-access-policies | POST object-store-roles/object-store-access-policies
-[**ObjectStoreRolesObjectStoreTrustPoliciesDownloadGet**](ObjectStoreRolesAPI.md#ObjectStoreRolesObjectStoreTrustPoliciesDownloadGet) | **Get** /api/2.29/object-store-roles/object-store-trust-policies/download | GET object-store-roles/object-store-trust-policies/download
-[**ObjectStoreRolesObjectStoreTrustPoliciesGet**](ObjectStoreRolesAPI.md#ObjectStoreRolesObjectStoreTrustPoliciesGet) | **Get** /api/2.29/object-store-roles/object-store-trust-policies | GET object-store-roles/object-store-trust-policies
-[**ObjectStoreRolesObjectStoreTrustPoliciesRulesDelete**](ObjectStoreRolesAPI.md#ObjectStoreRolesObjectStoreTrustPoliciesRulesDelete) | **Delete** /api/2.29/object-store-roles/object-store-trust-policies/rules | DELETE object-store-roles/object-store-trust-policies/rules
-[**ObjectStoreRolesObjectStoreTrustPoliciesRulesGet**](ObjectStoreRolesAPI.md#ObjectStoreRolesObjectStoreTrustPoliciesRulesGet) | **Get** /api/2.29/object-store-roles/object-store-trust-policies/rules | GET object-store-roles/object-store-trust-policies/rules
-[**ObjectStoreRolesObjectStoreTrustPoliciesRulesPatch**](ObjectStoreRolesAPI.md#ObjectStoreRolesObjectStoreTrustPoliciesRulesPatch) | **Patch** /api/2.29/object-store-roles/object-store-trust-policies/rules | PATCH object-store-roles/object-store-trust-policies/rules
-[**ObjectStoreRolesObjectStoreTrustPoliciesRulesPost**](ObjectStoreRolesAPI.md#ObjectStoreRolesObjectStoreTrustPoliciesRulesPost) | **Post** /api/2.29/object-store-roles/object-store-trust-policies/rules | POST object-store-roles/object-store-trust-policies/rules
-[**ObjectStoreRolesObjectStoreTrustPoliciesUploadPatch**](ObjectStoreRolesAPI.md#ObjectStoreRolesObjectStoreTrustPoliciesUploadPatch) | **Patch** /api/2.29/object-store-roles/object-store-trust-policies/upload | PATCH object-store-roles/object-store-trust-policies/upload
-[**ObjectStoreRolesPatch**](ObjectStoreRolesAPI.md#ObjectStoreRolesPatch) | **Patch** /api/2.29/object-store-roles | PATCH object-store-roles
-[**ObjectStoreRolesPost**](ObjectStoreRolesAPI.md#ObjectStoreRolesPost) | **Post** /api/2.29/object-store-roles | POST object-store-roles
+[**ObjectStoreRolesDelete**](ObjectStoreRolesAPI.md#ObjectStoreRolesDelete) | **Delete** /api/2.30/object-store-roles | DELETE object-store-roles
+[**ObjectStoreRolesGet**](ObjectStoreRolesAPI.md#ObjectStoreRolesGet) | **Get** /api/2.30/object-store-roles | GET object-store-roles
+[**ObjectStoreRolesObjectStoreAccessPoliciesDelete**](ObjectStoreRolesAPI.md#ObjectStoreRolesObjectStoreAccessPoliciesDelete) | **Delete** /api/2.30/object-store-roles/object-store-access-policies | DELETE object-store-roles/object-store-access-policies
+[**ObjectStoreRolesObjectStoreAccessPoliciesGet**](ObjectStoreRolesAPI.md#ObjectStoreRolesObjectStoreAccessPoliciesGet) | **Get** /api/2.30/object-store-roles/object-store-access-policies | GET object-store-roles/object-store-access-policies
+[**ObjectStoreRolesObjectStoreAccessPoliciesPost**](ObjectStoreRolesAPI.md#ObjectStoreRolesObjectStoreAccessPoliciesPost) | **Post** /api/2.30/object-store-roles/object-store-access-policies | POST object-store-roles/object-store-access-policies
+[**ObjectStoreRolesObjectStoreTrustPoliciesDownloadGet**](ObjectStoreRolesAPI.md#ObjectStoreRolesObjectStoreTrustPoliciesDownloadGet) | **Get** /api/2.30/object-store-roles/object-store-trust-policies/download | GET object-store-roles/object-store-trust-policies/download
+[**ObjectStoreRolesObjectStoreTrustPoliciesGet**](ObjectStoreRolesAPI.md#ObjectStoreRolesObjectStoreTrustPoliciesGet) | **Get** /api/2.30/object-store-roles/object-store-trust-policies | GET object-store-roles/object-store-trust-policies
+[**ObjectStoreRolesObjectStoreTrustPoliciesRulesDelete**](ObjectStoreRolesAPI.md#ObjectStoreRolesObjectStoreTrustPoliciesRulesDelete) | **Delete** /api/2.30/object-store-roles/object-store-trust-policies/rules | DELETE object-store-roles/object-store-trust-policies/rules
+[**ObjectStoreRolesObjectStoreTrustPoliciesRulesGet**](ObjectStoreRolesAPI.md#ObjectStoreRolesObjectStoreTrustPoliciesRulesGet) | **Get** /api/2.30/object-store-roles/object-store-trust-policies/rules | GET object-store-roles/object-store-trust-policies/rules
+[**ObjectStoreRolesObjectStoreTrustPoliciesRulesPatch**](ObjectStoreRolesAPI.md#ObjectStoreRolesObjectStoreTrustPoliciesRulesPatch) | **Patch** /api/2.30/object-store-roles/object-store-trust-policies/rules | PATCH object-store-roles/object-store-trust-policies/rules
+[**ObjectStoreRolesObjectStoreTrustPoliciesRulesPost**](ObjectStoreRolesAPI.md#ObjectStoreRolesObjectStoreTrustPoliciesRulesPost) | **Post** /api/2.30/object-store-roles/object-store-trust-policies/rules | POST object-store-roles/object-store-trust-policies/rules
+[**ObjectStoreRolesObjectStoreTrustPoliciesUploadPatch**](ObjectStoreRolesAPI.md#ObjectStoreRolesObjectStoreTrustPoliciesUploadPatch) | **Patch** /api/2.30/object-store-roles/object-store-trust-policies/upload | PATCH object-store-roles/object-store-trust-policies/upload
+[**ObjectStoreRolesPatch**](ObjectStoreRolesAPI.md#ObjectStoreRolesPatch) | **Patch** /api/2.30/object-store-roles | PATCH object-store-roles
+[**ObjectStoreRolesPost**](ObjectStoreRolesAPI.md#ObjectStoreRolesPost) | **Post** /api/2.30/object-store-roles | POST object-store-roles
 
 
 
@@ -38,7 +38,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -76,8 +76,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
- **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;name&#x60; or &#x60;names&#x60; query parameters.  | 
- **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
+ **ids** | **[]string** | Performs the operation on the single resource specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
+ **names** | **[]string** | Performs the operation on the single resource specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 
@@ -114,7 +114,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -198,7 +198,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -276,7 +276,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -362,7 +362,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -442,7 +442,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -520,7 +520,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -605,7 +605,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -645,9 +645,9 @@ Name | Type | Description  | Notes
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
  **indices** | **[]int32** | A comma-separated list of resource indices. If there is not at least one resource that matches each of the elements of &#x60;indices&#x60;, then an error is returned.  | 
  **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
- **policyNames** | **[]string** | A comma-separated list of policy names.  | 
- **roleIds** | **[]string** | A comma-separated list of object store role IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;role_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;role_names&#x60; query parameter.  | 
- **roleNames** | **[]string** | A comma-separated list of object store role names. If there is not at least one resource that matches each of the elements of &#x60;role_names&#x60;, then an error is returned. This cannot be provided together with the &#x60;role_ids&#x60; query parameter.  | 
+ **policyNames** | **[]string** | Performs the operation on the single policy specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;policy_ids&#x60; or &#x60;policy_names&#x60; parameter is required, but they cannot be set together.  | 
+ **roleIds** | **[]string** | Performs the operation on the single object store role specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;role_ids&#x60; or &#x60;role_names&#x60; parameter is required, but they cannot be set together.  | 
+ **roleNames** | **[]string** | Performs the operation on the single object store role specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;role_ids&#x60; or &#x60;role_names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 
@@ -684,7 +684,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -771,7 +771,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -814,9 +814,9 @@ Name | Type | Description  | Notes
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
  **indices** | **[]int32** | A comma-separated list of resource indices. If there is not at least one resource that matches each of the elements of &#x60;indices&#x60;, then an error is returned.  | 
  **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
- **policyNames** | **[]string** | A comma-separated list of policy names.  | 
- **roleIds** | **[]string** | A comma-separated list of object store role IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;role_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;role_names&#x60; query parameter.  | 
- **roleNames** | **[]string** | A comma-separated list of object store role names. If there is not at least one resource that matches each of the elements of &#x60;role_names&#x60;, then an error is returned. This cannot be provided together with the &#x60;role_ids&#x60; query parameter.  | 
+ **policyNames** | **[]string** | Performs the operation on the single policy specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;policy_ids&#x60; or &#x60;policy_names&#x60; parameter is required, but they cannot be set together.  | 
+ **roleIds** | **[]string** | Performs the operation on the single object store role specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;role_ids&#x60; or &#x60;role_names&#x60; parameter is required, but they cannot be set together.  | 
+ **roleNames** | **[]string** | Performs the operation on the single object store role specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;role_ids&#x60; or &#x60;role_names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 
@@ -853,7 +853,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -895,9 +895,9 @@ Name | Type | Description  | Notes
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
  **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
- **policyNames** | **[]string** | A comma-separated list of policy names.  | 
- **roleIds** | **[]string** | A comma-separated list of object store role IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;role_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;role_names&#x60; query parameter.  | 
- **roleNames** | **[]string** | A comma-separated list of object store role names. If there is not at least one resource that matches each of the elements of &#x60;role_names&#x60;, then an error is returned. This cannot be provided together with the &#x60;role_ids&#x60; query parameter.  | 
+ **policyNames** | **[]string** | Performs the operation on the single policy specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;policy_ids&#x60; or &#x60;policy_names&#x60; parameter is required, but they cannot be set together.  | 
+ **roleIds** | **[]string** | Performs the operation on the single object store role specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;role_ids&#x60; or &#x60;role_names&#x60; parameter is required, but they cannot be set together.  | 
+ **roleNames** | **[]string** | Performs the operation on the single object store role specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;role_ids&#x60; or &#x60;role_names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 
@@ -934,7 +934,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -976,8 +976,8 @@ Name | Type | Description  | Notes
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
  **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
- **roleIds** | **[]string** | A comma-separated list of object store role IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;role_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;role_names&#x60; query parameter.  | 
- **roleNames** | **[]string** | A comma-separated list of object store role names. If there is not at least one resource that matches each of the elements of &#x60;role_names&#x60;, then an error is returned. This cannot be provided together with the &#x60;role_ids&#x60; query parameter.  | 
+ **roleIds** | **[]string** | Performs the operation on the single object store role specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;role_ids&#x60; or &#x60;role_names&#x60; parameter is required, but they cannot be set together.  | 
+ **roleNames** | **[]string** | Performs the operation on the single object store role specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;role_ids&#x60; or &#x60;role_names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 
@@ -1014,7 +1014,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1055,8 +1055,8 @@ Name | Type | Description  | Notes
  **objectStoreRole** | [**ObjectStoreRole**](ObjectStoreRole.md) |  | 
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
- **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;name&#x60; or &#x60;names&#x60; query parameters.  | 
- **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
+ **ids** | **[]string** | Performs the operation on the single resource specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
+ **names** | **[]string** | Performs the operation on the single resource specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 
@@ -1093,7 +1093,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1131,7 +1131,7 @@ Other parameters are passed through a pointer to a apiObjectStoreRolesPostReques
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **names** | **[]string** | A comma-separated list of resource names.  | 
+ **names** | **[]string** | Performs the operation on the unique name specified. Only a single name is supported; specifying multiple names in comma-separated format is not allowed.  If there is not a resource that matches the specified name, then an error is returned, except when creating a new resource.  | 
  **objectStoreRole** | [**ObjectStoreRolePost**](ObjectStoreRolePost.md) |  | 
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 

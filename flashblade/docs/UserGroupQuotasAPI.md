@@ -4,8 +4,8 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**FileSystemGroupQuotasGet**](UserGroupQuotasAPI.md#FileSystemGroupQuotasGet) | **Get** /api/2.29/file-system-group-quotas | GET /file-system-group-quotas
-[**FileSystemUserQuotasGet**](UserGroupQuotasAPI.md#FileSystemUserQuotasGet) | **Get** /api/2.29/file-system-user-quotas | GET /file-system-user-quotas
+[**FileSystemGroupQuotasGet**](UserGroupQuotasAPI.md#FileSystemGroupQuotasGet) | **Get** /api/2.30/file-system-group-quotas | GET /file-system-group-quotas
+[**FileSystemUserQuotasGet**](UserGroupQuotasAPI.md#FileSystemUserQuotasGet) | **Get** /api/2.30/file-system-user-quotas | GET /file-system-user-quotas
 
 
 
@@ -26,7 +26,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -112,7 +112,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {

@@ -4,8 +4,8 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ResiliencyGroupsGet**](ResiliencyGroupsAPI.md#ResiliencyGroupsGet) | **Get** /api/2.29/resiliency-groups | GET resiliency-groups
-[**ResiliencyGroupsMembersGet**](ResiliencyGroupsAPI.md#ResiliencyGroupsMembersGet) | **Get** /api/2.29/resiliency-groups/members | GET resiliency-groups/members
+[**ResiliencyGroupsGet**](ResiliencyGroupsAPI.md#ResiliencyGroupsGet) | **Get** /api/2.30/resiliency-groups | GET resiliency-groups
+[**ResiliencyGroupsMembersGet**](ResiliencyGroupsAPI.md#ResiliencyGroupsMembersGet) | **Get** /api/2.30/resiliency-groups/members | GET resiliency-groups/members
 
 
 
@@ -26,7 +26,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -108,7 +108,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {

@@ -4,16 +4,16 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**TelemetryMetricsPoliciesArraysGet**](TelemetryMetricsPoliciesAPI.md#TelemetryMetricsPoliciesArraysGet) | **Get** /api/2.29/telemetry-metrics-policies/arrays | GET telemetry-metrics-policies/arrays
-[**TelemetryMetricsPoliciesDelete**](TelemetryMetricsPoliciesAPI.md#TelemetryMetricsPoliciesDelete) | **Delete** /api/2.29/telemetry-metrics-policies | DELETE telemetry-metrics-policies
-[**TelemetryMetricsPoliciesGet**](TelemetryMetricsPoliciesAPI.md#TelemetryMetricsPoliciesGet) | **Get** /api/2.29/telemetry-metrics-policies | GET telemetry-metrics-policies
-[**TelemetryMetricsPoliciesMembersGet**](TelemetryMetricsPoliciesAPI.md#TelemetryMetricsPoliciesMembersGet) | **Get** /api/2.29/telemetry-metrics-policies/members | GET telemetry-metrics-policies/members
-[**TelemetryMetricsPoliciesPatch**](TelemetryMetricsPoliciesAPI.md#TelemetryMetricsPoliciesPatch) | **Patch** /api/2.29/telemetry-metrics-policies | PATCH telemetry-metrics-policies
-[**TelemetryMetricsPoliciesPost**](TelemetryMetricsPoliciesAPI.md#TelemetryMetricsPoliciesPost) | **Post** /api/2.29/telemetry-metrics-policies | POST telemetry-metrics-policies
-[**TelemetryMetricsPoliciesRulesDelete**](TelemetryMetricsPoliciesAPI.md#TelemetryMetricsPoliciesRulesDelete) | **Delete** /api/2.29/telemetry-metrics-policies/rules | DELETE telemetry-metrics-policies/rules
-[**TelemetryMetricsPoliciesRulesGet**](TelemetryMetricsPoliciesAPI.md#TelemetryMetricsPoliciesRulesGet) | **Get** /api/2.29/telemetry-metrics-policies/rules | GET telemetry-metrics-policies/rules
-[**TelemetryMetricsPoliciesRulesPatch**](TelemetryMetricsPoliciesAPI.md#TelemetryMetricsPoliciesRulesPatch) | **Patch** /api/2.29/telemetry-metrics-policies/rules | PATCH telemetry-metrics-policies/rules
-[**TelemetryMetricsPoliciesRulesPost**](TelemetryMetricsPoliciesAPI.md#TelemetryMetricsPoliciesRulesPost) | **Post** /api/2.29/telemetry-metrics-policies/rules | POST telemetry-metrics-policies/rules
+[**TelemetryMetricsPoliciesArraysGet**](TelemetryMetricsPoliciesAPI.md#TelemetryMetricsPoliciesArraysGet) | **Get** /api/2.30/telemetry-metrics-policies/arrays | GET telemetry-metrics-policies/arrays
+[**TelemetryMetricsPoliciesDelete**](TelemetryMetricsPoliciesAPI.md#TelemetryMetricsPoliciesDelete) | **Delete** /api/2.30/telemetry-metrics-policies | DELETE telemetry-metrics-policies
+[**TelemetryMetricsPoliciesGet**](TelemetryMetricsPoliciesAPI.md#TelemetryMetricsPoliciesGet) | **Get** /api/2.30/telemetry-metrics-policies | GET telemetry-metrics-policies
+[**TelemetryMetricsPoliciesMembersGet**](TelemetryMetricsPoliciesAPI.md#TelemetryMetricsPoliciesMembersGet) | **Get** /api/2.30/telemetry-metrics-policies/members | GET telemetry-metrics-policies/members
+[**TelemetryMetricsPoliciesPatch**](TelemetryMetricsPoliciesAPI.md#TelemetryMetricsPoliciesPatch) | **Patch** /api/2.30/telemetry-metrics-policies | PATCH telemetry-metrics-policies
+[**TelemetryMetricsPoliciesPost**](TelemetryMetricsPoliciesAPI.md#TelemetryMetricsPoliciesPost) | **Post** /api/2.30/telemetry-metrics-policies | POST telemetry-metrics-policies
+[**TelemetryMetricsPoliciesRulesDelete**](TelemetryMetricsPoliciesAPI.md#TelemetryMetricsPoliciesRulesDelete) | **Delete** /api/2.30/telemetry-metrics-policies/rules | DELETE telemetry-metrics-policies/rules
+[**TelemetryMetricsPoliciesRulesGet**](TelemetryMetricsPoliciesAPI.md#TelemetryMetricsPoliciesRulesGet) | **Get** /api/2.30/telemetry-metrics-policies/rules | GET telemetry-metrics-policies/rules
+[**TelemetryMetricsPoliciesRulesPatch**](TelemetryMetricsPoliciesAPI.md#TelemetryMetricsPoliciesRulesPatch) | **Patch** /api/2.30/telemetry-metrics-policies/rules | PATCH telemetry-metrics-policies/rules
+[**TelemetryMetricsPoliciesRulesPost**](TelemetryMetricsPoliciesAPI.md#TelemetryMetricsPoliciesRulesPost) | **Post** /api/2.30/telemetry-metrics-policies/rules | POST telemetry-metrics-policies/rules
 
 
 
@@ -34,7 +34,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -120,7 +120,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -199,7 +199,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -283,7 +283,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -369,7 +369,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -410,8 +410,8 @@ Name | Type | Description  | Notes
  **policy** | [**TelemetryMetricsPolicyPatch**](TelemetryMetricsPolicyPatch.md) |  | 
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
- **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;name&#x60; or &#x60;names&#x60; query parameters.  | 
- **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
+ **ids** | **[]string** | Performs the operation on the single resource specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
+ **names** | **[]string** | Performs the operation on the single resource specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
  **versions** | **[]string** | A comma-separated list of versions. This is an optional query param used for concurrency control. The ordering should match the names or ids query param. This will fail with a 412 Precondition failed if the resource was changed and the current version of the resource doesn&#39;t match the value in the query param.  | 
 
 ### Return type
@@ -449,7 +449,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -529,7 +529,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -567,8 +567,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
- **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;name&#x60; or &#x60;names&#x60; query parameters.  | 
- **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
+ **ids** | **[]string** | Performs the operation on the single resource specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
+ **names** | **[]string** | Performs the operation on the single resource specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
  **versions** | **[]string** | A comma-separated list of versions. This is an optional query param used for concurrency control. The ordering should match the names or ids query param. This will fail with a 412 Precondition failed if the resource was changed and the current version of the resource doesn&#39;t match the value in the query param.  | 
 
 ### Return type
@@ -606,7 +606,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -692,7 +692,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -733,8 +733,8 @@ Name | Type | Description  | Notes
  **rule** | [**TelemetryMetricsPolicyRulePatch**](TelemetryMetricsPolicyRulePatch.md) |  | 
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
- **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;name&#x60; or &#x60;names&#x60; query parameters.  | 
- **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
+ **ids** | **[]string** | Performs the operation on the single resource specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
+ **names** | **[]string** | Performs the operation on the single resource specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
  **versions** | **[]string** | A comma-separated list of versions. This is an optional query param used for concurrency control. The ordering should match the names or ids query param. This will fail with a 412 Precondition failed if the resource was changed and the current version of the resource doesn&#39;t match the value in the query param.  | 
 
 ### Return type
@@ -772,7 +772,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -813,8 +813,8 @@ Name | Type | Description  | Notes
  **rule** | [**TelemetryMetricsPolicyRule**](TelemetryMetricsPolicyRule.md) |  | 
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
- **policyIds** | **[]string** | A comma-separated list of policy IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;policy_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;policy_names&#x60; query parameter.  | 
- **policyNames** | **[]string** | A comma-separated list of policy names.  | 
+ **policyIds** | **[]string** | Performs the operation on the single policy specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;policy_ids&#x60; or &#x60;policy_names&#x60; parameter is required, but they cannot be set together.  | 
+ **policyNames** | **[]string** | Performs the operation on the single policy specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;policy_ids&#x60; or &#x60;policy_names&#x60; parameter is required, but they cannot be set together.  | 
  **versions** | **[]string** | A comma-separated list of versions. This is an optional query param used for concurrency control. The ordering should match the names or ids query param. This will fail with a 412 Precondition failed if the resource was changed and the current version of the resource doesn&#39;t match the value in the query param.  | 
 
 ### Return type

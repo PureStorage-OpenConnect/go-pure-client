@@ -4,8 +4,8 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**PasswordPoliciesGet**](PoliciesPasswordAPI.md#PasswordPoliciesGet) | **Get** /api/2.29/password-policies | List password policies
-[**PasswordPoliciesPatch**](PoliciesPasswordAPI.md#PasswordPoliciesPatch) | **Patch** /api/2.29/password-policies | Modify password policies
+[**PasswordPoliciesGet**](PoliciesPasswordAPI.md#PasswordPoliciesGet) | **Get** /api/2.30/password-policies | List password policies
+[**PasswordPoliciesPatch**](PoliciesPasswordAPI.md#PasswordPoliciesPatch) | **Patch** /api/2.30/password-policies | Modify password policies
 
 
 
@@ -26,7 +26,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -108,7 +108,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {

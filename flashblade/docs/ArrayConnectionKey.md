@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**Context** | Pointer to [**FixedReference**](FixedReference.md) | The context in which the operation was performed.  Valid values include a reference to any array which is a member of the same fleet or to the fleet itself.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | [optional] [readonly] 
 **ConnectionKey** | Pointer to **string** | Connection-key, used on another array to connect to this array. After creation, listing will only show ****.  | [optional] [readonly] 
 **Created** | Pointer to **int64** | Creation time in milliseconds since UNIX epoch. | [optional] [readonly] 
 **Expires** | Pointer to **int64** | Expiration time in milliseconds since UNIX epoch. | [optional] [readonly] 
@@ -26,6 +27,31 @@ will change when the set of required properties is changed
 NewArrayConnectionKeyWithDefaults instantiates a new ArrayConnectionKey object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetContext
+
+`func (o *ArrayConnectionKey) GetContext() FixedReference`
+
+GetContext returns the Context field if non-nil, zero value otherwise.
+
+### GetContextOk
+
+`func (o *ArrayConnectionKey) GetContextOk() (*FixedReference, bool)`
+
+GetContextOk returns a tuple with the Context field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetContext
+
+`func (o *ArrayConnectionKey) SetContext(v FixedReference)`
+
+SetContext sets Context field to given value.
+
+### HasContext
+
+`func (o *ArrayConnectionKey) HasContext() bool`
+
+HasContext returns a boolean if a field has been set.
 
 ### GetConnectionKey
 

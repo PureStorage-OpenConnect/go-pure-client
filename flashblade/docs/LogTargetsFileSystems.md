@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | Pointer to **string** | A globally unique, system-generated ID. The ID cannot be modified and cannot refer to another resource.  | [optional] [readonly] 
 **Name** | Pointer to **string** | A user-specified name. The name must be locally unique and can be changed.  | [optional] 
+**Context** | Pointer to [**FixedReference**](FixedReference.md) | The context in which the operation was performed.  Valid values include a reference to any array which is a member of the same fleet or to the fleet itself.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | [optional] [readonly] 
 **FileSystem** | Pointer to [**Reference**](Reference.md) | The target filesystem where audit logs will be stored. | [optional] 
 **KeepFor** | Pointer to **int64** | Specifies the period that audit logs are retained before they are deleted, in milliseconds. Default value is &#x60;null&#x60; which means time based retention does not apply. Use 0 to reset the value to &#x60;null&#x60;. At least one of the &#x60;keep_for&#x60; or &#x60;keep_size&#x60; parameters is required, and they can be set together.  | [optional] 
 **KeepSize** | Pointer to **int64** | Specifies the maximum size of audit logs to be retained. Measured in bytes. When exceeded, older logs will be deleted. Default value is &#x60;null&#x60; which means size-based retention does not apply. Use 0 to reset the value to &#x60;null&#x60;. At least one of the &#x60;keep_for&#x60; or &#x60;keep_size&#x60; parameters is required, and they can be set together.  | [optional] 
@@ -78,6 +79,31 @@ SetName sets Name field to given value.
 `func (o *LogTargetsFileSystems) HasName() bool`
 
 HasName returns a boolean if a field has been set.
+
+### GetContext
+
+`func (o *LogTargetsFileSystems) GetContext() FixedReference`
+
+GetContext returns the Context field if non-nil, zero value otherwise.
+
+### GetContextOk
+
+`func (o *LogTargetsFileSystems) GetContextOk() (*FixedReference, bool)`
+
+GetContextOk returns a tuple with the Context field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetContext
+
+`func (o *LogTargetsFileSystems) SetContext(v FixedReference)`
+
+SetContext sets Context field to given value.
+
+### HasContext
+
+`func (o *LogTargetsFileSystems) HasContext() bool`
+
+HasContext returns a boolean if a field has been set.
 
 ### GetFileSystem
 

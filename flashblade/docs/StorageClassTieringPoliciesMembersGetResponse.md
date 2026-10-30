@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ContinuationToken** | Pointer to **string** | Continuation token that can be provided in the &#x60;continuation_token&#x60; query param to get the next page of data. If you use the &#x60;continuation_token&#x60; to page through data you are guaranteed to get all items exactly once regardless of how items are modified. If an item is added or deleted during the pagination then it may or may not be returned. The &#x60;continuation_token&#x60; is generated if the &#x60;limit&#x60; is less than the remaining number of items, and the default sort is used (no sort is specified).  | [optional] 
 **TotalItemCount** | Pointer to **int32** | Total number of items after applying &#x60;filter&#x60; params. | [optional] 
-**Items** | Pointer to [**[]PolicyMember**](PolicyMember.md) | A list of members for storage class tiering policies. | [optional] 
+**Items** | Pointer to [**[]PolicyMemberContext**](PolicyMemberContext.md) | A list of members for storage class tiering policies. | [optional] 
 **Errors** | Pointer to [**[]ErrorContextResponseErrors**](ErrorContextResponseErrors.md) | The list of errors encountered when attempting to perform an operation. | [optional] [readonly] 
 
 ## Methods
@@ -80,20 +80,20 @@ HasTotalItemCount returns a boolean if a field has been set.
 
 ### GetItems
 
-`func (o *StorageClassTieringPoliciesMembersGetResponse) GetItems() []PolicyMember`
+`func (o *StorageClassTieringPoliciesMembersGetResponse) GetItems() []PolicyMemberContext`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *StorageClassTieringPoliciesMembersGetResponse) GetItemsOk() (*[]PolicyMember, bool)`
+`func (o *StorageClassTieringPoliciesMembersGetResponse) GetItemsOk() (*[]PolicyMemberContext, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *StorageClassTieringPoliciesMembersGetResponse) SetItems(v []PolicyMember)`
+`func (o *StorageClassTieringPoliciesMembersGetResponse) SetItems(v []PolicyMemberContext)`
 
 SetItems sets Items field to given value.
 

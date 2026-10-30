@@ -4,35 +4,35 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**BucketAuditFilterActionsGet**](BucketsAPI.md#BucketAuditFilterActionsGet) | **Get** /api/2.29/bucket-audit-filter-actions | GET bucket-audit-filter-actions
-[**BucketsAuditFiltersDelete**](BucketsAPI.md#BucketsAuditFiltersDelete) | **Delete** /api/2.29/buckets/audit-filters | DELETE buckets/audit-filters
-[**BucketsAuditFiltersGet**](BucketsAPI.md#BucketsAuditFiltersGet) | **Get** /api/2.29/buckets/audit-filters | GET buckets/audit-filters
-[**BucketsAuditFiltersPatch**](BucketsAPI.md#BucketsAuditFiltersPatch) | **Patch** /api/2.29/buckets/audit-filters | PATCH buckets/audit-filters
-[**BucketsAuditFiltersPost**](BucketsAPI.md#BucketsAuditFiltersPost) | **Post** /api/2.29/buckets/audit-filters | POST buckets/audit-filters
-[**BucketsBucketAccessPoliciesDelete**](BucketsAPI.md#BucketsBucketAccessPoliciesDelete) | **Delete** /api/2.29/buckets/bucket-access-policies | DELETE buckets/bucket-access-policies
-[**BucketsBucketAccessPoliciesGet**](BucketsAPI.md#BucketsBucketAccessPoliciesGet) | **Get** /api/2.29/buckets/bucket-access-policies | GET buckets/bucket-access-policies
-[**BucketsBucketAccessPoliciesPost**](BucketsAPI.md#BucketsBucketAccessPoliciesPost) | **Post** /api/2.29/buckets/bucket-access-policies | POST buckets/bucket-access-policies
-[**BucketsBucketAccessPoliciesRulesDelete**](BucketsAPI.md#BucketsBucketAccessPoliciesRulesDelete) | **Delete** /api/2.29/buckets/bucket-access-policies/rules | DELETE buckets/bucket-access-policies/rules
-[**BucketsBucketAccessPoliciesRulesGet**](BucketsAPI.md#BucketsBucketAccessPoliciesRulesGet) | **Get** /api/2.29/buckets/bucket-access-policies/rules | GET buckets/bucket-access-policies/rules
-[**BucketsBucketAccessPoliciesRulesPost**](BucketsAPI.md#BucketsBucketAccessPoliciesRulesPost) | **Post** /api/2.29/buckets/bucket-access-policies/rules | POST buckets/bucket-access-policies/rules
-[**BucketsCrossOriginResourceSharingPoliciesDelete**](BucketsAPI.md#BucketsCrossOriginResourceSharingPoliciesDelete) | **Delete** /api/2.29/buckets/cross-origin-resource-sharing-policies | DELETE buckets/cross-origin-resource-sharing-policies
-[**BucketsCrossOriginResourceSharingPoliciesGet**](BucketsAPI.md#BucketsCrossOriginResourceSharingPoliciesGet) | **Get** /api/2.29/buckets/cross-origin-resource-sharing-policies | GET buckets/cross-origin-resource-sharing-policies
-[**BucketsCrossOriginResourceSharingPoliciesPost**](BucketsAPI.md#BucketsCrossOriginResourceSharingPoliciesPost) | **Post** /api/2.29/buckets/cross-origin-resource-sharing-policies | POST buckets/cross-origin-resource-sharing-policies
-[**BucketsCrossOriginResourceSharingPoliciesRulesDelete**](BucketsAPI.md#BucketsCrossOriginResourceSharingPoliciesRulesDelete) | **Delete** /api/2.29/buckets/cross-origin-resource-sharing-policies/rules | DELETE buckets/cross-origin-resource-sharing-policies/rules
-[**BucketsCrossOriginResourceSharingPoliciesRulesGet**](BucketsAPI.md#BucketsCrossOriginResourceSharingPoliciesRulesGet) | **Get** /api/2.29/buckets/cross-origin-resource-sharing-policies/rules | GET buckets/cross-origin-resource-sharing-policies/rules
-[**BucketsCrossOriginResourceSharingPoliciesRulesPost**](BucketsAPI.md#BucketsCrossOriginResourceSharingPoliciesRulesPost) | **Post** /api/2.29/buckets/cross-origin-resource-sharing-policies/rules | POST buckets/cross-origin-resource-sharing-policies/rules
-[**BucketsDelete**](BucketsAPI.md#BucketsDelete) | **Delete** /api/2.29/buckets | DELETE buckets
-[**BucketsGet**](BucketsAPI.md#BucketsGet) | **Get** /api/2.29/buckets | GET buckets
-[**BucketsLifecyclePoliciesGet**](BucketsAPI.md#BucketsLifecyclePoliciesGet) | **Get** /api/2.29/buckets/lifecycle-policies | GET buckets/lifecycle-policies
-[**BucketsLifecyclePoliciesPatch**](BucketsAPI.md#BucketsLifecyclePoliciesPatch) | **Patch** /api/2.29/buckets/lifecycle-policies | PATCH buckets/lifecycle-policies
-[**BucketsLifecyclePoliciesRulesDelete**](BucketsAPI.md#BucketsLifecyclePoliciesRulesDelete) | **Delete** /api/2.29/buckets/lifecycle-policies/rules | DELETE buckets/lifecycle-policies/rules
-[**BucketsLifecyclePoliciesRulesGet**](BucketsAPI.md#BucketsLifecyclePoliciesRulesGet) | **Get** /api/2.29/buckets/lifecycle-policies/rules | GET buckets/lifecycle-policies/rules
-[**BucketsLifecyclePoliciesRulesPatch**](BucketsAPI.md#BucketsLifecyclePoliciesRulesPatch) | **Patch** /api/2.29/buckets/lifecycle-policies/rules | PATCH buckets/lifecycle-policies/rules
-[**BucketsLifecyclePoliciesRulesPost**](BucketsAPI.md#BucketsLifecyclePoliciesRulesPost) | **Post** /api/2.29/buckets/lifecycle-policies/rules | POST buckets/lifecycle-policies/rules
-[**BucketsPatch**](BucketsAPI.md#BucketsPatch) | **Patch** /api/2.29/buckets | PATCH buckets
-[**BucketsPerformanceGet**](BucketsAPI.md#BucketsPerformanceGet) | **Get** /api/2.29/buckets/performance | GET buckets/performance
-[**BucketsPost**](BucketsAPI.md#BucketsPost) | **Post** /api/2.29/buckets | POST buckets
-[**BucketsS3SpecificPerformanceGet**](BucketsAPI.md#BucketsS3SpecificPerformanceGet) | **Get** /api/2.29/buckets/s3-specific-performance | GET buckets/s3-specific-performance
+[**BucketAuditFilterActionsGet**](BucketsAPI.md#BucketAuditFilterActionsGet) | **Get** /api/2.30/bucket-audit-filter-actions | GET bucket-audit-filter-actions
+[**BucketsAuditFiltersDelete**](BucketsAPI.md#BucketsAuditFiltersDelete) | **Delete** /api/2.30/buckets/audit-filters | DELETE buckets/audit-filters
+[**BucketsAuditFiltersGet**](BucketsAPI.md#BucketsAuditFiltersGet) | **Get** /api/2.30/buckets/audit-filters | GET buckets/audit-filters
+[**BucketsAuditFiltersPatch**](BucketsAPI.md#BucketsAuditFiltersPatch) | **Patch** /api/2.30/buckets/audit-filters | PATCH buckets/audit-filters
+[**BucketsAuditFiltersPost**](BucketsAPI.md#BucketsAuditFiltersPost) | **Post** /api/2.30/buckets/audit-filters | POST buckets/audit-filters
+[**BucketsBucketAccessPoliciesDelete**](BucketsAPI.md#BucketsBucketAccessPoliciesDelete) | **Delete** /api/2.30/buckets/bucket-access-policies | DELETE buckets/bucket-access-policies
+[**BucketsBucketAccessPoliciesGet**](BucketsAPI.md#BucketsBucketAccessPoliciesGet) | **Get** /api/2.30/buckets/bucket-access-policies | GET buckets/bucket-access-policies
+[**BucketsBucketAccessPoliciesPost**](BucketsAPI.md#BucketsBucketAccessPoliciesPost) | **Post** /api/2.30/buckets/bucket-access-policies | POST buckets/bucket-access-policies
+[**BucketsBucketAccessPoliciesRulesDelete**](BucketsAPI.md#BucketsBucketAccessPoliciesRulesDelete) | **Delete** /api/2.30/buckets/bucket-access-policies/rules | DELETE buckets/bucket-access-policies/rules
+[**BucketsBucketAccessPoliciesRulesGet**](BucketsAPI.md#BucketsBucketAccessPoliciesRulesGet) | **Get** /api/2.30/buckets/bucket-access-policies/rules | GET buckets/bucket-access-policies/rules
+[**BucketsBucketAccessPoliciesRulesPost**](BucketsAPI.md#BucketsBucketAccessPoliciesRulesPost) | **Post** /api/2.30/buckets/bucket-access-policies/rules | POST buckets/bucket-access-policies/rules
+[**BucketsCrossOriginResourceSharingPoliciesDelete**](BucketsAPI.md#BucketsCrossOriginResourceSharingPoliciesDelete) | **Delete** /api/2.30/buckets/cross-origin-resource-sharing-policies | DELETE buckets/cross-origin-resource-sharing-policies
+[**BucketsCrossOriginResourceSharingPoliciesGet**](BucketsAPI.md#BucketsCrossOriginResourceSharingPoliciesGet) | **Get** /api/2.30/buckets/cross-origin-resource-sharing-policies | GET buckets/cross-origin-resource-sharing-policies
+[**BucketsCrossOriginResourceSharingPoliciesPost**](BucketsAPI.md#BucketsCrossOriginResourceSharingPoliciesPost) | **Post** /api/2.30/buckets/cross-origin-resource-sharing-policies | POST buckets/cross-origin-resource-sharing-policies
+[**BucketsCrossOriginResourceSharingPoliciesRulesDelete**](BucketsAPI.md#BucketsCrossOriginResourceSharingPoliciesRulesDelete) | **Delete** /api/2.30/buckets/cross-origin-resource-sharing-policies/rules | DELETE buckets/cross-origin-resource-sharing-policies/rules
+[**BucketsCrossOriginResourceSharingPoliciesRulesGet**](BucketsAPI.md#BucketsCrossOriginResourceSharingPoliciesRulesGet) | **Get** /api/2.30/buckets/cross-origin-resource-sharing-policies/rules | GET buckets/cross-origin-resource-sharing-policies/rules
+[**BucketsCrossOriginResourceSharingPoliciesRulesPost**](BucketsAPI.md#BucketsCrossOriginResourceSharingPoliciesRulesPost) | **Post** /api/2.30/buckets/cross-origin-resource-sharing-policies/rules | POST buckets/cross-origin-resource-sharing-policies/rules
+[**BucketsDelete**](BucketsAPI.md#BucketsDelete) | **Delete** /api/2.30/buckets | DELETE buckets
+[**BucketsGet**](BucketsAPI.md#BucketsGet) | **Get** /api/2.30/buckets | GET buckets
+[**BucketsLifecyclePoliciesGet**](BucketsAPI.md#BucketsLifecyclePoliciesGet) | **Get** /api/2.30/buckets/lifecycle-policies | GET buckets/lifecycle-policies
+[**BucketsLifecyclePoliciesPatch**](BucketsAPI.md#BucketsLifecyclePoliciesPatch) | **Patch** /api/2.30/buckets/lifecycle-policies | PATCH buckets/lifecycle-policies
+[**BucketsLifecyclePoliciesRulesDelete**](BucketsAPI.md#BucketsLifecyclePoliciesRulesDelete) | **Delete** /api/2.30/buckets/lifecycle-policies/rules | DELETE buckets/lifecycle-policies/rules
+[**BucketsLifecyclePoliciesRulesGet**](BucketsAPI.md#BucketsLifecyclePoliciesRulesGet) | **Get** /api/2.30/buckets/lifecycle-policies/rules | GET buckets/lifecycle-policies/rules
+[**BucketsLifecyclePoliciesRulesPatch**](BucketsAPI.md#BucketsLifecyclePoliciesRulesPatch) | **Patch** /api/2.30/buckets/lifecycle-policies/rules | PATCH buckets/lifecycle-policies/rules
+[**BucketsLifecyclePoliciesRulesPost**](BucketsAPI.md#BucketsLifecyclePoliciesRulesPost) | **Post** /api/2.30/buckets/lifecycle-policies/rules | POST buckets/lifecycle-policies/rules
+[**BucketsPatch**](BucketsAPI.md#BucketsPatch) | **Patch** /api/2.30/buckets | PATCH buckets
+[**BucketsPerformanceGet**](BucketsAPI.md#BucketsPerformanceGet) | **Get** /api/2.30/buckets/performance | GET buckets/performance
+[**BucketsPost**](BucketsAPI.md#BucketsPost) | **Post** /api/2.30/buckets | POST buckets
+[**BucketsS3SpecificPerformanceGet**](BucketsAPI.md#BucketsS3SpecificPerformanceGet) | **Get** /api/2.30/buckets/s3-specific-performance | GET buckets/s3-specific-performance
 
 
 
@@ -53,7 +53,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -136,7 +136,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -173,8 +173,8 @@ Other parameters are passed through a pointer to a apiBucketsAuditFiltersDeleteR
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
- **bucketIds** | **[]string** | A comma-separated list of bucket IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;bucket_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;bucket_names&#x60; query parameter. This can be provided with the &#x60;ids&#x60; query parameter but not with &#x60;names&#x60;.  | 
- **bucketNames** | **[]string** | A comma-separated list of bucket names. If there is not at least one resource that matches each of the elements of &#x60;bucket_names&#x60;, then an error is returned. This cannot be provided together with the &#x60;bucket_ids&#x60; query parameter. This can be provided with the &#x60;ids&#x60; query parameter but not with &#x60;names&#x60;.  | 
+ **bucketIds** | **[]string** | Performs the operation on the single bucket specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;bucket_ids&#x60; or &#x60;bucket_names&#x60; parameter is required, but they cannot be set together.  | 
+ **bucketNames** | **[]string** | Performs the operation on the single bucket specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;bucket_ids&#x60; or &#x60;bucket_names&#x60; parameter is required, but they cannot be set together.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
  **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
 
@@ -213,7 +213,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -298,7 +298,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -339,8 +339,8 @@ Name | Type | Description  | Notes
  **names** | **[]string** | A comma-separated list of resource names.  | 
  **auditFilter** | [**BucketAuditFilterPost**](BucketAuditFilterPost.md) |  | 
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
- **bucketIds** | **[]string** | A comma-separated list of bucket IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;bucket_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;bucket_names&#x60; query parameter. This can be provided with the &#x60;ids&#x60; query parameter but not with &#x60;names&#x60;.  | 
- **bucketNames** | **[]string** | A comma-separated list of bucket names. If there is not at least one resource that matches each of the elements of &#x60;bucket_names&#x60;, then an error is returned. This cannot be provided together with the &#x60;bucket_ids&#x60; query parameter. This can be provided with the &#x60;ids&#x60; query parameter but not with &#x60;names&#x60;.  | 
+ **bucketIds** | **[]string** | Performs the operation on the single bucket specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;bucket_ids&#x60; or &#x60;bucket_names&#x60; parameter is required, but they cannot be set together.  | 
+ **bucketNames** | **[]string** | Performs the operation on the single bucket specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;bucket_ids&#x60; or &#x60;bucket_names&#x60; parameter is required, but they cannot be set together.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
 
 ### Return type
@@ -378,7 +378,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -419,8 +419,8 @@ Name | Type | Description  | Notes
  **names** | **[]string** | A comma-separated list of resource names.  | 
  **auditFilter** | [**BucketAuditFilterPost**](BucketAuditFilterPost.md) |  | 
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
- **bucketIds** | **[]string** | A comma-separated list of bucket IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;bucket_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;bucket_names&#x60; query parameter. This can be provided with the &#x60;ids&#x60; query parameter but not with &#x60;names&#x60;.  | 
- **bucketNames** | **[]string** | A comma-separated list of bucket names. If there is not at least one resource that matches each of the elements of &#x60;bucket_names&#x60;, then an error is returned. This cannot be provided together with the &#x60;bucket_ids&#x60; query parameter. This can be provided with the &#x60;ids&#x60; query parameter but not with &#x60;names&#x60;.  | 
+ **bucketIds** | **[]string** | Performs the operation on the single bucket specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;bucket_ids&#x60; or &#x60;bucket_names&#x60; parameter is required, but they cannot be set together.  | 
+ **bucketNames** | **[]string** | Performs the operation on the single bucket specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;bucket_ids&#x60; or &#x60;bucket_names&#x60; parameter is required, but they cannot be set together.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
 
 ### Return type
@@ -458,7 +458,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -495,8 +495,8 @@ Other parameters are passed through a pointer to a apiBucketsBucketAccessPolicie
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
- **bucketIds** | **[]string** | A comma-separated list of bucket IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;bucket_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;bucket_names&#x60; query parameter. This can be provided with the &#x60;ids&#x60; query parameter but not with &#x60;names&#x60;.  | 
- **bucketNames** | **[]string** | A comma-separated list of bucket names. If there is not at least one resource that matches each of the elements of &#x60;bucket_names&#x60;, then an error is returned. This cannot be provided together with the &#x60;bucket_ids&#x60; query parameter. This can be provided with the &#x60;ids&#x60; query parameter but not with &#x60;names&#x60;.  | 
+ **bucketIds** | **[]string** | Performs the operation on the single bucket specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;bucket_ids&#x60; or &#x60;bucket_names&#x60; parameter is required, but they cannot be set together.  | 
+ **bucketNames** | **[]string** | Performs the operation on the single bucket specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;bucket_ids&#x60; or &#x60;bucket_names&#x60; parameter is required, but they cannot be set together.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
  **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
 
@@ -535,7 +535,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -620,7 +620,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -659,8 +659,8 @@ Other parameters are passed through a pointer to a apiBucketsBucketAccessPolicie
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
- **bucketIds** | **[]string** | A comma-separated list of bucket IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;bucket_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;bucket_names&#x60; query parameter. This can be provided with the &#x60;ids&#x60; query parameter but not with &#x60;names&#x60;.  | 
- **bucketNames** | **[]string** | A comma-separated list of bucket names. If there is not at least one resource that matches each of the elements of &#x60;bucket_names&#x60;, then an error is returned. This cannot be provided together with the &#x60;bucket_ids&#x60; query parameter. This can be provided with the &#x60;ids&#x60; query parameter but not with &#x60;names&#x60;.  | 
+ **bucketIds** | **[]string** | Performs the operation on the single bucket specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;bucket_ids&#x60; or &#x60;bucket_names&#x60; parameter is required, but they cannot be set together.  | 
+ **bucketNames** | **[]string** | Performs the operation on the single bucket specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;bucket_ids&#x60; or &#x60;bucket_names&#x60; parameter is required, but they cannot be set together.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
  **policy** | [**BucketAccessPolicyPost**](BucketAccessPolicyPost.md) |  | 
 
@@ -699,7 +699,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -736,11 +736,11 @@ Other parameters are passed through a pointer to a apiBucketsBucketAccessPolicie
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
- **bucketIds** | **[]string** | A comma-separated list of bucket IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;bucket_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;bucket_names&#x60; query parameter. This can be provided with the &#x60;ids&#x60; query parameter but not with &#x60;names&#x60;.  | 
- **bucketNames** | **[]string** | A comma-separated list of bucket names. If there is not at least one resource that matches each of the elements of &#x60;bucket_names&#x60;, then an error is returned. This cannot be provided together with the &#x60;bucket_ids&#x60; query parameter. This can be provided with the &#x60;ids&#x60; query parameter but not with &#x60;names&#x60;.  | 
+ **bucketIds** | **[]string** | Performs the operation on the single bucket specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;bucket_ids&#x60; or &#x60;bucket_names&#x60; parameter is required, but they cannot be set together.  | 
+ **bucketNames** | **[]string** | Performs the operation on the single bucket specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;bucket_ids&#x60; or &#x60;bucket_names&#x60; parameter is required, but they cannot be set together.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
  **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
- **policyNames** | **[]string** | A comma-separated list of policy names.  | 
+ **policyNames** | **[]string** | Performs the operation on the single policy specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;policy_ids&#x60; or &#x60;policy_names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 
@@ -777,7 +777,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -863,7 +863,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -904,10 +904,10 @@ Name | Type | Description  | Notes
  **names** | **[]string** | A comma-separated list of resource names.  | 
  **rule** | [**BucketAccessPolicyRulePost**](BucketAccessPolicyRulePost.md) |  | 
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
- **bucketIds** | **[]string** | A comma-separated list of bucket IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;bucket_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;bucket_names&#x60; query parameter. This can be provided with the &#x60;ids&#x60; query parameter but not with &#x60;names&#x60;.  | 
- **bucketNames** | **[]string** | A comma-separated list of bucket names. If there is not at least one resource that matches each of the elements of &#x60;bucket_names&#x60;, then an error is returned. This cannot be provided together with the &#x60;bucket_ids&#x60; query parameter. This can be provided with the &#x60;ids&#x60; query parameter but not with &#x60;names&#x60;.  | 
+ **bucketIds** | **[]string** | Performs the operation on the single bucket specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;bucket_ids&#x60; or &#x60;bucket_names&#x60; parameter is required, but they cannot be set together.  | 
+ **bucketNames** | **[]string** | Performs the operation on the single bucket specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;bucket_ids&#x60; or &#x60;bucket_names&#x60; parameter is required, but they cannot be set together.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
- **policyNames** | **[]string** | A comma-separated list of policy names.  | 
+ **policyNames** | **[]string** | Performs the operation on the single policy specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;policy_ids&#x60; or &#x60;policy_names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 
@@ -944,7 +944,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -981,8 +981,8 @@ Other parameters are passed through a pointer to a apiBucketsCrossOriginResource
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
- **bucketIds** | **[]string** | A comma-separated list of bucket IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;bucket_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;bucket_names&#x60; query parameter. This can be provided with the &#x60;ids&#x60; query parameter but not with &#x60;names&#x60;.  | 
- **bucketNames** | **[]string** | A comma-separated list of bucket names. If there is not at least one resource that matches each of the elements of &#x60;bucket_names&#x60;, then an error is returned. This cannot be provided together with the &#x60;bucket_ids&#x60; query parameter. This can be provided with the &#x60;ids&#x60; query parameter but not with &#x60;names&#x60;.  | 
+ **bucketIds** | **[]string** | Performs the operation on the single bucket specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;bucket_ids&#x60; or &#x60;bucket_names&#x60; parameter is required, but they cannot be set together.  | 
+ **bucketNames** | **[]string** | Performs the operation on the single bucket specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;bucket_ids&#x60; or &#x60;bucket_names&#x60; parameter is required, but they cannot be set together.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
  **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
 
@@ -1021,7 +1021,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1106,7 +1106,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1145,8 +1145,8 @@ Other parameters are passed through a pointer to a apiBucketsCrossOriginResource
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
- **bucketIds** | **[]string** | A comma-separated list of bucket IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;bucket_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;bucket_names&#x60; query parameter. This can be provided with the &#x60;ids&#x60; query parameter but not with &#x60;names&#x60;.  | 
- **bucketNames** | **[]string** | A comma-separated list of bucket names. If there is not at least one resource that matches each of the elements of &#x60;bucket_names&#x60;, then an error is returned. This cannot be provided together with the &#x60;bucket_ids&#x60; query parameter. This can be provided with the &#x60;ids&#x60; query parameter but not with &#x60;names&#x60;.  | 
+ **bucketIds** | **[]string** | Performs the operation on the single bucket specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;bucket_ids&#x60; or &#x60;bucket_names&#x60; parameter is required, but they cannot be set together.  | 
+ **bucketNames** | **[]string** | Performs the operation on the single bucket specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;bucket_ids&#x60; or &#x60;bucket_names&#x60; parameter is required, but they cannot be set together.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
  **policy** | [**CrossOriginResourceSharingPolicyPatch**](CrossOriginResourceSharingPolicyPatch.md) |  | 
 
@@ -1185,7 +1185,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1222,11 +1222,11 @@ Other parameters are passed through a pointer to a apiBucketsCrossOriginResource
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
- **bucketIds** | **[]string** | A comma-separated list of bucket IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;bucket_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;bucket_names&#x60; query parameter. This can be provided with the &#x60;ids&#x60; query parameter but not with &#x60;names&#x60;.  | 
- **bucketNames** | **[]string** | A comma-separated list of bucket names. If there is not at least one resource that matches each of the elements of &#x60;bucket_names&#x60;, then an error is returned. This cannot be provided together with the &#x60;bucket_ids&#x60; query parameter. This can be provided with the &#x60;ids&#x60; query parameter but not with &#x60;names&#x60;.  | 
+ **bucketIds** | **[]string** | Performs the operation on the single bucket specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;bucket_ids&#x60; or &#x60;bucket_names&#x60; parameter is required, but they cannot be set together.  | 
+ **bucketNames** | **[]string** | Performs the operation on the single bucket specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;bucket_ids&#x60; or &#x60;bucket_names&#x60; parameter is required, but they cannot be set together.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
  **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
- **policyNames** | **[]string** | A comma-separated list of policy names.  | 
+ **policyNames** | **[]string** | Performs the operation on the single policy specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;policy_ids&#x60; or &#x60;policy_names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 
@@ -1263,7 +1263,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1349,7 +1349,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1390,10 +1390,10 @@ Name | Type | Description  | Notes
  **names** | **[]string** | A comma-separated list of resource names.  | 
  **rule** | [**CrossOriginResourceSharingPolicyRulePost**](CrossOriginResourceSharingPolicyRulePost.md) |  | 
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
- **bucketIds** | **[]string** | A comma-separated list of bucket IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;bucket_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;bucket_names&#x60; query parameter. This can be provided with the &#x60;ids&#x60; query parameter but not with &#x60;names&#x60;.  | 
- **bucketNames** | **[]string** | A comma-separated list of bucket names. If there is not at least one resource that matches each of the elements of &#x60;bucket_names&#x60;, then an error is returned. This cannot be provided together with the &#x60;bucket_ids&#x60; query parameter. This can be provided with the &#x60;ids&#x60; query parameter but not with &#x60;names&#x60;.  | 
+ **bucketIds** | **[]string** | Performs the operation on the single bucket specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;bucket_ids&#x60; or &#x60;bucket_names&#x60; parameter is required, but they cannot be set together.  | 
+ **bucketNames** | **[]string** | Performs the operation on the single bucket specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;bucket_ids&#x60; or &#x60;bucket_names&#x60; parameter is required, but they cannot be set together.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
- **policyNames** | **[]string** | A comma-separated list of policy names.  | 
+ **policyNames** | **[]string** | Performs the operation on the single policy specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;policy_ids&#x60; or &#x60;policy_names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 
@@ -1430,7 +1430,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1468,8 +1468,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
- **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;name&#x60; or &#x60;names&#x60; query parameters.  | 
- **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
+ **ids** | **[]string** | Performs the operation on the single resource specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
+ **names** | **[]string** | Performs the operation on the single resource specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 
@@ -1491,7 +1491,7 @@ Authorization is handled by the Authenticator specified in the configuration and
 
 ## BucketsGet
 
-> BucketGetResponse BucketsGet(ctx).XRequestID(xRequestID).AllowErrors(allowErrors).ContextNames(contextNames).ContinuationToken(continuationToken).Destroyed(destroyed).Filter(filter).Ids(ids).Limit(limit).Names(names).Offset(offset).Sort(sort).TotalOnly(totalOnly).Execute()
+> BucketGetResponse BucketsGet(ctx).XRequestID(xRequestID).AllowErrors(allowErrors).ContextNames(contextNames).ContinuationToken(continuationToken).Destroyed(destroyed).Filter(filter).Ids(ids).Limit(limit).Names(names).Offset(offset).Sort(sort).TotalOnly(totalOnly).WorkloadIds(workloadIds).WorkloadNames(workloadNames).Execute()
 
 GET buckets
 
@@ -1506,7 +1506,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1556,6 +1556,8 @@ Name | Type | Description  | Notes
  **offset** | **int32** | The offset of the first resource to return from a collection.  | 
  **sort** | **[]string** | Sort the response by the specified fields (in descending order if &#39;-&#39; is appended to the field name). NOTE: If you provide a sort you will not get a &#x60;continuation_token&#x60; in the response.  | 
  **totalOnly** | **bool** | If set to &#x60;true&#x60;, returns the aggregate value of all items after filtering. Where it makes more sense, the average value is displayed instead. The values are displayed for each name where meaningful. If &#x60;total_only&#x3D;true&#x60;, the &#x60;items&#x60; list will be empty.  | 
+ **workloadIds** | **[]string** | A comma-separated list of workload IDs. If, after filtering, there is not at least one resource that matches each of the elements, then an error is returned. This cannot be provided together with the &#x60;workload_names&#x60; query parameter.  | 
+ **workloadNames** | **[]string** | A comma-separated list of workload names. If, after filtering, there is not at least one resource that matches each of the elements, then an error is returned. This cannot be provided together with the &#x60;workload_ids&#x60; query parameter.  | 
 
 ### Return type
 
@@ -1592,7 +1594,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1677,7 +1679,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1716,8 +1718,8 @@ Other parameters are passed through a pointer to a apiBucketsLifecyclePoliciesPa
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
- **bucketIds** | **[]string** | A comma-separated list of bucket IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;bucket_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;bucket_names&#x60; query parameter. This can be provided with the &#x60;ids&#x60; query parameter but not with &#x60;names&#x60;.  | 
- **bucketNames** | **[]string** | A comma-separated list of bucket names. If there is not at least one resource that matches each of the elements of &#x60;bucket_names&#x60;, then an error is returned. This cannot be provided together with the &#x60;bucket_ids&#x60; query parameter. This can be provided with the &#x60;ids&#x60; query parameter but not with &#x60;names&#x60;.  | 
+ **bucketIds** | **[]string** | Performs the operation on the single bucket specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;bucket_ids&#x60; or &#x60;bucket_names&#x60; parameter is required, but they cannot be set together.  | 
+ **bucketNames** | **[]string** | Performs the operation on the single bucket specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;bucket_ids&#x60; or &#x60;bucket_names&#x60; parameter is required, but they cannot be set together.  | 
  **confirmDate** | **bool** | If set to &#x60;true&#x60;, then confirm the date of &#x60;keep_current_version_until&#x60; is correct.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
  **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
@@ -1758,7 +1760,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1795,11 +1797,11 @@ Other parameters are passed through a pointer to a apiBucketsLifecyclePoliciesRu
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
- **bucketIds** | **[]string** | A comma-separated list of bucket IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;bucket_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;bucket_names&#x60; query parameter. This can be provided with the &#x60;ids&#x60; query parameter but not with &#x60;names&#x60;.  | 
- **bucketNames** | **[]string** | A comma-separated list of bucket names. If there is not at least one resource that matches each of the elements of &#x60;bucket_names&#x60;, then an error is returned. This cannot be provided together with the &#x60;bucket_ids&#x60; query parameter. This can be provided with the &#x60;ids&#x60; query parameter but not with &#x60;names&#x60;.  | 
+ **bucketIds** | **[]string** | Performs the operation on the single bucket specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;bucket_ids&#x60; or &#x60;bucket_names&#x60; parameter is required, but they cannot be set together.  | 
+ **bucketNames** | **[]string** | Performs the operation on the single bucket specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;bucket_ids&#x60; or &#x60;bucket_names&#x60; parameter is required, but they cannot be set together.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
  **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
- **policyNames** | **[]string** | A comma-separated list of policy names.  | 
+ **policyNames** | **[]string** | Performs the operation on the single policy specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;policy_ids&#x60; or &#x60;policy_names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 
@@ -1836,7 +1838,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1922,7 +1924,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -1962,12 +1964,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **rule** | [**BucketLifecyclePolicyRulePatch**](BucketLifecyclePolicyRulePatch.md) |  | 
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
- **bucketIds** | **[]string** | A comma-separated list of bucket IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;bucket_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;bucket_names&#x60; query parameter. This can be provided with the &#x60;ids&#x60; query parameter but not with &#x60;names&#x60;.  | 
- **bucketNames** | **[]string** | A comma-separated list of bucket names. If there is not at least one resource that matches each of the elements of &#x60;bucket_names&#x60;, then an error is returned. This cannot be provided together with the &#x60;bucket_ids&#x60; query parameter. This can be provided with the &#x60;ids&#x60; query parameter but not with &#x60;names&#x60;.  | 
+ **bucketIds** | **[]string** | Performs the operation on the single bucket specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;bucket_ids&#x60; or &#x60;bucket_names&#x60; parameter is required, but they cannot be set together.  | 
+ **bucketNames** | **[]string** | Performs the operation on the single bucket specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;bucket_ids&#x60; or &#x60;bucket_names&#x60; parameter is required, but they cannot be set together.  | 
  **confirmDate** | **bool** | If set to &#x60;true&#x60;, then confirm the date of &#x60;keep_current_version_until&#x60; is correct.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
  **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
- **policyNames** | **[]string** | A comma-separated list of policy names.  | 
+ **policyNames** | **[]string** | Performs the operation on the single policy specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;policy_ids&#x60; or &#x60;policy_names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 
@@ -2004,7 +2006,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -2044,12 +2046,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **rule** | [**BucketLifecyclePolicyRulePost**](BucketLifecyclePolicyRulePost.md) |  | 
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
- **bucketIds** | **[]string** | A comma-separated list of bucket IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;bucket_ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;bucket_names&#x60; query parameter. This can be provided with the &#x60;ids&#x60; query parameter but not with &#x60;names&#x60;.  | 
- **bucketNames** | **[]string** | A comma-separated list of bucket names. If there is not at least one resource that matches each of the elements of &#x60;bucket_names&#x60;, then an error is returned. This cannot be provided together with the &#x60;bucket_ids&#x60; query parameter. This can be provided with the &#x60;ids&#x60; query parameter but not with &#x60;names&#x60;.  | 
+ **bucketIds** | **[]string** | Performs the operation on the single bucket specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;bucket_ids&#x60; or &#x60;bucket_names&#x60; parameter is required, but they cannot be set together.  | 
+ **bucketNames** | **[]string** | Performs the operation on the single bucket specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;bucket_ids&#x60; or &#x60;bucket_names&#x60; parameter is required, but they cannot be set together.  | 
  **confirmDate** | **bool** | If set to &#x60;true&#x60;, then confirm the date of &#x60;keep_current_version_until&#x60; is correct.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
  **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
- **policyNames** | **[]string** | A comma-separated list of policy names.  | 
+ **policyNames** | **[]string** | Performs the operation on the single policy specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;policy_ids&#x60; or &#x60;policy_names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 
@@ -2086,7 +2088,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -2128,9 +2130,9 @@ Name | Type | Description  | Notes
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
  **cancelInProgressStorageClassTransition** | **bool** | If set to &#x60;true&#x60;, the storage class policy of this file system will be set to the requested storage class policy, even if a transition to a different storage class is in-progress. Setting this parameter to &#x60;true&#x60; is acknowledgement that any in-progress transition on this file system will be cancelled. If not specified, the default value is &#x60;false&#x60;.  | 
  **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
- **ids** | **[]string** | A comma-separated list of resource IDs. If after filtering, there is not at least one resource that matches each of the elements of &#x60;ids&#x60;, then an error is returned. This cannot be provided together with the &#x60;name&#x60; or &#x60;names&#x60; query parameters.  | 
+ **ids** | **[]string** | Performs the operation on the single resource specified by ID. Only one value is supported; specifying multiple IDs in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
  **ignoreUsage** | **bool** | Allow update operations that lead to a &#x60;hard_limit_enabled&#x60; object store account, bucket, or file system with usage over its limiting value. For object store accounts and buckets, the limiting value is that of &#x60;quota_limit&#x60;, and for file systems it is that of &#x60;provisioned&#x60;. The operation can be setting &#x60;hard_limit_enabled&#x60; when usage is higher than the limiting value, modifying the limiting value to a value under usage when &#x60;hard_limit_enabled&#x60;, recovering a destroyed bucket of an object store account that causes an account&#39;s space usage to go over its hard &#x60;quota_limit&#x60;. Also allows update operations that would cause usage of the requested storage class to go over its warning threshold.  | 
- **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
+ **names** | **[]string** | Performs the operation on the single resource specified. Only one value is supported; specifying multiple values in comma-separated format is not allowed. The &#x60;ids&#x60; or &#x60;names&#x60; parameter is required, but they cannot be set together.  | 
 
 ### Return type
 
@@ -2167,7 +2169,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -2253,7 +2255,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -2331,7 +2333,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {

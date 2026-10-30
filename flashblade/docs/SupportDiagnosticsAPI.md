@@ -4,11 +4,11 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**SupportDiagnosticsDetailsGet**](SupportDiagnosticsAPI.md#SupportDiagnosticsDetailsGet) | **Get** /api/2.29/support-diagnostics/details | GET diagnostics details
-[**SupportDiagnosticsGet**](SupportDiagnosticsAPI.md#SupportDiagnosticsGet) | **Get** /api/2.29/support-diagnostics | GET diagnostics list
-[**SupportDiagnosticsPost**](SupportDiagnosticsAPI.md#SupportDiagnosticsPost) | **Post** /api/2.29/support-diagnostics | Start a diagnostic task
-[**SupportDiagnosticsSettingsGet**](SupportDiagnosticsAPI.md#SupportDiagnosticsSettingsGet) | **Get** /api/2.29/support-diagnostics/settings | List diagnostics tools version and last updated date
-[**SupportDiagnosticsSettingsPatch**](SupportDiagnosticsAPI.md#SupportDiagnosticsSettingsPatch) | **Patch** /api/2.29/support-diagnostics/settings | Update diagnostics tools
+[**SupportDiagnosticsDetailsGet**](SupportDiagnosticsAPI.md#SupportDiagnosticsDetailsGet) | **Get** /api/2.30/support-diagnostics/details | GET diagnostics details
+[**SupportDiagnosticsGet**](SupportDiagnosticsAPI.md#SupportDiagnosticsGet) | **Get** /api/2.30/support-diagnostics | GET diagnostics list
+[**SupportDiagnosticsPost**](SupportDiagnosticsAPI.md#SupportDiagnosticsPost) | **Post** /api/2.30/support-diagnostics | Start a diagnostic task
+[**SupportDiagnosticsSettingsGet**](SupportDiagnosticsAPI.md#SupportDiagnosticsSettingsGet) | **Get** /api/2.30/support-diagnostics/settings | List diagnostics tools version and last updated date
+[**SupportDiagnosticsSettingsPatch**](SupportDiagnosticsAPI.md#SupportDiagnosticsSettingsPatch) | **Patch** /api/2.30/support-diagnostics/settings | Update diagnostics tools
 
 
 
@@ -29,7 +29,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -111,7 +111,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -193,7 +193,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -270,7 +270,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
@@ -351,7 +351,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_29"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flashblade/FB_2_30"
 )
 
 func main() {
