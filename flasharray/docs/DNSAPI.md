@@ -4,10 +4,10 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DnsDelete**](DNSAPI.md#DnsDelete) | **Delete** /api/2.58/dns | Delete DNS configuration
-[**DnsGet**](DNSAPI.md#DnsGet) | **Get** /api/2.58/dns | List DNS parameters
-[**DnsPatch**](DNSAPI.md#DnsPatch) | **Patch** /api/2.58/dns | Modify DNS parameters
-[**DnsPost**](DNSAPI.md#DnsPost) | **Post** /api/2.58/dns | Create DNS configuration
+[**DnsDelete**](DNSAPI.md#DnsDelete) | **Delete** /api/2.59/dns | Delete DNS configuration
+[**DnsGet**](DNSAPI.md#DnsGet) | **Get** /api/2.59/dns | List DNS parameters
+[**DnsPatch**](DNSAPI.md#DnsPatch) | **Patch** /api/2.59/dns | Modify DNS parameters
+[**DnsPost**](DNSAPI.md#DnsPost) | **Post** /api/2.59/dns | Create DNS configuration
 
 
 
@@ -28,7 +28,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -104,7 +104,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -189,7 +189,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -268,7 +268,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

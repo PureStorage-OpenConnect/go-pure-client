@@ -4,10 +4,10 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DirectorySnapshotsDelete**](DirectorySnapshotsAPI.md#DirectorySnapshotsDelete) | **Delete** /api/2.58/directory-snapshots | Delete directory snapshot
-[**DirectorySnapshotsGet**](DirectorySnapshotsAPI.md#DirectorySnapshotsGet) | **Get** /api/2.58/directory-snapshots | List directory snapshots
-[**DirectorySnapshotsPatch**](DirectorySnapshotsAPI.md#DirectorySnapshotsPatch) | **Patch** /api/2.58/directory-snapshots | Modify directory snapshot
-[**DirectorySnapshotsPost**](DirectorySnapshotsAPI.md#DirectorySnapshotsPost) | **Post** /api/2.58/directory-snapshots | Create directory snapshot
+[**DirectorySnapshotsDelete**](DirectorySnapshotsAPI.md#DirectorySnapshotsDelete) | **Delete** /api/2.59/directory-snapshots | Delete directory snapshot
+[**DirectorySnapshotsGet**](DirectorySnapshotsAPI.md#DirectorySnapshotsGet) | **Get** /api/2.59/directory-snapshots | List directory snapshots
+[**DirectorySnapshotsPatch**](DirectorySnapshotsAPI.md#DirectorySnapshotsPatch) | **Patch** /api/2.59/directory-snapshots | Modify directory snapshot
+[**DirectorySnapshotsPost**](DirectorySnapshotsAPI.md#DirectorySnapshotsPost) | **Post** /api/2.59/directory-snapshots | Create directory snapshot
 
 
 
@@ -28,7 +28,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -105,7 +105,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -195,7 +195,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -275,7 +275,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

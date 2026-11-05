@@ -4,25 +4,25 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**VolumesBatchPost**](VolumesAPI.md#VolumesBatchPost) | **Post** /api/2.58/volumes/batch | Create or copy volumes and upsert tags
-[**VolumesBatchTestPost**](VolumesAPI.md#VolumesBatchTestPost) | **Post** /api/2.58/volumes/batch/test | Create an attempt to copy volumes and upsert tags
-[**VolumesDelete**](VolumesAPI.md#VolumesDelete) | **Delete** /api/2.58/volumes | Delete a volume
-[**VolumesDiffGet**](VolumesAPI.md#VolumesDiffGet) | **Get** /api/2.58/volumes/diff | List volume diffs
-[**VolumesGet**](VolumesAPI.md#VolumesGet) | **Get** /api/2.58/volumes | List volumes
-[**VolumesPatch**](VolumesAPI.md#VolumesPatch) | **Patch** /api/2.58/volumes | Modify a volume
-[**VolumesPerformanceByArrayGet**](VolumesAPI.md#VolumesPerformanceByArrayGet) | **Get** /api/2.58/volumes/performance/by-array | List volume performance data by array
-[**VolumesPerformanceGet**](VolumesAPI.md#VolumesPerformanceGet) | **Get** /api/2.58/volumes/performance | List volume performance data
-[**VolumesPost**](VolumesAPI.md#VolumesPost) | **Post** /api/2.58/volumes | Create or copy a volume and upsert tags
-[**VolumesProtectionGroupsDelete**](VolumesAPI.md#VolumesProtectionGroupsDelete) | **Delete** /api/2.58/volumes/protection-groups | Delete a volume from a protection group
-[**VolumesProtectionGroupsGet**](VolumesAPI.md#VolumesProtectionGroupsGet) | **Get** /api/2.58/volumes/protection-groups | List volumes that are members of protection groups
-[**VolumesProtectionGroupsPost**](VolumesAPI.md#VolumesProtectionGroupsPost) | **Post** /api/2.58/volumes/protection-groups | Create a volume and add it to a protection group
-[**VolumesQosGet**](VolumesAPI.md#VolumesQosGet) | **Get** /api/2.58/volumes/qos | List volume QoS config
-[**VolumesSpaceGet**](VolumesAPI.md#VolumesSpaceGet) | **Get** /api/2.58/volumes/space | List volume space information
-[**VolumesTagsBatchPut**](VolumesAPI.md#VolumesTagsBatchPut) | **Put** /api/2.58/volumes/tags/batch | Update tags
-[**VolumesTagsDelete**](VolumesAPI.md#VolumesTagsDelete) | **Delete** /api/2.58/volumes/tags | Delete tags
-[**VolumesTagsGet**](VolumesAPI.md#VolumesTagsGet) | **Get** /api/2.58/volumes/tags | List tags
-[**VolumesTestPost**](VolumesAPI.md#VolumesTestPost) | **Post** /api/2.58/volumes/test | Create a dry run attempt to copy a volume
-[**VolumesVolumeGroupsGet**](VolumesAPI.md#VolumesVolumeGroupsGet) | **Get** /api/2.58/volumes/volume-groups | List volumes that are in volume groups
+[**VolumesBatchPost**](VolumesAPI.md#VolumesBatchPost) | **Post** /api/2.59/volumes/batch | Create or copy volumes and upsert tags
+[**VolumesBatchTestPost**](VolumesAPI.md#VolumesBatchTestPost) | **Post** /api/2.59/volumes/batch/test | Create an attempt to copy volumes and upsert tags
+[**VolumesDelete**](VolumesAPI.md#VolumesDelete) | **Delete** /api/2.59/volumes | Delete a volume
+[**VolumesDiffGet**](VolumesAPI.md#VolumesDiffGet) | **Get** /api/2.59/volumes/diff | List volume diffs
+[**VolumesGet**](VolumesAPI.md#VolumesGet) | **Get** /api/2.59/volumes | List volumes
+[**VolumesPatch**](VolumesAPI.md#VolumesPatch) | **Patch** /api/2.59/volumes | Modify a volume
+[**VolumesPerformanceByArrayGet**](VolumesAPI.md#VolumesPerformanceByArrayGet) | **Get** /api/2.59/volumes/performance/by-array | List volume performance data by array
+[**VolumesPerformanceGet**](VolumesAPI.md#VolumesPerformanceGet) | **Get** /api/2.59/volumes/performance | List volume performance data
+[**VolumesPost**](VolumesAPI.md#VolumesPost) | **Post** /api/2.59/volumes | Create or copy a volume and upsert tags
+[**VolumesProtectionGroupsDelete**](VolumesAPI.md#VolumesProtectionGroupsDelete) | **Delete** /api/2.59/volumes/protection-groups | Delete a volume from a protection group
+[**VolumesProtectionGroupsGet**](VolumesAPI.md#VolumesProtectionGroupsGet) | **Get** /api/2.59/volumes/protection-groups | List volumes that are members of protection groups
+[**VolumesProtectionGroupsPost**](VolumesAPI.md#VolumesProtectionGroupsPost) | **Post** /api/2.59/volumes/protection-groups | Create a volume and add it to a protection group
+[**VolumesQosGet**](VolumesAPI.md#VolumesQosGet) | **Get** /api/2.59/volumes/qos | List volume QoS config
+[**VolumesSpaceGet**](VolumesAPI.md#VolumesSpaceGet) | **Get** /api/2.59/volumes/space | List volume space information
+[**VolumesTagsBatchPut**](VolumesAPI.md#VolumesTagsBatchPut) | **Put** /api/2.59/volumes/tags/batch | Update tags
+[**VolumesTagsDelete**](VolumesAPI.md#VolumesTagsDelete) | **Delete** /api/2.59/volumes/tags | Delete tags
+[**VolumesTagsGet**](VolumesAPI.md#VolumesTagsGet) | **Get** /api/2.59/volumes/tags | List tags
+[**VolumesTestPost**](VolumesAPI.md#VolumesTestPost) | **Post** /api/2.59/volumes/test | Create a dry run attempt to copy a volume
+[**VolumesVolumeGroupsGet**](VolumesAPI.md#VolumesVolumeGroupsGet) | **Get** /api/2.59/volumes/volume-groups | List volumes that are in volume groups
 
 
 
@@ -43,7 +43,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -124,7 +124,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -205,7 +205,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -282,7 +282,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -374,7 +374,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -462,7 +462,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -547,7 +547,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -638,7 +638,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -729,7 +729,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -813,7 +813,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -892,7 +892,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -981,7 +981,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1062,7 +1062,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1152,7 +1152,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1243,7 +1243,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1323,7 +1323,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1402,7 +1402,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1490,7 +1490,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1574,7 +1574,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **MoreItemsRemaining** | Pointer to **bool** | Returns a value of &#x60;true&#x60; if subsequent items can be retrieved.  | [optional] 
 **TotalItemCount** | Pointer to **int32** | The total number of records after applying all filter query parameters. The &#x60;total_item_count&#x60; will be calculated if and only if the corresponding query parameter &#x60;total_item_count&#x60; is set to &#x60;true&#x60;. If this query parameter is not set or set to &#x60;false&#x60;, a value of &#x60;null&#x60; will be returned.  | [optional] 
 **Items** | Pointer to [**[]VirtualMachine**](VirtualMachine.md) | Displays a list of all items after filtering. The values are displayed for each name if meaningful.  | [optional] 
+**Errors** | Pointer to [**[]ErrorcontextresponseErrors**](ErrorcontextresponseErrors.md) | The list of errors encountered when attempting to perform an operation. | [optional] [readonly] 
 
 ## Methods
 
@@ -127,6 +128,31 @@ SetItems sets Items field to given value.
 `func (o *VirtualMachineGetResponse) HasItems() bool`
 
 HasItems returns a boolean if a field has been set.
+
+### GetErrors
+
+`func (o *VirtualMachineGetResponse) GetErrors() []ErrorcontextresponseErrors`
+
+GetErrors returns the Errors field if non-nil, zero value otherwise.
+
+### GetErrorsOk
+
+`func (o *VirtualMachineGetResponse) GetErrorsOk() (*[]ErrorcontextresponseErrors, bool)`
+
+GetErrorsOk returns a tuple with the Errors field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetErrors
+
+`func (o *VirtualMachineGetResponse) SetErrors(v []ErrorcontextresponseErrors)`
+
+SetErrors sets Errors field to given value.
+
+### HasErrors
+
+`func (o *VirtualMachineGetResponse) HasErrors() bool`
+
+HasErrors returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

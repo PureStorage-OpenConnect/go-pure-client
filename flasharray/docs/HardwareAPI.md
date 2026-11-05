@@ -4,8 +4,8 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**HardwareGet**](HardwareAPI.md#HardwareGet) | **Get** /api/2.58/hardware | List hardware component information
-[**HardwarePatch**](HardwareAPI.md#HardwarePatch) | **Patch** /api/2.58/hardware | Modify visual identification
+[**HardwareGet**](HardwareAPI.md#HardwareGet) | **Get** /api/2.59/hardware | List hardware component information
+[**HardwarePatch**](HardwareAPI.md#HardwarePatch) | **Patch** /api/2.59/hardware | Modify visual identification
 
 
 
@@ -26,7 +26,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -108,7 +108,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ComponentAddress** | Pointer to **string** | Address of the component running the test. | [optional] 
-**ComponentName** | Pointer to **string** | Name of the component running the test. | [optional] 
-**Description** | Pointer to **string** | Description of what is being tested. | [optional] 
+**Context** | Pointer to [**FixedReferenceWithType**](FixedReferenceWithType.md) | The context in which the operation was performed.  Valid values include a reference to any array which is a member of the same fleet or to the fleet itself.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | [optional] [readonly] 
+**ComponentAddress** | Pointer to **string** | The address of the component running the test. | [optional] 
+**ComponentName** | Pointer to **string** | The name of the component running the test. | [optional] 
+**Description** | Pointer to **string** | The description of what is being tested. | [optional] 
 **Destination** | Pointer to **string** | The URI of the target server being tested. | [optional] 
-**Enabled** | Pointer to **bool** | Expresses whether the service is enabled or not. | [optional] 
+**Enabled** | Pointer to **bool** | Indicates whether the service is enabled. | [optional] 
 **ResultDetails** | Pointer to **string** | Additional information about the test result. | [optional] 
-**Success** | Pointer to **bool** | Expresses whether communication between the FlashArray and the KMIP server succeeded or not.  | [optional] 
-**TestType** | Pointer to **string** | Description of what is being tested. | [optional] 
+**Success** | Pointer to **bool** | Indicates whether communication between the FlashArray and the KMIP server succeeded.  | [optional] 
+**TestType** | Pointer to **string** | The description of what is being tested. | [optional] 
 
 ## Methods
 
@@ -31,6 +32,31 @@ will change when the set of required properties is changed
 NewKmipTestResultWithDefaults instantiates a new KmipTestResult object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetContext
+
+`func (o *KmipTestResult) GetContext() FixedReferenceWithType`
+
+GetContext returns the Context field if non-nil, zero value otherwise.
+
+### GetContextOk
+
+`func (o *KmipTestResult) GetContextOk() (*FixedReferenceWithType, bool)`
+
+GetContextOk returns a tuple with the Context field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetContext
+
+`func (o *KmipTestResult) SetContext(v FixedReferenceWithType)`
+
+SetContext sets Context field to given value.
+
+### HasContext
+
+`func (o *KmipTestResult) HasContext() bool`
+
+HasContext returns a boolean if a field has been set.
 
 ### GetComponentAddress
 

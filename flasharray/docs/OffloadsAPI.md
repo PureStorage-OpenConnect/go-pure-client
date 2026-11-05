@@ -4,10 +4,10 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**OffloadsDelete**](OffloadsAPI.md#OffloadsDelete) | **Delete** /api/2.58/offloads | Delete offload target
-[**OffloadsGet**](OffloadsAPI.md#OffloadsGet) | **Get** /api/2.58/offloads | List offload targets
-[**OffloadsPatch**](OffloadsAPI.md#OffloadsPatch) | **Patch** /api/2.58/offloads | Patch offload target
-[**OffloadsPost**](OffloadsAPI.md#OffloadsPost) | **Post** /api/2.58/offloads | Create offload target
+[**OffloadsDelete**](OffloadsAPI.md#OffloadsDelete) | **Delete** /api/2.59/offloads | Delete offload target
+[**OffloadsGet**](OffloadsAPI.md#OffloadsGet) | **Get** /api/2.59/offloads | List offload targets
+[**OffloadsPatch**](OffloadsAPI.md#OffloadsPatch) | **Patch** /api/2.59/offloads | Patch offload target
+[**OffloadsPost**](OffloadsAPI.md#OffloadsPost) | **Post** /api/2.59/offloads | Create offload target
 
 
 
@@ -28,7 +28,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -104,7 +104,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -191,7 +191,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -270,7 +270,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

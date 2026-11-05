@@ -4,18 +4,18 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**LogTargetsFileDelete**](LogTargetsAPI.md#LogTargetsFileDelete) | **Delete** /api/2.58/log-targets/file | Delete file log target
-[**LogTargetsFileGet**](LogTargetsAPI.md#LogTargetsFileGet) | **Get** /api/2.58/log-targets/file | List file log targets
-[**LogTargetsFilePatch**](LogTargetsAPI.md#LogTargetsFilePatch) | **Patch** /api/2.58/log-targets/file | Modify file log target
-[**LogTargetsFilePost**](LogTargetsAPI.md#LogTargetsFilePost) | **Post** /api/2.58/log-targets/file | Create file log target
-[**LogTargetsGet**](LogTargetsAPI.md#LogTargetsGet) | **Get** /api/2.58/log-targets | List log targets
-[**LogTargetsSyslogDelete**](LogTargetsAPI.md#LogTargetsSyslogDelete) | **Delete** /api/2.58/log-targets/syslog | Delete syslog server
-[**LogTargetsSyslogGet**](LogTargetsAPI.md#LogTargetsSyslogGet) | **Get** /api/2.58/log-targets/syslog | List syslog servers
-[**LogTargetsSyslogPatch**](LogTargetsAPI.md#LogTargetsSyslogPatch) | **Patch** /api/2.58/log-targets/syslog | Modify syslog server
-[**LogTargetsSyslogPost**](LogTargetsAPI.md#LogTargetsSyslogPost) | **Post** /api/2.58/log-targets/syslog | Create syslog server
-[**LogTargetsSyslogSettingsGet**](LogTargetsAPI.md#LogTargetsSyslogSettingsGet) | **Get** /api/2.58/log-targets/syslog/settings | List syslog settings
-[**LogTargetsSyslogSettingsPatch**](LogTargetsAPI.md#LogTargetsSyslogSettingsPatch) | **Patch** /api/2.58/log-targets/syslog/settings | Modify syslog settings
-[**LogTargetsSyslogTestGet**](LogTargetsAPI.md#LogTargetsSyslogTestGet) | **Get** /api/2.58/log-targets/syslog/test | List syslog server test results
+[**LogTargetsFileDelete**](LogTargetsAPI.md#LogTargetsFileDelete) | **Delete** /api/2.59/log-targets/file | Delete file log target
+[**LogTargetsFileGet**](LogTargetsAPI.md#LogTargetsFileGet) | **Get** /api/2.59/log-targets/file | List file log targets
+[**LogTargetsFilePatch**](LogTargetsAPI.md#LogTargetsFilePatch) | **Patch** /api/2.59/log-targets/file | Modify file log target
+[**LogTargetsFilePost**](LogTargetsAPI.md#LogTargetsFilePost) | **Post** /api/2.59/log-targets/file | Create file log target
+[**LogTargetsGet**](LogTargetsAPI.md#LogTargetsGet) | **Get** /api/2.59/log-targets | List log targets
+[**LogTargetsSyslogDelete**](LogTargetsAPI.md#LogTargetsSyslogDelete) | **Delete** /api/2.59/log-targets/syslog | Delete syslog server
+[**LogTargetsSyslogGet**](LogTargetsAPI.md#LogTargetsSyslogGet) | **Get** /api/2.59/log-targets/syslog | List syslog servers
+[**LogTargetsSyslogPatch**](LogTargetsAPI.md#LogTargetsSyslogPatch) | **Patch** /api/2.59/log-targets/syslog | Modify syslog server
+[**LogTargetsSyslogPost**](LogTargetsAPI.md#LogTargetsSyslogPost) | **Post** /api/2.59/log-targets/syslog | Create syslog server
+[**LogTargetsSyslogSettingsGet**](LogTargetsAPI.md#LogTargetsSyslogSettingsGet) | **Get** /api/2.59/log-targets/syslog/settings | List syslog settings
+[**LogTargetsSyslogSettingsPatch**](LogTargetsAPI.md#LogTargetsSyslogSettingsPatch) | **Patch** /api/2.59/log-targets/syslog/settings | Modify syslog settings
+[**LogTargetsSyslogTestGet**](LogTargetsAPI.md#LogTargetsSyslogTestGet) | **Get** /api/2.59/log-targets/syslog/test | List syslog server test results
 
 
 
@@ -36,7 +36,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -112,7 +112,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -197,7 +197,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -276,7 +276,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -355,7 +355,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -440,7 +440,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -516,7 +516,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -601,7 +601,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -680,7 +680,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -759,7 +759,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -843,7 +843,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -921,7 +921,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

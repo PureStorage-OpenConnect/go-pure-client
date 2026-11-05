@@ -4,16 +4,16 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ProtectionGroupSnapshotsDelete**](ProtectionGroupSnapshotsAPI.md#ProtectionGroupSnapshotsDelete) | **Delete** /api/2.58/protection-group-snapshots | Delete a protection group snapshot
-[**ProtectionGroupSnapshotsGet**](ProtectionGroupSnapshotsAPI.md#ProtectionGroupSnapshotsGet) | **Get** /api/2.58/protection-group-snapshots | List protection group snapshots
-[**ProtectionGroupSnapshotsPatch**](ProtectionGroupSnapshotsAPI.md#ProtectionGroupSnapshotsPatch) | **Patch** /api/2.58/protection-group-snapshots | Modify a protection group snapshot
-[**ProtectionGroupSnapshotsPost**](ProtectionGroupSnapshotsAPI.md#ProtectionGroupSnapshotsPost) | **Post** /api/2.58/protection-group-snapshots | Create a protection group snapshot and create tags.
-[**ProtectionGroupSnapshotsReplicaPost**](ProtectionGroupSnapshotsAPI.md#ProtectionGroupSnapshotsReplicaPost) | **Post** /api/2.58/protection-group-snapshots/replica | Create an action to send protection group snapshots
-[**ProtectionGroupSnapshotsTagsBatchPut**](ProtectionGroupSnapshotsAPI.md#ProtectionGroupSnapshotsTagsBatchPut) | **Put** /api/2.58/protection-group-snapshots/tags/batch | Update tags
-[**ProtectionGroupSnapshotsTagsDelete**](ProtectionGroupSnapshotsAPI.md#ProtectionGroupSnapshotsTagsDelete) | **Delete** /api/2.58/protection-group-snapshots/tags | Delete tags
-[**ProtectionGroupSnapshotsTagsGet**](ProtectionGroupSnapshotsAPI.md#ProtectionGroupSnapshotsTagsGet) | **Get** /api/2.58/protection-group-snapshots/tags | List tags
-[**ProtectionGroupSnapshotsTestPost**](ProtectionGroupSnapshotsAPI.md#ProtectionGroupSnapshotsTestPost) | **Post** /api/2.58/protection-group-snapshots/test | Create an attempt to take protection group snapshot
-[**ProtectionGroupSnapshotsTransferGet**](ProtectionGroupSnapshotsAPI.md#ProtectionGroupSnapshotsTransferGet) | **Get** /api/2.58/protection-group-snapshots/transfer | List protection group snapshots with transfer statistics
+[**ProtectionGroupSnapshotsDelete**](ProtectionGroupSnapshotsAPI.md#ProtectionGroupSnapshotsDelete) | **Delete** /api/2.59/protection-group-snapshots | Delete a protection group snapshot
+[**ProtectionGroupSnapshotsGet**](ProtectionGroupSnapshotsAPI.md#ProtectionGroupSnapshotsGet) | **Get** /api/2.59/protection-group-snapshots | List protection group snapshots
+[**ProtectionGroupSnapshotsPatch**](ProtectionGroupSnapshotsAPI.md#ProtectionGroupSnapshotsPatch) | **Patch** /api/2.59/protection-group-snapshots | Modify a protection group snapshot
+[**ProtectionGroupSnapshotsPost**](ProtectionGroupSnapshotsAPI.md#ProtectionGroupSnapshotsPost) | **Post** /api/2.59/protection-group-snapshots | Create a protection group snapshot and create tags.
+[**ProtectionGroupSnapshotsReplicaPost**](ProtectionGroupSnapshotsAPI.md#ProtectionGroupSnapshotsReplicaPost) | **Post** /api/2.59/protection-group-snapshots/replica | Create an action to send protection group snapshots
+[**ProtectionGroupSnapshotsTagsBatchPut**](ProtectionGroupSnapshotsAPI.md#ProtectionGroupSnapshotsTagsBatchPut) | **Put** /api/2.59/protection-group-snapshots/tags/batch | Update tags
+[**ProtectionGroupSnapshotsTagsDelete**](ProtectionGroupSnapshotsAPI.md#ProtectionGroupSnapshotsTagsDelete) | **Delete** /api/2.59/protection-group-snapshots/tags | Delete tags
+[**ProtectionGroupSnapshotsTagsGet**](ProtectionGroupSnapshotsAPI.md#ProtectionGroupSnapshotsTagsGet) | **Get** /api/2.59/protection-group-snapshots/tags | List tags
+[**ProtectionGroupSnapshotsTestPost**](ProtectionGroupSnapshotsAPI.md#ProtectionGroupSnapshotsTestPost) | **Post** /api/2.59/protection-group-snapshots/test | Create an attempt to take protection group snapshot
+[**ProtectionGroupSnapshotsTransferGet**](ProtectionGroupSnapshotsAPI.md#ProtectionGroupSnapshotsTransferGet) | **Get** /api/2.59/protection-group-snapshots/transfer | List protection group snapshots with transfer statistics
 
 
 
@@ -34,7 +34,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -111,7 +111,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -201,7 +201,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -281,7 +281,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -366,7 +366,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -447,7 +447,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -527,7 +527,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -606,7 +606,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -694,7 +694,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -779,7 +779,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

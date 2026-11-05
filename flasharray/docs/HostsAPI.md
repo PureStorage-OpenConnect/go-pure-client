@@ -4,24 +4,24 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**HostsDelete**](HostsAPI.md#HostsDelete) | **Delete** /api/2.58/hosts | Delete a host
-[**HostsGet**](HostsAPI.md#HostsGet) | **Get** /api/2.58/hosts | List hosts
-[**HostsHostGroupsDelete**](HostsAPI.md#HostsHostGroupsDelete) | **Delete** /api/2.58/hosts/host-groups | Delete a membership from a host group
-[**HostsHostGroupsGet**](HostsAPI.md#HostsHostGroupsGet) | **Get** /api/2.58/hosts/host-groups | List hosts that are associated with host groups
-[**HostsHostGroupsPost**](HostsAPI.md#HostsHostGroupsPost) | **Post** /api/2.58/hosts/host-groups | Create a membership to a host group
-[**HostsPatch**](HostsAPI.md#HostsPatch) | **Patch** /api/2.58/hosts | Modify a host
-[**HostsPerformanceBalanceGet**](HostsAPI.md#HostsPerformanceBalanceGet) | **Get** /api/2.58/hosts/performance/balance | List host performance balance
-[**HostsPerformanceByArrayGet**](HostsAPI.md#HostsPerformanceByArrayGet) | **Get** /api/2.58/hosts/performance/by-array | List host performance data by array
-[**HostsPerformanceGet**](HostsAPI.md#HostsPerformanceGet) | **Get** /api/2.58/hosts/performance | List host performance data
-[**HostsPost**](HostsAPI.md#HostsPost) | **Post** /api/2.58/hosts | Create a host and upsert tags
-[**HostsProtectionGroupsDelete**](HostsAPI.md#HostsProtectionGroupsDelete) | **Delete** /api/2.58/hosts/protection-groups | Delete a host from a protection group
-[**HostsProtectionGroupsGet**](HostsAPI.md#HostsProtectionGroupsGet) | **Get** /api/2.58/hosts/protection-groups | List hosts that are members of protection groups
-[**HostsProtectionGroupsPost**](HostsAPI.md#HostsProtectionGroupsPost) | **Post** /api/2.58/hosts/protection-groups | Create a host
-[**HostsQosGet**](HostsAPI.md#HostsQosGet) | **Get** /api/2.58/hosts/qos | List host QoS config
-[**HostsSpaceGet**](HostsAPI.md#HostsSpaceGet) | **Get** /api/2.58/hosts/space | List host space information
-[**HostsTagsBatchPut**](HostsAPI.md#HostsTagsBatchPut) | **Put** /api/2.58/hosts/tags/batch | Update tags
-[**HostsTagsDelete**](HostsAPI.md#HostsTagsDelete) | **Delete** /api/2.58/hosts/tags | Delete tags
-[**HostsTagsGet**](HostsAPI.md#HostsTagsGet) | **Get** /api/2.58/hosts/tags | List tags
+[**HostsDelete**](HostsAPI.md#HostsDelete) | **Delete** /api/2.59/hosts | Delete a host
+[**HostsGet**](HostsAPI.md#HostsGet) | **Get** /api/2.59/hosts | List hosts
+[**HostsHostGroupsDelete**](HostsAPI.md#HostsHostGroupsDelete) | **Delete** /api/2.59/hosts/host-groups | Delete a membership from a host group
+[**HostsHostGroupsGet**](HostsAPI.md#HostsHostGroupsGet) | **Get** /api/2.59/hosts/host-groups | List hosts that are associated with host groups
+[**HostsHostGroupsPost**](HostsAPI.md#HostsHostGroupsPost) | **Post** /api/2.59/hosts/host-groups | Create a membership to a host group
+[**HostsPatch**](HostsAPI.md#HostsPatch) | **Patch** /api/2.59/hosts | Modify a host
+[**HostsPerformanceBalanceGet**](HostsAPI.md#HostsPerformanceBalanceGet) | **Get** /api/2.59/hosts/performance/balance | List host performance balance
+[**HostsPerformanceByArrayGet**](HostsAPI.md#HostsPerformanceByArrayGet) | **Get** /api/2.59/hosts/performance/by-array | List host performance data by array
+[**HostsPerformanceGet**](HostsAPI.md#HostsPerformanceGet) | **Get** /api/2.59/hosts/performance | List host performance data
+[**HostsPost**](HostsAPI.md#HostsPost) | **Post** /api/2.59/hosts | Create a host and upsert tags
+[**HostsProtectionGroupsDelete**](HostsAPI.md#HostsProtectionGroupsDelete) | **Delete** /api/2.59/hosts/protection-groups | Delete a host from a protection group
+[**HostsProtectionGroupsGet**](HostsAPI.md#HostsProtectionGroupsGet) | **Get** /api/2.59/hosts/protection-groups | List hosts that are members of protection groups
+[**HostsProtectionGroupsPost**](HostsAPI.md#HostsProtectionGroupsPost) | **Post** /api/2.59/hosts/protection-groups | Create a host
+[**HostsQosGet**](HostsAPI.md#HostsQosGet) | **Get** /api/2.59/hosts/qos | List host QoS config
+[**HostsSpaceGet**](HostsAPI.md#HostsSpaceGet) | **Get** /api/2.59/hosts/space | List host space information
+[**HostsTagsBatchPut**](HostsAPI.md#HostsTagsBatchPut) | **Put** /api/2.59/hosts/tags/batch | Update tags
+[**HostsTagsDelete**](HostsAPI.md#HostsTagsDelete) | **Delete** /api/2.59/hosts/tags | Delete tags
+[**HostsTagsGet**](HostsAPI.md#HostsTagsGet) | **Get** /api/2.59/hosts/tags | List tags
 
 
 
@@ -42,7 +42,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -118,7 +118,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -204,7 +204,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -281,7 +281,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -367,7 +367,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -446,7 +446,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -530,7 +530,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -615,7 +615,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -704,7 +704,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -793,7 +793,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -872,7 +872,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -950,7 +950,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1037,7 +1037,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1117,7 +1117,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1207,7 +1207,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1292,7 +1292,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1372,7 +1372,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1451,7 +1451,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

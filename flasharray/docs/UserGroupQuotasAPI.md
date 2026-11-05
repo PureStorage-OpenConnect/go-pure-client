@@ -4,8 +4,8 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DirectoryGroupQuotasGet**](UserGroupQuotasAPI.md#DirectoryGroupQuotasGet) | **Get** /api/2.58/directory-group-quotas | List group quotas.
-[**DirectoryUserQuotasGet**](UserGroupQuotasAPI.md#DirectoryUserQuotasGet) | **Get** /api/2.58/directory-user-quotas | List user quotas.
+[**DirectoryGroupQuotasGet**](UserGroupQuotasAPI.md#DirectoryGroupQuotasGet) | **Get** /api/2.59/directory-group-quotas | List group quotas.
+[**DirectoryUserQuotasGet**](UserGroupQuotasAPI.md#DirectoryUserQuotasGet) | **Get** /api/2.59/directory-user-quotas | List user quotas.
 
 
 
@@ -26,7 +26,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -117,7 +117,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

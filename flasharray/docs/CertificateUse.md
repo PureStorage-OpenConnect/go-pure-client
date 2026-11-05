@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | Pointer to **string** | A globally unique, system-generated ID. The ID cannot be modified and cannot refer to another resource.  | [optional] [readonly] 
 **Name** | Pointer to **string** | A locally unique, system-generated name. The name cannot be modified.  | [optional] [readonly] 
+**Context** | Pointer to [**FixedReferenceWithType**](FixedReferenceWithType.md) | The context in which the operation was performed.  Valid values include a reference to any array which is a member of the same fleet or to the fleet itself.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | [optional] [readonly] 
 **Group** | Pointer to [**FixedReferenceWithType**](FixedReferenceWithType.md) | A reference to the certificate group that is being used, if any, where this certificate is a member of the certificate-group. Returns &#x60;null&#x60; if the referenced user object is not associated with a group and is directly using this certificate.  | [optional] 
 **Use** | Pointer to [**FixedReferenceWithType**](FixedReferenceWithType.md) | A reference to an object using this certificate. | [optional] 
 
@@ -77,6 +78,31 @@ SetName sets Name field to given value.
 `func (o *CertificateUse) HasName() bool`
 
 HasName returns a boolean if a field has been set.
+
+### GetContext
+
+`func (o *CertificateUse) GetContext() FixedReferenceWithType`
+
+GetContext returns the Context field if non-nil, zero value otherwise.
+
+### GetContextOk
+
+`func (o *CertificateUse) GetContextOk() (*FixedReferenceWithType, bool)`
+
+GetContextOk returns a tuple with the Context field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetContext
+
+`func (o *CertificateUse) SetContext(v FixedReferenceWithType)`
+
+SetContext sets Context field to given value.
+
+### HasContext
+
+`func (o *CertificateUse) HasContext() bool`
+
+HasContext returns a boolean if a field has been set.
 
 ### GetGroup
 

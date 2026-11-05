@@ -4,19 +4,19 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CertificateGroupsCertificatesDelete**](CertificateGroupsAPI.md#CertificateGroupsCertificatesDelete) | **Delete** /api/2.58/certificate-groups/certificates | Delete certificate-groups or certificates
-[**CertificateGroupsCertificatesGet**](CertificateGroupsAPI.md#CertificateGroupsCertificatesGet) | **Get** /api/2.58/certificate-groups/certificates | List  certificate-groups and certificates
-[**CertificateGroupsCertificatesPost**](CertificateGroupsAPI.md#CertificateGroupsCertificatesPost) | **Post** /api/2.58/certificate-groups/certificates | Create certificate-groups/certificates
-[**CertificateGroupsDelete**](CertificateGroupsAPI.md#CertificateGroupsDelete) | **Delete** /api/2.58/certificate-groups | Delete certificate-groups
-[**CertificateGroupsGet**](CertificateGroupsAPI.md#CertificateGroupsGet) | **Get** /api/2.58/certificate-groups | List certificate-groups
-[**CertificateGroupsPost**](CertificateGroupsAPI.md#CertificateGroupsPost) | **Post** /api/2.58/certificate-groups | Create certificate-groups
-[**CertificateGroupsUsesGet**](CertificateGroupsAPI.md#CertificateGroupsUsesGet) | **Get** /api/2.58/certificate-groups/uses | List  certificate-groups/uses
+[**CertificateGroupsCertificatesDelete**](CertificateGroupsAPI.md#CertificateGroupsCertificatesDelete) | **Delete** /api/2.59/certificate-groups/certificates | Delete certificate-groups or certificates
+[**CertificateGroupsCertificatesGet**](CertificateGroupsAPI.md#CertificateGroupsCertificatesGet) | **Get** /api/2.59/certificate-groups/certificates | List  certificate-groups and certificates
+[**CertificateGroupsCertificatesPost**](CertificateGroupsAPI.md#CertificateGroupsCertificatesPost) | **Post** /api/2.59/certificate-groups/certificates | Create certificate-groups/certificates
+[**CertificateGroupsDelete**](CertificateGroupsAPI.md#CertificateGroupsDelete) | **Delete** /api/2.59/certificate-groups | Delete certificate-groups
+[**CertificateGroupsGet**](CertificateGroupsAPI.md#CertificateGroupsGet) | **Get** /api/2.59/certificate-groups | List certificate-groups
+[**CertificateGroupsPost**](CertificateGroupsAPI.md#CertificateGroupsPost) | **Post** /api/2.59/certificate-groups | Create certificate-groups
+[**CertificateGroupsUsesGet**](CertificateGroupsAPI.md#CertificateGroupsUsesGet) | **Get** /api/2.59/certificate-groups/uses | List  certificate-groups/uses
 
 
 
 ## CertificateGroupsCertificatesDelete
 
-> CertificateGroupsCertificatesDelete(ctx).Authorization(authorization).XRequestID(xRequestID).CertificateGroupIds(certificateGroupIds).CertificateGroupNames(certificateGroupNames).CertificateIds(certificateIds).CertificateNames(certificateNames).Execute()
+> CertificateGroupsCertificatesDelete(ctx).Authorization(authorization).XRequestID(xRequestID).CertificateGroupIds(certificateGroupIds).CertificateGroupNames(certificateGroupNames).CertificateIds(certificateIds).CertificateNames(certificateNames).ContextNames(contextNames).Execute()
 
 Delete certificate-groups or certificates
 
@@ -31,7 +31,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -73,6 +73,7 @@ Name | Type | Description  | Notes
  **certificateGroupNames** | **[]string** | A comma-separated list of certificate group names. If no resource matches each of the elements of &#x60;certificate_group_names&#x60;, then an error is returned. This cannot be provided in conjunction with the &#x60;certificate_group_ids&#x60; parameter.  | 
  **certificateIds** | **[]string** | A comma-separated list of certificate ids. If there is not at least one resource that matches each of the elements of &#x60;certificate_ids&#x60;, then an error is returned. This cannot be provided in conjunction with the &#x60;certificate_names&#x60; parameter.  | 
  **certificateNames** | **[]string** | The names of one or more certificates. Enter multiple names in comma-separated format. For example, &#x60;cert01,cert02&#x60;.  | 
+ **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
 
 ### Return type
 
@@ -94,7 +95,7 @@ Authorization is handled by the Authenticator specified in the configuration and
 
 ## CertificateGroupsCertificatesGet
 
-> CertificateGroupCertificateGetResponse CertificateGroupsCertificatesGet(ctx).Authorization(authorization).XRequestID(xRequestID).CertificateGroupIds(certificateGroupIds).CertificateGroupNames(certificateGroupNames).CertificateIds(certificateIds).CertificateNames(certificateNames).ContinuationToken(continuationToken).Filter(filter).Limit(limit).Offset(offset).Sort(sort).TotalItemCount(totalItemCount).Execute()
+> CertificateGroupCertificateGetResponse CertificateGroupsCertificatesGet(ctx).Authorization(authorization).XRequestID(xRequestID).AllowErrors(allowErrors).CertificateGroupIds(certificateGroupIds).CertificateGroupNames(certificateGroupNames).CertificateIds(certificateIds).CertificateNames(certificateNames).ContextNames(contextNames).ContinuationToken(continuationToken).Filter(filter).Limit(limit).Offset(offset).Sort(sort).TotalItemCount(totalItemCount).Execute()
 
 List  certificate-groups and certificates
 
@@ -109,7 +110,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -149,10 +150,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Access token (in JWT format) required to use any API endpoint (except &#x60;/oauth2&#x60;, &#x60;/login&#x60;, and &#x60;/logout&#x60;)  | 
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
+ **allowErrors** | **bool** | If set to &#x60;true&#x60;, the API will allow the operation to continue even if there are errors. Any errors will be returned in the &#x60;errors&#x60; field of the response. If set to &#x60;false&#x60;, the operation will fail if there are any errors.  | [default to false]
  **certificateGroupIds** | **[]string** | A comma-separated list of certificate group ids. If there is not at least one resource that matches each of the elements of &#x60;certificate_group_ids&#x60;, then an error is returned. This cannot be provided in conjunction with the &#x60;certificate_group_names&#x60; parameter.  | 
  **certificateGroupNames** | **[]string** | A comma-separated list of certificate group names. If no resource matches each of the elements of &#x60;certificate_group_names&#x60;, then an error is returned. This cannot be provided in conjunction with the &#x60;certificate_group_ids&#x60; parameter.  | 
  **certificateIds** | **[]string** | A comma-separated list of certificate ids. If there is not at least one resource that matches each of the elements of &#x60;certificate_ids&#x60;, then an error is returned. This cannot be provided in conjunction with the &#x60;certificate_names&#x60; parameter.  | 
  **certificateNames** | **[]string** | The names of one or more certificates. Enter multiple names in comma-separated format. For example, &#x60;cert01,cert02&#x60;.  | 
+ **contextNames** | **[]string** | Performs the operation on the unique contexts specified.  If specified, each context name must be the name of an array in the same fleet or the name of the fleet itself.  If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  | 
  **continuationToken** | **string** | A token used to retrieve the next page of data with some consistency guaranteed. The token is a Base64 encoded value. Set &#x60;continuation_token&#x60; to the system-generated token taken from the &#x60;x-next-token&#x60; header field of the response. A query has reached its last page when the response does not include a token. Pagination requires the &#x60;limit&#x60; and &#x60;continuation_token&#x60; query parameters.  | 
  **filter** | **string** | Narrows down the results to only the response objects that satisfy the filter criteria.  | 
  **limit** | **int32** | Limits the size of the response to the specified number of objects on each page. To return the total number of resources, set &#x60;limit&#x3D;0&#x60;. The total number of resources is returned as a &#x60;total_item_count&#x60; value. If the page size requested is larger than the system maximum limit, the server returns the maximum limit, disregarding the requested page size.  | 
@@ -180,7 +183,7 @@ Authorization is handled by the Authenticator specified in the configuration and
 
 ## CertificateGroupsCertificatesPost
 
-> CertificateGroupCertificateResponse CertificateGroupsCertificatesPost(ctx).Authorization(authorization).XRequestID(xRequestID).CertificateGroupIds(certificateGroupIds).CertificateGroupNames(certificateGroupNames).CertificateIds(certificateIds).CertificateNames(certificateNames).Execute()
+> CertificateGroupCertificateResponse CertificateGroupsCertificatesPost(ctx).Authorization(authorization).XRequestID(xRequestID).CertificateGroupIds(certificateGroupIds).CertificateGroupNames(certificateGroupNames).CertificateIds(certificateIds).CertificateNames(certificateNames).ContextNames(contextNames).Execute()
 
 Create certificate-groups/certificates
 
@@ -195,7 +198,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -239,6 +242,7 @@ Name | Type | Description  | Notes
  **certificateGroupNames** | **[]string** | A comma-separated list of certificate group names. If no resource matches each of the elements of &#x60;certificate_group_names&#x60;, then an error is returned. This cannot be provided in conjunction with the &#x60;certificate_group_ids&#x60; parameter.  | 
  **certificateIds** | **[]string** | A comma-separated list of certificate ids. If there is not at least one resource that matches each of the elements of &#x60;certificate_ids&#x60;, then an error is returned. This cannot be provided in conjunction with the &#x60;certificate_names&#x60; parameter.  | 
  **certificateNames** | **[]string** | The names of one or more certificates. Enter multiple names in comma-separated format. For example, &#x60;cert01,cert02&#x60;.  | 
+ **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
 
 ### Return type
 
@@ -260,7 +264,7 @@ Authorization is handled by the Authenticator specified in the configuration and
 
 ## CertificateGroupsDelete
 
-> CertificateGroupsDelete(ctx).Authorization(authorization).XRequestID(xRequestID).Ids(ids).Names(names).Execute()
+> CertificateGroupsDelete(ctx).Authorization(authorization).XRequestID(xRequestID).ContextNames(contextNames).Ids(ids).Names(names).Execute()
 
 Delete certificate-groups
 
@@ -275,7 +279,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -313,6 +317,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Access token (in JWT format) required to use any API endpoint (except &#x60;/oauth2&#x60;, &#x60;/login&#x60;, and &#x60;/logout&#x60;)  | 
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
+ **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
  **ids** | **[]string** | A comma-separated list of unique resource IDs. At least one resource must match  each specified ID, otherwise an error is returned. This parameter is required   if ids or names is not provided, but it cannot be used together with name or names.  | 
  **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
 
@@ -336,7 +341,7 @@ Authorization is handled by the Authenticator specified in the configuration and
 
 ## CertificateGroupsGet
 
-> CertificateGroupGetResponse CertificateGroupsGet(ctx).Authorization(authorization).XRequestID(xRequestID).ContinuationToken(continuationToken).Filter(filter).Ids(ids).Limit(limit).Names(names).Offset(offset).Sort(sort).TotalItemCount(totalItemCount).Execute()
+> CertificateGroupGetResponse CertificateGroupsGet(ctx).Authorization(authorization).XRequestID(xRequestID).AllowErrors(allowErrors).ContextNames(contextNames).ContinuationToken(continuationToken).Filter(filter).Ids(ids).Limit(limit).Names(names).Offset(offset).Sort(sort).TotalItemCount(totalItemCount).Execute()
 
 List certificate-groups
 
@@ -351,7 +356,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -391,6 +396,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Access token (in JWT format) required to use any API endpoint (except &#x60;/oauth2&#x60;, &#x60;/login&#x60;, and &#x60;/logout&#x60;)  | 
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
+ **allowErrors** | **bool** | If set to &#x60;true&#x60;, the API will allow the operation to continue even if there are errors. Any errors will be returned in the &#x60;errors&#x60; field of the response. If set to &#x60;false&#x60;, the operation will fail if there are any errors.  | [default to false]
+ **contextNames** | **[]string** | Performs the operation on the unique contexts specified.  If specified, each context name must be the name of an array in the same fleet or the name of the fleet itself.  If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  | 
  **continuationToken** | **string** | A token used to retrieve the next page of data with some consistency guaranteed. The token is a Base64 encoded value. Set &#x60;continuation_token&#x60; to the system-generated token taken from the &#x60;x-next-token&#x60; header field of the response. A query has reached its last page when the response does not include a token. Pagination requires the &#x60;limit&#x60; and &#x60;continuation_token&#x60; query parameters.  | 
  **filter** | **string** | Narrows down the results to only the response objects that satisfy the filter criteria.  | 
  **ids** | **[]string** | A comma-separated list of unique resource IDs. At least one resource must match  each specified ID, otherwise an error is returned. This parameter is required   if ids or names is not provided, but it cannot be used together with name or names.  | 
@@ -420,7 +427,7 @@ Authorization is handled by the Authenticator specified in the configuration and
 
 ## CertificateGroupsPost
 
-> CertificateGroupResponse CertificateGroupsPost(ctx).Authorization(authorization).XRequestID(xRequestID).Names(names).Execute()
+> CertificateGroupResponse CertificateGroupsPost(ctx).Authorization(authorization).XRequestID(xRequestID).ContextNames(contextNames).Names(names).Execute()
 
 Create certificate-groups
 
@@ -435,7 +442,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -475,6 +482,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Access token (in JWT format) required to use any API endpoint (except &#x60;/oauth2&#x60;, &#x60;/login&#x60;, and &#x60;/logout&#x60;)  | 
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
+ **contextNames** | **[]string** | Performs the operation on the context specified.  If specified, the context names must be an array of size 1, and the single element must be the name of an array in the same fleet or the name of the fleet itself. If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | 
  **names** | **[]string** | Performs the operation on the unique names specified. Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  If there is not at least one resource that matches each of the elements of &#x60;names&#x60;, then an error is returned, except when creating new resources.  | 
 
 ### Return type
@@ -497,7 +505,7 @@ Authorization is handled by the Authenticator specified in the configuration and
 
 ## CertificateGroupsUsesGet
 
-> CertificateGroupUseGetResponse CertificateGroupsUsesGet(ctx).Authorization(authorization).XRequestID(xRequestID).ContinuationToken(continuationToken).Filter(filter).Ids(ids).Limit(limit).Names(names).Offset(offset).Sort(sort).TotalItemCount(totalItemCount).Execute()
+> CertificateGroupUseGetResponse CertificateGroupsUsesGet(ctx).Authorization(authorization).XRequestID(xRequestID).AllowErrors(allowErrors).ContextNames(contextNames).ContinuationToken(continuationToken).Filter(filter).Ids(ids).Limit(limit).Names(names).Offset(offset).Sort(sort).TotalItemCount(totalItemCount).Execute()
 
 List  certificate-groups/uses
 
@@ -512,7 +520,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -552,6 +560,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **string** | Access token (in JWT format) required to use any API endpoint (except &#x60;/oauth2&#x60;, &#x60;/login&#x60;, and &#x60;/logout&#x60;)  | 
  **xRequestID** | **string** | Supplied by client during request or generated by server.  | 
+ **allowErrors** | **bool** | If set to &#x60;true&#x60;, the API will allow the operation to continue even if there are errors. Any errors will be returned in the &#x60;errors&#x60; field of the response. If set to &#x60;false&#x60;, the operation will fail if there are any errors.  | [default to false]
+ **contextNames** | **[]string** | Performs the operation on the unique contexts specified.  If specified, each context name must be the name of an array in the same fleet or the name of the fleet itself.  If not specified, the context will default to the array that received this request.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  Enter multiple names in comma-separated format. For example, &#x60;name01,name02&#x60;.  | 
  **continuationToken** | **string** | A token used to retrieve the next page of data with some consistency guaranteed. The token is a Base64 encoded value. Set &#x60;continuation_token&#x60; to the system-generated token taken from the &#x60;x-next-token&#x60; header field of the response. A query has reached its last page when the response does not include a token. Pagination requires the &#x60;limit&#x60; and &#x60;continuation_token&#x60; query parameters.  | 
  **filter** | **string** | Narrows down the results to only the response objects that satisfy the filter criteria.  | 
  **ids** | **[]string** | A comma-separated list of unique resource IDs. At least one resource must match  each specified ID, otherwise an error is returned. This parameter is required   if ids or names is not provided, but it cannot be used together with name or names.  | 

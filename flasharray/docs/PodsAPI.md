@@ -4,25 +4,25 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**PodsArraysDelete**](PodsAPI.md#PodsArraysDelete) | **Delete** /api/2.58/pods/arrays | Delete a pod that was stretched to an array
-[**PodsArraysGet**](PodsAPI.md#PodsArraysGet) | **Get** /api/2.58/pods/arrays | List pods and their the array members
-[**PodsArraysPost**](PodsAPI.md#PodsArraysPost) | **Post** /api/2.58/pods/arrays | Creates a pod to be stretched to an array
-[**PodsDelete**](PodsAPI.md#PodsDelete) | **Delete** /api/2.58/pods | Delete a pod
-[**PodsGet**](PodsAPI.md#PodsGet) | **Get** /api/2.58/pods | List pods
-[**PodsMembersDelete**](PodsAPI.md#PodsMembersDelete) | **Delete** /api/2.58/pods/members | Delete a member from a pod
-[**PodsMembersGet**](PodsAPI.md#PodsMembersGet) | **Get** /api/2.58/pods/members | List pods and their members
-[**PodsMembersPost**](PodsAPI.md#PodsMembersPost) | **Post** /api/2.58/pods/members | Creates a pod to be stretched to a member
-[**PodsPatch**](PodsAPI.md#PodsPatch) | **Patch** /api/2.58/pods | Modify a pod
-[**PodsPerformanceByArrayGet**](PodsAPI.md#PodsPerformanceByArrayGet) | **Get** /api/2.58/pods/performance/by-array | List pod performance data by array
-[**PodsPerformanceGet**](PodsAPI.md#PodsPerformanceGet) | **Get** /api/2.58/pods/performance | List pod performance data
-[**PodsPerformanceReplicationByArrayGet**](PodsAPI.md#PodsPerformanceReplicationByArrayGet) | **Get** /api/2.58/pods/performance/replication/by-array | List pod replication performance data by array
-[**PodsPerformanceReplicationGet**](PodsAPI.md#PodsPerformanceReplicationGet) | **Get** /api/2.58/pods/performance/replication | List pod replication performance data
-[**PodsPost**](PodsAPI.md#PodsPost) | **Post** /api/2.58/pods | Create a pod
-[**PodsSpaceGet**](PodsAPI.md#PodsSpaceGet) | **Get** /api/2.58/pods/space | List pod space information
-[**PodsTagsBatchPut**](PodsAPI.md#PodsTagsBatchPut) | **Put** /api/2.58/pods/tags/batch | Update tags
-[**PodsTagsDelete**](PodsAPI.md#PodsTagsDelete) | **Delete** /api/2.58/pods/tags | Delete tags
-[**PodsTagsGet**](PodsAPI.md#PodsTagsGet) | **Get** /api/2.58/pods/tags | List tags
-[**PodsTestPost**](PodsAPI.md#PodsTestPost) | **Post** /api/2.58/pods/test | Create an attempt to clone a pod
+[**PodsArraysDelete**](PodsAPI.md#PodsArraysDelete) | **Delete** /api/2.59/pods/arrays | Delete a pod that was stretched to an array
+[**PodsArraysGet**](PodsAPI.md#PodsArraysGet) | **Get** /api/2.59/pods/arrays | List pods and their the array members
+[**PodsArraysPost**](PodsAPI.md#PodsArraysPost) | **Post** /api/2.59/pods/arrays | Creates a pod to be stretched to an array
+[**PodsDelete**](PodsAPI.md#PodsDelete) | **Delete** /api/2.59/pods | Delete a pod
+[**PodsGet**](PodsAPI.md#PodsGet) | **Get** /api/2.59/pods | List pods
+[**PodsMembersDelete**](PodsAPI.md#PodsMembersDelete) | **Delete** /api/2.59/pods/members | Delete a member from a pod
+[**PodsMembersGet**](PodsAPI.md#PodsMembersGet) | **Get** /api/2.59/pods/members | List pods and their members
+[**PodsMembersPost**](PodsAPI.md#PodsMembersPost) | **Post** /api/2.59/pods/members | Creates a pod to be stretched to a member
+[**PodsPatch**](PodsAPI.md#PodsPatch) | **Patch** /api/2.59/pods | Modify a pod
+[**PodsPerformanceByArrayGet**](PodsAPI.md#PodsPerformanceByArrayGet) | **Get** /api/2.59/pods/performance/by-array | List pod performance data by array
+[**PodsPerformanceGet**](PodsAPI.md#PodsPerformanceGet) | **Get** /api/2.59/pods/performance | List pod performance data
+[**PodsPerformanceReplicationByArrayGet**](PodsAPI.md#PodsPerformanceReplicationByArrayGet) | **Get** /api/2.59/pods/performance/replication/by-array | List pod replication performance data by array
+[**PodsPerformanceReplicationGet**](PodsAPI.md#PodsPerformanceReplicationGet) | **Get** /api/2.59/pods/performance/replication | List pod replication performance data
+[**PodsPost**](PodsAPI.md#PodsPost) | **Post** /api/2.59/pods | Create a pod
+[**PodsSpaceGet**](PodsAPI.md#PodsSpaceGet) | **Get** /api/2.59/pods/space | List pod space information
+[**PodsTagsBatchPut**](PodsAPI.md#PodsTagsBatchPut) | **Put** /api/2.59/pods/tags/batch | Update tags
+[**PodsTagsDelete**](PodsAPI.md#PodsTagsDelete) | **Delete** /api/2.59/pods/tags | Delete tags
+[**PodsTagsGet**](PodsAPI.md#PodsTagsGet) | **Get** /api/2.59/pods/tags | List tags
+[**PodsTestPost**](PodsAPI.md#PodsTestPost) | **Post** /api/2.59/pods/test | Create an attempt to clone a pod
 
 
 
@@ -43,7 +43,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -123,7 +123,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -211,7 +211,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -292,7 +292,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -370,7 +370,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -458,7 +458,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -538,7 +538,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -626,7 +626,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -707,7 +707,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -798,7 +798,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -891,7 +891,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -984,7 +984,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1075,7 +1075,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1166,7 +1166,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1247,7 +1247,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1338,7 +1338,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1418,7 +1418,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1497,7 +1497,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1585,7 +1585,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

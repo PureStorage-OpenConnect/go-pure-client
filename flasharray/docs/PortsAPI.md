@@ -4,8 +4,8 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**PortsGet**](PortsAPI.md#PortsGet) | **Get** /api/2.58/ports | List ports
-[**PortsInitiatorsGet**](PortsAPI.md#PortsInitiatorsGet) | **Get** /api/2.58/ports/initiators | List port initiators
+[**PortsGet**](PortsAPI.md#PortsGet) | **Get** /api/2.59/ports | List ports
+[**PortsInitiatorsGet**](PortsAPI.md#PortsInitiatorsGet) | **Get** /api/2.59/ports/initiators | List port initiators
 
 
 
@@ -26,7 +26,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -111,7 +111,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

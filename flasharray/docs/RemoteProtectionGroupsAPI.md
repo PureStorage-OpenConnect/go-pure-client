@@ -4,9 +4,9 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**RemoteProtectionGroupsDelete**](RemoteProtectionGroupsAPI.md#RemoteProtectionGroupsDelete) | **Delete** /api/2.58/remote-protection-groups | Delete a remote protection group
-[**RemoteProtectionGroupsGet**](RemoteProtectionGroupsAPI.md#RemoteProtectionGroupsGet) | **Get** /api/2.58/remote-protection-groups | List remote protection groups
-[**RemoteProtectionGroupsPatch**](RemoteProtectionGroupsAPI.md#RemoteProtectionGroupsPatch) | **Patch** /api/2.58/remote-protection-groups | Modify a remote protection group
+[**RemoteProtectionGroupsDelete**](RemoteProtectionGroupsAPI.md#RemoteProtectionGroupsDelete) | **Delete** /api/2.59/remote-protection-groups | Delete a remote protection group
+[**RemoteProtectionGroupsGet**](RemoteProtectionGroupsAPI.md#RemoteProtectionGroupsGet) | **Get** /api/2.59/remote-protection-groups | List remote protection groups
+[**RemoteProtectionGroupsPatch**](RemoteProtectionGroupsAPI.md#RemoteProtectionGroupsPatch) | **Patch** /api/2.59/remote-protection-groups | Modify a remote protection group
 
 
 
@@ -27,7 +27,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -105,7 +105,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -193,7 +193,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

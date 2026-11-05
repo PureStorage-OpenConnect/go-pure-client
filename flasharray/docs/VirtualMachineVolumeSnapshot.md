@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**Context** | Pointer to [**FixedReferenceWithType**](FixedReferenceWithType.md) | The context in which the operation was performed.  Valid values include a reference to any array which is a member of the same fleet or to the fleet itself.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | [optional] [readonly] 
 **Created** | Pointer to **int64** | The virtual machine volume snapshot creation time measured in milliseconds since the UNIX epoch.  | [optional] [readonly] 
-**Destroyed** | Pointer to **bool** | Returns a value of &#x60;true&#x60; if the virtual machine volume snapshot has been destroyed and is pending eradication.  | [optional] [readonly] 
+**Destroyed** | Pointer to **bool** | Returns &#x60;true&#x60; if the virtual machine volume snapshot has been destroyed and is pending eradication.  | [optional] [readonly] 
 **Id** | Pointer to **string** | A globally unique, system-generated ID. The ID cannot be modified.  | [optional] [readonly] 
 **Name** | Pointer to **string** | The name of the virtual machine volume snapshot.  | [optional] [readonly] 
 **RecoverContext** | Pointer to [**FixedReference**](FixedReference.md) | A reference to any additional entities needed to recover this virtual machine.  | [optional] 
@@ -33,6 +34,31 @@ will change when the set of required properties is changed
 NewVirtualMachineVolumeSnapshotWithDefaults instantiates a new VirtualMachineVolumeSnapshot object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetContext
+
+`func (o *VirtualMachineVolumeSnapshot) GetContext() FixedReferenceWithType`
+
+GetContext returns the Context field if non-nil, zero value otherwise.
+
+### GetContextOk
+
+`func (o *VirtualMachineVolumeSnapshot) GetContextOk() (*FixedReferenceWithType, bool)`
+
+GetContextOk returns a tuple with the Context field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetContext
+
+`func (o *VirtualMachineVolumeSnapshot) SetContext(v FixedReferenceWithType)`
+
+SetContext sets Context field to given value.
+
+### HasContext
+
+`func (o *VirtualMachineVolumeSnapshot) HasContext() bool`
+
+HasContext returns a boolean if a field has been set.
 
 ### GetCreated
 

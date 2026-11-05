@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DataSealingKeysGet**](DataSealingKeysAPI.md#DataSealingKeysGet) | **Get** /api/2.58/data-sealing-keys | List data sealing keys
-[**DataSealingKeysPatch**](DataSealingKeysAPI.md#DataSealingKeysPatch) | **Patch** /api/2.58/data-sealing-keys | Modify data sealing keys
-[**DataSealingKeysPost**](DataSealingKeysAPI.md#DataSealingKeysPost) | **Post** /api/2.58/data-sealing-keys | Create data sealing keys
-[**DataSealingKeysRevokePost**](DataSealingKeysAPI.md#DataSealingKeysRevokePost) | **Post** /api/2.58/data-sealing-keys/revoke | Revoke data sealing keys
-[**DataSealingKeysRotatePost**](DataSealingKeysAPI.md#DataSealingKeysRotatePost) | **Post** /api/2.58/data-sealing-keys/rotate | Rotate data sealing keys
-[**DataSealingKeysTestGet**](DataSealingKeysAPI.md#DataSealingKeysTestGet) | **Get** /api/2.58/data-sealing-keys/test | Test data sealing key remote connectivity
+[**DataSealingKeysGet**](DataSealingKeysAPI.md#DataSealingKeysGet) | **Get** /api/2.59/data-sealing-keys | List data sealing keys
+[**DataSealingKeysPatch**](DataSealingKeysAPI.md#DataSealingKeysPatch) | **Patch** /api/2.59/data-sealing-keys | Modify data sealing keys
+[**DataSealingKeysPost**](DataSealingKeysAPI.md#DataSealingKeysPost) | **Post** /api/2.59/data-sealing-keys | Create data sealing keys
+[**DataSealingKeysRevokePost**](DataSealingKeysAPI.md#DataSealingKeysRevokePost) | **Post** /api/2.59/data-sealing-keys/revoke | Revoke data sealing keys
+[**DataSealingKeysRotatePost**](DataSealingKeysAPI.md#DataSealingKeysRotatePost) | **Post** /api/2.59/data-sealing-keys/rotate | Rotate data sealing keys
+[**DataSealingKeysTestGet**](DataSealingKeysAPI.md#DataSealingKeysTestGet) | **Get** /api/2.59/data-sealing-keys/test | Test data sealing key remote connectivity
 
 
 
@@ -30,7 +30,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -116,7 +116,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -196,7 +196,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -275,7 +275,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -356,7 +356,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -436,7 +436,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

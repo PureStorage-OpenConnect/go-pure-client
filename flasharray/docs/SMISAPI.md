@@ -4,8 +4,8 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**SmiSGet**](SMISAPI.md#SmiSGet) | **Get** /api/2.58/smi-s | List SMI-S settings
-[**SmiSPatch**](SMISAPI.md#SmiSPatch) | **Patch** /api/2.58/smi-s | Modify SLP and SMI-S
+[**SmiSGet**](SMISAPI.md#SmiSGet) | **Get** /api/2.59/smi-s | List SMI-S settings
+[**SmiSPatch**](SMISAPI.md#SmiSPatch) | **Patch** /api/2.59/smi-s | Modify SLP and SMI-S
 
 
 
@@ -26,7 +26,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -107,7 +107,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

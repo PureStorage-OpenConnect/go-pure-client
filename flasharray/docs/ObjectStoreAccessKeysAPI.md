@@ -4,10 +4,10 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ObjectStoreAccessKeysDelete**](ObjectStoreAccessKeysAPI.md#ObjectStoreAccessKeysDelete) | **Delete** /api/2.58/object-store-access-keys | DELETE object-store-access-keys
-[**ObjectStoreAccessKeysGet**](ObjectStoreAccessKeysAPI.md#ObjectStoreAccessKeysGet) | **Get** /api/2.58/object-store-access-keys | GET object-store-access-keys
-[**ObjectStoreAccessKeysPatch**](ObjectStoreAccessKeysAPI.md#ObjectStoreAccessKeysPatch) | **Patch** /api/2.58/object-store-access-keys | PATCH object-store-access-keys
-[**ObjectStoreAccessKeysPost**](ObjectStoreAccessKeysAPI.md#ObjectStoreAccessKeysPost) | **Post** /api/2.58/object-store-access-keys | POST object-store-access-keys
+[**ObjectStoreAccessKeysDelete**](ObjectStoreAccessKeysAPI.md#ObjectStoreAccessKeysDelete) | **Delete** /api/2.59/object-store-access-keys | DELETE object-store-access-keys
+[**ObjectStoreAccessKeysGet**](ObjectStoreAccessKeysAPI.md#ObjectStoreAccessKeysGet) | **Get** /api/2.59/object-store-access-keys | GET object-store-access-keys
+[**ObjectStoreAccessKeysPatch**](ObjectStoreAccessKeysAPI.md#ObjectStoreAccessKeysPatch) | **Patch** /api/2.59/object-store-access-keys | PATCH object-store-access-keys
+[**ObjectStoreAccessKeysPost**](ObjectStoreAccessKeysAPI.md#ObjectStoreAccessKeysPost) | **Post** /api/2.59/object-store-access-keys | POST object-store-access-keys
 
 
 
@@ -28,7 +28,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -103,7 +103,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -187,7 +187,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -265,7 +265,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

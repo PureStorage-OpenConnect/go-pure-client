@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**BucketsDelete**](BucketsAPI.md#BucketsDelete) | **Delete** /api/2.58/buckets | DELETE buckets
-[**BucketsGet**](BucketsAPI.md#BucketsGet) | **Get** /api/2.58/buckets | GET buckets
-[**BucketsPatch**](BucketsAPI.md#BucketsPatch) | **Patch** /api/2.58/buckets | PATCH buckets
-[**BucketsPerformanceGet**](BucketsAPI.md#BucketsPerformanceGet) | **Get** /api/2.58/buckets/performance | List bucket performance data
-[**BucketsPost**](BucketsAPI.md#BucketsPost) | **Post** /api/2.58/buckets | POST buckets
-[**BucketsSpaceGet**](BucketsAPI.md#BucketsSpaceGet) | **Get** /api/2.58/buckets/space | List bucket space information
+[**BucketsDelete**](BucketsAPI.md#BucketsDelete) | **Delete** /api/2.59/buckets | DELETE buckets
+[**BucketsGet**](BucketsAPI.md#BucketsGet) | **Get** /api/2.59/buckets | GET buckets
+[**BucketsPatch**](BucketsAPI.md#BucketsPatch) | **Patch** /api/2.59/buckets | PATCH buckets
+[**BucketsPerformanceGet**](BucketsAPI.md#BucketsPerformanceGet) | **Get** /api/2.59/buckets/performance | List bucket performance data
+[**BucketsPost**](BucketsAPI.md#BucketsPost) | **Post** /api/2.59/buckets | POST buckets
+[**BucketsSpaceGet**](BucketsAPI.md#BucketsSpaceGet) | **Get** /api/2.59/buckets/space | List bucket space information
 
 
 
@@ -30,7 +30,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -106,7 +106,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -195,7 +195,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -274,7 +274,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -362,7 +362,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -440,7 +440,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

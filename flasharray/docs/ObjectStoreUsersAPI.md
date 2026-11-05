@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ObjectStoreUsersDelete**](ObjectStoreUsersAPI.md#ObjectStoreUsersDelete) | **Delete** /api/2.58/object-store-users | DELETE object-store-users
-[**ObjectStoreUsersGet**](ObjectStoreUsersAPI.md#ObjectStoreUsersGet) | **Get** /api/2.58/object-store-users | GET object-store-users
-[**ObjectStoreUsersPoliciesObjectStoreAccessDelete**](ObjectStoreUsersAPI.md#ObjectStoreUsersPoliciesObjectStoreAccessDelete) | **Delete** /api/2.58/object-store-users/policies/object-store-access | DELETE object-store-users/policies/object-store-access
-[**ObjectStoreUsersPoliciesObjectStoreAccessGet**](ObjectStoreUsersAPI.md#ObjectStoreUsersPoliciesObjectStoreAccessGet) | **Get** /api/2.58/object-store-users/policies/object-store-access | GET object-store-users/policies/object-store-access
-[**ObjectStoreUsersPoliciesObjectStoreAccessPost**](ObjectStoreUsersAPI.md#ObjectStoreUsersPoliciesObjectStoreAccessPost) | **Post** /api/2.58/object-store-users/policies/object-store-access | POST object-store-users/policies/object-store-access
-[**ObjectStoreUsersPost**](ObjectStoreUsersAPI.md#ObjectStoreUsersPost) | **Post** /api/2.58/object-store-users | POST object-store-users
+[**ObjectStoreUsersDelete**](ObjectStoreUsersAPI.md#ObjectStoreUsersDelete) | **Delete** /api/2.59/object-store-users | DELETE object-store-users
+[**ObjectStoreUsersGet**](ObjectStoreUsersAPI.md#ObjectStoreUsersGet) | **Get** /api/2.59/object-store-users | GET object-store-users
+[**ObjectStoreUsersPoliciesObjectStoreAccessDelete**](ObjectStoreUsersAPI.md#ObjectStoreUsersPoliciesObjectStoreAccessDelete) | **Delete** /api/2.59/object-store-users/policies/object-store-access | DELETE object-store-users/policies/object-store-access
+[**ObjectStoreUsersPoliciesObjectStoreAccessGet**](ObjectStoreUsersAPI.md#ObjectStoreUsersPoliciesObjectStoreAccessGet) | **Get** /api/2.59/object-store-users/policies/object-store-access | GET object-store-users/policies/object-store-access
+[**ObjectStoreUsersPoliciesObjectStoreAccessPost**](ObjectStoreUsersAPI.md#ObjectStoreUsersPoliciesObjectStoreAccessPost) | **Post** /api/2.59/object-store-users/policies/object-store-access | POST object-store-users/policies/object-store-access
+[**ObjectStoreUsersPost**](ObjectStoreUsersAPI.md#ObjectStoreUsersPost) | **Post** /api/2.59/object-store-users | POST object-store-users
 
 
 
@@ -30,7 +30,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -106,7 +106,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -191,7 +191,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -269,7 +269,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -356,7 +356,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -436,7 +436,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

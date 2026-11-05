@@ -4,8 +4,8 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DrivesGet**](DrivesAPI.md#DrivesGet) | **Get** /api/2.58/drives | List flash, NVRAM, and cache modules
-[**DrivesPatch**](DrivesAPI.md#DrivesPatch) | **Patch** /api/2.58/drives | Modify flash and NVRAM modules
+[**DrivesGet**](DrivesAPI.md#DrivesGet) | **Get** /api/2.59/drives | List flash, NVRAM, and cache modules
+[**DrivesPatch**](DrivesAPI.md#DrivesPatch) | **Patch** /api/2.59/drives | Modify flash and NVRAM modules
 
 
 
@@ -26,7 +26,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -109,7 +109,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

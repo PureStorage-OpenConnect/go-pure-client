@@ -6,8 +6,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **BandwidthLimit** | Pointer to **int64** | The maximum QoS bandwidth limit for the container. Whenever throughput exceeds the bandwidth limit, throttling occurs. Measured in bytes per second. Maximum limit is 512 GB/s.  | [optional] 
 **IopsLimit** | Pointer to **int64** | The QoS IOPs limit for the container.  | [optional] 
-**BandwidthFloor** | Pointer to **int64** | The QoS bandwidth floor for the container. Traffic is granted priority until this floor is reached. Measured in bytes per second. Maximum floor is 512 GB/s.  | [optional] 
-**IopsFloor** | Pointer to **int64** | The QoS IOPs floor for the container. Traffic is granted priority until this floor is reached. Maximum floor is 100,000,000 IOs per second.  | [optional] 
+**BandwidthFloor** | Pointer to **int64** | The QoS bandwidth floor for the container, measured in bytes per second. Traffic is granted priority until this floor is reached. The maximum floor is 512 GB/s.  | [optional] 
+**IopsFloor** | Pointer to **int64** | The QoS IOPS floor for the container. Traffic is granted priority until this floor is reached. The maximum floor is 100,000,000 IOs per second.  | [optional] 
 
 ## Methods
 

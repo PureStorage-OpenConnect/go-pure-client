@@ -4,16 +4,16 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**FleetsDelete**](FleetsAPI.md#FleetsDelete) | **Delete** /api/2.58/fleets | Delete a fleet
-[**FleetsFleetKeyGet**](FleetsAPI.md#FleetsFleetKeyGet) | **Get** /api/2.58/fleets/fleet-key | Get fleet key information
-[**FleetsFleetKeyPost**](FleetsAPI.md#FleetsFleetKeyPost) | **Post** /api/2.58/fleets/fleet-key | Create a fleet key
-[**FleetsGet**](FleetsAPI.md#FleetsGet) | **Get** /api/2.58/fleets | List fleets
-[**FleetsMembersBatchPost**](FleetsAPI.md#FleetsMembersBatchPost) | **Post** /api/2.58/fleets/members/batch | Create fleet members in batch
-[**FleetsMembersDelete**](FleetsAPI.md#FleetsMembersDelete) | **Delete** /api/2.58/fleets/members | Delete fleet members
-[**FleetsMembersGet**](FleetsAPI.md#FleetsMembersGet) | **Get** /api/2.58/fleets/members | List fleet members
-[**FleetsMembersPost**](FleetsAPI.md#FleetsMembersPost) | **Post** /api/2.58/fleets/members | Add members to a fleet
-[**FleetsPatch**](FleetsAPI.md#FleetsPatch) | **Patch** /api/2.58/fleets | Modify a fleet
-[**FleetsPost**](FleetsAPI.md#FleetsPost) | **Post** /api/2.58/fleets | Create a fleet
+[**FleetsDelete**](FleetsAPI.md#FleetsDelete) | **Delete** /api/2.59/fleets | Delete a fleet
+[**FleetsFleetKeyGet**](FleetsAPI.md#FleetsFleetKeyGet) | **Get** /api/2.59/fleets/fleet-key | Get fleet key information
+[**FleetsFleetKeyPost**](FleetsAPI.md#FleetsFleetKeyPost) | **Post** /api/2.59/fleets/fleet-key | Create a fleet key
+[**FleetsGet**](FleetsAPI.md#FleetsGet) | **Get** /api/2.59/fleets | List fleets
+[**FleetsMembersBatchPost**](FleetsAPI.md#FleetsMembersBatchPost) | **Post** /api/2.59/fleets/members/batch | Create fleet members in batch
+[**FleetsMembersDelete**](FleetsAPI.md#FleetsMembersDelete) | **Delete** /api/2.59/fleets/members | Delete fleet members
+[**FleetsMembersGet**](FleetsAPI.md#FleetsMembersGet) | **Get** /api/2.59/fleets/members | List fleet members
+[**FleetsMembersPost**](FleetsAPI.md#FleetsMembersPost) | **Post** /api/2.59/fleets/members | Add members to a fleet
+[**FleetsPatch**](FleetsAPI.md#FleetsPatch) | **Patch** /api/2.59/fleets | Modify a fleet
+[**FleetsPost**](FleetsAPI.md#FleetsPost) | **Post** /api/2.59/fleets | Create a fleet
 
 
 
@@ -34,7 +34,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -110,7 +110,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -192,7 +192,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -268,7 +268,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -352,7 +352,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -432,7 +432,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -509,7 +509,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -595,7 +595,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -674,7 +674,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -753,7 +753,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

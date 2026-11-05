@@ -4,13 +4,13 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**NetworkInterfacesDelete**](NetworkInterfacesAPI.md#NetworkInterfacesDelete) | **Delete** /api/2.58/network-interfaces | Delete network interface
-[**NetworkInterfacesGet**](NetworkInterfacesAPI.md#NetworkInterfacesGet) | **Get** /api/2.58/network-interfaces | List network interfaces
-[**NetworkInterfacesNeighborsGet**](NetworkInterfacesAPI.md#NetworkInterfacesNeighborsGet) | **Get** /api/2.58/network-interfaces/neighbors | List network interface neighbors
-[**NetworkInterfacesPatch**](NetworkInterfacesAPI.md#NetworkInterfacesPatch) | **Patch** /api/2.58/network-interfaces | Modify network interface
-[**NetworkInterfacesPerformanceGet**](NetworkInterfacesAPI.md#NetworkInterfacesPerformanceGet) | **Get** /api/2.58/network-interfaces/performance | List network performance statistics
-[**NetworkInterfacesPortDetailsGet**](NetworkInterfacesAPI.md#NetworkInterfacesPortDetailsGet) | **Get** /api/2.58/network-interfaces/port-details | List SFP port details
-[**NetworkInterfacesPost**](NetworkInterfacesAPI.md#NetworkInterfacesPost) | **Post** /api/2.58/network-interfaces | Create network interface
+[**NetworkInterfacesDelete**](NetworkInterfacesAPI.md#NetworkInterfacesDelete) | **Delete** /api/2.59/network-interfaces | Delete network interface
+[**NetworkInterfacesGet**](NetworkInterfacesAPI.md#NetworkInterfacesGet) | **Get** /api/2.59/network-interfaces | List network interfaces
+[**NetworkInterfacesNeighborsGet**](NetworkInterfacesAPI.md#NetworkInterfacesNeighborsGet) | **Get** /api/2.59/network-interfaces/neighbors | List network interface neighbors
+[**NetworkInterfacesPatch**](NetworkInterfacesAPI.md#NetworkInterfacesPatch) | **Patch** /api/2.59/network-interfaces | Modify network interface
+[**NetworkInterfacesPerformanceGet**](NetworkInterfacesAPI.md#NetworkInterfacesPerformanceGet) | **Get** /api/2.59/network-interfaces/performance | List network performance statistics
+[**NetworkInterfacesPortDetailsGet**](NetworkInterfacesAPI.md#NetworkInterfacesPortDetailsGet) | **Get** /api/2.59/network-interfaces/port-details | List SFP port details
+[**NetworkInterfacesPost**](NetworkInterfacesAPI.md#NetworkInterfacesPost) | **Post** /api/2.59/network-interfaces | Create network interface
 
 
 
@@ -31,7 +31,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -107,7 +107,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -192,7 +192,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -273,7 +273,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -353,7 +353,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -439,7 +439,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -521,7 +521,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

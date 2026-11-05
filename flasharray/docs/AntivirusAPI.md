@@ -4,15 +4,15 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AntivirusTargetsGet**](AntivirusAPI.md#AntivirusTargetsGet) | **Get** /api/2.58/antivirus/targets | List antivirus targets
-[**AntivirusTargetsIcapDelete**](AntivirusAPI.md#AntivirusTargetsIcapDelete) | **Delete** /api/2.58/antivirus/targets/icap | Delete antivirus ICAP targets
-[**AntivirusTargetsIcapGet**](AntivirusAPI.md#AntivirusTargetsIcapGet) | **Get** /api/2.58/antivirus/targets/icap | List antivirus ICAP targets
-[**AntivirusTargetsIcapPatch**](AntivirusAPI.md#AntivirusTargetsIcapPatch) | **Patch** /api/2.58/antivirus/targets/icap | Modify antivirus ICAP targets
-[**AntivirusTargetsIcapPost**](AntivirusAPI.md#AntivirusTargetsIcapPost) | **Post** /api/2.58/antivirus/targets/icap | Create antivirus ICAP targets
-[**AntivirusTargetsIcapScannersDelete**](AntivirusAPI.md#AntivirusTargetsIcapScannersDelete) | **Delete** /api/2.58/antivirus/targets/icap/scanners | Delete antivirus ICAP scanners
-[**AntivirusTargetsIcapScannersGet**](AntivirusAPI.md#AntivirusTargetsIcapScannersGet) | **Get** /api/2.58/antivirus/targets/icap/scanners | List antivirus ICAP scanners
-[**AntivirusTargetsIcapScannersPatch**](AntivirusAPI.md#AntivirusTargetsIcapScannersPatch) | **Patch** /api/2.58/antivirus/targets/icap/scanners | Modify antivirus ICAP scanners
-[**AntivirusTargetsIcapScannersPost**](AntivirusAPI.md#AntivirusTargetsIcapScannersPost) | **Post** /api/2.58/antivirus/targets/icap/scanners | Create antivirus ICAP scanners
+[**AntivirusTargetsGet**](AntivirusAPI.md#AntivirusTargetsGet) | **Get** /api/2.59/antivirus/targets | List antivirus targets
+[**AntivirusTargetsIcapDelete**](AntivirusAPI.md#AntivirusTargetsIcapDelete) | **Delete** /api/2.59/antivirus/targets/icap | Delete antivirus ICAP targets
+[**AntivirusTargetsIcapGet**](AntivirusAPI.md#AntivirusTargetsIcapGet) | **Get** /api/2.59/antivirus/targets/icap | List antivirus ICAP targets
+[**AntivirusTargetsIcapPatch**](AntivirusAPI.md#AntivirusTargetsIcapPatch) | **Patch** /api/2.59/antivirus/targets/icap | Modify antivirus ICAP targets
+[**AntivirusTargetsIcapPost**](AntivirusAPI.md#AntivirusTargetsIcapPost) | **Post** /api/2.59/antivirus/targets/icap | Create antivirus ICAP targets
+[**AntivirusTargetsIcapScannersDelete**](AntivirusAPI.md#AntivirusTargetsIcapScannersDelete) | **Delete** /api/2.59/antivirus/targets/icap/scanners | Delete antivirus ICAP scanners
+[**AntivirusTargetsIcapScannersGet**](AntivirusAPI.md#AntivirusTargetsIcapScannersGet) | **Get** /api/2.59/antivirus/targets/icap/scanners | List antivirus ICAP scanners
+[**AntivirusTargetsIcapScannersPatch**](AntivirusAPI.md#AntivirusTargetsIcapScannersPatch) | **Patch** /api/2.59/antivirus/targets/icap/scanners | Modify antivirus ICAP scanners
+[**AntivirusTargetsIcapScannersPost**](AntivirusAPI.md#AntivirusTargetsIcapScannersPost) | **Post** /api/2.59/antivirus/targets/icap/scanners | Create antivirus ICAP scanners
 
 
 
@@ -33,7 +33,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -119,7 +119,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -197,7 +197,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -283,7 +283,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -363,7 +363,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -442,7 +442,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -520,7 +520,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -606,7 +606,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -687,7 +687,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

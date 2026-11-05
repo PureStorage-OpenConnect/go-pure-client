@@ -4,11 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CaCertificate** | Pointer to **string** | CA certificate text for the KMIP server.  | [optional] 
+**Context** | Pointer to [**FixedReferenceWithType**](FixedReferenceWithType.md) | The context in which the operation was performed.  Valid values include a reference to any array which is a member of the same fleet or to the fleet itself.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | [optional] [readonly] 
+**CaCertificate** | Pointer to **string** | The CA certificate text for the KMIP server.  | [optional] 
 **Certificate** | Pointer to [**KmipCertificate**](KmipCertificate.md) | The certificate used to verify FlashArray authenticity to the KMIP servers.  | [optional] 
-**KmipObjects** | Pointer to [**[]KmipObject**](KmipObject.md) | List of the name and UID of the KMIP objects.  | [optional] 
+**KmipObjects** | Pointer to [**[]KmipObject**](KmipObject.md) | A list of the names and UIDs of the KMIP objects.  | [optional] 
 **Name** | Pointer to **string** | A locally unique, system-generated name. The name cannot be modified.  | [optional] [readonly] 
-**Uris** | Pointer to **[]string** | List of URIs for the configured KMIP servers.  | [optional] 
+**Uris** | Pointer to **[]string** | A list of URIs for the configured KMIP servers.  | [optional] 
 
 ## Methods
 
@@ -28,6 +29,31 @@ will change when the set of required properties is changed
 NewKmipWithDefaults instantiates a new Kmip object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetContext
+
+`func (o *Kmip) GetContext() FixedReferenceWithType`
+
+GetContext returns the Context field if non-nil, zero value otherwise.
+
+### GetContextOk
+
+`func (o *Kmip) GetContextOk() (*FixedReferenceWithType, bool)`
+
+GetContextOk returns a tuple with the Context field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetContext
+
+`func (o *Kmip) SetContext(v FixedReferenceWithType)`
+
+SetContext sets Context field to given value.
+
+### HasContext
+
+`func (o *Kmip) HasContext() bool`
+
+HasContext returns a boolean if a field has been set.
 
 ### GetCaCertificate
 

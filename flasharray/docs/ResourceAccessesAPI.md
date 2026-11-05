@@ -4,10 +4,10 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ResourceAccessesBatchPost**](ResourceAccessesAPI.md#ResourceAccessesBatchPost) | **Post** /api/2.58/resource-accesses/batch | Create a resource access configuration
-[**ResourceAccessesDelete**](ResourceAccessesAPI.md#ResourceAccessesDelete) | **Delete** /api/2.58/resource-accesses | Delete a resource access configuration
-[**ResourceAccessesGet**](ResourceAccessesAPI.md#ResourceAccessesGet) | **Get** /api/2.58/resource-accesses | List resource access configurations
-[**ResourceAccessesStatusGet**](ResourceAccessesAPI.md#ResourceAccessesStatusGet) | **Get** /api/2.58/resource-accesses/status | List status of resource accesses as specified by resource access configuration
+[**ResourceAccessesBatchPost**](ResourceAccessesAPI.md#ResourceAccessesBatchPost) | **Post** /api/2.59/resource-accesses/batch | Create a resource access configuration
+[**ResourceAccessesDelete**](ResourceAccessesAPI.md#ResourceAccessesDelete) | **Delete** /api/2.59/resource-accesses | Delete a resource access configuration
+[**ResourceAccessesGet**](ResourceAccessesAPI.md#ResourceAccessesGet) | **Get** /api/2.59/resource-accesses | List resource access configurations
+[**ResourceAccessesStatusGet**](ResourceAccessesAPI.md#ResourceAccessesStatusGet) | **Get** /api/2.59/resource-accesses/status | List status of resource accesses as specified by resource access configuration
 
 
 
@@ -28,7 +28,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -105,7 +105,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -180,7 +180,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -263,7 +263,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

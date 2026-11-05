@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Id** | Pointer to **string** | A globally unique, system-generated ID. The ID cannot be modified and cannot refer to another resource.  | [optional] [readonly] 
 **Name** | Pointer to **string** | A user-specified name. The name must be locally unique and can be changed.  | [optional] 
 **Destroyed** | Pointer to **bool** | Returns a value of &#x60;true&#x60; if the volume group has been destroyed and is pending eradication. Before the &#x60;time_remaining&#x60; period has elapsed, the destroyed volume group can be recovered by setting &#x60;destroyed&#x3D;false&#x60;. After the &#x60;time_remaining&#x60; period has elapsed, the volume group is permanently eradicated and cannot be recovered.  | [optional] 
-**PriorityAdjustment** | Pointer to [**PriorityAdjustment**](PriorityAdjustment.md) |  | [optional] 
+**PriorityAdjustment** | Pointer to [**PriorityAdjustmentPatch**](PriorityAdjustmentPatch.md) |  | [optional] 
 **Qos** | Pointer to [**QosPatch**](QosPatch.md) |  | [optional] 
 **Space** | Pointer to [**Space**](Space.md) |  | [optional] 
 
@@ -107,20 +107,20 @@ HasDestroyed returns a boolean if a field has been set.
 
 ### GetPriorityAdjustment
 
-`func (o *VolumeGroupPatch) GetPriorityAdjustment() PriorityAdjustment`
+`func (o *VolumeGroupPatch) GetPriorityAdjustment() PriorityAdjustmentPatch`
 
 GetPriorityAdjustment returns the PriorityAdjustment field if non-nil, zero value otherwise.
 
 ### GetPriorityAdjustmentOk
 
-`func (o *VolumeGroupPatch) GetPriorityAdjustmentOk() (*PriorityAdjustment, bool)`
+`func (o *VolumeGroupPatch) GetPriorityAdjustmentOk() (*PriorityAdjustmentPatch, bool)`
 
 GetPriorityAdjustmentOk returns a tuple with the PriorityAdjustment field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPriorityAdjustment
 
-`func (o *VolumeGroupPatch) SetPriorityAdjustment(v PriorityAdjustment)`
+`func (o *VolumeGroupPatch) SetPriorityAdjustment(v PriorityAdjustmentPatch)`
 
 SetPriorityAdjustment sets PriorityAdjustment field to given value.
 

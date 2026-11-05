@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Qos** | Pointer to [**ContainerQosCeilings**](ContainerQosCeilings.md) | Sets QoS limits. | [optional] 
+**PriorityAdjustment** | Pointer to [**PriorityAdjustmentValue**](PriorityAdjustmentValue.md) | Adjusts host group priority. | [optional] 
+**Qos** | Pointer to [**ContainerQos**](ContainerQos.md) | Sets QoS ceilings and floors. | [optional] 
 **Tags** | Pointer to [**[]NonCopyableTag**](NonCopyableTag.md) | The list of tags to be upserted with the object.  | [optional] 
 
 ## Methods
@@ -26,22 +27,47 @@ NewHostGroupPostWithDefaults instantiates a new HostGroupPost object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
+### GetPriorityAdjustment
+
+`func (o *HostGroupPost) GetPriorityAdjustment() PriorityAdjustmentValue`
+
+GetPriorityAdjustment returns the PriorityAdjustment field if non-nil, zero value otherwise.
+
+### GetPriorityAdjustmentOk
+
+`func (o *HostGroupPost) GetPriorityAdjustmentOk() (*PriorityAdjustmentValue, bool)`
+
+GetPriorityAdjustmentOk returns a tuple with the PriorityAdjustment field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPriorityAdjustment
+
+`func (o *HostGroupPost) SetPriorityAdjustment(v PriorityAdjustmentValue)`
+
+SetPriorityAdjustment sets PriorityAdjustment field to given value.
+
+### HasPriorityAdjustment
+
+`func (o *HostGroupPost) HasPriorityAdjustment() bool`
+
+HasPriorityAdjustment returns a boolean if a field has been set.
+
 ### GetQos
 
-`func (o *HostGroupPost) GetQos() ContainerQosCeilings`
+`func (o *HostGroupPost) GetQos() ContainerQos`
 
 GetQos returns the Qos field if non-nil, zero value otherwise.
 
 ### GetQosOk
 
-`func (o *HostGroupPost) GetQosOk() (*ContainerQosCeilings, bool)`
+`func (o *HostGroupPost) GetQosOk() (*ContainerQos, bool)`
 
 GetQosOk returns a tuple with the Qos field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetQos
 
-`func (o *HostGroupPost) SetQos(v ContainerQosCeilings)`
+`func (o *HostGroupPost) SetQos(v ContainerQos)`
 
 SetQos sets Qos field to given value.
 

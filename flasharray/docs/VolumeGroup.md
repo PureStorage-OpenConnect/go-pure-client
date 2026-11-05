@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **Name** | Pointer to **string** | A user-specified name. The name must be locally unique and can be changed.  | [optional] 
 **Destroyed** | Pointer to **bool** | Returns a value of &#x60;true&#x60; if the volume group has been destroyed and is pending eradication. Before the &#x60;time_remaining&#x60; period has elapsed, the destroyed volume group can be recovered by setting &#x60;destroyed&#x3D;false&#x60;. After the &#x60;time_remaining&#x60; period has elapsed, the volume group is permanently eradicated and cannot be recovered.  | [optional] 
 **Pod** | Pointer to [**Reference**](Reference.md) | A reference to the pod.  | [optional] 
+**Priority** | Pointer to **int32** | The effective priority band for this volume group. If a &#x60;priority_adjustment&#x60; is configured on the volume group, this field reflects that value. If no &#x60;priority_adjustment&#x60; is set, it reflects the closest ancestor&#39;s configured band, or 0 (default) if no ancestor has a band.  | [optional] [readonly] 
 **PriorityAdjustment** | Pointer to [**PriorityAdjustment**](PriorityAdjustment.md) |  | [optional] 
 **Qos** | Pointer to [**Qos**](Qos.md) |  | [optional] 
 **Space** | Pointer to [**Space**](Space.md) |  | [optional] 
@@ -159,6 +160,31 @@ SetPod sets Pod field to given value.
 `func (o *VolumeGroup) HasPod() bool`
 
 HasPod returns a boolean if a field has been set.
+
+### GetPriority
+
+`func (o *VolumeGroup) GetPriority() int32`
+
+GetPriority returns the Priority field if non-nil, zero value otherwise.
+
+### GetPriorityOk
+
+`func (o *VolumeGroup) GetPriorityOk() (*int32, bool)`
+
+GetPriorityOk returns a tuple with the Priority field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPriority
+
+`func (o *VolumeGroup) SetPriority(v int32)`
+
+SetPriority sets Priority field to given value.
+
+### HasPriority
+
+`func (o *VolumeGroup) HasPriority() bool`
+
+HasPriority returns a boolean if a field has been set.
 
 ### GetPriorityAdjustment
 

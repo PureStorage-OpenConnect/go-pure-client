@@ -4,13 +4,13 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ArrayConnectionsConnectionKeyGet**](ArrayConnectionsAPI.md#ArrayConnectionsConnectionKeyGet) | **Get** /api/2.58/array-connections/connection-key | List connection key
-[**ArrayConnectionsConnectionKeysPost**](ArrayConnectionsAPI.md#ArrayConnectionsConnectionKeysPost) | **Post** /api/2.58/array-connections/connection-keys | Create array connection key
-[**ArrayConnectionsDelete**](ArrayConnectionsAPI.md#ArrayConnectionsDelete) | **Delete** /api/2.58/array-connections | Delete an array connection
-[**ArrayConnectionsGet**](ArrayConnectionsAPI.md#ArrayConnectionsGet) | **Get** /api/2.58/array-connections | List the connected arrays
-[**ArrayConnectionsPatch**](ArrayConnectionsAPI.md#ArrayConnectionsPatch) | **Patch** /api/2.58/array-connections | Modify an array connection
-[**ArrayConnectionsPathGet**](ArrayConnectionsAPI.md#ArrayConnectionsPathGet) | **Get** /api/2.58/array-connections/path | List connection path
-[**ArrayConnectionsPost**](ArrayConnectionsAPI.md#ArrayConnectionsPost) | **Post** /api/2.58/array-connections | Create an array connection
+[**ArrayConnectionsConnectionKeyGet**](ArrayConnectionsAPI.md#ArrayConnectionsConnectionKeyGet) | **Get** /api/2.59/array-connections/connection-key | List connection key
+[**ArrayConnectionsConnectionKeysPost**](ArrayConnectionsAPI.md#ArrayConnectionsConnectionKeysPost) | **Post** /api/2.59/array-connections/connection-keys | Create array connection key
+[**ArrayConnectionsDelete**](ArrayConnectionsAPI.md#ArrayConnectionsDelete) | **Delete** /api/2.59/array-connections | Delete an array connection
+[**ArrayConnectionsGet**](ArrayConnectionsAPI.md#ArrayConnectionsGet) | **Get** /api/2.59/array-connections | List the connected arrays
+[**ArrayConnectionsPatch**](ArrayConnectionsAPI.md#ArrayConnectionsPatch) | **Patch** /api/2.59/array-connections | Modify an array connection
+[**ArrayConnectionsPathGet**](ArrayConnectionsAPI.md#ArrayConnectionsPathGet) | **Get** /api/2.59/array-connections/path | List connection path
+[**ArrayConnectionsPost**](ArrayConnectionsAPI.md#ArrayConnectionsPost) | **Post** /api/2.59/array-connections | Create an array connection
 
 
 
@@ -31,7 +31,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -110,7 +110,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -187,7 +187,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -264,7 +264,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -352,7 +352,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -434,7 +434,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -522,7 +522,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

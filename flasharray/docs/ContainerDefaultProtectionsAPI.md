@@ -4,8 +4,8 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ContainerDefaultProtectionsGet**](ContainerDefaultProtectionsAPI.md#ContainerDefaultProtectionsGet) | **Get** /api/2.58/container-default-protections | List container default protections
-[**ContainerDefaultProtectionsPatch**](ContainerDefaultProtectionsAPI.md#ContainerDefaultProtectionsPatch) | **Patch** /api/2.58/container-default-protections | Modify a container&#39;s default protections
+[**ContainerDefaultProtectionsGet**](ContainerDefaultProtectionsAPI.md#ContainerDefaultProtectionsGet) | **Get** /api/2.59/container-default-protections | List container default protections
+[**ContainerDefaultProtectionsPatch**](ContainerDefaultProtectionsAPI.md#ContainerDefaultProtectionsPatch) | **Patch** /api/2.59/container-default-protections | Modify a container&#39;s default protections
 
 
 
@@ -26,7 +26,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -113,7 +113,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

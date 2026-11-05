@@ -4,8 +4,8 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**RemotePodsGet**](RemotePodsAPI.md#RemotePodsGet) | **Get** /api/2.58/remote-pods | List remote pods
-[**RemotePodsTagsGet**](RemotePodsAPI.md#RemotePodsTagsGet) | **Get** /api/2.58/remote-pods/tags | List tags
+[**RemotePodsGet**](RemotePodsAPI.md#RemotePodsGet) | **Get** /api/2.59/remote-pods | List remote pods
+[**RemotePodsTagsGet**](RemotePodsAPI.md#RemotePodsTagsGet) | **Get** /api/2.59/remote-pods/tags | List tags
 
 
 
@@ -26,7 +26,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -114,7 +114,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

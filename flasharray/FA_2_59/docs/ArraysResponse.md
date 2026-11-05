@@ -1,0 +1,524 @@
+# ArraysResponse
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Id** | Pointer to **string** | A globally unique, system-generated ID. The ID cannot be modified and cannot refer to another resource.  | [optional] [readonly] 
+**Name** | Pointer to **string** | A user-specified name. The name must be locally unique and can be changed.  | [optional] 
+**Context** | Pointer to [**FixedReferenceWithType**](FixedReferenceWithType.md) | The context in which the operation was performed.  Valid values include a reference to any array which is a member of the same fleet or to the fleet itself.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | [optional] [readonly] 
+**AsOf** | Pointer to **int64** | The time in milliseconds since UNIX epoch.  | [optional] [readonly] 
+**Banner** | Pointer to **string** |  | [optional] 
+**Capacity** | Pointer to **int64** | The usable capacity in bytes. If the user does not have sufficient access, this field will return &#x60;null&#x60;.  | [optional] [readonly] 
+**ConsoleLockEnabled** | Pointer to **bool** | If &#x60;true&#x60;, console lock is enabled for the array. If the user does not have sufficient access, this field will return &#x60;null&#x60;.  | [optional] 
+**Encryption** | Pointer to [**ArrayEncryption**](ArrayEncryption.md) |  | [optional] 
+**EradicationConfig** | Pointer to [**EradicationConfig**](EradicationConfig.md) |  | [optional] 
+**IdleTimeout** | Pointer to **int32** | The idle timeout in milliseconds. Valid values include &#x60;0&#x60; and any multiple of &#x60;60000&#x60; in the range of &#x60;300000&#x60; and &#x60;10800000&#x60;. Any other values are rounded down to the nearest multiple of &#x60;60000&#x60;.  | [optional] 
+**NetworkAccessPolicy** | Pointer to [**ReferenceWithType**](ReferenceWithType.md) | The network access policy for the array.  | [optional] 
+**NtpServers** | Pointer to **[]string** | NTP Servers. If the user does not have sufficient access, this field will return &#x60;null&#x60;.  | [optional] 
+**NtpSymmetricKey** | Pointer to **string** | The text of ntp symmetric authentication key. Supported formats include a hex-encoded string no longer than 64 characters, or an ASCII string no longer than 20 characters, excluding \&quot;#\&quot;. Any configured key will be masked as \&quot;****\&quot; on return. If the user does not have sufficient access, this field will return &#x60;null&#x60;.  | [optional] 
+**Os** | Pointer to **string** | Specifies the operating system. Values include &#x60;Purity&#x60;, &#x60;Purity//FA&#x60;, and &#x60;Purity//FB&#x60;.  | [optional] [readonly] 
+**Parity** | Pointer to **float32** | A representation of data redundancy on the array. Data redundancy is rebuilt automatically by the system whenever parity is less than &#x60;1.0&#x60;. If the user does not have sufficient access, this field will return &#x60;null&#x60;.  | [optional] [readonly] 
+**ScsiTimeout** | Pointer to **int32** | The SCSI timeout. If not specified, defaults to &#x60;60s&#x60;. If the user does not have sufficient access, this field will return &#x60;null&#x60;.  | [optional] 
+**TimeZone** | Pointer to **string** | The time zone of the array.  | [optional] [readonly] 
+**Version** | Pointer to **string** |  | [optional] [readonly] 
+**Space** | Pointer to [**SpaceResponse**](SpaceResponse.md) | If the user does not have sufficient access, all fields will return &#x60;null&#x60;. | [optional] 
+
+## Methods
+
+### NewArraysResponse
+
+`func NewArraysResponse() *ArraysResponse`
+
+NewArraysResponse instantiates a new ArraysResponse object
+This constructor will assign default values to properties that have it defined,
+and makes sure properties required by API are set, but the set of arguments
+will change when the set of required properties is changed
+
+### NewArraysResponseWithDefaults
+
+`func NewArraysResponseWithDefaults() *ArraysResponse`
+
+NewArraysResponseWithDefaults instantiates a new ArraysResponse object
+This constructor will only assign default values to properties that have it defined,
+but it doesn't guarantee that properties required by API are set
+
+### GetId
+
+`func (o *ArraysResponse) GetId() string`
+
+GetId returns the Id field if non-nil, zero value otherwise.
+
+### GetIdOk
+
+`func (o *ArraysResponse) GetIdOk() (*string, bool)`
+
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetId
+
+`func (o *ArraysResponse) SetId(v string)`
+
+SetId sets Id field to given value.
+
+### HasId
+
+`func (o *ArraysResponse) HasId() bool`
+
+HasId returns a boolean if a field has been set.
+
+### GetName
+
+`func (o *ArraysResponse) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *ArraysResponse) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *ArraysResponse) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *ArraysResponse) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetContext
+
+`func (o *ArraysResponse) GetContext() FixedReferenceWithType`
+
+GetContext returns the Context field if non-nil, zero value otherwise.
+
+### GetContextOk
+
+`func (o *ArraysResponse) GetContextOk() (*FixedReferenceWithType, bool)`
+
+GetContextOk returns a tuple with the Context field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetContext
+
+`func (o *ArraysResponse) SetContext(v FixedReferenceWithType)`
+
+SetContext sets Context field to given value.
+
+### HasContext
+
+`func (o *ArraysResponse) HasContext() bool`
+
+HasContext returns a boolean if a field has been set.
+
+### GetAsOf
+
+`func (o *ArraysResponse) GetAsOf() int64`
+
+GetAsOf returns the AsOf field if non-nil, zero value otherwise.
+
+### GetAsOfOk
+
+`func (o *ArraysResponse) GetAsOfOk() (*int64, bool)`
+
+GetAsOfOk returns a tuple with the AsOf field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAsOf
+
+`func (o *ArraysResponse) SetAsOf(v int64)`
+
+SetAsOf sets AsOf field to given value.
+
+### HasAsOf
+
+`func (o *ArraysResponse) HasAsOf() bool`
+
+HasAsOf returns a boolean if a field has been set.
+
+### GetBanner
+
+`func (o *ArraysResponse) GetBanner() string`
+
+GetBanner returns the Banner field if non-nil, zero value otherwise.
+
+### GetBannerOk
+
+`func (o *ArraysResponse) GetBannerOk() (*string, bool)`
+
+GetBannerOk returns a tuple with the Banner field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBanner
+
+`func (o *ArraysResponse) SetBanner(v string)`
+
+SetBanner sets Banner field to given value.
+
+### HasBanner
+
+`func (o *ArraysResponse) HasBanner() bool`
+
+HasBanner returns a boolean if a field has been set.
+
+### GetCapacity
+
+`func (o *ArraysResponse) GetCapacity() int64`
+
+GetCapacity returns the Capacity field if non-nil, zero value otherwise.
+
+### GetCapacityOk
+
+`func (o *ArraysResponse) GetCapacityOk() (*int64, bool)`
+
+GetCapacityOk returns a tuple with the Capacity field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCapacity
+
+`func (o *ArraysResponse) SetCapacity(v int64)`
+
+SetCapacity sets Capacity field to given value.
+
+### HasCapacity
+
+`func (o *ArraysResponse) HasCapacity() bool`
+
+HasCapacity returns a boolean if a field has been set.
+
+### GetConsoleLockEnabled
+
+`func (o *ArraysResponse) GetConsoleLockEnabled() bool`
+
+GetConsoleLockEnabled returns the ConsoleLockEnabled field if non-nil, zero value otherwise.
+
+### GetConsoleLockEnabledOk
+
+`func (o *ArraysResponse) GetConsoleLockEnabledOk() (*bool, bool)`
+
+GetConsoleLockEnabledOk returns a tuple with the ConsoleLockEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetConsoleLockEnabled
+
+`func (o *ArraysResponse) SetConsoleLockEnabled(v bool)`
+
+SetConsoleLockEnabled sets ConsoleLockEnabled field to given value.
+
+### HasConsoleLockEnabled
+
+`func (o *ArraysResponse) HasConsoleLockEnabled() bool`
+
+HasConsoleLockEnabled returns a boolean if a field has been set.
+
+### GetEncryption
+
+`func (o *ArraysResponse) GetEncryption() ArrayEncryption`
+
+GetEncryption returns the Encryption field if non-nil, zero value otherwise.
+
+### GetEncryptionOk
+
+`func (o *ArraysResponse) GetEncryptionOk() (*ArrayEncryption, bool)`
+
+GetEncryptionOk returns a tuple with the Encryption field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEncryption
+
+`func (o *ArraysResponse) SetEncryption(v ArrayEncryption)`
+
+SetEncryption sets Encryption field to given value.
+
+### HasEncryption
+
+`func (o *ArraysResponse) HasEncryption() bool`
+
+HasEncryption returns a boolean if a field has been set.
+
+### GetEradicationConfig
+
+`func (o *ArraysResponse) GetEradicationConfig() EradicationConfig`
+
+GetEradicationConfig returns the EradicationConfig field if non-nil, zero value otherwise.
+
+### GetEradicationConfigOk
+
+`func (o *ArraysResponse) GetEradicationConfigOk() (*EradicationConfig, bool)`
+
+GetEradicationConfigOk returns a tuple with the EradicationConfig field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEradicationConfig
+
+`func (o *ArraysResponse) SetEradicationConfig(v EradicationConfig)`
+
+SetEradicationConfig sets EradicationConfig field to given value.
+
+### HasEradicationConfig
+
+`func (o *ArraysResponse) HasEradicationConfig() bool`
+
+HasEradicationConfig returns a boolean if a field has been set.
+
+### GetIdleTimeout
+
+`func (o *ArraysResponse) GetIdleTimeout() int32`
+
+GetIdleTimeout returns the IdleTimeout field if non-nil, zero value otherwise.
+
+### GetIdleTimeoutOk
+
+`func (o *ArraysResponse) GetIdleTimeoutOk() (*int32, bool)`
+
+GetIdleTimeoutOk returns a tuple with the IdleTimeout field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIdleTimeout
+
+`func (o *ArraysResponse) SetIdleTimeout(v int32)`
+
+SetIdleTimeout sets IdleTimeout field to given value.
+
+### HasIdleTimeout
+
+`func (o *ArraysResponse) HasIdleTimeout() bool`
+
+HasIdleTimeout returns a boolean if a field has been set.
+
+### GetNetworkAccessPolicy
+
+`func (o *ArraysResponse) GetNetworkAccessPolicy() ReferenceWithType`
+
+GetNetworkAccessPolicy returns the NetworkAccessPolicy field if non-nil, zero value otherwise.
+
+### GetNetworkAccessPolicyOk
+
+`func (o *ArraysResponse) GetNetworkAccessPolicyOk() (*ReferenceWithType, bool)`
+
+GetNetworkAccessPolicyOk returns a tuple with the NetworkAccessPolicy field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetworkAccessPolicy
+
+`func (o *ArraysResponse) SetNetworkAccessPolicy(v ReferenceWithType)`
+
+SetNetworkAccessPolicy sets NetworkAccessPolicy field to given value.
+
+### HasNetworkAccessPolicy
+
+`func (o *ArraysResponse) HasNetworkAccessPolicy() bool`
+
+HasNetworkAccessPolicy returns a boolean if a field has been set.
+
+### GetNtpServers
+
+`func (o *ArraysResponse) GetNtpServers() []string`
+
+GetNtpServers returns the NtpServers field if non-nil, zero value otherwise.
+
+### GetNtpServersOk
+
+`func (o *ArraysResponse) GetNtpServersOk() (*[]string, bool)`
+
+GetNtpServersOk returns a tuple with the NtpServers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNtpServers
+
+`func (o *ArraysResponse) SetNtpServers(v []string)`
+
+SetNtpServers sets NtpServers field to given value.
+
+### HasNtpServers
+
+`func (o *ArraysResponse) HasNtpServers() bool`
+
+HasNtpServers returns a boolean if a field has been set.
+
+### GetNtpSymmetricKey
+
+`func (o *ArraysResponse) GetNtpSymmetricKey() string`
+
+GetNtpSymmetricKey returns the NtpSymmetricKey field if non-nil, zero value otherwise.
+
+### GetNtpSymmetricKeyOk
+
+`func (o *ArraysResponse) GetNtpSymmetricKeyOk() (*string, bool)`
+
+GetNtpSymmetricKeyOk returns a tuple with the NtpSymmetricKey field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNtpSymmetricKey
+
+`func (o *ArraysResponse) SetNtpSymmetricKey(v string)`
+
+SetNtpSymmetricKey sets NtpSymmetricKey field to given value.
+
+### HasNtpSymmetricKey
+
+`func (o *ArraysResponse) HasNtpSymmetricKey() bool`
+
+HasNtpSymmetricKey returns a boolean if a field has been set.
+
+### GetOs
+
+`func (o *ArraysResponse) GetOs() string`
+
+GetOs returns the Os field if non-nil, zero value otherwise.
+
+### GetOsOk
+
+`func (o *ArraysResponse) GetOsOk() (*string, bool)`
+
+GetOsOk returns a tuple with the Os field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOs
+
+`func (o *ArraysResponse) SetOs(v string)`
+
+SetOs sets Os field to given value.
+
+### HasOs
+
+`func (o *ArraysResponse) HasOs() bool`
+
+HasOs returns a boolean if a field has been set.
+
+### GetParity
+
+`func (o *ArraysResponse) GetParity() float32`
+
+GetParity returns the Parity field if non-nil, zero value otherwise.
+
+### GetParityOk
+
+`func (o *ArraysResponse) GetParityOk() (*float32, bool)`
+
+GetParityOk returns a tuple with the Parity field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetParity
+
+`func (o *ArraysResponse) SetParity(v float32)`
+
+SetParity sets Parity field to given value.
+
+### HasParity
+
+`func (o *ArraysResponse) HasParity() bool`
+
+HasParity returns a boolean if a field has been set.
+
+### GetScsiTimeout
+
+`func (o *ArraysResponse) GetScsiTimeout() int32`
+
+GetScsiTimeout returns the ScsiTimeout field if non-nil, zero value otherwise.
+
+### GetScsiTimeoutOk
+
+`func (o *ArraysResponse) GetScsiTimeoutOk() (*int32, bool)`
+
+GetScsiTimeoutOk returns a tuple with the ScsiTimeout field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetScsiTimeout
+
+`func (o *ArraysResponse) SetScsiTimeout(v int32)`
+
+SetScsiTimeout sets ScsiTimeout field to given value.
+
+### HasScsiTimeout
+
+`func (o *ArraysResponse) HasScsiTimeout() bool`
+
+HasScsiTimeout returns a boolean if a field has been set.
+
+### GetTimeZone
+
+`func (o *ArraysResponse) GetTimeZone() string`
+
+GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
+
+### GetTimeZoneOk
+
+`func (o *ArraysResponse) GetTimeZoneOk() (*string, bool)`
+
+GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTimeZone
+
+`func (o *ArraysResponse) SetTimeZone(v string)`
+
+SetTimeZone sets TimeZone field to given value.
+
+### HasTimeZone
+
+`func (o *ArraysResponse) HasTimeZone() bool`
+
+HasTimeZone returns a boolean if a field has been set.
+
+### GetVersion
+
+`func (o *ArraysResponse) GetVersion() string`
+
+GetVersion returns the Version field if non-nil, zero value otherwise.
+
+### GetVersionOk
+
+`func (o *ArraysResponse) GetVersionOk() (*string, bool)`
+
+GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVersion
+
+`func (o *ArraysResponse) SetVersion(v string)`
+
+SetVersion sets Version field to given value.
+
+### HasVersion
+
+`func (o *ArraysResponse) HasVersion() bool`
+
+HasVersion returns a boolean if a field has been set.
+
+### GetSpace
+
+`func (o *ArraysResponse) GetSpace() SpaceResponse`
+
+GetSpace returns the Space field if non-nil, zero value otherwise.
+
+### GetSpaceOk
+
+`func (o *ArraysResponse) GetSpaceOk() (*SpaceResponse, bool)`
+
+GetSpaceOk returns a tuple with the Space field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSpace
+
+`func (o *ArraysResponse) SetSpace(v SpaceResponse)`
+
+SetSpace sets Space field to given value.
+
+### HasSpace
+
+`func (o *ArraysResponse) HasSpace() bool`
+
+HasSpace returns a boolean if a field has been set.
+
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

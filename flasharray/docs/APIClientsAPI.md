@@ -4,10 +4,10 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ApiClientsDelete**](APIClientsAPI.md#ApiClientsDelete) | **Delete** /api/2.58/api-clients | Delete an API client
-[**ApiClientsGet**](APIClientsAPI.md#ApiClientsGet) | **Get** /api/2.58/api-clients | List API clients
-[**ApiClientsPatch**](APIClientsAPI.md#ApiClientsPatch) | **Patch** /api/2.58/api-clients | Manage an API client
-[**ApiClientsPost**](APIClientsAPI.md#ApiClientsPost) | **Post** /api/2.58/api-clients | Create an API client
+[**ApiClientsDelete**](APIClientsAPI.md#ApiClientsDelete) | **Delete** /api/2.59/api-clients | Delete an API client
+[**ApiClientsGet**](APIClientsAPI.md#ApiClientsGet) | **Get** /api/2.59/api-clients | List API clients
+[**ApiClientsPatch**](APIClientsAPI.md#ApiClientsPatch) | **Patch** /api/2.59/api-clients | Manage an API client
+[**ApiClientsPost**](APIClientsAPI.md#ApiClientsPost) | **Post** /api/2.59/api-clients | Create an API client
 
 
 
@@ -28,7 +28,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -104,7 +104,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -187,7 +187,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -266,7 +266,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

@@ -4,10 +4,10 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ObjectStoreAccountsDelete**](ObjectStoreAccountsAPI.md#ObjectStoreAccountsDelete) | **Delete** /api/2.58/object-store-accounts | DELETE object-store-accounts
-[**ObjectStoreAccountsGet**](ObjectStoreAccountsAPI.md#ObjectStoreAccountsGet) | **Get** /api/2.58/object-store-accounts | GET object-store-accounts
-[**ObjectStoreAccountsPost**](ObjectStoreAccountsAPI.md#ObjectStoreAccountsPost) | **Post** /api/2.58/object-store-accounts | POST object-store-accounts
-[**ObjectStoreAccountsSpaceGet**](ObjectStoreAccountsAPI.md#ObjectStoreAccountsSpaceGet) | **Get** /api/2.58/object-store-accounts/space | List object store account space information
+[**ObjectStoreAccountsDelete**](ObjectStoreAccountsAPI.md#ObjectStoreAccountsDelete) | **Delete** /api/2.59/object-store-accounts | DELETE object-store-accounts
+[**ObjectStoreAccountsGet**](ObjectStoreAccountsAPI.md#ObjectStoreAccountsGet) | **Get** /api/2.59/object-store-accounts | GET object-store-accounts
+[**ObjectStoreAccountsPost**](ObjectStoreAccountsAPI.md#ObjectStoreAccountsPost) | **Post** /api/2.59/object-store-accounts | POST object-store-accounts
+[**ObjectStoreAccountsSpaceGet**](ObjectStoreAccountsAPI.md#ObjectStoreAccountsSpaceGet) | **Get** /api/2.59/object-store-accounts/space | List object store account space information
 
 
 
@@ -28,7 +28,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -104,7 +104,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -190,7 +190,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -267,7 +267,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

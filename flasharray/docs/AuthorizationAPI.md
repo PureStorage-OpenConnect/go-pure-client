@@ -4,8 +4,8 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**LoginPost**](AuthorizationAPI.md#LoginPost) | **Post** /api/2.58/login | Create a user session
-[**LogoutPost**](AuthorizationAPI.md#LogoutPost) | **Post** /api/2.58/logout | POST logout (placeholder)
+[**LoginPost**](AuthorizationAPI.md#LoginPost) | **Post** /api/2.59/login | Create a user session
+[**LogoutPost**](AuthorizationAPI.md#LogoutPost) | **Post** /api/2.59/logout | POST logout (placeholder)
 [**ApiAPIVersionGet**](AuthorizationAPI.md#ApiAPIVersionGet) | **Get** /api/api_version | List available API versions
 [**Oauth210TokenPost**](AuthorizationAPI.md#Oauth210TokenPost) | **Post** /oauth2/1.0/token | Get access token
 
@@ -28,7 +28,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -105,7 +105,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -179,7 +179,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -254,7 +254,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
