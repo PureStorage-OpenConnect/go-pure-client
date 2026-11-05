@@ -4,136 +4,136 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**PoliciesAlertWatcherDelete**](PoliciesAPI.md#PoliciesAlertWatcherDelete) | **Delete** /api/2.58/policies/alert-watcher | Delete alert-watcher policies
-[**PoliciesAlertWatcherGet**](PoliciesAPI.md#PoliciesAlertWatcherGet) | **Get** /api/2.58/policies/alert-watcher | List alert-watcher policies
-[**PoliciesAlertWatcherMembersDelete**](PoliciesAPI.md#PoliciesAlertWatcherMembersDelete) | **Delete** /api/2.58/policies/alert-watcher/members | Delete membership between alert-watcher policies and attached object
-[**PoliciesAlertWatcherMembersGet**](PoliciesAPI.md#PoliciesAlertWatcherMembersGet) | **Get** /api/2.58/policies/alert-watcher/members | List alert-watcher policy members
-[**PoliciesAlertWatcherMembersPost**](PoliciesAPI.md#PoliciesAlertWatcherMembersPost) | **Post** /api/2.58/policies/alert-watcher/members | Create a membership between an object and an alert-watcher policy
-[**PoliciesAlertWatcherPatch**](PoliciesAPI.md#PoliciesAlertWatcherPatch) | **Patch** /api/2.58/policies/alert-watcher | Modify alert-watcher policies
-[**PoliciesAlertWatcherPost**](PoliciesAPI.md#PoliciesAlertWatcherPost) | **Post** /api/2.58/policies/alert-watcher | Create alert-watcher policies
-[**PoliciesAlertWatcherRulesDelete**](PoliciesAPI.md#PoliciesAlertWatcherRulesDelete) | **Delete** /api/2.58/policies/alert-watcher/rules | Delete alert-watcher policy rules
-[**PoliciesAlertWatcherRulesGet**](PoliciesAPI.md#PoliciesAlertWatcherRulesGet) | **Get** /api/2.58/policies/alert-watcher/rules | List alert-watcher policy rules
-[**PoliciesAlertWatcherRulesPatch**](PoliciesAPI.md#PoliciesAlertWatcherRulesPatch) | **Patch** /api/2.58/policies/alert-watcher/rules | Modify alert-watcher policy rules
-[**PoliciesAlertWatcherRulesPost**](PoliciesAPI.md#PoliciesAlertWatcherRulesPost) | **Post** /api/2.58/policies/alert-watcher/rules | Create alert-watcher policy rules
-[**PoliciesAlertWatcherRulesTestGet**](PoliciesAPI.md#PoliciesAlertWatcherRulesTestGet) | **Get** /api/2.58/policies/alert-watcher/rules/test | List rules of alert-watcher policy rule test
-[**PoliciesAntivirusDelete**](PoliciesAPI.md#PoliciesAntivirusDelete) | **Delete** /api/2.58/policies/antivirus | Delete Antivirus policies
-[**PoliciesAntivirusGet**](PoliciesAPI.md#PoliciesAntivirusGet) | **Get** /api/2.58/policies/antivirus | List Antivirus policies
-[**PoliciesAntivirusMembersDelete**](PoliciesAPI.md#PoliciesAntivirusMembersDelete) | **Delete** /api/2.58/policies/antivirus/members | Delete membership between antivirus policies and managed directories
-[**PoliciesAntivirusMembersGet**](PoliciesAPI.md#PoliciesAntivirusMembersGet) | **Get** /api/2.58/policies/antivirus/members | List antivirus policy members
-[**PoliciesAntivirusMembersPost**](PoliciesAPI.md#PoliciesAntivirusMembersPost) | **Post** /api/2.58/policies/antivirus/members | Create a membership between a managed directory and an antivirus policy
-[**PoliciesAntivirusPatch**](PoliciesAPI.md#PoliciesAntivirusPatch) | **Patch** /api/2.58/policies/antivirus | Modify Antivirus policies
-[**PoliciesAntivirusPost**](PoliciesAPI.md#PoliciesAntivirusPost) | **Post** /api/2.58/policies/antivirus | Create Antivirus policies
-[**PoliciesAntivirusRulesDelete**](PoliciesAPI.md#PoliciesAntivirusRulesDelete) | **Delete** /api/2.58/policies/antivirus/rules | Delete Antivirus policy rules.
-[**PoliciesAntivirusRulesGet**](PoliciesAPI.md#PoliciesAntivirusRulesGet) | **Get** /api/2.58/policies/antivirus/rules | List Antivirus policy rules
-[**PoliciesAntivirusRulesPatch**](PoliciesAPI.md#PoliciesAntivirusRulesPatch) | **Patch** /api/2.58/policies/antivirus/rules | Modify Antivirus policy rules
-[**PoliciesAntivirusRulesPost**](PoliciesAPI.md#PoliciesAntivirusRulesPost) | **Post** /api/2.58/policies/antivirus/rules | Create Antivirus policy rules
-[**PoliciesAuditFileDelete**](PoliciesAPI.md#PoliciesAuditFileDelete) | **Delete** /api/2.58/policies/audit-file | Delete audit policies
-[**PoliciesAuditFileGet**](PoliciesAPI.md#PoliciesAuditFileGet) | **Get** /api/2.58/policies/audit-file | List audit policies
-[**PoliciesAuditFileMembersDelete**](PoliciesAPI.md#PoliciesAuditFileMembersDelete) | **Delete** /api/2.58/policies/audit-file/members | Delete membership between audit policies and managed directories
-[**PoliciesAuditFileMembersGet**](PoliciesAPI.md#PoliciesAuditFileMembersGet) | **Get** /api/2.58/policies/audit-file/members | List audit policy members
-[**PoliciesAuditFileMembersPost**](PoliciesAPI.md#PoliciesAuditFileMembersPost) | **Post** /api/2.58/policies/audit-file/members | Create a membership between a managed directory and a audit policy
-[**PoliciesAuditFilePatch**](PoliciesAPI.md#PoliciesAuditFilePatch) | **Patch** /api/2.58/policies/audit-file | Modify audit policies
-[**PoliciesAuditFilePost**](PoliciesAPI.md#PoliciesAuditFilePost) | **Post** /api/2.58/policies/audit-file | Create audit policies
-[**PoliciesAutodirDelete**](PoliciesAPI.md#PoliciesAutodirDelete) | **Delete** /api/2.58/policies/autodir | Delete auto managed directory policies
-[**PoliciesAutodirGet**](PoliciesAPI.md#PoliciesAutodirGet) | **Get** /api/2.58/policies/autodir | List auto managed directory policies
-[**PoliciesAutodirMembersDelete**](PoliciesAPI.md#PoliciesAutodirMembersDelete) | **Delete** /api/2.58/policies/autodir/members | Delete auto managed directory policies
-[**PoliciesAutodirMembersGet**](PoliciesAPI.md#PoliciesAutodirMembersGet) | **Get** /api/2.58/policies/autodir/members | List auto managed directories policy members
-[**PoliciesAutodirMembersPost**](PoliciesAPI.md#PoliciesAutodirMembersPost) | **Post** /api/2.58/policies/autodir/members | Create auto managed directory policies
-[**PoliciesAutodirPatch**](PoliciesAPI.md#PoliciesAutodirPatch) | **Patch** /api/2.58/policies/autodir | Modify auto managed directory policies
-[**PoliciesAutodirPost**](PoliciesAPI.md#PoliciesAutodirPost) | **Post** /api/2.58/policies/autodir | Create auto managed directory policies
-[**PoliciesGet**](PoliciesAPI.md#PoliciesGet) | **Get** /api/2.58/policies | List policies
-[**PoliciesManagementAccessDelete**](PoliciesAPI.md#PoliciesManagementAccessDelete) | **Delete** /api/2.58/policies/management-access | Delete management access policies
-[**PoliciesManagementAccessGet**](PoliciesAPI.md#PoliciesManagementAccessGet) | **Get** /api/2.58/policies/management-access | List management access policies
-[**PoliciesManagementAccessMembersDelete**](PoliciesAPI.md#PoliciesManagementAccessMembersDelete) | **Delete** /api/2.58/policies/management-access/members | Delete membership between management access policies and attached object
-[**PoliciesManagementAccessMembersGet**](PoliciesAPI.md#PoliciesManagementAccessMembersGet) | **Get** /api/2.58/policies/management-access/members | List management access policy members
-[**PoliciesManagementAccessMembersPost**](PoliciesAPI.md#PoliciesManagementAccessMembersPost) | **Post** /api/2.58/policies/management-access/members | Create a membership between an object and a management access policy
-[**PoliciesManagementAccessPatch**](PoliciesAPI.md#PoliciesManagementAccessPatch) | **Patch** /api/2.58/policies/management-access | Modify management access policies
-[**PoliciesManagementAccessPost**](PoliciesAPI.md#PoliciesManagementAccessPost) | **Post** /api/2.58/policies/management-access | Create management access policies
-[**PoliciesMembersGet**](PoliciesAPI.md#PoliciesMembersGet) | **Get** /api/2.58/policies/members | List policy members
-[**PoliciesNetworkAccessDelete**](PoliciesAPI.md#PoliciesNetworkAccessDelete) | **Delete** /api/2.58/policies/network-access | Delete network access policies
-[**PoliciesNetworkAccessGet**](PoliciesAPI.md#PoliciesNetworkAccessGet) | **Get** /api/2.58/policies/network-access | List network access policies
-[**PoliciesNetworkAccessMembersGet**](PoliciesAPI.md#PoliciesNetworkAccessMembersGet) | **Get** /api/2.58/policies/network-access/members | List network access policy members
-[**PoliciesNetworkAccessPatch**](PoliciesAPI.md#PoliciesNetworkAccessPatch) | **Patch** /api/2.58/policies/network-access | Modify network access policies
-[**PoliciesNetworkAccessPost**](PoliciesAPI.md#PoliciesNetworkAccessPost) | **Post** /api/2.58/policies/network-access | Create network access policies
-[**PoliciesNetworkAccessRulesDelete**](PoliciesAPI.md#PoliciesNetworkAccessRulesDelete) | **Delete** /api/2.58/policies/network-access/rules | Delete network access policy rules
-[**PoliciesNetworkAccessRulesGet**](PoliciesAPI.md#PoliciesNetworkAccessRulesGet) | **Get** /api/2.58/policies/network-access/rules | List network access policy rules
-[**PoliciesNetworkAccessRulesPatch**](PoliciesAPI.md#PoliciesNetworkAccessRulesPatch) | **Patch** /api/2.58/policies/network-access/rules | Modify network access policy rules
-[**PoliciesNetworkAccessRulesPost**](PoliciesAPI.md#PoliciesNetworkAccessRulesPost) | **Post** /api/2.58/policies/network-access/rules | Create network access policy rules
-[**PoliciesNfsClientRulesDelete**](PoliciesAPI.md#PoliciesNfsClientRulesDelete) | **Delete** /api/2.58/policies/nfs/client-rules | Delete NFS client policy rules.
-[**PoliciesNfsClientRulesGet**](PoliciesAPI.md#PoliciesNfsClientRulesGet) | **Get** /api/2.58/policies/nfs/client-rules | List NFS client policy rules
-[**PoliciesNfsClientRulesPatch**](PoliciesAPI.md#PoliciesNfsClientRulesPatch) | **Patch** /api/2.58/policies/nfs/client-rules | Modify NFS client policy rules
-[**PoliciesNfsClientRulesPost**](PoliciesAPI.md#PoliciesNfsClientRulesPost) | **Post** /api/2.58/policies/nfs/client-rules | Create NFS client policy rules
-[**PoliciesNfsDelete**](PoliciesAPI.md#PoliciesNfsDelete) | **Delete** /api/2.58/policies/nfs | Delete NFS policies
-[**PoliciesNfsGet**](PoliciesAPI.md#PoliciesNfsGet) | **Get** /api/2.58/policies/nfs | List NFS policies
-[**PoliciesNfsMembersDelete**](PoliciesAPI.md#PoliciesNfsMembersDelete) | **Delete** /api/2.58/policies/nfs/members | Delete NFS policies
-[**PoliciesNfsMembersGet**](PoliciesAPI.md#PoliciesNfsMembersGet) | **Get** /api/2.58/policies/nfs/members | List NFS policy members
-[**PoliciesNfsMembersPost**](PoliciesAPI.md#PoliciesNfsMembersPost) | **Post** /api/2.58/policies/nfs/members | Create NFS policies
-[**PoliciesNfsPatch**](PoliciesAPI.md#PoliciesNfsPatch) | **Patch** /api/2.58/policies/nfs | Modify NFS policies
-[**PoliciesNfsPost**](PoliciesAPI.md#PoliciesNfsPost) | **Post** /api/2.58/policies/nfs | Create NFS policies
-[**PoliciesObjectStoreAccessGet**](PoliciesAPI.md#PoliciesObjectStoreAccessGet) | **Get** /api/2.58/policies/object-store-access | GET policies/object-store-access
-[**PoliciesObjectStoreAccessMembersDelete**](PoliciesAPI.md#PoliciesObjectStoreAccessMembersDelete) | **Delete** /api/2.58/policies/object-store-access/members | DELETE policies/object-store-access/members
-[**PoliciesObjectStoreAccessMembersGet**](PoliciesAPI.md#PoliciesObjectStoreAccessMembersGet) | **Get** /api/2.58/policies/object-store-access/members | GET policies/object-store-access/members
-[**PoliciesObjectStoreAccessMembersPost**](PoliciesAPI.md#PoliciesObjectStoreAccessMembersPost) | **Post** /api/2.58/policies/object-store-access/members | POST policies/object-store-access/members
-[**PoliciesObjectStoreAccessRulesGet**](PoliciesAPI.md#PoliciesObjectStoreAccessRulesGet) | **Get** /api/2.58/policies/object-store-access/rules | GET policies/object-store-access/rules
-[**PoliciesPasswordGet**](PoliciesAPI.md#PoliciesPasswordGet) | **Get** /api/2.58/policies/password | List password policies
-[**PoliciesPasswordPatch**](PoliciesAPI.md#PoliciesPasswordPatch) | **Patch** /api/2.58/policies/password | Modify password policies
-[**PoliciesQosDelete**](PoliciesAPI.md#PoliciesQosDelete) | **Delete** /api/2.58/policies/qos | Delete QoS policies
-[**PoliciesQosGet**](PoliciesAPI.md#PoliciesQosGet) | **Get** /api/2.58/policies/qos | List QoS policies
-[**PoliciesQosMembersDelete**](PoliciesAPI.md#PoliciesQosMembersDelete) | **Delete** /api/2.58/policies/qos/members | Delete membership between QoS policies and entities
-[**PoliciesQosMembersGet**](PoliciesAPI.md#PoliciesQosMembersGet) | **Get** /api/2.58/policies/qos/members | List QoS policy members
-[**PoliciesQosMembersPost**](PoliciesAPI.md#PoliciesQosMembersPost) | **Post** /api/2.58/policies/qos/members | Create a membership between an entity and a QoS policy
-[**PoliciesQosPatch**](PoliciesAPI.md#PoliciesQosPatch) | **Patch** /api/2.58/policies/qos | Modify QoS policies
-[**PoliciesQosPost**](PoliciesAPI.md#PoliciesQosPost) | **Post** /api/2.58/policies/qos | Create QoS policies
-[**PoliciesQuotaDelete**](PoliciesAPI.md#PoliciesQuotaDelete) | **Delete** /api/2.58/policies/quota | Delete quota policies
-[**PoliciesQuotaGet**](PoliciesAPI.md#PoliciesQuotaGet) | **Get** /api/2.58/policies/quota | List quota policies
-[**PoliciesQuotaMembersDelete**](PoliciesAPI.md#PoliciesQuotaMembersDelete) | **Delete** /api/2.58/policies/quota/members | Delete membership between quota policies and managed directories
-[**PoliciesQuotaMembersGet**](PoliciesAPI.md#PoliciesQuotaMembersGet) | **Get** /api/2.58/policies/quota/members | List quota policy members
-[**PoliciesQuotaMembersPost**](PoliciesAPI.md#PoliciesQuotaMembersPost) | **Post** /api/2.58/policies/quota/members | Create a membership between a managed directory and a quota policy
-[**PoliciesQuotaPatch**](PoliciesAPI.md#PoliciesQuotaPatch) | **Patch** /api/2.58/policies/quota | Modify quota policies
-[**PoliciesQuotaPost**](PoliciesAPI.md#PoliciesQuotaPost) | **Post** /api/2.58/policies/quota | Create quota policies
-[**PoliciesQuotaRulesDelete**](PoliciesAPI.md#PoliciesQuotaRulesDelete) | **Delete** /api/2.58/policies/quota/rules | Delete quota policy rules
-[**PoliciesQuotaRulesGet**](PoliciesAPI.md#PoliciesQuotaRulesGet) | **Get** /api/2.58/policies/quota/rules | List quota policy rules
-[**PoliciesQuotaRulesPatch**](PoliciesAPI.md#PoliciesQuotaRulesPatch) | **Patch** /api/2.58/policies/quota/rules | Modify quota policy rules
-[**PoliciesQuotaRulesPost**](PoliciesAPI.md#PoliciesQuotaRulesPost) | **Post** /api/2.58/policies/quota/rules | Create quota policy rules
-[**PoliciesSmbClientRulesDelete**](PoliciesAPI.md#PoliciesSmbClientRulesDelete) | **Delete** /api/2.58/policies/smb/client-rules | Delete SMB client policy rules.
-[**PoliciesSmbClientRulesGet**](PoliciesAPI.md#PoliciesSmbClientRulesGet) | **Get** /api/2.58/policies/smb/client-rules | List SMB client policy rules
-[**PoliciesSmbClientRulesPost**](PoliciesAPI.md#PoliciesSmbClientRulesPost) | **Post** /api/2.58/policies/smb/client-rules | Create SMB client policy rules
-[**PoliciesSmbDelete**](PoliciesAPI.md#PoliciesSmbDelete) | **Delete** /api/2.58/policies/smb | Delete SMB policies
-[**PoliciesSmbGet**](PoliciesAPI.md#PoliciesSmbGet) | **Get** /api/2.58/policies/smb | List SMB policies
-[**PoliciesSmbMembersDelete**](PoliciesAPI.md#PoliciesSmbMembersDelete) | **Delete** /api/2.58/policies/smb/members | Delete SMB policies
-[**PoliciesSmbMembersGet**](PoliciesAPI.md#PoliciesSmbMembersGet) | **Get** /api/2.58/policies/smb/members | List SMB policy members
-[**PoliciesSmbMembersPost**](PoliciesAPI.md#PoliciesSmbMembersPost) | **Post** /api/2.58/policies/smb/members | Create SMB policies
-[**PoliciesSmbPatch**](PoliciesAPI.md#PoliciesSmbPatch) | **Patch** /api/2.58/policies/smb | Modify SMB policies
-[**PoliciesSmbPost**](PoliciesAPI.md#PoliciesSmbPost) | **Post** /api/2.58/policies/smb | Create SMB policies
-[**PoliciesSnapshotDelete**](PoliciesAPI.md#PoliciesSnapshotDelete) | **Delete** /api/2.58/policies/snapshot | Delete snapshot policies
-[**PoliciesSnapshotGet**](PoliciesAPI.md#PoliciesSnapshotGet) | **Get** /api/2.58/policies/snapshot | List snapshot policies
-[**PoliciesSnapshotMembersDelete**](PoliciesAPI.md#PoliciesSnapshotMembersDelete) | **Delete** /api/2.58/policies/snapshot/members | Delete snapshot policies
-[**PoliciesSnapshotMembersGet**](PoliciesAPI.md#PoliciesSnapshotMembersGet) | **Get** /api/2.58/policies/snapshot/members | List snapshot policy members
-[**PoliciesSnapshotMembersPost**](PoliciesAPI.md#PoliciesSnapshotMembersPost) | **Post** /api/2.58/policies/snapshot/members | Create snapshot policies
-[**PoliciesSnapshotPatch**](PoliciesAPI.md#PoliciesSnapshotPatch) | **Patch** /api/2.58/policies/snapshot | Modify snapshot policies
-[**PoliciesSnapshotPost**](PoliciesAPI.md#PoliciesSnapshotPost) | **Post** /api/2.58/policies/snapshot | Create snapshot policies
-[**PoliciesSnapshotRulesDelete**](PoliciesAPI.md#PoliciesSnapshotRulesDelete) | **Delete** /api/2.58/policies/snapshot/rules | Delete snapshot policy rules
-[**PoliciesSnapshotRulesGet**](PoliciesAPI.md#PoliciesSnapshotRulesGet) | **Get** /api/2.58/policies/snapshot/rules | List snapshot policy rules
-[**PoliciesSnapshotRulesPatch**](PoliciesAPI.md#PoliciesSnapshotRulesPatch) | **Patch** /api/2.58/policies/snapshot/rules | Modify snapshot policy rules
-[**PoliciesSnapshotRulesPost**](PoliciesAPI.md#PoliciesSnapshotRulesPost) | **Post** /api/2.58/policies/snapshot/rules | Create snapshot policy rules
-[**PoliciesTlsDelete**](PoliciesAPI.md#PoliciesTlsDelete) | **Delete** /api/2.58/policies/tls | Delete TLS policies
-[**PoliciesTlsGet**](PoliciesAPI.md#PoliciesTlsGet) | **Get** /api/2.58/policies/tls | List TLS policies
-[**PoliciesTlsMembersDelete**](PoliciesAPI.md#PoliciesTlsMembersDelete) | **Delete** /api/2.58/policies/tls/members | Delete membership between TLS policies and attached object
-[**PoliciesTlsMembersGet**](PoliciesAPI.md#PoliciesTlsMembersGet) | **Get** /api/2.58/policies/tls/members | List TLS policy members
-[**PoliciesTlsMembersPost**](PoliciesAPI.md#PoliciesTlsMembersPost) | **Post** /api/2.58/policies/tls/members | Create a membership between an object and a TLS policy
-[**PoliciesTlsPatch**](PoliciesAPI.md#PoliciesTlsPatch) | **Patch** /api/2.58/policies/tls | Modify TLS policies
-[**PoliciesTlsPost**](PoliciesAPI.md#PoliciesTlsPost) | **Post** /api/2.58/policies/tls | Create TLS policies
-[**PoliciesUserGroupQuotaDelete**](PoliciesAPI.md#PoliciesUserGroupQuotaDelete) | **Delete** /api/2.58/policies/user-group-quota | Delete user-group-quota policies
-[**PoliciesUserGroupQuotaGet**](PoliciesAPI.md#PoliciesUserGroupQuotaGet) | **Get** /api/2.58/policies/user-group-quota | List user-group-quota policies
-[**PoliciesUserGroupQuotaMembersDelete**](PoliciesAPI.md#PoliciesUserGroupQuotaMembersDelete) | **Delete** /api/2.58/policies/user-group-quota/members | Delete membership between user-group-quota policies and managed directories
-[**PoliciesUserGroupQuotaMembersGet**](PoliciesAPI.md#PoliciesUserGroupQuotaMembersGet) | **Get** /api/2.58/policies/user-group-quota/members | List user-group-quota policy members
-[**PoliciesUserGroupQuotaMembersPost**](PoliciesAPI.md#PoliciesUserGroupQuotaMembersPost) | **Post** /api/2.58/policies/user-group-quota/members | Create a membership between a managed directory and a user-group-quota policy
-[**PoliciesUserGroupQuotaPatch**](PoliciesAPI.md#PoliciesUserGroupQuotaPatch) | **Patch** /api/2.58/policies/user-group-quota | Modify user-group-quota policies
-[**PoliciesUserGroupQuotaPost**](PoliciesAPI.md#PoliciesUserGroupQuotaPost) | **Post** /api/2.58/policies/user-group-quota | Create user-group-quota policies
-[**PoliciesUserGroupQuotaRulesDelete**](PoliciesAPI.md#PoliciesUserGroupQuotaRulesDelete) | **Delete** /api/2.58/policies/user-group-quota/rules | Delete quota policy rules
-[**PoliciesUserGroupQuotaRulesGet**](PoliciesAPI.md#PoliciesUserGroupQuotaRulesGet) | **Get** /api/2.58/policies/user-group-quota/rules | List user-group-quota policy rules
-[**PoliciesUserGroupQuotaRulesPatch**](PoliciesAPI.md#PoliciesUserGroupQuotaRulesPatch) | **Patch** /api/2.58/policies/user-group-quota/rules | Modify user-group-quota policy rules
-[**PoliciesUserGroupQuotaRulesPost**](PoliciesAPI.md#PoliciesUserGroupQuotaRulesPost) | **Post** /api/2.58/policies/user-group-quota/rules | Create user-group-quota policy rules
+[**PoliciesAlertWatcherDelete**](PoliciesAPI.md#PoliciesAlertWatcherDelete) | **Delete** /api/2.59/policies/alert-watcher | Delete alert-watcher policies
+[**PoliciesAlertWatcherGet**](PoliciesAPI.md#PoliciesAlertWatcherGet) | **Get** /api/2.59/policies/alert-watcher | List alert-watcher policies
+[**PoliciesAlertWatcherMembersDelete**](PoliciesAPI.md#PoliciesAlertWatcherMembersDelete) | **Delete** /api/2.59/policies/alert-watcher/members | Delete membership between alert-watcher policies and attached object
+[**PoliciesAlertWatcherMembersGet**](PoliciesAPI.md#PoliciesAlertWatcherMembersGet) | **Get** /api/2.59/policies/alert-watcher/members | List alert-watcher policy members
+[**PoliciesAlertWatcherMembersPost**](PoliciesAPI.md#PoliciesAlertWatcherMembersPost) | **Post** /api/2.59/policies/alert-watcher/members | Create a membership between an object and an alert-watcher policy
+[**PoliciesAlertWatcherPatch**](PoliciesAPI.md#PoliciesAlertWatcherPatch) | **Patch** /api/2.59/policies/alert-watcher | Modify alert-watcher policies
+[**PoliciesAlertWatcherPost**](PoliciesAPI.md#PoliciesAlertWatcherPost) | **Post** /api/2.59/policies/alert-watcher | Create alert-watcher policies
+[**PoliciesAlertWatcherRulesDelete**](PoliciesAPI.md#PoliciesAlertWatcherRulesDelete) | **Delete** /api/2.59/policies/alert-watcher/rules | Delete alert-watcher policy rules
+[**PoliciesAlertWatcherRulesGet**](PoliciesAPI.md#PoliciesAlertWatcherRulesGet) | **Get** /api/2.59/policies/alert-watcher/rules | List alert-watcher policy rules
+[**PoliciesAlertWatcherRulesPatch**](PoliciesAPI.md#PoliciesAlertWatcherRulesPatch) | **Patch** /api/2.59/policies/alert-watcher/rules | Modify alert-watcher policy rules
+[**PoliciesAlertWatcherRulesPost**](PoliciesAPI.md#PoliciesAlertWatcherRulesPost) | **Post** /api/2.59/policies/alert-watcher/rules | Create alert-watcher policy rules
+[**PoliciesAlertWatcherRulesTestGet**](PoliciesAPI.md#PoliciesAlertWatcherRulesTestGet) | **Get** /api/2.59/policies/alert-watcher/rules/test | List rules of alert-watcher policy rule test
+[**PoliciesAntivirusDelete**](PoliciesAPI.md#PoliciesAntivirusDelete) | **Delete** /api/2.59/policies/antivirus | Delete Antivirus policies
+[**PoliciesAntivirusGet**](PoliciesAPI.md#PoliciesAntivirusGet) | **Get** /api/2.59/policies/antivirus | List Antivirus policies
+[**PoliciesAntivirusMembersDelete**](PoliciesAPI.md#PoliciesAntivirusMembersDelete) | **Delete** /api/2.59/policies/antivirus/members | Delete membership between antivirus policies and managed directories
+[**PoliciesAntivirusMembersGet**](PoliciesAPI.md#PoliciesAntivirusMembersGet) | **Get** /api/2.59/policies/antivirus/members | List antivirus policy members
+[**PoliciesAntivirusMembersPost**](PoliciesAPI.md#PoliciesAntivirusMembersPost) | **Post** /api/2.59/policies/antivirus/members | Create a membership between a managed directory and an antivirus policy
+[**PoliciesAntivirusPatch**](PoliciesAPI.md#PoliciesAntivirusPatch) | **Patch** /api/2.59/policies/antivirus | Modify Antivirus policies
+[**PoliciesAntivirusPost**](PoliciesAPI.md#PoliciesAntivirusPost) | **Post** /api/2.59/policies/antivirus | Create Antivirus policies
+[**PoliciesAntivirusRulesDelete**](PoliciesAPI.md#PoliciesAntivirusRulesDelete) | **Delete** /api/2.59/policies/antivirus/rules | Delete Antivirus policy rules.
+[**PoliciesAntivirusRulesGet**](PoliciesAPI.md#PoliciesAntivirusRulesGet) | **Get** /api/2.59/policies/antivirus/rules | List Antivirus policy rules
+[**PoliciesAntivirusRulesPatch**](PoliciesAPI.md#PoliciesAntivirusRulesPatch) | **Patch** /api/2.59/policies/antivirus/rules | Modify Antivirus policy rules
+[**PoliciesAntivirusRulesPost**](PoliciesAPI.md#PoliciesAntivirusRulesPost) | **Post** /api/2.59/policies/antivirus/rules | Create Antivirus policy rules
+[**PoliciesAuditFileDelete**](PoliciesAPI.md#PoliciesAuditFileDelete) | **Delete** /api/2.59/policies/audit-file | Delete audit policies
+[**PoliciesAuditFileGet**](PoliciesAPI.md#PoliciesAuditFileGet) | **Get** /api/2.59/policies/audit-file | List audit policies
+[**PoliciesAuditFileMembersDelete**](PoliciesAPI.md#PoliciesAuditFileMembersDelete) | **Delete** /api/2.59/policies/audit-file/members | Delete membership between audit policies and managed directories
+[**PoliciesAuditFileMembersGet**](PoliciesAPI.md#PoliciesAuditFileMembersGet) | **Get** /api/2.59/policies/audit-file/members | List audit policy members
+[**PoliciesAuditFileMembersPost**](PoliciesAPI.md#PoliciesAuditFileMembersPost) | **Post** /api/2.59/policies/audit-file/members | Create a membership between a managed directory and a audit policy
+[**PoliciesAuditFilePatch**](PoliciesAPI.md#PoliciesAuditFilePatch) | **Patch** /api/2.59/policies/audit-file | Modify audit policies
+[**PoliciesAuditFilePost**](PoliciesAPI.md#PoliciesAuditFilePost) | **Post** /api/2.59/policies/audit-file | Create audit policies
+[**PoliciesAutodirDelete**](PoliciesAPI.md#PoliciesAutodirDelete) | **Delete** /api/2.59/policies/autodir | Delete auto managed directory policies
+[**PoliciesAutodirGet**](PoliciesAPI.md#PoliciesAutodirGet) | **Get** /api/2.59/policies/autodir | List auto managed directory policies
+[**PoliciesAutodirMembersDelete**](PoliciesAPI.md#PoliciesAutodirMembersDelete) | **Delete** /api/2.59/policies/autodir/members | Delete auto managed directory policies
+[**PoliciesAutodirMembersGet**](PoliciesAPI.md#PoliciesAutodirMembersGet) | **Get** /api/2.59/policies/autodir/members | List auto managed directories policy members
+[**PoliciesAutodirMembersPost**](PoliciesAPI.md#PoliciesAutodirMembersPost) | **Post** /api/2.59/policies/autodir/members | Create auto managed directory policies
+[**PoliciesAutodirPatch**](PoliciesAPI.md#PoliciesAutodirPatch) | **Patch** /api/2.59/policies/autodir | Modify auto managed directory policies
+[**PoliciesAutodirPost**](PoliciesAPI.md#PoliciesAutodirPost) | **Post** /api/2.59/policies/autodir | Create auto managed directory policies
+[**PoliciesGet**](PoliciesAPI.md#PoliciesGet) | **Get** /api/2.59/policies | List policies
+[**PoliciesManagementAccessDelete**](PoliciesAPI.md#PoliciesManagementAccessDelete) | **Delete** /api/2.59/policies/management-access | Delete management access policies
+[**PoliciesManagementAccessGet**](PoliciesAPI.md#PoliciesManagementAccessGet) | **Get** /api/2.59/policies/management-access | List management access policies
+[**PoliciesManagementAccessMembersDelete**](PoliciesAPI.md#PoliciesManagementAccessMembersDelete) | **Delete** /api/2.59/policies/management-access/members | Delete membership between management access policies and attached object
+[**PoliciesManagementAccessMembersGet**](PoliciesAPI.md#PoliciesManagementAccessMembersGet) | **Get** /api/2.59/policies/management-access/members | List management access policy members
+[**PoliciesManagementAccessMembersPost**](PoliciesAPI.md#PoliciesManagementAccessMembersPost) | **Post** /api/2.59/policies/management-access/members | Create a membership between an object and a management access policy
+[**PoliciesManagementAccessPatch**](PoliciesAPI.md#PoliciesManagementAccessPatch) | **Patch** /api/2.59/policies/management-access | Modify management access policies
+[**PoliciesManagementAccessPost**](PoliciesAPI.md#PoliciesManagementAccessPost) | **Post** /api/2.59/policies/management-access | Create management access policies
+[**PoliciesMembersGet**](PoliciesAPI.md#PoliciesMembersGet) | **Get** /api/2.59/policies/members | List policy members
+[**PoliciesNetworkAccessDelete**](PoliciesAPI.md#PoliciesNetworkAccessDelete) | **Delete** /api/2.59/policies/network-access | Delete network access policies
+[**PoliciesNetworkAccessGet**](PoliciesAPI.md#PoliciesNetworkAccessGet) | **Get** /api/2.59/policies/network-access | List network access policies
+[**PoliciesNetworkAccessMembersGet**](PoliciesAPI.md#PoliciesNetworkAccessMembersGet) | **Get** /api/2.59/policies/network-access/members | List network access policy members
+[**PoliciesNetworkAccessPatch**](PoliciesAPI.md#PoliciesNetworkAccessPatch) | **Patch** /api/2.59/policies/network-access | Modify network access policies
+[**PoliciesNetworkAccessPost**](PoliciesAPI.md#PoliciesNetworkAccessPost) | **Post** /api/2.59/policies/network-access | Create network access policies
+[**PoliciesNetworkAccessRulesDelete**](PoliciesAPI.md#PoliciesNetworkAccessRulesDelete) | **Delete** /api/2.59/policies/network-access/rules | Delete network access policy rules
+[**PoliciesNetworkAccessRulesGet**](PoliciesAPI.md#PoliciesNetworkAccessRulesGet) | **Get** /api/2.59/policies/network-access/rules | List network access policy rules
+[**PoliciesNetworkAccessRulesPatch**](PoliciesAPI.md#PoliciesNetworkAccessRulesPatch) | **Patch** /api/2.59/policies/network-access/rules | Modify network access policy rules
+[**PoliciesNetworkAccessRulesPost**](PoliciesAPI.md#PoliciesNetworkAccessRulesPost) | **Post** /api/2.59/policies/network-access/rules | Create network access policy rules
+[**PoliciesNfsClientRulesDelete**](PoliciesAPI.md#PoliciesNfsClientRulesDelete) | **Delete** /api/2.59/policies/nfs/client-rules | Delete NFS client policy rules.
+[**PoliciesNfsClientRulesGet**](PoliciesAPI.md#PoliciesNfsClientRulesGet) | **Get** /api/2.59/policies/nfs/client-rules | List NFS client policy rules
+[**PoliciesNfsClientRulesPatch**](PoliciesAPI.md#PoliciesNfsClientRulesPatch) | **Patch** /api/2.59/policies/nfs/client-rules | Modify NFS client policy rules
+[**PoliciesNfsClientRulesPost**](PoliciesAPI.md#PoliciesNfsClientRulesPost) | **Post** /api/2.59/policies/nfs/client-rules | Create NFS client policy rules
+[**PoliciesNfsDelete**](PoliciesAPI.md#PoliciesNfsDelete) | **Delete** /api/2.59/policies/nfs | Delete NFS policies
+[**PoliciesNfsGet**](PoliciesAPI.md#PoliciesNfsGet) | **Get** /api/2.59/policies/nfs | List NFS policies
+[**PoliciesNfsMembersDelete**](PoliciesAPI.md#PoliciesNfsMembersDelete) | **Delete** /api/2.59/policies/nfs/members | Delete NFS policies
+[**PoliciesNfsMembersGet**](PoliciesAPI.md#PoliciesNfsMembersGet) | **Get** /api/2.59/policies/nfs/members | List NFS policy members
+[**PoliciesNfsMembersPost**](PoliciesAPI.md#PoliciesNfsMembersPost) | **Post** /api/2.59/policies/nfs/members | Create NFS policies
+[**PoliciesNfsPatch**](PoliciesAPI.md#PoliciesNfsPatch) | **Patch** /api/2.59/policies/nfs | Modify NFS policies
+[**PoliciesNfsPost**](PoliciesAPI.md#PoliciesNfsPost) | **Post** /api/2.59/policies/nfs | Create NFS policies
+[**PoliciesObjectStoreAccessGet**](PoliciesAPI.md#PoliciesObjectStoreAccessGet) | **Get** /api/2.59/policies/object-store-access | GET policies/object-store-access
+[**PoliciesObjectStoreAccessMembersDelete**](PoliciesAPI.md#PoliciesObjectStoreAccessMembersDelete) | **Delete** /api/2.59/policies/object-store-access/members | DELETE policies/object-store-access/members
+[**PoliciesObjectStoreAccessMembersGet**](PoliciesAPI.md#PoliciesObjectStoreAccessMembersGet) | **Get** /api/2.59/policies/object-store-access/members | GET policies/object-store-access/members
+[**PoliciesObjectStoreAccessMembersPost**](PoliciesAPI.md#PoliciesObjectStoreAccessMembersPost) | **Post** /api/2.59/policies/object-store-access/members | POST policies/object-store-access/members
+[**PoliciesObjectStoreAccessRulesGet**](PoliciesAPI.md#PoliciesObjectStoreAccessRulesGet) | **Get** /api/2.59/policies/object-store-access/rules | GET policies/object-store-access/rules
+[**PoliciesPasswordGet**](PoliciesAPI.md#PoliciesPasswordGet) | **Get** /api/2.59/policies/password | List password policies
+[**PoliciesPasswordPatch**](PoliciesAPI.md#PoliciesPasswordPatch) | **Patch** /api/2.59/policies/password | Modify password policies
+[**PoliciesQosDelete**](PoliciesAPI.md#PoliciesQosDelete) | **Delete** /api/2.59/policies/qos | Delete QoS policies
+[**PoliciesQosGet**](PoliciesAPI.md#PoliciesQosGet) | **Get** /api/2.59/policies/qos | List QoS policies
+[**PoliciesQosMembersDelete**](PoliciesAPI.md#PoliciesQosMembersDelete) | **Delete** /api/2.59/policies/qos/members | Delete membership between QoS policies and entities
+[**PoliciesQosMembersGet**](PoliciesAPI.md#PoliciesQosMembersGet) | **Get** /api/2.59/policies/qos/members | List QoS policy members
+[**PoliciesQosMembersPost**](PoliciesAPI.md#PoliciesQosMembersPost) | **Post** /api/2.59/policies/qos/members | Create a membership between an entity and a QoS policy
+[**PoliciesQosPatch**](PoliciesAPI.md#PoliciesQosPatch) | **Patch** /api/2.59/policies/qos | Modify QoS policies
+[**PoliciesQosPost**](PoliciesAPI.md#PoliciesQosPost) | **Post** /api/2.59/policies/qos | Create QoS policies
+[**PoliciesQuotaDelete**](PoliciesAPI.md#PoliciesQuotaDelete) | **Delete** /api/2.59/policies/quota | Delete quota policies
+[**PoliciesQuotaGet**](PoliciesAPI.md#PoliciesQuotaGet) | **Get** /api/2.59/policies/quota | List quota policies
+[**PoliciesQuotaMembersDelete**](PoliciesAPI.md#PoliciesQuotaMembersDelete) | **Delete** /api/2.59/policies/quota/members | Delete membership between quota policies and managed directories
+[**PoliciesQuotaMembersGet**](PoliciesAPI.md#PoliciesQuotaMembersGet) | **Get** /api/2.59/policies/quota/members | List quota policy members
+[**PoliciesQuotaMembersPost**](PoliciesAPI.md#PoliciesQuotaMembersPost) | **Post** /api/2.59/policies/quota/members | Create a membership between a managed directory and a quota policy
+[**PoliciesQuotaPatch**](PoliciesAPI.md#PoliciesQuotaPatch) | **Patch** /api/2.59/policies/quota | Modify quota policies
+[**PoliciesQuotaPost**](PoliciesAPI.md#PoliciesQuotaPost) | **Post** /api/2.59/policies/quota | Create quota policies
+[**PoliciesQuotaRulesDelete**](PoliciesAPI.md#PoliciesQuotaRulesDelete) | **Delete** /api/2.59/policies/quota/rules | Delete quota policy rules
+[**PoliciesQuotaRulesGet**](PoliciesAPI.md#PoliciesQuotaRulesGet) | **Get** /api/2.59/policies/quota/rules | List quota policy rules
+[**PoliciesQuotaRulesPatch**](PoliciesAPI.md#PoliciesQuotaRulesPatch) | **Patch** /api/2.59/policies/quota/rules | Modify quota policy rules
+[**PoliciesQuotaRulesPost**](PoliciesAPI.md#PoliciesQuotaRulesPost) | **Post** /api/2.59/policies/quota/rules | Create quota policy rules
+[**PoliciesSmbClientRulesDelete**](PoliciesAPI.md#PoliciesSmbClientRulesDelete) | **Delete** /api/2.59/policies/smb/client-rules | Delete SMB client policy rules.
+[**PoliciesSmbClientRulesGet**](PoliciesAPI.md#PoliciesSmbClientRulesGet) | **Get** /api/2.59/policies/smb/client-rules | List SMB client policy rules
+[**PoliciesSmbClientRulesPost**](PoliciesAPI.md#PoliciesSmbClientRulesPost) | **Post** /api/2.59/policies/smb/client-rules | Create SMB client policy rules
+[**PoliciesSmbDelete**](PoliciesAPI.md#PoliciesSmbDelete) | **Delete** /api/2.59/policies/smb | Delete SMB policies
+[**PoliciesSmbGet**](PoliciesAPI.md#PoliciesSmbGet) | **Get** /api/2.59/policies/smb | List SMB policies
+[**PoliciesSmbMembersDelete**](PoliciesAPI.md#PoliciesSmbMembersDelete) | **Delete** /api/2.59/policies/smb/members | Delete SMB policies
+[**PoliciesSmbMembersGet**](PoliciesAPI.md#PoliciesSmbMembersGet) | **Get** /api/2.59/policies/smb/members | List SMB policy members
+[**PoliciesSmbMembersPost**](PoliciesAPI.md#PoliciesSmbMembersPost) | **Post** /api/2.59/policies/smb/members | Create SMB policies
+[**PoliciesSmbPatch**](PoliciesAPI.md#PoliciesSmbPatch) | **Patch** /api/2.59/policies/smb | Modify SMB policies
+[**PoliciesSmbPost**](PoliciesAPI.md#PoliciesSmbPost) | **Post** /api/2.59/policies/smb | Create SMB policies
+[**PoliciesSnapshotDelete**](PoliciesAPI.md#PoliciesSnapshotDelete) | **Delete** /api/2.59/policies/snapshot | Delete snapshot policies
+[**PoliciesSnapshotGet**](PoliciesAPI.md#PoliciesSnapshotGet) | **Get** /api/2.59/policies/snapshot | List snapshot policies
+[**PoliciesSnapshotMembersDelete**](PoliciesAPI.md#PoliciesSnapshotMembersDelete) | **Delete** /api/2.59/policies/snapshot/members | Delete snapshot policies
+[**PoliciesSnapshotMembersGet**](PoliciesAPI.md#PoliciesSnapshotMembersGet) | **Get** /api/2.59/policies/snapshot/members | List snapshot policy members
+[**PoliciesSnapshotMembersPost**](PoliciesAPI.md#PoliciesSnapshotMembersPost) | **Post** /api/2.59/policies/snapshot/members | Create snapshot policies
+[**PoliciesSnapshotPatch**](PoliciesAPI.md#PoliciesSnapshotPatch) | **Patch** /api/2.59/policies/snapshot | Modify snapshot policies
+[**PoliciesSnapshotPost**](PoliciesAPI.md#PoliciesSnapshotPost) | **Post** /api/2.59/policies/snapshot | Create snapshot policies
+[**PoliciesSnapshotRulesDelete**](PoliciesAPI.md#PoliciesSnapshotRulesDelete) | **Delete** /api/2.59/policies/snapshot/rules | Delete snapshot policy rules
+[**PoliciesSnapshotRulesGet**](PoliciesAPI.md#PoliciesSnapshotRulesGet) | **Get** /api/2.59/policies/snapshot/rules | List snapshot policy rules
+[**PoliciesSnapshotRulesPatch**](PoliciesAPI.md#PoliciesSnapshotRulesPatch) | **Patch** /api/2.59/policies/snapshot/rules | Modify snapshot policy rules
+[**PoliciesSnapshotRulesPost**](PoliciesAPI.md#PoliciesSnapshotRulesPost) | **Post** /api/2.59/policies/snapshot/rules | Create snapshot policy rules
+[**PoliciesTlsDelete**](PoliciesAPI.md#PoliciesTlsDelete) | **Delete** /api/2.59/policies/tls | Delete TLS policies
+[**PoliciesTlsGet**](PoliciesAPI.md#PoliciesTlsGet) | **Get** /api/2.59/policies/tls | List TLS policies
+[**PoliciesTlsMembersDelete**](PoliciesAPI.md#PoliciesTlsMembersDelete) | **Delete** /api/2.59/policies/tls/members | Delete membership between TLS policies and attached object
+[**PoliciesTlsMembersGet**](PoliciesAPI.md#PoliciesTlsMembersGet) | **Get** /api/2.59/policies/tls/members | List TLS policy members
+[**PoliciesTlsMembersPost**](PoliciesAPI.md#PoliciesTlsMembersPost) | **Post** /api/2.59/policies/tls/members | Create a membership between an object and a TLS policy
+[**PoliciesTlsPatch**](PoliciesAPI.md#PoliciesTlsPatch) | **Patch** /api/2.59/policies/tls | Modify TLS policies
+[**PoliciesTlsPost**](PoliciesAPI.md#PoliciesTlsPost) | **Post** /api/2.59/policies/tls | Create TLS policies
+[**PoliciesUserGroupQuotaDelete**](PoliciesAPI.md#PoliciesUserGroupQuotaDelete) | **Delete** /api/2.59/policies/user-group-quota | Delete user-group-quota policies
+[**PoliciesUserGroupQuotaGet**](PoliciesAPI.md#PoliciesUserGroupQuotaGet) | **Get** /api/2.59/policies/user-group-quota | List user-group-quota policies
+[**PoliciesUserGroupQuotaMembersDelete**](PoliciesAPI.md#PoliciesUserGroupQuotaMembersDelete) | **Delete** /api/2.59/policies/user-group-quota/members | Delete membership between user-group-quota policies and managed directories
+[**PoliciesUserGroupQuotaMembersGet**](PoliciesAPI.md#PoliciesUserGroupQuotaMembersGet) | **Get** /api/2.59/policies/user-group-quota/members | List user-group-quota policy members
+[**PoliciesUserGroupQuotaMembersPost**](PoliciesAPI.md#PoliciesUserGroupQuotaMembersPost) | **Post** /api/2.59/policies/user-group-quota/members | Create a membership between a managed directory and a user-group-quota policy
+[**PoliciesUserGroupQuotaPatch**](PoliciesAPI.md#PoliciesUserGroupQuotaPatch) | **Patch** /api/2.59/policies/user-group-quota | Modify user-group-quota policies
+[**PoliciesUserGroupQuotaPost**](PoliciesAPI.md#PoliciesUserGroupQuotaPost) | **Post** /api/2.59/policies/user-group-quota | Create user-group-quota policies
+[**PoliciesUserGroupQuotaRulesDelete**](PoliciesAPI.md#PoliciesUserGroupQuotaRulesDelete) | **Delete** /api/2.59/policies/user-group-quota/rules | Delete quota policy rules
+[**PoliciesUserGroupQuotaRulesGet**](PoliciesAPI.md#PoliciesUserGroupQuotaRulesGet) | **Get** /api/2.59/policies/user-group-quota/rules | List user-group-quota policy rules
+[**PoliciesUserGroupQuotaRulesPatch**](PoliciesAPI.md#PoliciesUserGroupQuotaRulesPatch) | **Patch** /api/2.59/policies/user-group-quota/rules | Modify user-group-quota policy rules
+[**PoliciesUserGroupQuotaRulesPost**](PoliciesAPI.md#PoliciesUserGroupQuotaRulesPost) | **Post** /api/2.59/policies/user-group-quota/rules | Create user-group-quota policy rules
 
 
 
@@ -154,7 +154,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -231,7 +231,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -318,7 +318,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -398,7 +398,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -488,7 +488,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -568,7 +568,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -648,7 +648,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -729,7 +729,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -807,7 +807,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -895,7 +895,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -976,7 +976,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1056,7 +1056,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1141,7 +1141,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1218,7 +1218,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1305,7 +1305,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1385,7 +1385,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1475,7 +1475,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1555,7 +1555,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1636,7 +1636,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1718,7 +1718,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1796,7 +1796,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1884,7 +1884,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1965,7 +1965,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -2045,7 +2045,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -2122,7 +2122,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -2209,7 +2209,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -2289,7 +2289,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -2379,7 +2379,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -2459,7 +2459,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -2539,7 +2539,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -2620,7 +2620,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -2697,7 +2697,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -2784,7 +2784,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -2864,7 +2864,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -2954,7 +2954,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -3034,7 +3034,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -3114,7 +3114,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -3195,7 +3195,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -3282,7 +3282,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -3359,7 +3359,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -3445,7 +3445,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -3525,7 +3525,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -3614,7 +3614,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -3694,7 +3694,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -3774,7 +3774,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -3855,7 +3855,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -3945,7 +3945,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -4022,7 +4022,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -4109,7 +4109,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -4198,7 +4198,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -4278,7 +4278,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -4359,7 +4359,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -4437,7 +4437,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -4525,7 +4525,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -4606,7 +4606,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -4686,7 +4686,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -4764,7 +4764,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -4852,7 +4852,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -4933,7 +4933,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -5013,7 +5013,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -5090,7 +5090,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -5179,7 +5179,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -5261,7 +5261,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -5351,7 +5351,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -5431,7 +5431,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -5511,7 +5511,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -5592,7 +5592,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -5678,7 +5678,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -5757,7 +5757,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -5845,7 +5845,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -5926,7 +5926,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -6012,7 +6012,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -6098,7 +6098,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -6178,7 +6178,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -6255,7 +6255,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -6342,7 +6342,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -6422,7 +6422,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -6512,7 +6512,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -6592,7 +6592,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -6672,7 +6672,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -6753,7 +6753,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -6830,7 +6830,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -6919,7 +6919,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -6999,7 +6999,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -7089,7 +7089,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -7170,7 +7170,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -7251,7 +7251,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -7332,7 +7332,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -7410,7 +7410,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -7498,7 +7498,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -7580,7 +7580,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -7661,7 +7661,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -7739,7 +7739,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -7827,7 +7827,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -7907,7 +7907,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -7984,7 +7984,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -8073,7 +8073,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -8155,7 +8155,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -8245,7 +8245,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -8325,7 +8325,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -8405,7 +8405,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -8486,7 +8486,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -8563,7 +8563,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -8652,7 +8652,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -8732,7 +8732,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -8822,7 +8822,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -8902,7 +8902,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -8982,7 +8982,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -9063,7 +9063,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -9141,7 +9141,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -9229,7 +9229,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -9310,7 +9310,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -9390,7 +9390,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -9467,7 +9467,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -9555,7 +9555,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -9635,7 +9635,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -9724,7 +9724,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -9804,7 +9804,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -9884,7 +9884,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -9965,7 +9965,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -10042,7 +10042,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -10129,7 +10129,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -10210,7 +10210,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -10300,7 +10300,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -10381,7 +10381,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -10462,7 +10462,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -10543,7 +10543,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -10622,7 +10622,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -10710,7 +10710,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -10792,7 +10792,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

@@ -4,13 +4,13 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ServersDelete**](ServersAPI.md#ServersDelete) | **Delete** /api/2.58/servers | Delete server
-[**ServersGet**](ServersAPI.md#ServersGet) | **Get** /api/2.58/servers | List servers
-[**ServersPatch**](ServersAPI.md#ServersPatch) | **Patch** /api/2.58/servers | Modify server
-[**ServersPoliciesTlsDelete**](ServersAPI.md#ServersPoliciesTlsDelete) | **Delete** /api/2.58/servers/policies/tls | Delete membership between TLS policies and attached object
-[**ServersPoliciesTlsGet**](ServersAPI.md#ServersPoliciesTlsGet) | **Get** /api/2.58/servers/policies/tls | List TLS policies attached to servers
-[**ServersPoliciesTlsPost**](ServersAPI.md#ServersPoliciesTlsPost) | **Post** /api/2.58/servers/policies/tls | Create a membership between a server and a TLS policy
-[**ServersPost**](ServersAPI.md#ServersPost) | **Post** /api/2.58/servers | Create server
+[**ServersDelete**](ServersAPI.md#ServersDelete) | **Delete** /api/2.59/servers | Delete server
+[**ServersGet**](ServersAPI.md#ServersGet) | **Get** /api/2.59/servers | List servers
+[**ServersPatch**](ServersAPI.md#ServersPatch) | **Patch** /api/2.59/servers | Modify server
+[**ServersPoliciesTlsDelete**](ServersAPI.md#ServersPoliciesTlsDelete) | **Delete** /api/2.59/servers/policies/tls | Delete membership between TLS policies and attached object
+[**ServersPoliciesTlsGet**](ServersAPI.md#ServersPoliciesTlsGet) | **Get** /api/2.59/servers/policies/tls | List TLS policies attached to servers
+[**ServersPoliciesTlsPost**](ServersAPI.md#ServersPoliciesTlsPost) | **Post** /api/2.59/servers/policies/tls | Create a membership between a server and a TLS policy
+[**ServersPost**](ServersAPI.md#ServersPost) | **Post** /api/2.59/servers | Create server
 
 
 
@@ -31,7 +31,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -109,7 +109,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -196,7 +196,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -276,7 +276,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -355,7 +355,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -443,7 +443,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -523,7 +523,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

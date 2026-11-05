@@ -4,11 +4,11 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**RemoteVolumeSnapshotsDelete**](RemoteVolumeSnapshotsAPI.md#RemoteVolumeSnapshotsDelete) | **Delete** /api/2.58/remote-volume-snapshots | Delete a remote volume snapshot
-[**RemoteVolumeSnapshotsGet**](RemoteVolumeSnapshotsAPI.md#RemoteVolumeSnapshotsGet) | **Get** /api/2.58/remote-volume-snapshots | List remote volume snapshots
-[**RemoteVolumeSnapshotsPatch**](RemoteVolumeSnapshotsAPI.md#RemoteVolumeSnapshotsPatch) | **Patch** /api/2.58/remote-volume-snapshots | Modify a remote volume snapshot
-[**RemoteVolumeSnapshotsPost**](RemoteVolumeSnapshotsAPI.md#RemoteVolumeSnapshotsPost) | **Post** /api/2.58/remote-volume-snapshots | Create a volume snapshot on a connected remote target or offload target
-[**RemoteVolumeSnapshotsTransferGet**](RemoteVolumeSnapshotsAPI.md#RemoteVolumeSnapshotsTransferGet) | **Get** /api/2.58/remote-volume-snapshots/transfer | List remote volume snapshots with transfer statistics
+[**RemoteVolumeSnapshotsDelete**](RemoteVolumeSnapshotsAPI.md#RemoteVolumeSnapshotsDelete) | **Delete** /api/2.59/remote-volume-snapshots | Delete a remote volume snapshot
+[**RemoteVolumeSnapshotsGet**](RemoteVolumeSnapshotsAPI.md#RemoteVolumeSnapshotsGet) | **Get** /api/2.59/remote-volume-snapshots | List remote volume snapshots
+[**RemoteVolumeSnapshotsPatch**](RemoteVolumeSnapshotsAPI.md#RemoteVolumeSnapshotsPatch) | **Patch** /api/2.59/remote-volume-snapshots | Modify a remote volume snapshot
+[**RemoteVolumeSnapshotsPost**](RemoteVolumeSnapshotsAPI.md#RemoteVolumeSnapshotsPost) | **Post** /api/2.59/remote-volume-snapshots | Create a volume snapshot on a connected remote target or offload target
+[**RemoteVolumeSnapshotsTransferGet**](RemoteVolumeSnapshotsAPI.md#RemoteVolumeSnapshotsTransferGet) | **Get** /api/2.59/remote-volume-snapshots/transfer | List remote volume snapshots with transfer statistics
 
 
 
@@ -29,7 +29,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -107,7 +107,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -197,7 +197,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -278,7 +278,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -359,7 +359,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

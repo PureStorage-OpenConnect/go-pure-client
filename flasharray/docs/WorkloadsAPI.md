@@ -4,15 +4,15 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**WorkloadsDelete**](WorkloadsAPI.md#WorkloadsDelete) | **Delete** /api/2.58/workloads | Delete a workload
-[**WorkloadsGet**](WorkloadsAPI.md#WorkloadsGet) | **Get** /api/2.58/workloads | List workloads
-[**WorkloadsPatch**](WorkloadsAPI.md#WorkloadsPatch) | **Patch** /api/2.58/workloads | Modify a workload
-[**WorkloadsPlacementRecommendationsGet**](WorkloadsAPI.md#WorkloadsPlacementRecommendationsGet) | **Get** /api/2.58/workloads/placement-recommendations | List workload placement recommendations
-[**WorkloadsPlacementRecommendationsPost**](WorkloadsAPI.md#WorkloadsPlacementRecommendationsPost) | **Post** /api/2.58/workloads/placement-recommendations | Create a request for a workload placement recommendation.
-[**WorkloadsPost**](WorkloadsAPI.md#WorkloadsPost) | **Post** /api/2.58/workloads | Create a workload
-[**WorkloadsTagsBatchPut**](WorkloadsAPI.md#WorkloadsTagsBatchPut) | **Put** /api/2.58/workloads/tags/batch | Update tags
-[**WorkloadsTagsDelete**](WorkloadsAPI.md#WorkloadsTagsDelete) | **Delete** /api/2.58/workloads/tags | Delete tags
-[**WorkloadsTagsGet**](WorkloadsAPI.md#WorkloadsTagsGet) | **Get** /api/2.58/workloads/tags | List tags
+[**WorkloadsDelete**](WorkloadsAPI.md#WorkloadsDelete) | **Delete** /api/2.59/workloads | Delete a workload
+[**WorkloadsGet**](WorkloadsAPI.md#WorkloadsGet) | **Get** /api/2.59/workloads | List workloads
+[**WorkloadsPatch**](WorkloadsAPI.md#WorkloadsPatch) | **Patch** /api/2.59/workloads | Modify a workload
+[**WorkloadsPlacementRecommendationsGet**](WorkloadsAPI.md#WorkloadsPlacementRecommendationsGet) | **Get** /api/2.59/workloads/placement-recommendations | List workload placement recommendations
+[**WorkloadsPlacementRecommendationsPost**](WorkloadsAPI.md#WorkloadsPlacementRecommendationsPost) | **Post** /api/2.59/workloads/placement-recommendations | Create a request for a workload placement recommendation.
+[**WorkloadsPost**](WorkloadsAPI.md#WorkloadsPost) | **Post** /api/2.59/workloads | Create a workload
+[**WorkloadsTagsBatchPut**](WorkloadsAPI.md#WorkloadsTagsBatchPut) | **Put** /api/2.59/workloads/tags/batch | Update tags
+[**WorkloadsTagsDelete**](WorkloadsAPI.md#WorkloadsTagsDelete) | **Delete** /api/2.59/workloads/tags | Delete tags
+[**WorkloadsTagsGet**](WorkloadsAPI.md#WorkloadsTagsGet) | **Get** /api/2.59/workloads/tags | List tags
 
 
 
@@ -33,7 +33,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -110,7 +110,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -193,7 +193,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -273,7 +273,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -355,7 +355,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -436,7 +436,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -517,7 +517,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -597,7 +597,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -676,7 +676,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

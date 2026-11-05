@@ -4,10 +4,10 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**SubnetsDelete**](SubnetsAPI.md#SubnetsDelete) | **Delete** /api/2.58/subnets | Delete subnet
-[**SubnetsGet**](SubnetsAPI.md#SubnetsGet) | **Get** /api/2.58/subnets | List subnets
-[**SubnetsPatch**](SubnetsAPI.md#SubnetsPatch) | **Patch** /api/2.58/subnets | Modify subnet
-[**SubnetsPost**](SubnetsAPI.md#SubnetsPost) | **Post** /api/2.58/subnets | Create subnet
+[**SubnetsDelete**](SubnetsAPI.md#SubnetsDelete) | **Delete** /api/2.59/subnets | Delete subnet
+[**SubnetsGet**](SubnetsAPI.md#SubnetsGet) | **Get** /api/2.59/subnets | List subnets
+[**SubnetsPatch**](SubnetsAPI.md#SubnetsPatch) | **Patch** /api/2.59/subnets | Modify subnet
+[**SubnetsPost**](SubnetsAPI.md#SubnetsPost) | **Post** /api/2.59/subnets | Create subnet
 
 
 
@@ -28,7 +28,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -104,7 +104,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -189,7 +189,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -268,7 +268,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

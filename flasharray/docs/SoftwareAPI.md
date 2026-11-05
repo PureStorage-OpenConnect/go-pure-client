@@ -4,22 +4,22 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**SoftwareBundleGet**](SoftwareAPI.md#SoftwareBundleGet) | **Get** /api/2.58/software-bundle | List software-bundle
-[**SoftwareBundlePost**](SoftwareAPI.md#SoftwareBundlePost) | **Post** /api/2.58/software-bundle | Create software-bundle
-[**SoftwareCheckDelete**](SoftwareAPI.md#SoftwareCheckDelete) | **Delete** /api/2.58/software-check | Delete a software check task
-[**SoftwareCheckGet**](SoftwareAPI.md#SoftwareCheckGet) | **Get** /api/2.58/software-check | List software check tasks
-[**SoftwareCheckPost**](SoftwareAPI.md#SoftwareCheckPost) | **Post** /api/2.58/software-check | Create a software check task
-[**SoftwareDelete**](SoftwareAPI.md#SoftwareDelete) | **Delete** /api/2.58/software | Delete a software package
-[**SoftwareGet**](SoftwareAPI.md#SoftwareGet) | **Get** /api/2.58/software | List software packages
-[**SoftwareInstallationStepsGet**](SoftwareAPI.md#SoftwareInstallationStepsGet) | **Get** /api/2.58/software-installation-steps | List software upgrade steps
-[**SoftwareInstallationsGet**](SoftwareAPI.md#SoftwareInstallationsGet) | **Get** /api/2.58/software-installations | List software upgrades
-[**SoftwareInstallationsPatch**](SoftwareAPI.md#SoftwareInstallationsPatch) | **Patch** /api/2.58/software-installations | Modify software upgrade
-[**SoftwareInstallationsPost**](SoftwareAPI.md#SoftwareInstallationsPost) | **Post** /api/2.58/software-installations | Create a software upgrade
-[**SoftwarePatchesCatalogGet**](SoftwareAPI.md#SoftwarePatchesCatalogGet) | **Get** /api/2.58/software-patches/catalog | List available software patches
-[**SoftwarePatchesGet**](SoftwareAPI.md#SoftwarePatchesGet) | **Get** /api/2.58/software-patches | List software patches
-[**SoftwarePatchesPost**](SoftwareAPI.md#SoftwarePatchesPost) | **Post** /api/2.58/software-patches | Create a software patch
-[**SoftwarePost**](SoftwareAPI.md#SoftwarePost) | **Post** /api/2.58/software | Create a software package
-[**SoftwareVersionsGet**](SoftwareAPI.md#SoftwareVersionsGet) | **Get** /api/2.58/software-versions | List software versions
+[**SoftwareBundleGet**](SoftwareAPI.md#SoftwareBundleGet) | **Get** /api/2.59/software-bundle | List software-bundle
+[**SoftwareBundlePost**](SoftwareAPI.md#SoftwareBundlePost) | **Post** /api/2.59/software-bundle | Create software-bundle
+[**SoftwareCheckDelete**](SoftwareAPI.md#SoftwareCheckDelete) | **Delete** /api/2.59/software-check | Delete a software check task
+[**SoftwareCheckGet**](SoftwareAPI.md#SoftwareCheckGet) | **Get** /api/2.59/software-check | List software check tasks
+[**SoftwareCheckPost**](SoftwareAPI.md#SoftwareCheckPost) | **Post** /api/2.59/software-check | Create a software check task
+[**SoftwareDelete**](SoftwareAPI.md#SoftwareDelete) | **Delete** /api/2.59/software | Delete a software package
+[**SoftwareGet**](SoftwareAPI.md#SoftwareGet) | **Get** /api/2.59/software | List software packages
+[**SoftwareInstallationStepsGet**](SoftwareAPI.md#SoftwareInstallationStepsGet) | **Get** /api/2.59/software-installation-steps | List software upgrade steps
+[**SoftwareInstallationsGet**](SoftwareAPI.md#SoftwareInstallationsGet) | **Get** /api/2.59/software-installations | List software upgrades
+[**SoftwareInstallationsPatch**](SoftwareAPI.md#SoftwareInstallationsPatch) | **Patch** /api/2.59/software-installations | Modify software upgrade
+[**SoftwareInstallationsPost**](SoftwareAPI.md#SoftwareInstallationsPost) | **Post** /api/2.59/software-installations | Create a software upgrade
+[**SoftwarePatchesCatalogGet**](SoftwareAPI.md#SoftwarePatchesCatalogGet) | **Get** /api/2.59/software-patches/catalog | List available software patches
+[**SoftwarePatchesGet**](SoftwareAPI.md#SoftwarePatchesGet) | **Get** /api/2.59/software-patches | List software patches
+[**SoftwarePatchesPost**](SoftwareAPI.md#SoftwarePatchesPost) | **Post** /api/2.59/software-patches | Create a software patch
+[**SoftwarePost**](SoftwareAPI.md#SoftwarePost) | **Post** /api/2.59/software | Create a software package
+[**SoftwareVersionsGet**](SoftwareAPI.md#SoftwareVersionsGet) | **Get** /api/2.59/software-versions | List software versions
 
 
 
@@ -40,7 +40,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -121,7 +121,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -197,7 +197,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -273,7 +273,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -358,7 +358,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -436,7 +436,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -512,7 +512,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -596,7 +596,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -681,7 +681,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -767,7 +767,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -846,7 +846,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -924,7 +924,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1005,7 +1005,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1088,7 +1088,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1166,7 +1166,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1243,7 +1243,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

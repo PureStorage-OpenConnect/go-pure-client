@@ -4,35 +4,35 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ArraysCacheGet**](ArraysAPI.md#ArraysCacheGet) | **Get** /api/2.58/arrays/cache | DIMM Cache status
-[**ArraysCloudCapacityGet**](ArraysAPI.md#ArraysCloudCapacityGet) | **Get** /api/2.58/arrays/cloud-capacity | List CBS array capacity status
-[**ArraysCloudCapacityPatch**](ArraysAPI.md#ArraysCloudCapacityPatch) | **Patch** /api/2.58/arrays/cloud-capacity | Modify CBS array capacity
-[**ArraysCloudCapacitySupportedStepsGet**](ArraysAPI.md#ArraysCloudCapacitySupportedStepsGet) | **Get** /api/2.58/arrays/cloud-capacity/supported-steps | List CBS array capacity steps
-[**ArraysCloudConfigGet**](ArraysAPI.md#ArraysCloudConfigGet) | **Get** /api/2.58/arrays/cloud-config | List CBS array configuration status
-[**ArraysCloudConfigPatch**](ArraysAPI.md#ArraysCloudConfigPatch) | **Patch** /api/2.58/arrays/cloud-config | Modify CBS array configuration
-[**ArraysCloudConfigSupportedConfigsGet**](ArraysAPI.md#ArraysCloudConfigSupportedConfigsGet) | **Get** /api/2.58/arrays/cloud-config/supported-configs | List CBS array supported upgrade target configs
-[**ArraysCloudProviderTagsBatchPut**](ArraysAPI.md#ArraysCloudProviderTagsBatchPut) | **Put** /api/2.58/arrays/cloud-provider-tags/batch | Update user tags on the cloud.
-[**ArraysCloudProviderTagsDelete**](ArraysAPI.md#ArraysCloudProviderTagsDelete) | **Delete** /api/2.58/arrays/cloud-provider-tags | Delete user tags from the cloud.
-[**ArraysCloudProviderTagsGet**](ArraysAPI.md#ArraysCloudProviderTagsGet) | **Get** /api/2.58/arrays/cloud-provider-tags | List user tags on the cloud.
-[**ArraysDelete**](ArraysAPI.md#ArraysDelete) | **Delete** /api/2.58/arrays | Delete an array
-[**ArraysErasuresDelete**](ArraysAPI.md#ArraysErasuresDelete) | **Delete** /api/2.58/arrays/erasures | Delete factory reset
-[**ArraysErasuresGet**](ArraysAPI.md#ArraysErasuresGet) | **Get** /api/2.58/arrays/erasures | List factory reset details
-[**ArraysErasuresPatch**](ArraysAPI.md#ArraysErasuresPatch) | **Patch** /api/2.58/arrays/erasures | Update factory reset
-[**ArraysErasuresPost**](ArraysAPI.md#ArraysErasuresPost) | **Post** /api/2.58/arrays/erasures | Create a process for factory reset
-[**ArraysEulaGet**](ArraysAPI.md#ArraysEulaGet) | **Get** /api/2.58/arrays/eula | List End User Agreement and signature
-[**ArraysEulaPatch**](ArraysAPI.md#ArraysEulaPatch) | **Patch** /api/2.58/arrays/eula | Modify signature on the End User Agreement
-[**ArraysFactoryResetTokenDelete**](ArraysAPI.md#ArraysFactoryResetTokenDelete) | **Delete** /api/2.58/arrays/factory-reset-token | Delete a factory reset token
-[**ArraysFactoryResetTokenGet**](ArraysAPI.md#ArraysFactoryResetTokenGet) | **Get** /api/2.58/arrays/factory-reset-token | List factory reset tokens
-[**ArraysFactoryResetTokenPost**](ArraysAPI.md#ArraysFactoryResetTokenPost) | **Post** /api/2.58/arrays/factory-reset-token | Create a factory reset token
-[**ArraysGet**](ArraysAPI.md#ArraysGet) | **Get** /api/2.58/arrays | List arrays
-[**ArraysNtpTestGet**](ArraysAPI.md#ArraysNtpTestGet) | **Get** /api/2.58/arrays/ntp-test | List NTP test results
-[**ArraysPatch**](ArraysAPI.md#ArraysPatch) | **Patch** /api/2.58/arrays | Modify an array
-[**ArraysPerformanceByLinkGet**](ArraysAPI.md#ArraysPerformanceByLinkGet) | **Get** /api/2.58/arrays/performance/by-link | List array front-end IO performance data by link
-[**ArraysPerformanceGet**](ArraysAPI.md#ArraysPerformanceGet) | **Get** /api/2.58/arrays/performance | List array front-end performance data
-[**ArraysSpaceGet**](ArraysAPI.md#ArraysSpaceGet) | **Get** /api/2.58/arrays/space | List array space information
-[**ArraysTagsBatchPut**](ArraysAPI.md#ArraysTagsBatchPut) | **Put** /api/2.58/arrays/tags/batch | Update tags
-[**ArraysTagsDelete**](ArraysAPI.md#ArraysTagsDelete) | **Delete** /api/2.58/arrays/tags | Delete tags
-[**ArraysTagsGet**](ArraysAPI.md#ArraysTagsGet) | **Get** /api/2.58/arrays/tags | List tags
+[**ArraysCacheGet**](ArraysAPI.md#ArraysCacheGet) | **Get** /api/2.59/arrays/cache | DIMM Cache status
+[**ArraysCloudCapacityGet**](ArraysAPI.md#ArraysCloudCapacityGet) | **Get** /api/2.59/arrays/cloud-capacity | List CBS array capacity status
+[**ArraysCloudCapacityPatch**](ArraysAPI.md#ArraysCloudCapacityPatch) | **Patch** /api/2.59/arrays/cloud-capacity | Modify CBS array capacity
+[**ArraysCloudCapacitySupportedStepsGet**](ArraysAPI.md#ArraysCloudCapacitySupportedStepsGet) | **Get** /api/2.59/arrays/cloud-capacity/supported-steps | List CBS array capacity steps
+[**ArraysCloudConfigGet**](ArraysAPI.md#ArraysCloudConfigGet) | **Get** /api/2.59/arrays/cloud-config | List CBS array configuration status
+[**ArraysCloudConfigPatch**](ArraysAPI.md#ArraysCloudConfigPatch) | **Patch** /api/2.59/arrays/cloud-config | Modify CBS array configuration
+[**ArraysCloudConfigSupportedConfigsGet**](ArraysAPI.md#ArraysCloudConfigSupportedConfigsGet) | **Get** /api/2.59/arrays/cloud-config/supported-configs | List CBS array supported upgrade target configs
+[**ArraysCloudProviderTagsBatchPut**](ArraysAPI.md#ArraysCloudProviderTagsBatchPut) | **Put** /api/2.59/arrays/cloud-provider-tags/batch | Update user tags on the cloud.
+[**ArraysCloudProviderTagsDelete**](ArraysAPI.md#ArraysCloudProviderTagsDelete) | **Delete** /api/2.59/arrays/cloud-provider-tags | Delete user tags from the cloud.
+[**ArraysCloudProviderTagsGet**](ArraysAPI.md#ArraysCloudProviderTagsGet) | **Get** /api/2.59/arrays/cloud-provider-tags | List user tags on the cloud.
+[**ArraysDelete**](ArraysAPI.md#ArraysDelete) | **Delete** /api/2.59/arrays | Delete an array
+[**ArraysErasuresDelete**](ArraysAPI.md#ArraysErasuresDelete) | **Delete** /api/2.59/arrays/erasures | Delete factory reset
+[**ArraysErasuresGet**](ArraysAPI.md#ArraysErasuresGet) | **Get** /api/2.59/arrays/erasures | List factory reset details
+[**ArraysErasuresPatch**](ArraysAPI.md#ArraysErasuresPatch) | **Patch** /api/2.59/arrays/erasures | Update factory reset
+[**ArraysErasuresPost**](ArraysAPI.md#ArraysErasuresPost) | **Post** /api/2.59/arrays/erasures | Create a process for factory reset
+[**ArraysEulaGet**](ArraysAPI.md#ArraysEulaGet) | **Get** /api/2.59/arrays/eula | List End User Agreement and signature
+[**ArraysEulaPatch**](ArraysAPI.md#ArraysEulaPatch) | **Patch** /api/2.59/arrays/eula | Modify signature on the End User Agreement
+[**ArraysFactoryResetTokenDelete**](ArraysAPI.md#ArraysFactoryResetTokenDelete) | **Delete** /api/2.59/arrays/factory-reset-token | Delete a factory reset token
+[**ArraysFactoryResetTokenGet**](ArraysAPI.md#ArraysFactoryResetTokenGet) | **Get** /api/2.59/arrays/factory-reset-token | List factory reset tokens
+[**ArraysFactoryResetTokenPost**](ArraysAPI.md#ArraysFactoryResetTokenPost) | **Post** /api/2.59/arrays/factory-reset-token | Create a factory reset token
+[**ArraysGet**](ArraysAPI.md#ArraysGet) | **Get** /api/2.59/arrays | List arrays
+[**ArraysNtpTestGet**](ArraysAPI.md#ArraysNtpTestGet) | **Get** /api/2.59/arrays/ntp-test | List NTP test results
+[**ArraysPatch**](ArraysAPI.md#ArraysPatch) | **Patch** /api/2.59/arrays | Modify an array
+[**ArraysPerformanceByLinkGet**](ArraysAPI.md#ArraysPerformanceByLinkGet) | **Get** /api/2.59/arrays/performance/by-link | List array front-end IO performance data by link
+[**ArraysPerformanceGet**](ArraysAPI.md#ArraysPerformanceGet) | **Get** /api/2.59/arrays/performance | List array front-end performance data
+[**ArraysSpaceGet**](ArraysAPI.md#ArraysSpaceGet) | **Get** /api/2.59/arrays/space | List array space information
+[**ArraysTagsBatchPut**](ArraysAPI.md#ArraysTagsBatchPut) | **Put** /api/2.59/arrays/tags/batch | Update tags
+[**ArraysTagsDelete**](ArraysAPI.md#ArraysTagsDelete) | **Delete** /api/2.59/arrays/tags | Delete tags
+[**ArraysTagsGet**](ArraysAPI.md#ArraysTagsGet) | **Get** /api/2.59/arrays/tags | List tags
 
 
 
@@ -53,7 +53,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -130,7 +130,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -211,7 +211,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -288,7 +288,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -370,7 +370,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -451,7 +451,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -528,7 +528,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -610,7 +610,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -687,7 +687,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -762,7 +762,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -844,7 +844,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -920,7 +920,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -994,7 +994,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1075,7 +1075,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1156,7 +1156,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1235,7 +1235,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1316,7 +1316,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1393,7 +1393,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1467,7 +1467,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1548,7 +1548,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1624,7 +1624,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1708,7 +1708,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1784,7 +1784,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1862,7 +1862,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1946,7 +1946,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -2032,7 +2032,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -2119,7 +2119,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -2197,7 +2197,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -2274,7 +2274,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

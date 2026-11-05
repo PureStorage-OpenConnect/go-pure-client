@@ -4,17 +4,17 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**SupportDiagnosticsDetailsGet**](SupportAPI.md#SupportDiagnosticsDetailsGet) | **Get** /api/2.58/support-diagnostics/details | List diagnostics details
-[**SupportDiagnosticsSettingsGet**](SupportAPI.md#SupportDiagnosticsSettingsGet) | **Get** /api/2.58/support-diagnostics/settings | List diagnostics tools version and last updated date
-[**SupportDiagnosticsSettingsPatch**](SupportAPI.md#SupportDiagnosticsSettingsPatch) | **Patch** /api/2.58/support-diagnostics/settings | Update diagnostics tools
-[**SupportGet**](SupportAPI.md#SupportGet) | **Get** /api/2.58/support | List connection paths
-[**SupportPatch**](SupportAPI.md#SupportPatch) | **Patch** /api/2.58/support | Create connection path
-[**SupportRemoteAssistSessionsGet**](SupportAPI.md#SupportRemoteAssistSessionsGet) | **Get** /api/2.58/support/remote-assist-sessions | List remote assist session
-[**SupportRemoteAssistSessionsPatch**](SupportAPI.md#SupportRemoteAssistSessionsPatch) | **Patch** /api/2.58/support/remote-assist-sessions | Modify remote assist session
-[**SupportRemoteAssistSessionsSettingsGet**](SupportAPI.md#SupportRemoteAssistSessionsSettingsGet) | **Get** /api/2.58/support/remote-assist-sessions/settings | List remote assist session global settings
-[**SupportRemoteAssistSessionsSettingsPatch**](SupportAPI.md#SupportRemoteAssistSessionsSettingsPatch) | **Patch** /api/2.58/support/remote-assist-sessions/settings | Update remote assist session global settings
-[**SupportSystemManifestGet**](SupportAPI.md#SupportSystemManifestGet) | **Get** /api/2.58/support/system-manifest | List the system manifest
-[**SupportTestGet**](SupportAPI.md#SupportTestGet) | **Get** /api/2.58/support/test | List Everpure Support connection data
+[**SupportDiagnosticsDetailsGet**](SupportAPI.md#SupportDiagnosticsDetailsGet) | **Get** /api/2.59/support-diagnostics/details | List diagnostics details
+[**SupportDiagnosticsSettingsGet**](SupportAPI.md#SupportDiagnosticsSettingsGet) | **Get** /api/2.59/support-diagnostics/settings | List diagnostics tools version and last updated date
+[**SupportDiagnosticsSettingsPatch**](SupportAPI.md#SupportDiagnosticsSettingsPatch) | **Patch** /api/2.59/support-diagnostics/settings | Update diagnostics tools
+[**SupportGet**](SupportAPI.md#SupportGet) | **Get** /api/2.59/support | List connection paths
+[**SupportPatch**](SupportAPI.md#SupportPatch) | **Patch** /api/2.59/support | Create connection path
+[**SupportRemoteAssistSessionsGet**](SupportAPI.md#SupportRemoteAssistSessionsGet) | **Get** /api/2.59/support/remote-assist-sessions | List remote assist session
+[**SupportRemoteAssistSessionsPatch**](SupportAPI.md#SupportRemoteAssistSessionsPatch) | **Patch** /api/2.59/support/remote-assist-sessions | Modify remote assist session
+[**SupportRemoteAssistSessionsSettingsGet**](SupportAPI.md#SupportRemoteAssistSessionsSettingsGet) | **Get** /api/2.59/support/remote-assist-sessions/settings | List remote assist session global settings
+[**SupportRemoteAssistSessionsSettingsPatch**](SupportAPI.md#SupportRemoteAssistSessionsSettingsPatch) | **Patch** /api/2.59/support/remote-assist-sessions/settings | Update remote assist session global settings
+[**SupportSystemManifestGet**](SupportAPI.md#SupportSystemManifestGet) | **Get** /api/2.59/support/system-manifest | List the system manifest
+[**SupportTestGet**](SupportAPI.md#SupportTestGet) | **Get** /api/2.59/support/test | List Everpure Support connection data
 
 
 
@@ -35,7 +35,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -117,7 +117,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -199,7 +199,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -276,7 +276,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -358,7 +358,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -435,7 +435,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -517,7 +517,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -594,7 +594,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -676,7 +676,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -753,7 +753,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -835,7 +835,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

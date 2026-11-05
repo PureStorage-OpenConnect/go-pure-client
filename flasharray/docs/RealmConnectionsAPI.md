@@ -4,13 +4,13 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**RealmConnectionsConnectionKeysDelete**](RealmConnectionsAPI.md#RealmConnectionsConnectionKeysDelete) | **Delete** /api/2.58/realm-connections/connection-keys | Delete realm connection keys
-[**RealmConnectionsConnectionKeysGet**](RealmConnectionsAPI.md#RealmConnectionsConnectionKeysGet) | **Get** /api/2.58/realm-connections/connection-keys | Get realm connection key information
-[**RealmConnectionsConnectionKeysPost**](RealmConnectionsAPI.md#RealmConnectionsConnectionKeysPost) | **Post** /api/2.58/realm-connections/connection-keys | Create realm connection key
-[**RealmConnectionsDelete**](RealmConnectionsAPI.md#RealmConnectionsDelete) | **Delete** /api/2.58/realm-connections | Delete realm connections.
-[**RealmConnectionsGet**](RealmConnectionsAPI.md#RealmConnectionsGet) | **Get** /api/2.58/realm-connections | List realm connections.
-[**RealmConnectionsPatch**](RealmConnectionsAPI.md#RealmConnectionsPatch) | **Patch** /api/2.58/realm-connections | Modify realm connections.
-[**RealmConnectionsPost**](RealmConnectionsAPI.md#RealmConnectionsPost) | **Post** /api/2.58/realm-connections | Create realm connection.
+[**RealmConnectionsConnectionKeysDelete**](RealmConnectionsAPI.md#RealmConnectionsConnectionKeysDelete) | **Delete** /api/2.59/realm-connections/connection-keys | Delete realm connection keys
+[**RealmConnectionsConnectionKeysGet**](RealmConnectionsAPI.md#RealmConnectionsConnectionKeysGet) | **Get** /api/2.59/realm-connections/connection-keys | Get realm connection key information
+[**RealmConnectionsConnectionKeysPost**](RealmConnectionsAPI.md#RealmConnectionsConnectionKeysPost) | **Post** /api/2.59/realm-connections/connection-keys | Create realm connection key
+[**RealmConnectionsDelete**](RealmConnectionsAPI.md#RealmConnectionsDelete) | **Delete** /api/2.59/realm-connections | Delete realm connections.
+[**RealmConnectionsGet**](RealmConnectionsAPI.md#RealmConnectionsGet) | **Get** /api/2.59/realm-connections | List realm connections.
+[**RealmConnectionsPatch**](RealmConnectionsAPI.md#RealmConnectionsPatch) | **Patch** /api/2.59/realm-connections | Modify realm connections.
+[**RealmConnectionsPost**](RealmConnectionsAPI.md#RealmConnectionsPost) | **Post** /api/2.59/realm-connections | Create realm connection.
 
 
 
@@ -31,7 +31,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -108,7 +108,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -194,7 +194,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -274,7 +274,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -354,7 +354,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -443,7 +443,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -526,7 +526,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

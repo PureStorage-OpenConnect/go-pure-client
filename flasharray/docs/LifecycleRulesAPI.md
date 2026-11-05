@@ -4,10 +4,10 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**LifecycleRulesDelete**](LifecycleRulesAPI.md#LifecycleRulesDelete) | **Delete** /api/2.58/lifecycle-rules | DELETE lifecycle-rules
-[**LifecycleRulesGet**](LifecycleRulesAPI.md#LifecycleRulesGet) | **Get** /api/2.58/lifecycle-rules | GET lifecycle-rules
-[**LifecycleRulesPatch**](LifecycleRulesAPI.md#LifecycleRulesPatch) | **Patch** /api/2.58/lifecycle-rules | PATCH lifecycle-rules
-[**LifecycleRulesPost**](LifecycleRulesAPI.md#LifecycleRulesPost) | **Post** /api/2.58/lifecycle-rules | POST lifecycle-rules
+[**LifecycleRulesDelete**](LifecycleRulesAPI.md#LifecycleRulesDelete) | **Delete** /api/2.59/lifecycle-rules | DELETE lifecycle-rules
+[**LifecycleRulesGet**](LifecycleRulesAPI.md#LifecycleRulesGet) | **Get** /api/2.59/lifecycle-rules | GET lifecycle-rules
+[**LifecycleRulesPatch**](LifecycleRulesAPI.md#LifecycleRulesPatch) | **Patch** /api/2.59/lifecycle-rules | PATCH lifecycle-rules
+[**LifecycleRulesPost**](LifecycleRulesAPI.md#LifecycleRulesPost) | **Post** /api/2.59/lifecycle-rules | POST lifecycle-rules
 
 
 
@@ -28,7 +28,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -106,7 +106,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -193,7 +193,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -275,7 +275,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

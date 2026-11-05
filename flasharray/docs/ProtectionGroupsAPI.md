@@ -4,29 +4,29 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ProtectionGroupsDelete**](ProtectionGroupsAPI.md#ProtectionGroupsDelete) | **Delete** /api/2.58/protection-groups | Delete a protection group
-[**ProtectionGroupsGet**](ProtectionGroupsAPI.md#ProtectionGroupsGet) | **Get** /api/2.58/protection-groups | List protection groups
-[**ProtectionGroupsHostGroupsDelete**](ProtectionGroupsAPI.md#ProtectionGroupsHostGroupsDelete) | **Delete** /api/2.58/protection-groups/host-groups | Delete a host group from a protection group
-[**ProtectionGroupsHostGroupsGet**](ProtectionGroupsAPI.md#ProtectionGroupsHostGroupsGet) | **Get** /api/2.58/protection-groups/host-groups | List protection groups with host group members
-[**ProtectionGroupsHostGroupsPost**](ProtectionGroupsAPI.md#ProtectionGroupsHostGroupsPost) | **Post** /api/2.58/protection-groups/host-groups | Creates an action to add a host group to a protection group
-[**ProtectionGroupsHostsDelete**](ProtectionGroupsAPI.md#ProtectionGroupsHostsDelete) | **Delete** /api/2.58/protection-groups/hosts | Delete a host from a protection group
-[**ProtectionGroupsHostsGet**](ProtectionGroupsAPI.md#ProtectionGroupsHostsGet) | **Get** /api/2.58/protection-groups/hosts | List protection groups with host members
-[**ProtectionGroupsHostsPost**](ProtectionGroupsAPI.md#ProtectionGroupsHostsPost) | **Post** /api/2.58/protection-groups/hosts | Create an action to add a host to a protection group
-[**ProtectionGroupsPatch**](ProtectionGroupsAPI.md#ProtectionGroupsPatch) | **Patch** /api/2.58/protection-groups | Modify a protection group
-[**ProtectionGroupsPerformanceReplicationByArrayGet**](ProtectionGroupsAPI.md#ProtectionGroupsPerformanceReplicationByArrayGet) | **Get** /api/2.58/protection-groups/performance/replication/by-array | List protection group replication performance data with array details
-[**ProtectionGroupsPerformanceReplicationGet**](ProtectionGroupsAPI.md#ProtectionGroupsPerformanceReplicationGet) | **Get** /api/2.58/protection-groups/performance/replication | List protection group replication performance data
-[**ProtectionGroupsPost**](ProtectionGroupsAPI.md#ProtectionGroupsPost) | **Post** /api/2.58/protection-groups | Create a protection group and upsert tags
-[**ProtectionGroupsSpaceGet**](ProtectionGroupsAPI.md#ProtectionGroupsSpaceGet) | **Get** /api/2.58/protection-groups/space | List protection group space information
-[**ProtectionGroupsTagsBatchPut**](ProtectionGroupsAPI.md#ProtectionGroupsTagsBatchPut) | **Put** /api/2.58/protection-groups/tags/batch | Update tags
-[**ProtectionGroupsTagsDelete**](ProtectionGroupsAPI.md#ProtectionGroupsTagsDelete) | **Delete** /api/2.58/protection-groups/tags | Delete tags
-[**ProtectionGroupsTagsGet**](ProtectionGroupsAPI.md#ProtectionGroupsTagsGet) | **Get** /api/2.58/protection-groups/tags | List tags
-[**ProtectionGroupsTargetsDelete**](ProtectionGroupsAPI.md#ProtectionGroupsTargetsDelete) | **Delete** /api/2.58/protection-groups/targets | Delete a target from a protection group
-[**ProtectionGroupsTargetsGet**](ProtectionGroupsAPI.md#ProtectionGroupsTargetsGet) | **Get** /api/2.58/protection-groups/targets | List protection groups with targets
-[**ProtectionGroupsTargetsPatch**](ProtectionGroupsAPI.md#ProtectionGroupsTargetsPatch) | **Patch** /api/2.58/protection-groups/targets | Modify a protection group target
-[**ProtectionGroupsTargetsPost**](ProtectionGroupsAPI.md#ProtectionGroupsTargetsPost) | **Post** /api/2.58/protection-groups/targets | Create an action to add a target to a protection group
-[**ProtectionGroupsVolumesDelete**](ProtectionGroupsAPI.md#ProtectionGroupsVolumesDelete) | **Delete** /api/2.58/protection-groups/volumes | Delete a volume from a protection group
-[**ProtectionGroupsVolumesGet**](ProtectionGroupsAPI.md#ProtectionGroupsVolumesGet) | **Get** /api/2.58/protection-groups/volumes | List protection groups with volume members
-[**ProtectionGroupsVolumesPost**](ProtectionGroupsAPI.md#ProtectionGroupsVolumesPost) | **Post** /api/2.58/protection-groups/volumes | Create a volume to add it to a protection group
+[**ProtectionGroupsDelete**](ProtectionGroupsAPI.md#ProtectionGroupsDelete) | **Delete** /api/2.59/protection-groups | Delete a protection group
+[**ProtectionGroupsGet**](ProtectionGroupsAPI.md#ProtectionGroupsGet) | **Get** /api/2.59/protection-groups | List protection groups
+[**ProtectionGroupsHostGroupsDelete**](ProtectionGroupsAPI.md#ProtectionGroupsHostGroupsDelete) | **Delete** /api/2.59/protection-groups/host-groups | Delete a host group from a protection group
+[**ProtectionGroupsHostGroupsGet**](ProtectionGroupsAPI.md#ProtectionGroupsHostGroupsGet) | **Get** /api/2.59/protection-groups/host-groups | List protection groups with host group members
+[**ProtectionGroupsHostGroupsPost**](ProtectionGroupsAPI.md#ProtectionGroupsHostGroupsPost) | **Post** /api/2.59/protection-groups/host-groups | Creates an action to add a host group to a protection group
+[**ProtectionGroupsHostsDelete**](ProtectionGroupsAPI.md#ProtectionGroupsHostsDelete) | **Delete** /api/2.59/protection-groups/hosts | Delete a host from a protection group
+[**ProtectionGroupsHostsGet**](ProtectionGroupsAPI.md#ProtectionGroupsHostsGet) | **Get** /api/2.59/protection-groups/hosts | List protection groups with host members
+[**ProtectionGroupsHostsPost**](ProtectionGroupsAPI.md#ProtectionGroupsHostsPost) | **Post** /api/2.59/protection-groups/hosts | Create an action to add a host to a protection group
+[**ProtectionGroupsPatch**](ProtectionGroupsAPI.md#ProtectionGroupsPatch) | **Patch** /api/2.59/protection-groups | Modify a protection group
+[**ProtectionGroupsPerformanceReplicationByArrayGet**](ProtectionGroupsAPI.md#ProtectionGroupsPerformanceReplicationByArrayGet) | **Get** /api/2.59/protection-groups/performance/replication/by-array | List protection group replication performance data with array details
+[**ProtectionGroupsPerformanceReplicationGet**](ProtectionGroupsAPI.md#ProtectionGroupsPerformanceReplicationGet) | **Get** /api/2.59/protection-groups/performance/replication | List protection group replication performance data
+[**ProtectionGroupsPost**](ProtectionGroupsAPI.md#ProtectionGroupsPost) | **Post** /api/2.59/protection-groups | Create a protection group and upsert tags
+[**ProtectionGroupsSpaceGet**](ProtectionGroupsAPI.md#ProtectionGroupsSpaceGet) | **Get** /api/2.59/protection-groups/space | List protection group space information
+[**ProtectionGroupsTagsBatchPut**](ProtectionGroupsAPI.md#ProtectionGroupsTagsBatchPut) | **Put** /api/2.59/protection-groups/tags/batch | Update tags
+[**ProtectionGroupsTagsDelete**](ProtectionGroupsAPI.md#ProtectionGroupsTagsDelete) | **Delete** /api/2.59/protection-groups/tags | Delete tags
+[**ProtectionGroupsTagsGet**](ProtectionGroupsAPI.md#ProtectionGroupsTagsGet) | **Get** /api/2.59/protection-groups/tags | List tags
+[**ProtectionGroupsTargetsDelete**](ProtectionGroupsAPI.md#ProtectionGroupsTargetsDelete) | **Delete** /api/2.59/protection-groups/targets | Delete a target from a protection group
+[**ProtectionGroupsTargetsGet**](ProtectionGroupsAPI.md#ProtectionGroupsTargetsGet) | **Get** /api/2.59/protection-groups/targets | List protection groups with targets
+[**ProtectionGroupsTargetsPatch**](ProtectionGroupsAPI.md#ProtectionGroupsTargetsPatch) | **Patch** /api/2.59/protection-groups/targets | Modify a protection group target
+[**ProtectionGroupsTargetsPost**](ProtectionGroupsAPI.md#ProtectionGroupsTargetsPost) | **Post** /api/2.59/protection-groups/targets | Create an action to add a target to a protection group
+[**ProtectionGroupsVolumesDelete**](ProtectionGroupsAPI.md#ProtectionGroupsVolumesDelete) | **Delete** /api/2.59/protection-groups/volumes | Delete a volume from a protection group
+[**ProtectionGroupsVolumesGet**](ProtectionGroupsAPI.md#ProtectionGroupsVolumesGet) | **Get** /api/2.59/protection-groups/volumes | List protection groups with volume members
+[**ProtectionGroupsVolumesPost**](ProtectionGroupsAPI.md#ProtectionGroupsVolumesPost) | **Post** /api/2.59/protection-groups/volumes | Create a volume to add it to a protection group
 
 
 
@@ -47,7 +47,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -124,7 +124,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -212,7 +212,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -290,7 +290,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -377,7 +377,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -457,7 +457,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -535,7 +535,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -622,7 +622,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -702,7 +702,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -782,7 +782,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -872,7 +872,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -962,7 +962,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1044,7 +1044,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1132,7 +1132,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1212,7 +1212,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1291,7 +1291,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1379,7 +1379,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1458,7 +1458,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1546,7 +1546,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1628,7 +1628,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1709,7 +1709,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1788,7 +1788,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1878,7 +1878,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

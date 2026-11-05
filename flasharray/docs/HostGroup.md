@@ -10,7 +10,9 @@ Name | Type | Description | Notes
 **Destroyed** | Pointer to **bool** | Returns a value of &#x60;true&#x60; if the host group has been destroyed with its container realm and is pending eradication. The &#x60;time_remaining&#x60; value displays the amount of time left until the destroyed host group is permanently eradicated. Before the &#x60;time_remaining&#x60; period has elapsed, the destroyed host group will be recovered if its container realm is recovered. Once the &#x60;time_remaining&#x60; period has elapsed, the host group is permanently eradicated and can no longer be recovered.  | [optional] [readonly] 
 **HostCount** | Pointer to **int64** | The number of hosts in the host group. | [optional] [readonly] 
 **IsLocal** | Pointer to **bool** | Returns a value of &#x60;true&#x60; if the host or host group belongs to the current array. Returns a value of &#x60;false&#x60; if the host or host group belongs to a remote array. | [optional] [readonly] 
-**Qos** | Pointer to [**ContainerQosCeilings**](ContainerQosCeilings.md) | Displays QoS limit information.  | [optional] 
+**Priority** | Pointer to **int32** | The effective priority band for this host group. If a &#x60;priority_adjustment&#x60; is configured on the host group, this field reflects that value. If no &#x60;priority_adjustment&#x60; is set, it reflects the closest ancestor&#39;s configured band, or 0 (default) if no ancestor has a band.  | [optional] [readonly] 
+**PriorityAdjustment** | Pointer to [**PriorityAdjustmentValue**](PriorityAdjustmentValue.md) | Priority adjustment value.  | [optional] 
+**Qos** | Pointer to [**ContainerQos**](ContainerQos.md) | Displays QoS ceilings and floors information.  | [optional] 
 **Space** | Pointer to [**Space**](Space.md) | Displays provisioned (virtual) size and physical storage consumption information for the sum of all volumes connected to the specified host.  | [optional] 
 **TimeRemaining** | Pointer to **int64** | The amount of time left until the destroyed host group is permanently eradicated, measured in milliseconds.  | [optional] [readonly] 
 
@@ -183,22 +185,72 @@ SetIsLocal sets IsLocal field to given value.
 
 HasIsLocal returns a boolean if a field has been set.
 
+### GetPriority
+
+`func (o *HostGroup) GetPriority() int32`
+
+GetPriority returns the Priority field if non-nil, zero value otherwise.
+
+### GetPriorityOk
+
+`func (o *HostGroup) GetPriorityOk() (*int32, bool)`
+
+GetPriorityOk returns a tuple with the Priority field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPriority
+
+`func (o *HostGroup) SetPriority(v int32)`
+
+SetPriority sets Priority field to given value.
+
+### HasPriority
+
+`func (o *HostGroup) HasPriority() bool`
+
+HasPriority returns a boolean if a field has been set.
+
+### GetPriorityAdjustment
+
+`func (o *HostGroup) GetPriorityAdjustment() PriorityAdjustmentValue`
+
+GetPriorityAdjustment returns the PriorityAdjustment field if non-nil, zero value otherwise.
+
+### GetPriorityAdjustmentOk
+
+`func (o *HostGroup) GetPriorityAdjustmentOk() (*PriorityAdjustmentValue, bool)`
+
+GetPriorityAdjustmentOk returns a tuple with the PriorityAdjustment field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPriorityAdjustment
+
+`func (o *HostGroup) SetPriorityAdjustment(v PriorityAdjustmentValue)`
+
+SetPriorityAdjustment sets PriorityAdjustment field to given value.
+
+### HasPriorityAdjustment
+
+`func (o *HostGroup) HasPriorityAdjustment() bool`
+
+HasPriorityAdjustment returns a boolean if a field has been set.
+
 ### GetQos
 
-`func (o *HostGroup) GetQos() ContainerQosCeilings`
+`func (o *HostGroup) GetQos() ContainerQos`
 
 GetQos returns the Qos field if non-nil, zero value otherwise.
 
 ### GetQosOk
 
-`func (o *HostGroup) GetQosOk() (*ContainerQosCeilings, bool)`
+`func (o *HostGroup) GetQosOk() (*ContainerQos, bool)`
 
 GetQosOk returns a tuple with the Qos field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetQos
 
-`func (o *HostGroup) SetQos(v ContainerQosCeilings)`
+`func (o *HostGroup) SetQos(v ContainerQos)`
 
 SetQos sets Qos field to given value.
 

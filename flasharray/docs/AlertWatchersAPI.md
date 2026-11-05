@@ -4,11 +4,11 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AlertWatchersDelete**](AlertWatchersAPI.md#AlertWatchersDelete) | **Delete** /api/2.58/alert-watchers | Delete alert watcher
-[**AlertWatchersGet**](AlertWatchersAPI.md#AlertWatchersGet) | **Get** /api/2.58/alert-watchers | List alert watchers
-[**AlertWatchersPatch**](AlertWatchersAPI.md#AlertWatchersPatch) | **Patch** /api/2.58/alert-watchers | Modify alert watcher
-[**AlertWatchersPost**](AlertWatchersAPI.md#AlertWatchersPost) | **Post** /api/2.58/alert-watchers | Create alert watcher
-[**AlertWatchersTestGet**](AlertWatchersAPI.md#AlertWatchersTestGet) | **Get** /api/2.58/alert-watchers/test | List alert watcher test
+[**AlertWatchersDelete**](AlertWatchersAPI.md#AlertWatchersDelete) | **Delete** /api/2.59/alert-watchers | Delete alert watcher
+[**AlertWatchersGet**](AlertWatchersAPI.md#AlertWatchersGet) | **Get** /api/2.59/alert-watchers | List alert watchers
+[**AlertWatchersPatch**](AlertWatchersAPI.md#AlertWatchersPatch) | **Patch** /api/2.59/alert-watchers | Modify alert watcher
+[**AlertWatchersPost**](AlertWatchersAPI.md#AlertWatchersPost) | **Post** /api/2.59/alert-watchers | Create alert watcher
+[**AlertWatchersTestGet**](AlertWatchersAPI.md#AlertWatchersTestGet) | **Get** /api/2.59/alert-watchers/test | List alert watcher test
 
 
 
@@ -29,7 +29,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -104,7 +104,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -187,7 +187,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -265,7 +265,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -343,7 +343,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

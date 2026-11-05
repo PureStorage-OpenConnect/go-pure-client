@@ -4,9 +4,9 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**SnmpAgentsGet**](SNMPAgentsAPI.md#SnmpAgentsGet) | **Get** /api/2.58/snmp-agents | List SNMP agent
-[**SnmpAgentsMibGet**](SNMPAgentsAPI.md#SnmpAgentsMibGet) | **Get** /api/2.58/snmp-agents/mib | List SNMP agent MIB text
-[**SnmpAgentsPatch**](SNMPAgentsAPI.md#SnmpAgentsPatch) | **Patch** /api/2.58/snmp-agents | Modify SNMP agent
+[**SnmpAgentsGet**](SNMPAgentsAPI.md#SnmpAgentsGet) | **Get** /api/2.59/snmp-agents | List SNMP agent
+[**SnmpAgentsMibGet**](SNMPAgentsAPI.md#SnmpAgentsMibGet) | **Get** /api/2.59/snmp-agents/mib | List SNMP agent MIB text
+[**SnmpAgentsPatch**](SNMPAgentsAPI.md#SnmpAgentsPatch) | **Patch** /api/2.59/snmp-agents | Modify SNMP agent
 
 
 
@@ -27,7 +27,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -108,7 +108,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -189,7 +189,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

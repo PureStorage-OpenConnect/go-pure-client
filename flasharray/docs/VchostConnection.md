@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AllVchosts** | Pointer to **bool** | If set to &#x60;true&#x60;, the storage container represented by the protocol endpoint is accessible to all vchosts. If set to &#x60;false&#x60;, the storage container represented by the protocol endpoint is only accesible to the vchosts that have explicit vchost-connections to this protocol endpoint. The default is &#x60;false&#x60;.  | [optional] [default to false]
-**ProtocolEndpoint** | Pointer to [**FixedReference**](FixedReference.md) | A reference to the protocol endpoint, representing a storage container that vCenter can use.  | [optional] 
-**Vchost** | Pointer to [**FixedReference**](FixedReference.md) | For vchost-connections, a vchost represents a vCenter. By connecting to a protocol endpoint, the corresponding vCenter gets the access to the storage container represented by this protocol endpoint. The vchost name should be null if &#x60;all_vchosts&#x60; is set to &#x60;true&#x60;, which means the storage container is accessible to all vchosts.  | [optional] 
+**Context** | Pointer to [**FixedReferenceWithType**](FixedReferenceWithType.md) | The context in which the operation was performed.  Valid values include a reference to any array which is a member of the same fleet or to the fleet itself.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | [optional] [readonly] 
+**AllVchosts** | Pointer to **bool** | If set to &#x60;true&#x60;, the storage container represented by the protocol endpoint is accessible to all vchosts. If set to &#x60;false&#x60;, the storage container represented by the protocol endpoint is only accessible to the vchosts that have explicit vchost-connections to this protocol endpoint. The default is &#x60;false&#x60;.  | [optional] [default to false]
+**ProtocolEndpoint** | Pointer to [**FixedReference**](FixedReference.md) | A reference to the protocol endpoint representing a storage container that vCenter can use.  | [optional] 
+**Vchost** | Pointer to [**FixedReference**](FixedReference.md) | For vchost-connections, a &#x60;vchost&#x60; represents a vCenter. By connecting to a protocol endpoint, the corresponding vCenter gains access to the storage container represented by the protocol endpoint. The &#x60;vchost&#x60; name must be &#x60;null&#x60; if &#x60;all_vchosts&#x60; is &#x60;true&#x60;, indicating that the storage container is accessible to all vchosts.  | [optional] 
 
 ## Methods
 
@@ -26,6 +27,31 @@ will change when the set of required properties is changed
 NewVchostConnectionWithDefaults instantiates a new VchostConnection object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetContext
+
+`func (o *VchostConnection) GetContext() FixedReferenceWithType`
+
+GetContext returns the Context field if non-nil, zero value otherwise.
+
+### GetContextOk
+
+`func (o *VchostConnection) GetContextOk() (*FixedReferenceWithType, bool)`
+
+GetContextOk returns a tuple with the Context field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetContext
+
+`func (o *VchostConnection) SetContext(v FixedReferenceWithType)`
+
+SetContext sets Context field to given value.
+
+### HasContext
+
+`func (o *VchostConnection) HasContext() bool`
+
+HasContext returns a boolean if a field has been set.
 
 ### GetAllVchosts
 

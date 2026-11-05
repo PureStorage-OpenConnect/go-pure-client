@@ -8,6 +8,8 @@ Name | Type | Description | Notes
 **Name** | Pointer to **string** | A locally unique, system-generated name. The name cannot be modified.  | [optional] [readonly] 
 **BandwidthLimit** | Pointer to **int64** | The maximum QoS bandwidth limit for the container. Whenever throughput exceeds the bandwidth limit, throttling occurs. Measured in bytes per second. Maximum limit is 512 GB/s.  | [optional] 
 **IopsLimit** | Pointer to **int64** | The QoS IOPs limit for the container.  | [optional] 
+**Priority** | Pointer to **int32** | The effective priority band. If a &#x60;priority_adjustment&#x60; is configured, this field reflects that value. If no &#x60;priority_adjustment&#x60; is set, it reflects the closest ancestor&#39;s configured band, or 0 (default) if no ancestor has a band.  | [optional] [readonly] 
+**PriorityAdjustmentValue** | Pointer to **int32** | The priority band configuration on the entity. Valid values are -10, 0, +10, and &#x60;null&#x60;.  | [optional] [readonly] 
 **Context** | Pointer to [**FixedReferenceWithType**](FixedReferenceWithType.md) | The context in which the operation was performed.  Valid values include a reference to any array which is a member of the same fleet or to the fleet itself.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | [optional] [readonly] 
 **Time** | Pointer to **int64** | The timestamp of when the data was taken, measured in milliseconds since the UNIX epoch.  | [optional] [readonly] 
 
@@ -129,6 +131,56 @@ SetIopsLimit sets IopsLimit field to given value.
 `func (o *QosMetricsCeilings) HasIopsLimit() bool`
 
 HasIopsLimit returns a boolean if a field has been set.
+
+### GetPriority
+
+`func (o *QosMetricsCeilings) GetPriority() int32`
+
+GetPriority returns the Priority field if non-nil, zero value otherwise.
+
+### GetPriorityOk
+
+`func (o *QosMetricsCeilings) GetPriorityOk() (*int32, bool)`
+
+GetPriorityOk returns a tuple with the Priority field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPriority
+
+`func (o *QosMetricsCeilings) SetPriority(v int32)`
+
+SetPriority sets Priority field to given value.
+
+### HasPriority
+
+`func (o *QosMetricsCeilings) HasPriority() bool`
+
+HasPriority returns a boolean if a field has been set.
+
+### GetPriorityAdjustmentValue
+
+`func (o *QosMetricsCeilings) GetPriorityAdjustmentValue() int32`
+
+GetPriorityAdjustmentValue returns the PriorityAdjustmentValue field if non-nil, zero value otherwise.
+
+### GetPriorityAdjustmentValueOk
+
+`func (o *QosMetricsCeilings) GetPriorityAdjustmentValueOk() (*int32, bool)`
+
+GetPriorityAdjustmentValueOk returns a tuple with the PriorityAdjustmentValue field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPriorityAdjustmentValue
+
+`func (o *QosMetricsCeilings) SetPriorityAdjustmentValue(v int32)`
+
+SetPriorityAdjustmentValue sets PriorityAdjustmentValue field to given value.
+
+### HasPriorityAdjustmentValue
+
+`func (o *QosMetricsCeilings) HasPriorityAdjustmentValue() bool`
+
+HasPriorityAdjustmentValue returns a boolean if a field has been set.
 
 ### GetContext
 

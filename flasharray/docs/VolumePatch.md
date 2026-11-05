@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Destroyed** | Pointer to **bool** | If set to &#x60;true&#x60;, destroys a resource. Once set to &#x60;true&#x60;, the &#x60;time_remaining&#x60; value will display the amount of time left until the destroyed resource is permanently eradicated. Before the &#x60;time_remaining&#x60; period has elapsed, the destroyed resource can be recovered by setting &#x60;destroyed&#x3D;false&#x60;. Once the &#x60;time_remaining&#x60; period has elapsed, the resource is permanently eradicated and can no longer be recovered.  | [optional] 
 **Name** | Pointer to **string** | The new name for the resource. | [optional] 
 **Pod** | Pointer to [**Reference**](Reference.md) | Moves the volume into the specified pod. | [optional] 
-**PriorityAdjustment** | Pointer to [**PriorityAdjustment**](PriorityAdjustment.md) | Adjusts volume priority. | [optional] 
+**PriorityAdjustment** | Pointer to [**PriorityAdjustmentPatch**](PriorityAdjustmentPatch.md) | Adjusts volume priority. | [optional] 
 **ProtocolEndpoint** | Pointer to [**ProtocolEndpoint**](ProtocolEndpoint.md) | Sets the properties that are specific to protocol endpoints. This can only be used in conjunction to &#x60;subtype&#x3D;protocol_endpoint&#x60;.  | [optional] 
 **Provisioned** | Pointer to **int64** | Updates the virtual size of the volume, measured in bytes. | [optional] 
 **Qos** | Pointer to [**QosPatch**](QosPatch.md) | Sets QoS limits. | [optional] 
@@ -111,20 +111,20 @@ HasPod returns a boolean if a field has been set.
 
 ### GetPriorityAdjustment
 
-`func (o *VolumePatch) GetPriorityAdjustment() PriorityAdjustment`
+`func (o *VolumePatch) GetPriorityAdjustment() PriorityAdjustmentPatch`
 
 GetPriorityAdjustment returns the PriorityAdjustment field if non-nil, zero value otherwise.
 
 ### GetPriorityAdjustmentOk
 
-`func (o *VolumePatch) GetPriorityAdjustmentOk() (*PriorityAdjustment, bool)`
+`func (o *VolumePatch) GetPriorityAdjustmentOk() (*PriorityAdjustmentPatch, bool)`
 
 GetPriorityAdjustmentOk returns a tuple with the PriorityAdjustment field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPriorityAdjustment
 
-`func (o *VolumePatch) SetPriorityAdjustment(v PriorityAdjustment)`
+`func (o *VolumePatch) SetPriorityAdjustment(v PriorityAdjustmentPatch)`
 
 SetPriorityAdjustment sets PriorityAdjustment field to given value.
 

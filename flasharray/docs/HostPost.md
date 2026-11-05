@@ -10,7 +10,8 @@ Name | Type | Description | Notes
 **NvmeStretch** | Pointer to **string** | The configuration that determines host behavior with stretched volumes, applicable only to &#x60;NVMe&#x60; hosts. Valid values include &#x60;disallow&#x60;, &#x60;allow&#x60;, and &#x60;allow-only-with-fleet&#x60;. Host operating systems supporting &#x60;NVMe&#x60; &#x60;dispersed namespaces&#x60; typically use &#x60;allow&#x60;, while those without such support use &#x60;allow-only-with-fleet&#x60; within a fleet or &#x60;disallow&#x60; otherwise. Changing to or from the &#x60;allow-only-with-fleet&#x60; mode triggers a disconnect of all &#x60;NVMe&#x60; connections for the host. The default value is &#x60;disallow&#x60;.  | [optional] 
 **Personality** | Pointer to **string** | Determines how the system tunes the array to ensure that it works optimally with the host. Set &#x60;personality&#x60; to the name of the host operating system or virtual memory system. Valid values are &#x60;aix&#x60;, &#x60;esxi&#x60;, &#x60;hitachi-vsp&#x60;, &#x60;hpux&#x60;, &#x60;oracle-vm-server&#x60;, &#x60;solaris&#x60;, &#x60;vms&#x60;, &#x60;nutanix-mgmt&#x60; and &#x60;nutanix-cluster&#x60;. If your system is not listed as one of the valid host personalities, do not set the option. By default, the personality is not set.  | [optional] 
 **PreferredArrays** | Pointer to [**[]Reference**](Reference.md) | For synchronous replication configurations, sets a host&#39;s preferred array to specify which array exposes active/optimized paths to that host. Enter multiple preferred arrays in comma-separated format. If a preferred array is set for a host, then the other arrays in the same pod will expose active/non-optimized paths to that host. If the host is in a host group, &#x60;preferred_arrays&#x60; cannot be set because host groups have their own preferred arrays. On a preferred array of a certain host, all the paths on all the ports (for both the primary and secondary controllers) are set up as A/O (active/optimized) paths, while on a non-preferred array, all the paths are A/N (Active/Non-optimized) paths.  | [optional] 
-**Qos** | Pointer to [**ContainerQosCeilings**](ContainerQosCeilings.md) | Sets QoS limits. | [optional] 
+**PriorityAdjustment** | Pointer to [**PriorityAdjustmentValue**](PriorityAdjustmentValue.md) | Adjusts host priority. | [optional] 
+**Qos** | Pointer to [**ContainerQos**](ContainerQos.md) | Sets QoS ceilings and floors. | [optional] 
 **Tags** | Pointer to [**[]NonCopyableTag**](NonCopyableTag.md) | The list of tags to be upserted with the object.  | [optional] 
 **Vlan** | Pointer to **string** | The VLAN ID that the host is associated with. If not set or set to &#x60;any&#x60;, the host can access any VLAN. If set to &#x60;untagged&#x60;, the host can only access untagged VLANs. If set to a number between &#x60;1&#x60; and &#x60;4094&#x60;, the host can only access the specified VLAN with that number.  | [optional] 
 **Wwns** | Pointer to **[]string** | The Fibre Channel World Wide Name (WWN) associated with the host. | [optional] 
@@ -184,22 +185,47 @@ SetPreferredArrays sets PreferredArrays field to given value.
 
 HasPreferredArrays returns a boolean if a field has been set.
 
+### GetPriorityAdjustment
+
+`func (o *HostPost) GetPriorityAdjustment() PriorityAdjustmentValue`
+
+GetPriorityAdjustment returns the PriorityAdjustment field if non-nil, zero value otherwise.
+
+### GetPriorityAdjustmentOk
+
+`func (o *HostPost) GetPriorityAdjustmentOk() (*PriorityAdjustmentValue, bool)`
+
+GetPriorityAdjustmentOk returns a tuple with the PriorityAdjustment field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPriorityAdjustment
+
+`func (o *HostPost) SetPriorityAdjustment(v PriorityAdjustmentValue)`
+
+SetPriorityAdjustment sets PriorityAdjustment field to given value.
+
+### HasPriorityAdjustment
+
+`func (o *HostPost) HasPriorityAdjustment() bool`
+
+HasPriorityAdjustment returns a boolean if a field has been set.
+
 ### GetQos
 
-`func (o *HostPost) GetQos() ContainerQosCeilings`
+`func (o *HostPost) GetQos() ContainerQos`
 
 GetQos returns the Qos field if non-nil, zero value otherwise.
 
 ### GetQosOk
 
-`func (o *HostPost) GetQosOk() (*ContainerQosCeilings, bool)`
+`func (o *HostPost) GetQosOk() (*ContainerQos, bool)`
 
 GetQosOk returns a tuple with the Qos field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetQos
 
-`func (o *HostPost) SetQos(v ContainerQosCeilings)`
+`func (o *HostPost) SetQos(v ContainerQos)`
 
 SetQos sets Qos field to given value.
 

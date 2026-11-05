@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **Name** | Pointer to **string** | A locally unique, system-generated name. The name cannot be modified.  | [optional] [readonly] 
 **BandwidthLimit** | Pointer to **int64** | The maximum QoS bandwidth limit for the container. Whenever throughput exceeds the bandwidth limit, throttling occurs. Measured in bytes per second. Maximum limit is 512 GB/s.  | [optional] 
 **IopsLimit** | Pointer to **int64** | The QoS IOPs limit for the container.  | [optional] 
-**BandwidthFloor** | Pointer to **int64** | The QoS bandwidth floor for the container. Traffic is granted priority until this floor is reached. Measured in bytes per second. Maximum floor is 512 GB/s.  | [optional] 
-**IopsFloor** | Pointer to **int64** | The QoS IOPs floor for the container. Traffic is granted priority until this floor is reached. Maximum floor is 100,000,000 IOs per second.  | [optional] 
+**BandwidthFloor** | Pointer to **int64** | The QoS bandwidth floor for the container, measured in bytes per second. Traffic is granted priority until this floor is reached. The maximum floor is 512 GB/s.  | [optional] 
+**IopsFloor** | Pointer to **int64** | The QoS IOPS floor for the container. Traffic is granted priority until this floor is reached. The maximum floor is 100,000,000 IOs per second.  | [optional] 
 **Context** | Pointer to [**FixedReferenceWithType**](FixedReferenceWithType.md) | The context in which the operation was performed.  Valid values include a reference to any array which is a member of the same fleet or to the fleet itself.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | [optional] [readonly] 
 **Time** | Pointer to **int64** | The timestamp of when the data was taken, measured in milliseconds since the UNIX epoch.  | [optional] [readonly] 
 

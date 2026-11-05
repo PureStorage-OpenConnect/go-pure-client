@@ -4,45 +4,45 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DirectoriesDelete**](DirectoriesAPI.md#DirectoriesDelete) | **Delete** /api/2.58/directories | Delete managed directories
-[**DirectoriesGet**](DirectoriesAPI.md#DirectoriesGet) | **Get** /api/2.58/directories | List directories
-[**DirectoriesGroupsGet**](DirectoriesAPI.md#DirectoriesGroupsGet) | **Get** /api/2.58/directories/groups | List group with content in directories
-[**DirectoriesLocksNlmReclamationsPost**](DirectoriesAPI.md#DirectoriesLocksNlmReclamationsPost) | **Post** /api/2.58/directories/locks/nlm-reclamations | Create NLM reclamation
-[**DirectoriesPatch**](DirectoriesAPI.md#DirectoriesPatch) | **Patch** /api/2.58/directories | Modify a managed directory
-[**DirectoriesPerformanceByArrayGet**](DirectoriesAPI.md#DirectoriesPerformanceByArrayGet) | **Get** /api/2.58/directories/performance/by-array | List directories performance data by array
-[**DirectoriesPerformanceGet**](DirectoriesAPI.md#DirectoriesPerformanceGet) | **Get** /api/2.58/directories/performance | List directory performance data
-[**DirectoriesPoliciesAntivirusDelete**](DirectoriesAPI.md#DirectoriesPoliciesAntivirusDelete) | **Delete** /api/2.58/directories/policies/antivirus | Delete directory-antivirus policy attachments
-[**DirectoriesPoliciesAntivirusGet**](DirectoriesAPI.md#DirectoriesPoliciesAntivirusGet) | **Get** /api/2.58/directories/policies/antivirus | List directory-antivirus policy attachments
-[**DirectoriesPoliciesAntivirusPost**](DirectoriesAPI.md#DirectoriesPoliciesAntivirusPost) | **Post** /api/2.58/directories/policies/antivirus | Create a membership between a managed directory and an antivirus policy
-[**DirectoriesPoliciesAuditFileDelete**](DirectoriesAPI.md#DirectoriesPoliciesAuditFileDelete) | **Delete** /api/2.58/directories/policies/audit-file | Delete a membership between a directory and one or more audit policies
-[**DirectoriesPoliciesAuditFileGet**](DirectoriesAPI.md#DirectoriesPoliciesAuditFileGet) | **Get** /api/2.58/directories/policies/audit-file | List audit policies attached to a directory
-[**DirectoriesPoliciesAuditFilePost**](DirectoriesAPI.md#DirectoriesPoliciesAuditFilePost) | **Post** /api/2.58/directories/policies/audit-file | Create a membership between a directory and one or more audit policies
-[**DirectoriesPoliciesAutodirDelete**](DirectoriesAPI.md#DirectoriesPoliciesAutodirDelete) | **Delete** /api/2.58/directories/policies/autodir | Delete a membership between a directory and one or more auto managed directory policies
-[**DirectoriesPoliciesAutodirGet**](DirectoriesAPI.md#DirectoriesPoliciesAutodirGet) | **Get** /api/2.58/directories/policies/autodir | List auto managed directory policies attached to a directory
-[**DirectoriesPoliciesAutodirPost**](DirectoriesAPI.md#DirectoriesPoliciesAutodirPost) | **Post** /api/2.58/directories/policies/autodir | Create a membership between a directory with one or more auto managed directory policies
-[**DirectoriesPoliciesGet**](DirectoriesAPI.md#DirectoriesPoliciesGet) | **Get** /api/2.58/directories/policies | List policies
-[**DirectoriesPoliciesNfsDelete**](DirectoriesAPI.md#DirectoriesPoliciesNfsDelete) | **Delete** /api/2.58/directories/policies/nfs | Delete a membership between a directory and one or more NFS policies
-[**DirectoriesPoliciesNfsGet**](DirectoriesAPI.md#DirectoriesPoliciesNfsGet) | **Get** /api/2.58/directories/policies/nfs | List NFS policies attached to a directory
-[**DirectoriesPoliciesNfsPost**](DirectoriesAPI.md#DirectoriesPoliciesNfsPost) | **Post** /api/2.58/directories/policies/nfs | Create a membership between a directory and one or more NFS policies
-[**DirectoriesPoliciesQosDelete**](DirectoriesAPI.md#DirectoriesPoliciesQosDelete) | **Delete** /api/2.58/directories/policies/qos | Delete a membership between a directory and one or more QoS policies
-[**DirectoriesPoliciesQosGet**](DirectoriesAPI.md#DirectoriesPoliciesQosGet) | **Get** /api/2.58/directories/policies/qos | List QoS policies attached to a directory
-[**DirectoriesPoliciesQosPost**](DirectoriesAPI.md#DirectoriesPoliciesQosPost) | **Post** /api/2.58/directories/policies/qos | Create a membership between a directory and one or more QoS policies
-[**DirectoriesPoliciesQuotaDelete**](DirectoriesAPI.md#DirectoriesPoliciesQuotaDelete) | **Delete** /api/2.58/directories/policies/quota | Delete a membership between a directory and one or more quota policies
-[**DirectoriesPoliciesQuotaGet**](DirectoriesAPI.md#DirectoriesPoliciesQuotaGet) | **Get** /api/2.58/directories/policies/quota | List quota policies attached to a directory
-[**DirectoriesPoliciesQuotaPost**](DirectoriesAPI.md#DirectoriesPoliciesQuotaPost) | **Post** /api/2.58/directories/policies/quota | Create a membership between a directory and one or more quota policies
-[**DirectoriesPoliciesSmbDelete**](DirectoriesAPI.md#DirectoriesPoliciesSmbDelete) | **Delete** /api/2.58/directories/policies/smb | Delete a membership between a directory and one or more SMB policies
-[**DirectoriesPoliciesSmbGet**](DirectoriesAPI.md#DirectoriesPoliciesSmbGet) | **Get** /api/2.58/directories/policies/smb | List SMB policies attached to a directory
-[**DirectoriesPoliciesSmbPost**](DirectoriesAPI.md#DirectoriesPoliciesSmbPost) | **Post** /api/2.58/directories/policies/smb | Create a membership between a directory and one or more SMB policies
-[**DirectoriesPoliciesSnapshotDelete**](DirectoriesAPI.md#DirectoriesPoliciesSnapshotDelete) | **Delete** /api/2.58/directories/policies/snapshot | Delete a membership between a directory and one or more snapshot policies
-[**DirectoriesPoliciesSnapshotGet**](DirectoriesAPI.md#DirectoriesPoliciesSnapshotGet) | **Get** /api/2.58/directories/policies/snapshot | List snapshot policies attached to a directory
-[**DirectoriesPoliciesSnapshotPost**](DirectoriesAPI.md#DirectoriesPoliciesSnapshotPost) | **Post** /api/2.58/directories/policies/snapshot | Create a membership between a directory with one or more snapshot policies
-[**DirectoriesPoliciesUserGroupQuotaDelete**](DirectoriesAPI.md#DirectoriesPoliciesUserGroupQuotaDelete) | **Delete** /api/2.58/directories/policies/user-group-quota | Delete a membership between a directory and one or more user-group-quota policies
-[**DirectoriesPoliciesUserGroupQuotaGet**](DirectoriesAPI.md#DirectoriesPoliciesUserGroupQuotaGet) | **Get** /api/2.58/directories/policies/user-group-quota | List user-group-quota policies attached to a directory
-[**DirectoriesPoliciesUserGroupQuotaPost**](DirectoriesAPI.md#DirectoriesPoliciesUserGroupQuotaPost) | **Post** /api/2.58/directories/policies/user-group-quota | Create a membership between a directory and one or more user-group-quota policies
-[**DirectoriesPost**](DirectoriesAPI.md#DirectoriesPost) | **Post** /api/2.58/directories | Create or copy directory
-[**DirectoriesQosGet**](DirectoriesAPI.md#DirectoriesQosGet) | **Get** /api/2.58/directories/qos | List directory QoS policy configurations
-[**DirectoriesSpaceGet**](DirectoriesAPI.md#DirectoriesSpaceGet) | **Get** /api/2.58/directories/space | List directory space information
-[**DirectoriesUsersGet**](DirectoriesAPI.md#DirectoriesUsersGet) | **Get** /api/2.58/directories/users | List users with content in directories
+[**DirectoriesDelete**](DirectoriesAPI.md#DirectoriesDelete) | **Delete** /api/2.59/directories | Delete managed directories
+[**DirectoriesGet**](DirectoriesAPI.md#DirectoriesGet) | **Get** /api/2.59/directories | List directories
+[**DirectoriesGroupsGet**](DirectoriesAPI.md#DirectoriesGroupsGet) | **Get** /api/2.59/directories/groups | List group with content in directories
+[**DirectoriesLocksNlmReclamationsPost**](DirectoriesAPI.md#DirectoriesLocksNlmReclamationsPost) | **Post** /api/2.59/directories/locks/nlm-reclamations | Create NLM reclamation
+[**DirectoriesPatch**](DirectoriesAPI.md#DirectoriesPatch) | **Patch** /api/2.59/directories | Modify a managed directory
+[**DirectoriesPerformanceByArrayGet**](DirectoriesAPI.md#DirectoriesPerformanceByArrayGet) | **Get** /api/2.59/directories/performance/by-array | List directories performance data by array
+[**DirectoriesPerformanceGet**](DirectoriesAPI.md#DirectoriesPerformanceGet) | **Get** /api/2.59/directories/performance | List directory performance data
+[**DirectoriesPoliciesAntivirusDelete**](DirectoriesAPI.md#DirectoriesPoliciesAntivirusDelete) | **Delete** /api/2.59/directories/policies/antivirus | Delete directory-antivirus policy attachments
+[**DirectoriesPoliciesAntivirusGet**](DirectoriesAPI.md#DirectoriesPoliciesAntivirusGet) | **Get** /api/2.59/directories/policies/antivirus | List directory-antivirus policy attachments
+[**DirectoriesPoliciesAntivirusPost**](DirectoriesAPI.md#DirectoriesPoliciesAntivirusPost) | **Post** /api/2.59/directories/policies/antivirus | Create a membership between a managed directory and an antivirus policy
+[**DirectoriesPoliciesAuditFileDelete**](DirectoriesAPI.md#DirectoriesPoliciesAuditFileDelete) | **Delete** /api/2.59/directories/policies/audit-file | Delete a membership between a directory and one or more audit policies
+[**DirectoriesPoliciesAuditFileGet**](DirectoriesAPI.md#DirectoriesPoliciesAuditFileGet) | **Get** /api/2.59/directories/policies/audit-file | List audit policies attached to a directory
+[**DirectoriesPoliciesAuditFilePost**](DirectoriesAPI.md#DirectoriesPoliciesAuditFilePost) | **Post** /api/2.59/directories/policies/audit-file | Create a membership between a directory and one or more audit policies
+[**DirectoriesPoliciesAutodirDelete**](DirectoriesAPI.md#DirectoriesPoliciesAutodirDelete) | **Delete** /api/2.59/directories/policies/autodir | Delete a membership between a directory and one or more auto managed directory policies
+[**DirectoriesPoliciesAutodirGet**](DirectoriesAPI.md#DirectoriesPoliciesAutodirGet) | **Get** /api/2.59/directories/policies/autodir | List auto managed directory policies attached to a directory
+[**DirectoriesPoliciesAutodirPost**](DirectoriesAPI.md#DirectoriesPoliciesAutodirPost) | **Post** /api/2.59/directories/policies/autodir | Create a membership between a directory with one or more auto managed directory policies
+[**DirectoriesPoliciesGet**](DirectoriesAPI.md#DirectoriesPoliciesGet) | **Get** /api/2.59/directories/policies | List policies
+[**DirectoriesPoliciesNfsDelete**](DirectoriesAPI.md#DirectoriesPoliciesNfsDelete) | **Delete** /api/2.59/directories/policies/nfs | Delete a membership between a directory and one or more NFS policies
+[**DirectoriesPoliciesNfsGet**](DirectoriesAPI.md#DirectoriesPoliciesNfsGet) | **Get** /api/2.59/directories/policies/nfs | List NFS policies attached to a directory
+[**DirectoriesPoliciesNfsPost**](DirectoriesAPI.md#DirectoriesPoliciesNfsPost) | **Post** /api/2.59/directories/policies/nfs | Create a membership between a directory and one or more NFS policies
+[**DirectoriesPoliciesQosDelete**](DirectoriesAPI.md#DirectoriesPoliciesQosDelete) | **Delete** /api/2.59/directories/policies/qos | Delete a membership between a directory and one or more QoS policies
+[**DirectoriesPoliciesQosGet**](DirectoriesAPI.md#DirectoriesPoliciesQosGet) | **Get** /api/2.59/directories/policies/qos | List QoS policies attached to a directory
+[**DirectoriesPoliciesQosPost**](DirectoriesAPI.md#DirectoriesPoliciesQosPost) | **Post** /api/2.59/directories/policies/qos | Create a membership between a directory and one or more QoS policies
+[**DirectoriesPoliciesQuotaDelete**](DirectoriesAPI.md#DirectoriesPoliciesQuotaDelete) | **Delete** /api/2.59/directories/policies/quota | Delete a membership between a directory and one or more quota policies
+[**DirectoriesPoliciesQuotaGet**](DirectoriesAPI.md#DirectoriesPoliciesQuotaGet) | **Get** /api/2.59/directories/policies/quota | List quota policies attached to a directory
+[**DirectoriesPoliciesQuotaPost**](DirectoriesAPI.md#DirectoriesPoliciesQuotaPost) | **Post** /api/2.59/directories/policies/quota | Create a membership between a directory and one or more quota policies
+[**DirectoriesPoliciesSmbDelete**](DirectoriesAPI.md#DirectoriesPoliciesSmbDelete) | **Delete** /api/2.59/directories/policies/smb | Delete a membership between a directory and one or more SMB policies
+[**DirectoriesPoliciesSmbGet**](DirectoriesAPI.md#DirectoriesPoliciesSmbGet) | **Get** /api/2.59/directories/policies/smb | List SMB policies attached to a directory
+[**DirectoriesPoliciesSmbPost**](DirectoriesAPI.md#DirectoriesPoliciesSmbPost) | **Post** /api/2.59/directories/policies/smb | Create a membership between a directory and one or more SMB policies
+[**DirectoriesPoliciesSnapshotDelete**](DirectoriesAPI.md#DirectoriesPoliciesSnapshotDelete) | **Delete** /api/2.59/directories/policies/snapshot | Delete a membership between a directory and one or more snapshot policies
+[**DirectoriesPoliciesSnapshotGet**](DirectoriesAPI.md#DirectoriesPoliciesSnapshotGet) | **Get** /api/2.59/directories/policies/snapshot | List snapshot policies attached to a directory
+[**DirectoriesPoliciesSnapshotPost**](DirectoriesAPI.md#DirectoriesPoliciesSnapshotPost) | **Post** /api/2.59/directories/policies/snapshot | Create a membership between a directory with one or more snapshot policies
+[**DirectoriesPoliciesUserGroupQuotaDelete**](DirectoriesAPI.md#DirectoriesPoliciesUserGroupQuotaDelete) | **Delete** /api/2.59/directories/policies/user-group-quota | Delete a membership between a directory and one or more user-group-quota policies
+[**DirectoriesPoliciesUserGroupQuotaGet**](DirectoriesAPI.md#DirectoriesPoliciesUserGroupQuotaGet) | **Get** /api/2.59/directories/policies/user-group-quota | List user-group-quota policies attached to a directory
+[**DirectoriesPoliciesUserGroupQuotaPost**](DirectoriesAPI.md#DirectoriesPoliciesUserGroupQuotaPost) | **Post** /api/2.59/directories/policies/user-group-quota | Create a membership between a directory and one or more user-group-quota policies
+[**DirectoriesPost**](DirectoriesAPI.md#DirectoriesPost) | **Post** /api/2.59/directories | Create or copy directory
+[**DirectoriesQosGet**](DirectoriesAPI.md#DirectoriesQosGet) | **Get** /api/2.59/directories/qos | List directory QoS policy configurations
+[**DirectoriesSpaceGet**](DirectoriesAPI.md#DirectoriesSpaceGet) | **Get** /api/2.59/directories/space | List directory space information
+[**DirectoriesUsersGet**](DirectoriesAPI.md#DirectoriesUsersGet) | **Get** /api/2.59/directories/users | List users with content in directories
 
 
 
@@ -63,7 +63,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -140,7 +140,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -232,7 +232,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -323,7 +323,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -399,7 +399,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -479,7 +479,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -571,7 +571,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -664,7 +664,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -743,7 +743,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -832,7 +832,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -912,7 +912,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -991,7 +991,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1080,7 +1080,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1160,7 +1160,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1239,7 +1239,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1328,7 +1328,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1408,7 +1408,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1497,7 +1497,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1578,7 +1578,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1667,7 +1667,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1747,7 +1747,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1826,7 +1826,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1915,7 +1915,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1995,7 +1995,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -2074,7 +2074,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -2163,7 +2163,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -2244,7 +2244,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -2325,7 +2325,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -2414,7 +2414,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -2494,7 +2494,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -2573,7 +2573,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -2662,7 +2662,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -2742,7 +2742,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -2822,7 +2822,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -2911,7 +2911,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -2992,7 +2992,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -3078,7 +3078,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -3168,7 +3168,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -3259,7 +3259,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

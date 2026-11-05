@@ -4,11 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Certificates** | Pointer to [**[]ReferenceNoIdWithType**](ReferenceNoIdWithType.md) | The certificate to be presented by the vchost over the configured endpoints.  | [optional] 
+**Context** | Pointer to [**FixedReferenceWithType**](FixedReferenceWithType.md) | The context in which the operation was performed.  Valid values include a reference to any array which is a member of the same fleet or to the fleet itself.  Other parameters provided with the request, such as names of volumes or snapshots, are resolved relative to the provided &#x60;context&#x60;.  | [optional] [readonly] 
+**Certificates** | Pointer to [**[]ReferenceNoIdWithType**](ReferenceNoIdWithType.md) | The certificate to be presented by the &#x60;vchost&#x60; over the configured endpoints.  | [optional] 
 **Endpoint** | Pointer to **string** | The IPv4 or IPv6 address of the endpoint.  | [optional] 
 **Id** | Pointer to **string** | A globally unique, system-generated ID. The ID cannot be modified.  | [optional] 
-**IsLocal** | Pointer to **bool** | Returns true if the vchost endpoint is local to the array, and false otherwise. | [optional] 
-**Vchost** | Pointer to [**ReferenceWithType**](ReferenceWithType.md) | The vchost for which this endpoint is to be configured.  | [optional] 
+**IsLocal** | Pointer to **bool** | Returns &#x60;true&#x60; if the &#x60;vchost&#x60; endpoint is local to the array, and &#x60;false&#x60; otherwise. | [optional] 
+**Vchost** | Pointer to [**ReferenceWithType**](ReferenceWithType.md) | The &#x60;vchost&#x60; for which this endpoint is to be configured.  | [optional] 
 
 ## Methods
 
@@ -28,6 +29,31 @@ will change when the set of required properties is changed
 NewVchostEndpointWithDefaults instantiates a new VchostEndpoint object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetContext
+
+`func (o *VchostEndpoint) GetContext() FixedReferenceWithType`
+
+GetContext returns the Context field if non-nil, zero value otherwise.
+
+### GetContextOk
+
+`func (o *VchostEndpoint) GetContextOk() (*FixedReferenceWithType, bool)`
+
+GetContextOk returns a tuple with the Context field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetContext
+
+`func (o *VchostEndpoint) SetContext(v FixedReferenceWithType)`
+
+SetContext sets Context field to given value.
+
+### HasContext
+
+`func (o *VchostEndpoint) HasContext() bool`
+
+HasContext returns a boolean if a field has been set.
 
 ### GetCertificates
 

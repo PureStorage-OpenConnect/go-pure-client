@@ -17,7 +17,9 @@ Name | Type | Description | Notes
 **Personality** | Pointer to **string** | Determines how the system tunes the array to ensure that it works optimally with the host. Set &#x60;personality&#x60; to the name of the host operating system or virtual memory system. Valid values are &#x60;aix&#x60;, &#x60;esxi&#x60;, &#x60;hitachi-vsp&#x60;, &#x60;hpux&#x60;, &#x60;oracle-vm-server&#x60;, &#x60;solaris&#x60;, &#x60;vms&#x60;, &#x60;nutanix-mgmt&#x60; and &#x60;nutanix-cluster&#x60;. If your system is not listed as one of the valid host personalities, do not set the option. By default, the personality is not set.  | [optional] 
 **PortConnectivity** | Pointer to [**HostPortConnectivity**](HostPortConnectivity.md) |  | [optional] 
 **PreferredArrays** | Pointer to [**[]Reference**](Reference.md) | For synchronous replication configurations, sets a host&#39;s preferred array to specify which array exposes active/optimized paths to that host. Enter multiple preferred arrays in comma-separated format. If a preferred array is set for a host, then the other arrays in the same pod will expose active/non-optimized paths to that host. If the host is in a host group, &#x60;preferred_arrays&#x60; cannot be set because host groups have their own preferred arrays. On a preferred array of a certain host, all the paths on all the ports (for both the primary and secondary controllers) are set up as A/O (active/optimized) paths, while on a non-preferred array, all the paths are A/N (Active/Non-optimized) paths.  | [optional] 
-**Qos** | Pointer to [**ContainerQosCeilings**](ContainerQosCeilings.md) | Displays QoS limit information.  | [optional] 
+**Priority** | Pointer to **int32** | The effective priority band for this host. If a &#x60;priority_adjustment&#x60; is configured on the host, this field reflects that value. If no &#x60;priority_adjustment&#x60; is set, it reflects the closest ancestor&#39;s configured band, or 0 (default) if no ancestor has a band.  | [optional] [readonly] 
+**PriorityAdjustment** | Pointer to [**PriorityAdjustmentValue**](PriorityAdjustmentValue.md) | Priority adjustment value.  | [optional] 
+**Qos** | Pointer to [**ContainerQos**](ContainerQos.md) | Displays QoS ceilings and floors information.  | [optional] 
 **Space** | Pointer to [**Space**](Space.md) | Displays provisioned (virtual) size and physical storage consumption information for the sum of all volumes connected to the specified host.  | [optional] 
 **TimeRemaining** | Pointer to **int64** | The amount of time left until the destroyed host is permanently eradicated, measured in milliseconds.  | [optional] [readonly] 
 **Vlan** | Pointer to **string** | The VLAN ID that the host is associated with. If set to &#x60;any&#x60;, the host can access any VLAN. If set to &#x60;untagged&#x60;, the host can only access untagged VLANs. If set to a number between &#x60;1&#x60; and &#x60;4094&#x60;, the host can only access the specified VLAN with that number.  | [optional] 
@@ -367,22 +369,72 @@ SetPreferredArrays sets PreferredArrays field to given value.
 
 HasPreferredArrays returns a boolean if a field has been set.
 
+### GetPriority
+
+`func (o *Host) GetPriority() int32`
+
+GetPriority returns the Priority field if non-nil, zero value otherwise.
+
+### GetPriorityOk
+
+`func (o *Host) GetPriorityOk() (*int32, bool)`
+
+GetPriorityOk returns a tuple with the Priority field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPriority
+
+`func (o *Host) SetPriority(v int32)`
+
+SetPriority sets Priority field to given value.
+
+### HasPriority
+
+`func (o *Host) HasPriority() bool`
+
+HasPriority returns a boolean if a field has been set.
+
+### GetPriorityAdjustment
+
+`func (o *Host) GetPriorityAdjustment() PriorityAdjustmentValue`
+
+GetPriorityAdjustment returns the PriorityAdjustment field if non-nil, zero value otherwise.
+
+### GetPriorityAdjustmentOk
+
+`func (o *Host) GetPriorityAdjustmentOk() (*PriorityAdjustmentValue, bool)`
+
+GetPriorityAdjustmentOk returns a tuple with the PriorityAdjustment field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPriorityAdjustment
+
+`func (o *Host) SetPriorityAdjustment(v PriorityAdjustmentValue)`
+
+SetPriorityAdjustment sets PriorityAdjustment field to given value.
+
+### HasPriorityAdjustment
+
+`func (o *Host) HasPriorityAdjustment() bool`
+
+HasPriorityAdjustment returns a boolean if a field has been set.
+
 ### GetQos
 
-`func (o *Host) GetQos() ContainerQosCeilings`
+`func (o *Host) GetQos() ContainerQos`
 
 GetQos returns the Qos field if non-nil, zero value otherwise.
 
 ### GetQosOk
 
-`func (o *Host) GetQosOk() (*ContainerQosCeilings, bool)`
+`func (o *Host) GetQosOk() (*ContainerQos, bool)`
 
 GetQosOk returns a tuple with the Qos field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetQos
 
-`func (o *Host) SetQos(v ContainerQosCeilings)`
+`func (o *Host) SetQos(v ContainerQos)`
 
 SetQos sets Qos field to given value.
 

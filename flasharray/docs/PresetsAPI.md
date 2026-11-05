@@ -4,11 +4,11 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**PresetsWorkloadDelete**](PresetsAPI.md#PresetsWorkloadDelete) | **Delete** /api/2.58/presets/workload | Delete a workload preset
-[**PresetsWorkloadGet**](PresetsAPI.md#PresetsWorkloadGet) | **Get** /api/2.58/presets/workload | List workload presets
-[**PresetsWorkloadPatch**](PresetsAPI.md#PresetsWorkloadPatch) | **Patch** /api/2.58/presets/workload | Modify a workload preset
-[**PresetsWorkloadPost**](PresetsAPI.md#PresetsWorkloadPost) | **Post** /api/2.58/presets/workload | Create a workload preset
-[**PresetsWorkloadPut**](PresetsAPI.md#PresetsWorkloadPut) | **Put** /api/2.58/presets/workload | Update a workload preset
+[**PresetsWorkloadDelete**](PresetsAPI.md#PresetsWorkloadDelete) | **Delete** /api/2.59/presets/workload | Delete a workload preset
+[**PresetsWorkloadGet**](PresetsAPI.md#PresetsWorkloadGet) | **Get** /api/2.59/presets/workload | List workload presets
+[**PresetsWorkloadPatch**](PresetsAPI.md#PresetsWorkloadPatch) | **Patch** /api/2.59/presets/workload | Modify a workload preset
+[**PresetsWorkloadPost**](PresetsAPI.md#PresetsWorkloadPost) | **Post** /api/2.59/presets/workload | Create a workload preset
+[**PresetsWorkloadPut**](PresetsAPI.md#PresetsWorkloadPut) | **Put** /api/2.59/presets/workload | Update a workload preset
 
 
 
@@ -29,7 +29,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -106,7 +106,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -185,7 +185,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -265,7 +265,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -345,7 +345,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

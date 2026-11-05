@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**SessionsGet**](SessionsAPI.md#SessionsGet) | **Get** /api/2.58/sessions | List session data
+[**SessionsGet**](SessionsAPI.md#SessionsGet) | **Get** /api/2.59/sessions | List session data
 
 
 
@@ -25,7 +25,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

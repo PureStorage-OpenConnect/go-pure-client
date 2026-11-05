@@ -4,9 +4,9 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AppsGet**](AppsAPI.md#AppsGet) | **Get** /api/2.58/apps | List apps
-[**AppsNodesGet**](AppsAPI.md#AppsNodesGet) | **Get** /api/2.58/apps/nodes | List app nodes
-[**AppsPatch**](AppsAPI.md#AppsPatch) | **Patch** /api/2.58/apps | Modify app
+[**AppsGet**](AppsAPI.md#AppsGet) | **Get** /api/2.59/apps | List apps
+[**AppsNodesGet**](AppsAPI.md#AppsNodesGet) | **Get** /api/2.59/apps/nodes | List app nodes
+[**AppsPatch**](AppsAPI.md#AppsPatch) | **Patch** /api/2.59/apps | Modify app
 
 
 
@@ -27,7 +27,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -110,7 +110,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -193,7 +193,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

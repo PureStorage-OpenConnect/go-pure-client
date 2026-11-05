@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DirectoryQuotasGet**](DirectoryQuotasAPI.md#DirectoryQuotasGet) | **Get** /api/2.58/directory-quotas | List directories with attached quota policies
+[**DirectoryQuotasGet**](DirectoryQuotasAPI.md#DirectoryQuotasGet) | **Get** /api/2.59/directory-quotas | List directories with attached quota policies
 
 
 
@@ -25,7 +25,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

@@ -4,21 +4,21 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AdminsAPITokensDelete**](AdministratorsAPI.md#AdminsAPITokensDelete) | **Delete** /api/2.58/admins/api-tokens | Delete API tokens
-[**AdminsAPITokensGet**](AdministratorsAPI.md#AdminsAPITokensGet) | **Get** /api/2.58/admins/api-tokens | List API tokens
-[**AdminsAPITokensPost**](AdministratorsAPI.md#AdminsAPITokensPost) | **Post** /api/2.58/admins/api-tokens | Create API tokens
-[**AdminsCacheDelete**](AdministratorsAPI.md#AdminsCacheDelete) | **Delete** /api/2.58/admins/cache | Delete cache entries
-[**AdminsCacheGet**](AdministratorsAPI.md#AdminsCacheGet) | **Get** /api/2.58/admins/cache | List administrator cache entries
-[**AdminsCachePut**](AdministratorsAPI.md#AdminsCachePut) | **Put** /api/2.58/admins/cache | Update or refresh entries in the administrator cache
-[**AdminsDelete**](AdministratorsAPI.md#AdminsDelete) | **Delete** /api/2.58/admins | Delete an administrator
-[**AdminsGet**](AdministratorsAPI.md#AdminsGet) | **Get** /api/2.58/admins | List administrators
-[**AdminsPatch**](AdministratorsAPI.md#AdminsPatch) | **Patch** /api/2.58/admins | Modify an administrator
-[**AdminsPoliciesManagementAccessDelete**](AdministratorsAPI.md#AdminsPoliciesManagementAccessDelete) | **Delete** /api/2.58/admins/policies/management-access | Delete a membership between an administrator and one or more management access policies
-[**AdminsPoliciesManagementAccessGet**](AdministratorsAPI.md#AdminsPoliciesManagementAccessGet) | **Get** /api/2.58/admins/policies/management-access | List management access policies attached to administrators
-[**AdminsPoliciesManagementAccessPost**](AdministratorsAPI.md#AdminsPoliciesManagementAccessPost) | **Post** /api/2.58/admins/policies/management-access | Create a membership between an administrator with one or more management access policies.
-[**AdminsPost**](AdministratorsAPI.md#AdminsPost) | **Post** /api/2.58/admins | Create an administrator
-[**AdminsSettingsGet**](AdministratorsAPI.md#AdminsSettingsGet) | **Get** /api/2.58/admins/settings | List administrator settings
-[**AdminsSettingsPatch**](AdministratorsAPI.md#AdminsSettingsPatch) | **Patch** /api/2.58/admins/settings | Modify administrator settings
+[**AdminsAPITokensDelete**](AdministratorsAPI.md#AdminsAPITokensDelete) | **Delete** /api/2.59/admins/api-tokens | Delete API tokens
+[**AdminsAPITokensGet**](AdministratorsAPI.md#AdminsAPITokensGet) | **Get** /api/2.59/admins/api-tokens | List API tokens
+[**AdminsAPITokensPost**](AdministratorsAPI.md#AdminsAPITokensPost) | **Post** /api/2.59/admins/api-tokens | Create API tokens
+[**AdminsCacheDelete**](AdministratorsAPI.md#AdminsCacheDelete) | **Delete** /api/2.59/admins/cache | Delete cache entries
+[**AdminsCacheGet**](AdministratorsAPI.md#AdminsCacheGet) | **Get** /api/2.59/admins/cache | List administrator cache entries
+[**AdminsCachePut**](AdministratorsAPI.md#AdminsCachePut) | **Put** /api/2.59/admins/cache | Update or refresh entries in the administrator cache
+[**AdminsDelete**](AdministratorsAPI.md#AdminsDelete) | **Delete** /api/2.59/admins | Delete an administrator
+[**AdminsGet**](AdministratorsAPI.md#AdminsGet) | **Get** /api/2.59/admins | List administrators
+[**AdminsPatch**](AdministratorsAPI.md#AdminsPatch) | **Patch** /api/2.59/admins | Modify an administrator
+[**AdminsPoliciesManagementAccessDelete**](AdministratorsAPI.md#AdminsPoliciesManagementAccessDelete) | **Delete** /api/2.59/admins/policies/management-access | Delete a membership between an administrator and one or more management access policies
+[**AdminsPoliciesManagementAccessGet**](AdministratorsAPI.md#AdminsPoliciesManagementAccessGet) | **Get** /api/2.59/admins/policies/management-access | List management access policies attached to administrators
+[**AdminsPoliciesManagementAccessPost**](AdministratorsAPI.md#AdminsPoliciesManagementAccessPost) | **Post** /api/2.59/admins/policies/management-access | Create a membership between an administrator with one or more management access policies.
+[**AdminsPost**](AdministratorsAPI.md#AdminsPost) | **Post** /api/2.59/admins | Create an administrator
+[**AdminsSettingsGet**](AdministratorsAPI.md#AdminsSettingsGet) | **Get** /api/2.59/admins/settings | List administrator settings
+[**AdminsSettingsPatch**](AdministratorsAPI.md#AdminsSettingsPatch) | **Patch** /api/2.59/admins/settings | Modify administrator settings
 
 
 
@@ -39,7 +39,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -115,7 +115,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -201,7 +201,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -280,7 +280,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -356,7 +356,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -441,7 +441,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -519,7 +519,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -595,7 +595,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -682,7 +682,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -761,7 +761,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -840,7 +840,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -928,7 +928,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1008,7 +1008,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1087,7 +1087,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1168,7 +1168,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

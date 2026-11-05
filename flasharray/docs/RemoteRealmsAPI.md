@@ -4,8 +4,8 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**RemoteRealmsGet**](RemoteRealmsAPI.md#RemoteRealmsGet) | **Get** /api/2.58/remote-realms | List remote realms
-[**RemoteRealmsTagsGet**](RemoteRealmsAPI.md#RemoteRealmsTagsGet) | **Get** /api/2.58/remote-realms/tags | List tags
+[**RemoteRealmsGet**](RemoteRealmsAPI.md#RemoteRealmsGet) | **Get** /api/2.59/remote-realms | List remote realms
+[**RemoteRealmsTagsGet**](RemoteRealmsAPI.md#RemoteRealmsTagsGet) | **Get** /api/2.59/remote-realms/tags | List tags
 
 
 
@@ -26,7 +26,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -114,7 +114,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

@@ -4,19 +4,19 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**RealmsDelete**](RealmsAPI.md#RealmsDelete) | **Delete** /api/2.58/realms | Delete realms
-[**RealmsGet**](RealmsAPI.md#RealmsGet) | **Get** /api/2.58/realms | List realms
-[**RealmsMembersDelete**](RealmsAPI.md#RealmsMembersDelete) | **Delete** /api/2.58/realms/members | Delete a member from a realm
-[**RealmsMembersGet**](RealmsAPI.md#RealmsMembersGet) | **Get** /api/2.58/realms/members | List realms and their members
-[**RealmsMembersPost**](RealmsAPI.md#RealmsMembersPost) | **Post** /api/2.58/realms/members | Creates a stretched realm
-[**RealmsPatch**](RealmsAPI.md#RealmsPatch) | **Patch** /api/2.58/realms | Modify realms
-[**RealmsPerformanceGet**](RealmsAPI.md#RealmsPerformanceGet) | **Get** /api/2.58/realms/performance | List realm performance data
-[**RealmsPost**](RealmsAPI.md#RealmsPost) | **Post** /api/2.58/realms | Create realms
-[**RealmsQosGet**](RealmsAPI.md#RealmsQosGet) | **Get** /api/2.58/realms/qos | List realm QoS config
-[**RealmsSpaceGet**](RealmsAPI.md#RealmsSpaceGet) | **Get** /api/2.58/realms/space | List realm space information
-[**RealmsTagsBatchPut**](RealmsAPI.md#RealmsTagsBatchPut) | **Put** /api/2.58/realms/tags/batch | Update tags
-[**RealmsTagsDelete**](RealmsAPI.md#RealmsTagsDelete) | **Delete** /api/2.58/realms/tags | Delete tags
-[**RealmsTagsGet**](RealmsAPI.md#RealmsTagsGet) | **Get** /api/2.58/realms/tags | List tags
+[**RealmsDelete**](RealmsAPI.md#RealmsDelete) | **Delete** /api/2.59/realms | Delete realms
+[**RealmsGet**](RealmsAPI.md#RealmsGet) | **Get** /api/2.59/realms | List realms
+[**RealmsMembersDelete**](RealmsAPI.md#RealmsMembersDelete) | **Delete** /api/2.59/realms/members | Delete a member from a realm
+[**RealmsMembersGet**](RealmsAPI.md#RealmsMembersGet) | **Get** /api/2.59/realms/members | List realms and their members
+[**RealmsMembersPost**](RealmsAPI.md#RealmsMembersPost) | **Post** /api/2.59/realms/members | Creates a stretched realm
+[**RealmsPatch**](RealmsAPI.md#RealmsPatch) | **Patch** /api/2.59/realms | Modify realms
+[**RealmsPerformanceGet**](RealmsAPI.md#RealmsPerformanceGet) | **Get** /api/2.59/realms/performance | List realm performance data
+[**RealmsPost**](RealmsAPI.md#RealmsPost) | **Post** /api/2.59/realms | Create realms
+[**RealmsQosGet**](RealmsAPI.md#RealmsQosGet) | **Get** /api/2.59/realms/qos | List realm QoS config
+[**RealmsSpaceGet**](RealmsAPI.md#RealmsSpaceGet) | **Get** /api/2.59/realms/space | List realm space information
+[**RealmsTagsBatchPut**](RealmsAPI.md#RealmsTagsBatchPut) | **Put** /api/2.59/realms/tags/batch | Update tags
+[**RealmsTagsDelete**](RealmsAPI.md#RealmsTagsDelete) | **Delete** /api/2.59/realms/tags | Delete tags
+[**RealmsTagsGet**](RealmsAPI.md#RealmsTagsGet) | **Get** /api/2.59/realms/tags | List tags
 
 
 
@@ -37,7 +37,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -115,7 +115,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -203,7 +203,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -282,7 +282,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -370,7 +370,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -451,7 +451,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -533,7 +533,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -624,7 +624,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -704,7 +704,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -794,7 +794,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -882,7 +882,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -962,7 +962,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1041,7 +1041,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

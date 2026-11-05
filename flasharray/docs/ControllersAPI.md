@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ControllersGet**](ControllersAPI.md#ControllersGet) | **Get** /api/2.58/controllers | List controller information and status
+[**ControllersGet**](ControllersAPI.md#ControllersGet) | **Get** /api/2.59/controllers | List controller information and status
 
 
 
@@ -25,7 +25,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

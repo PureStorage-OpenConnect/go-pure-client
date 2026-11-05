@@ -4,9 +4,9 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**FilesAntivirusGet**](FilesAPI.md#FilesAntivirusGet) | **Get** /api/2.58/files/antivirus | List antivirus file status
-[**FilesAntivirusPatch**](FilesAPI.md#FilesAntivirusPatch) | **Patch** /api/2.58/files/antivirus | Modify antivirus file status
-[**FilesPost**](FilesAPI.md#FilesPost) | **Post** /api/2.58/files | Create a file copy
+[**FilesAntivirusGet**](FilesAPI.md#FilesAntivirusGet) | **Get** /api/2.59/files/antivirus | List antivirus file status
+[**FilesAntivirusPatch**](FilesAPI.md#FilesAntivirusPatch) | **Patch** /api/2.59/files/antivirus | Modify antivirus file status
+[**FilesPost**](FilesAPI.md#FilesPost) | **Post** /api/2.59/files | Create a file copy
 
 
 
@@ -27,7 +27,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -114,7 +114,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -197,7 +197,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

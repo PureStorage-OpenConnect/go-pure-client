@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ActiveDirectoryDelete**](ActiveDirectoryAPI.md#ActiveDirectoryDelete) | **Delete** /api/2.58/active-directory | Delete Active Directory account
-[**ActiveDirectoryGet**](ActiveDirectoryAPI.md#ActiveDirectoryGet) | **Get** /api/2.58/active-directory | List Active Directory accounts
-[**ActiveDirectoryPatch**](ActiveDirectoryAPI.md#ActiveDirectoryPatch) | **Patch** /api/2.58/active-directory | Modify Active Directory account
-[**ActiveDirectoryPost**](ActiveDirectoryAPI.md#ActiveDirectoryPost) | **Post** /api/2.58/active-directory | Create Active Directory account
-[**ActiveDirectoryTestGet**](ActiveDirectoryAPI.md#ActiveDirectoryTestGet) | **Get** /api/2.58/active-directory/test | GET active-directory/test
-[**ActiveDirectoryTestPatch**](ActiveDirectoryAPI.md#ActiveDirectoryTestPatch) | **Patch** /api/2.58/active-directory/test | PATCH active-directory/test
+[**ActiveDirectoryDelete**](ActiveDirectoryAPI.md#ActiveDirectoryDelete) | **Delete** /api/2.59/active-directory | Delete Active Directory account
+[**ActiveDirectoryGet**](ActiveDirectoryAPI.md#ActiveDirectoryGet) | **Get** /api/2.59/active-directory | List Active Directory accounts
+[**ActiveDirectoryPatch**](ActiveDirectoryAPI.md#ActiveDirectoryPatch) | **Patch** /api/2.59/active-directory | Modify Active Directory account
+[**ActiveDirectoryPost**](ActiveDirectoryAPI.md#ActiveDirectoryPost) | **Post** /api/2.59/active-directory | Create Active Directory account
+[**ActiveDirectoryTestGet**](ActiveDirectoryAPI.md#ActiveDirectoryTestGet) | **Get** /api/2.59/active-directory/test | GET active-directory/test
+[**ActiveDirectoryTestPatch**](ActiveDirectoryAPI.md#ActiveDirectoryTestPatch) | **Patch** /api/2.59/active-directory/test | PATCH active-directory/test
 
 
 
@@ -30,7 +30,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -107,7 +107,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -192,7 +192,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -271,7 +271,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -351,7 +351,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -437,7 +437,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

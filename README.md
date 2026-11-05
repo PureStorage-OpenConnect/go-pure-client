@@ -214,6 +214,7 @@ func main() {
 * [FA2.56](flasharray/FA_2_56/README.md)
 * [FA2.57](flasharray/FA_2_57/README.md)
 * [FA2.58](flasharray/FA_2_58/README.md)
+* [FA2.59](flasharray/FA_2_59/README.md)
 
 ### Flash Blade - ⚠️ preview
 * [FB2.0](flashblade/FB_2_0/README.md)

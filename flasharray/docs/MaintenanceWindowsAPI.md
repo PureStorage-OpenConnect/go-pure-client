@@ -4,9 +4,9 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**MaintenanceWindowsDelete**](MaintenanceWindowsAPI.md#MaintenanceWindowsDelete) | **Delete** /api/2.58/maintenance-windows | Delete maintenance window
-[**MaintenanceWindowsGet**](MaintenanceWindowsAPI.md#MaintenanceWindowsGet) | **Get** /api/2.58/maintenance-windows | List maintenance window details
-[**MaintenanceWindowsPost**](MaintenanceWindowsAPI.md#MaintenanceWindowsPost) | **Post** /api/2.58/maintenance-windows | Create a maintenance window
+[**MaintenanceWindowsDelete**](MaintenanceWindowsAPI.md#MaintenanceWindowsDelete) | **Delete** /api/2.59/maintenance-windows | Delete maintenance window
+[**MaintenanceWindowsGet**](MaintenanceWindowsAPI.md#MaintenanceWindowsGet) | **Get** /api/2.59/maintenance-windows | List maintenance window details
+[**MaintenanceWindowsPost**](MaintenanceWindowsAPI.md#MaintenanceWindowsPost) | **Post** /api/2.59/maintenance-windows | Create a maintenance window
 
 
 
@@ -27,7 +27,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -102,7 +102,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -185,7 +185,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

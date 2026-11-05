@@ -4,9 +4,9 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ConnectionsDelete**](ConnectionsAPI.md#ConnectionsDelete) | **Delete** /api/2.58/connections | Delete a connection between a volume and its host or host group
-[**ConnectionsGet**](ConnectionsAPI.md#ConnectionsGet) | **Get** /api/2.58/connections | List volume connections
-[**ConnectionsPost**](ConnectionsAPI.md#ConnectionsPost) | **Post** /api/2.58/connections | Create a connection between a volume and host or host group
+[**ConnectionsDelete**](ConnectionsAPI.md#ConnectionsDelete) | **Delete** /api/2.59/connections | Delete a connection between a volume and its host or host group
+[**ConnectionsGet**](ConnectionsAPI.md#ConnectionsGet) | **Get** /api/2.59/connections | List volume connections
+[**ConnectionsPost**](ConnectionsAPI.md#ConnectionsPost) | **Post** /api/2.59/connections | Create a connection between a volume and host or host group
 
 
 
@@ -27,7 +27,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -106,7 +106,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -196,7 +196,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

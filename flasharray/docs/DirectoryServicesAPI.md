@@ -4,37 +4,37 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DirectoryServicesDelete**](DirectoryServicesAPI.md#DirectoryServicesDelete) | **Delete** /api/2.58/directory-services | Delete directory services configuration
-[**DirectoryServicesGet**](DirectoryServicesAPI.md#DirectoryServicesGet) | **Get** /api/2.58/directory-services | List directory services configuration
-[**DirectoryServicesLocalDirectoryServicesDelete**](DirectoryServicesAPI.md#DirectoryServicesLocalDirectoryServicesDelete) | **Delete** /api/2.58/directory-services/local/directory-services | Delete local directory services
-[**DirectoryServicesLocalDirectoryServicesGet**](DirectoryServicesAPI.md#DirectoryServicesLocalDirectoryServicesGet) | **Get** /api/2.58/directory-services/local/directory-services | List local directory services
-[**DirectoryServicesLocalDirectoryServicesPatch**](DirectoryServicesAPI.md#DirectoryServicesLocalDirectoryServicesPatch) | **Patch** /api/2.58/directory-services/local/directory-services | Modify local directory service
-[**DirectoryServicesLocalDirectoryServicesPost**](DirectoryServicesAPI.md#DirectoryServicesLocalDirectoryServicesPost) | **Post** /api/2.58/directory-services/local/directory-services | Create local directory service
-[**DirectoryServicesLocalGroupsDelete**](DirectoryServicesAPI.md#DirectoryServicesLocalGroupsDelete) | **Delete** /api/2.58/directory-services/local/groups | Delete local groups
-[**DirectoryServicesLocalGroupsGet**](DirectoryServicesAPI.md#DirectoryServicesLocalGroupsGet) | **Get** /api/2.58/directory-services/local/groups | List local groups
-[**DirectoryServicesLocalGroupsMembersDelete**](DirectoryServicesAPI.md#DirectoryServicesLocalGroupsMembersDelete) | **Delete** /api/2.58/directory-services/local/groups/members | Delete local group membership
-[**DirectoryServicesLocalGroupsMembersGet**](DirectoryServicesAPI.md#DirectoryServicesLocalGroupsMembersGet) | **Get** /api/2.58/directory-services/local/groups/members | List local group memberships
-[**DirectoryServicesLocalGroupsMembersPost**](DirectoryServicesAPI.md#DirectoryServicesLocalGroupsMembersPost) | **Post** /api/2.58/directory-services/local/groups/members | Create local group membership
-[**DirectoryServicesLocalGroupsPatch**](DirectoryServicesAPI.md#DirectoryServicesLocalGroupsPatch) | **Patch** /api/2.58/directory-services/local/groups | Modify local groups
-[**DirectoryServicesLocalGroupsPost**](DirectoryServicesAPI.md#DirectoryServicesLocalGroupsPost) | **Post** /api/2.58/directory-services/local/groups | Create local group
-[**DirectoryServicesLocalUsersDelete**](DirectoryServicesAPI.md#DirectoryServicesLocalUsersDelete) | **Delete** /api/2.58/directory-services/local/users | Delete local users
-[**DirectoryServicesLocalUsersGet**](DirectoryServicesAPI.md#DirectoryServicesLocalUsersGet) | **Get** /api/2.58/directory-services/local/users | List local users
-[**DirectoryServicesLocalUsersMembersDelete**](DirectoryServicesAPI.md#DirectoryServicesLocalUsersMembersDelete) | **Delete** /api/2.58/directory-services/local/users/members | Delete local user membership
-[**DirectoryServicesLocalUsersMembersGet**](DirectoryServicesAPI.md#DirectoryServicesLocalUsersMembersGet) | **Get** /api/2.58/directory-services/local/users/members | List local user memberships
-[**DirectoryServicesLocalUsersMembersPost**](DirectoryServicesAPI.md#DirectoryServicesLocalUsersMembersPost) | **Post** /api/2.58/directory-services/local/users/members | Create local user membership
-[**DirectoryServicesLocalUsersPatch**](DirectoryServicesAPI.md#DirectoryServicesLocalUsersPatch) | **Patch** /api/2.58/directory-services/local/users | Modify local user
-[**DirectoryServicesLocalUsersPost**](DirectoryServicesAPI.md#DirectoryServicesLocalUsersPost) | **Post** /api/2.58/directory-services/local/users | Create local user
-[**DirectoryServicesPatch**](DirectoryServicesAPI.md#DirectoryServicesPatch) | **Patch** /api/2.58/directory-services | Modify directory services configuration
-[**DirectoryServicesPost**](DirectoryServicesAPI.md#DirectoryServicesPost) | **Post** /api/2.58/directory-services | Create directory services configuration
-[**DirectoryServicesRolesDelete**](DirectoryServicesAPI.md#DirectoryServicesRolesDelete) | **Delete** /api/2.58/directory-services/roles | Delete group to management access policy mappings
-[**DirectoryServicesRolesGet**](DirectoryServicesAPI.md#DirectoryServicesRolesGet) | **Get** /api/2.58/directory-services/roles | List group to management access policy mappings
-[**DirectoryServicesRolesPatch**](DirectoryServicesAPI.md#DirectoryServicesRolesPatch) | **Patch** /api/2.58/directory-services/roles | Modify group to management access policy mappings
-[**DirectoryServicesRolesPoliciesManagementAccessDelete**](DirectoryServicesAPI.md#DirectoryServicesRolesPoliciesManagementAccessDelete) | **Delete** /api/2.58/directory-services/roles/policies/management-access | Delete a membership between a group to management access policy mapping and one or more management access policies
-[**DirectoryServicesRolesPoliciesManagementAccessGet**](DirectoryServicesAPI.md#DirectoryServicesRolesPoliciesManagementAccessGet) | **Get** /api/2.58/directory-services/roles/policies/management-access | List management access policies attached to a group to management access policy mapping
-[**DirectoryServicesRolesPoliciesManagementAccessPost**](DirectoryServicesAPI.md#DirectoryServicesRolesPoliciesManagementAccessPost) | **Post** /api/2.58/directory-services/roles/policies/management-access | Create a membership between a group to management access policy mapping with one or more management access policies
-[**DirectoryServicesRolesPost**](DirectoryServicesAPI.md#DirectoryServicesRolesPost) | **Post** /api/2.58/directory-services/roles | Create a group in management access policy mappings
-[**DirectoryServicesTestGet**](DirectoryServicesAPI.md#DirectoryServicesTestGet) | **Get** /api/2.58/directory-services/test | GET directory-service/test
-[**DirectoryServicesTestPatch**](DirectoryServicesAPI.md#DirectoryServicesTestPatch) | **Patch** /api/2.58/directory-services/test | PATCH directory-service/test
+[**DirectoryServicesDelete**](DirectoryServicesAPI.md#DirectoryServicesDelete) | **Delete** /api/2.59/directory-services | Delete directory services configuration
+[**DirectoryServicesGet**](DirectoryServicesAPI.md#DirectoryServicesGet) | **Get** /api/2.59/directory-services | List directory services configuration
+[**DirectoryServicesLocalDirectoryServicesDelete**](DirectoryServicesAPI.md#DirectoryServicesLocalDirectoryServicesDelete) | **Delete** /api/2.59/directory-services/local/directory-services | Delete local directory services
+[**DirectoryServicesLocalDirectoryServicesGet**](DirectoryServicesAPI.md#DirectoryServicesLocalDirectoryServicesGet) | **Get** /api/2.59/directory-services/local/directory-services | List local directory services
+[**DirectoryServicesLocalDirectoryServicesPatch**](DirectoryServicesAPI.md#DirectoryServicesLocalDirectoryServicesPatch) | **Patch** /api/2.59/directory-services/local/directory-services | Modify local directory service
+[**DirectoryServicesLocalDirectoryServicesPost**](DirectoryServicesAPI.md#DirectoryServicesLocalDirectoryServicesPost) | **Post** /api/2.59/directory-services/local/directory-services | Create local directory service
+[**DirectoryServicesLocalGroupsDelete**](DirectoryServicesAPI.md#DirectoryServicesLocalGroupsDelete) | **Delete** /api/2.59/directory-services/local/groups | Delete local groups
+[**DirectoryServicesLocalGroupsGet**](DirectoryServicesAPI.md#DirectoryServicesLocalGroupsGet) | **Get** /api/2.59/directory-services/local/groups | List local groups
+[**DirectoryServicesLocalGroupsMembersDelete**](DirectoryServicesAPI.md#DirectoryServicesLocalGroupsMembersDelete) | **Delete** /api/2.59/directory-services/local/groups/members | Delete local group membership
+[**DirectoryServicesLocalGroupsMembersGet**](DirectoryServicesAPI.md#DirectoryServicesLocalGroupsMembersGet) | **Get** /api/2.59/directory-services/local/groups/members | List local group memberships
+[**DirectoryServicesLocalGroupsMembersPost**](DirectoryServicesAPI.md#DirectoryServicesLocalGroupsMembersPost) | **Post** /api/2.59/directory-services/local/groups/members | Create local group membership
+[**DirectoryServicesLocalGroupsPatch**](DirectoryServicesAPI.md#DirectoryServicesLocalGroupsPatch) | **Patch** /api/2.59/directory-services/local/groups | Modify local groups
+[**DirectoryServicesLocalGroupsPost**](DirectoryServicesAPI.md#DirectoryServicesLocalGroupsPost) | **Post** /api/2.59/directory-services/local/groups | Create local group
+[**DirectoryServicesLocalUsersDelete**](DirectoryServicesAPI.md#DirectoryServicesLocalUsersDelete) | **Delete** /api/2.59/directory-services/local/users | Delete local users
+[**DirectoryServicesLocalUsersGet**](DirectoryServicesAPI.md#DirectoryServicesLocalUsersGet) | **Get** /api/2.59/directory-services/local/users | List local users
+[**DirectoryServicesLocalUsersMembersDelete**](DirectoryServicesAPI.md#DirectoryServicesLocalUsersMembersDelete) | **Delete** /api/2.59/directory-services/local/users/members | Delete local user membership
+[**DirectoryServicesLocalUsersMembersGet**](DirectoryServicesAPI.md#DirectoryServicesLocalUsersMembersGet) | **Get** /api/2.59/directory-services/local/users/members | List local user memberships
+[**DirectoryServicesLocalUsersMembersPost**](DirectoryServicesAPI.md#DirectoryServicesLocalUsersMembersPost) | **Post** /api/2.59/directory-services/local/users/members | Create local user membership
+[**DirectoryServicesLocalUsersPatch**](DirectoryServicesAPI.md#DirectoryServicesLocalUsersPatch) | **Patch** /api/2.59/directory-services/local/users | Modify local user
+[**DirectoryServicesLocalUsersPost**](DirectoryServicesAPI.md#DirectoryServicesLocalUsersPost) | **Post** /api/2.59/directory-services/local/users | Create local user
+[**DirectoryServicesPatch**](DirectoryServicesAPI.md#DirectoryServicesPatch) | **Patch** /api/2.59/directory-services | Modify directory services configuration
+[**DirectoryServicesPost**](DirectoryServicesAPI.md#DirectoryServicesPost) | **Post** /api/2.59/directory-services | Create directory services configuration
+[**DirectoryServicesRolesDelete**](DirectoryServicesAPI.md#DirectoryServicesRolesDelete) | **Delete** /api/2.59/directory-services/roles | Delete group to management access policy mappings
+[**DirectoryServicesRolesGet**](DirectoryServicesAPI.md#DirectoryServicesRolesGet) | **Get** /api/2.59/directory-services/roles | List group to management access policy mappings
+[**DirectoryServicesRolesPatch**](DirectoryServicesAPI.md#DirectoryServicesRolesPatch) | **Patch** /api/2.59/directory-services/roles | Modify group to management access policy mappings
+[**DirectoryServicesRolesPoliciesManagementAccessDelete**](DirectoryServicesAPI.md#DirectoryServicesRolesPoliciesManagementAccessDelete) | **Delete** /api/2.59/directory-services/roles/policies/management-access | Delete a membership between a group to management access policy mapping and one or more management access policies
+[**DirectoryServicesRolesPoliciesManagementAccessGet**](DirectoryServicesAPI.md#DirectoryServicesRolesPoliciesManagementAccessGet) | **Get** /api/2.59/directory-services/roles/policies/management-access | List management access policies attached to a group to management access policy mapping
+[**DirectoryServicesRolesPoliciesManagementAccessPost**](DirectoryServicesAPI.md#DirectoryServicesRolesPoliciesManagementAccessPost) | **Post** /api/2.59/directory-services/roles/policies/management-access | Create a membership between a group to management access policy mapping with one or more management access policies
+[**DirectoryServicesRolesPost**](DirectoryServicesAPI.md#DirectoryServicesRolesPost) | **Post** /api/2.59/directory-services/roles | Create a group in management access policy mappings
+[**DirectoryServicesTestGet**](DirectoryServicesAPI.md#DirectoryServicesTestGet) | **Get** /api/2.59/directory-services/test | GET directory-service/test
+[**DirectoryServicesTestPatch**](DirectoryServicesAPI.md#DirectoryServicesTestPatch) | **Patch** /api/2.59/directory-services/test | PATCH directory-service/test
 
 
 
@@ -55,7 +55,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -132,7 +132,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -218,7 +218,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -295,7 +295,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -381,7 +381,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -463,7 +463,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -542,7 +542,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -622,7 +622,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -710,7 +710,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -794,7 +794,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -885,7 +885,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -968,7 +968,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1051,7 +1051,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1132,7 +1132,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1212,7 +1212,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1300,7 +1300,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1384,7 +1384,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1474,7 +1474,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1557,7 +1557,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1641,7 +1641,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1722,7 +1722,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1804,7 +1804,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1883,7 +1883,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -1959,7 +1959,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -2045,7 +2045,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -2125,7 +2125,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -2204,7 +2204,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -2292,7 +2292,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -2372,7 +2372,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -2451,7 +2451,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -2538,7 +2538,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

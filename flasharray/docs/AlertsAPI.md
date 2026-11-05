@@ -4,14 +4,14 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AlertsEventsGet**](AlertsAPI.md#AlertsEventsGet) | **Get** /api/2.58/alerts/events | List alert events
-[**AlertsGet**](AlertsAPI.md#AlertsGet) | **Get** /api/2.58/alerts | List alerts
-[**AlertsPatch**](AlertsAPI.md#AlertsPatch) | **Patch** /api/2.58/alerts | Modify flagged state
-[**AlertsRulesCatalogGet**](AlertsAPI.md#AlertsRulesCatalogGet) | **Get** /api/2.58/alerts/rules/catalog | List available customizable alert codes
-[**AlertsRulesDelete**](AlertsAPI.md#AlertsRulesDelete) | **Delete** /api/2.58/alerts/rules | Delete a custom alert rule
-[**AlertsRulesGet**](AlertsAPI.md#AlertsRulesGet) | **Get** /api/2.58/alerts/rules | List custom alert rules
-[**AlertsRulesPatch**](AlertsAPI.md#AlertsRulesPatch) | **Patch** /api/2.58/alerts/rules | Modify a custom alert rule
-[**AlertsRulesPost**](AlertsAPI.md#AlertsRulesPost) | **Post** /api/2.58/alerts/rules | Create a custom alert rule
+[**AlertsEventsGet**](AlertsAPI.md#AlertsEventsGet) | **Get** /api/2.59/alerts/events | List alert events
+[**AlertsGet**](AlertsAPI.md#AlertsGet) | **Get** /api/2.59/alerts | List alerts
+[**AlertsPatch**](AlertsAPI.md#AlertsPatch) | **Patch** /api/2.59/alerts | Modify flagged state
+[**AlertsRulesCatalogGet**](AlertsAPI.md#AlertsRulesCatalogGet) | **Get** /api/2.59/alerts/rules/catalog | List available customizable alert codes
+[**AlertsRulesDelete**](AlertsAPI.md#AlertsRulesDelete) | **Delete** /api/2.59/alerts/rules | Delete a custom alert rule
+[**AlertsRulesGet**](AlertsAPI.md#AlertsRulesGet) | **Get** /api/2.59/alerts/rules | List custom alert rules
+[**AlertsRulesPatch**](AlertsAPI.md#AlertsRulesPatch) | **Patch** /api/2.59/alerts/rules | Modify a custom alert rule
+[**AlertsRulesPost**](AlertsAPI.md#AlertsRulesPost) | **Post** /api/2.59/alerts/rules | Create a custom alert rule
 
 
 
@@ -32,7 +32,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -119,7 +119,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -206,7 +206,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -285,7 +285,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -370,7 +370,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -446,7 +446,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -531,7 +531,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -610,7 +610,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

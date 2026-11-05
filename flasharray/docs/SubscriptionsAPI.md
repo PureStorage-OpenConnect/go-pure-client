@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**SubscriptionsGet**](SubscriptionsAPI.md#SubscriptionsGet) | **Get** /api/2.58/subscriptions | List subscriptions
+[**SubscriptionsGet**](SubscriptionsAPI.md#SubscriptionsGet) | **Get** /api/2.59/subscriptions | List subscriptions
 
 
 
@@ -25,7 +25,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**SsoSaml2IdpsDelete**](SAML2SSOAPI.md#SsoSaml2IdpsDelete) | **Delete** /api/2.58/sso/saml2/idps | Delete SAML2 SSO configurations
-[**SsoSaml2IdpsGet**](SAML2SSOAPI.md#SsoSaml2IdpsGet) | **Get** /api/2.58/sso/saml2/idps | List SAML2 SSO configurations
-[**SsoSaml2IdpsPatch**](SAML2SSOAPI.md#SsoSaml2IdpsPatch) | **Patch** /api/2.58/sso/saml2/idps | Modify SAML2 SSO configurations
-[**SsoSaml2IdpsPost**](SAML2SSOAPI.md#SsoSaml2IdpsPost) | **Post** /api/2.58/sso/saml2/idps | Create SAML2 SSO configurations
-[**SsoSaml2IdpsTestGet**](SAML2SSOAPI.md#SsoSaml2IdpsTestGet) | **Get** /api/2.58/sso/saml2/idps/test | List existing SAML2 SSO configurations
-[**SsoSaml2IdpsTestPatch**](SAML2SSOAPI.md#SsoSaml2IdpsTestPatch) | **Patch** /api/2.58/sso/saml2/idps/test | Modify provided SAML2 SSO configurations
+[**SsoSaml2IdpsDelete**](SAML2SSOAPI.md#SsoSaml2IdpsDelete) | **Delete** /api/2.59/sso/saml2/idps | Delete SAML2 SSO configurations
+[**SsoSaml2IdpsGet**](SAML2SSOAPI.md#SsoSaml2IdpsGet) | **Get** /api/2.59/sso/saml2/idps | List SAML2 SSO configurations
+[**SsoSaml2IdpsPatch**](SAML2SSOAPI.md#SsoSaml2IdpsPatch) | **Patch** /api/2.59/sso/saml2/idps | Modify SAML2 SSO configurations
+[**SsoSaml2IdpsPost**](SAML2SSOAPI.md#SsoSaml2IdpsPost) | **Post** /api/2.59/sso/saml2/idps | Create SAML2 SSO configurations
+[**SsoSaml2IdpsTestGet**](SAML2SSOAPI.md#SsoSaml2IdpsTestGet) | **Get** /api/2.59/sso/saml2/idps/test | List existing SAML2 SSO configurations
+[**SsoSaml2IdpsTestPatch**](SAML2SSOAPI.md#SsoSaml2IdpsTestPatch) | **Patch** /api/2.59/sso/saml2/idps/test | Modify provided SAML2 SSO configurations
 
 
 
@@ -30,7 +30,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -106,7 +106,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -190,7 +190,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -269,7 +269,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -347,7 +347,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -433,7 +433,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

@@ -4,15 +4,15 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**PodReplicaLinksDelete**](PodReplicaLinksAPI.md#PodReplicaLinksDelete) | **Delete** /api/2.58/pod-replica-links | Delete pod replica links
-[**PodReplicaLinksGet**](PodReplicaLinksAPI.md#PodReplicaLinksGet) | **Get** /api/2.58/pod-replica-links | List pod replica links
-[**PodReplicaLinksLagGet**](PodReplicaLinksAPI.md#PodReplicaLinksLagGet) | **Get** /api/2.58/pod-replica-links/lag | List pod replica link lag
-[**PodReplicaLinksMappingsPoliciesGet**](PodReplicaLinksAPI.md#PodReplicaLinksMappingsPoliciesGet) | **Get** /api/2.58/pod-replica-links/mappings/policies | List policy mappings
-[**PodReplicaLinksMappingsPoliciesPatch**](PodReplicaLinksAPI.md#PodReplicaLinksMappingsPoliciesPatch) | **Patch** /api/2.58/pod-replica-links/mappings/policies | Modify policy mappings
-[**PodReplicaLinksPatch**](PodReplicaLinksAPI.md#PodReplicaLinksPatch) | **Patch** /api/2.58/pod-replica-links | Modify pod replica links
-[**PodReplicaLinksPerformanceReplicationByArrayGet**](PodReplicaLinksAPI.md#PodReplicaLinksPerformanceReplicationByArrayGet) | **Get** /api/2.58/pod-replica-links/performance/replication/by-array | List replica link performance data with array details
-[**PodReplicaLinksPerformanceReplicationGet**](PodReplicaLinksAPI.md#PodReplicaLinksPerformanceReplicationGet) | **Get** /api/2.58/pod-replica-links/performance/replication | List replica link performance data
-[**PodReplicaLinksPost**](PodReplicaLinksAPI.md#PodReplicaLinksPost) | **Post** /api/2.58/pod-replica-links | Create pod replica links
+[**PodReplicaLinksDelete**](PodReplicaLinksAPI.md#PodReplicaLinksDelete) | **Delete** /api/2.59/pod-replica-links | Delete pod replica links
+[**PodReplicaLinksGet**](PodReplicaLinksAPI.md#PodReplicaLinksGet) | **Get** /api/2.59/pod-replica-links | List pod replica links
+[**PodReplicaLinksLagGet**](PodReplicaLinksAPI.md#PodReplicaLinksLagGet) | **Get** /api/2.59/pod-replica-links/lag | List pod replica link lag
+[**PodReplicaLinksMappingsPoliciesGet**](PodReplicaLinksAPI.md#PodReplicaLinksMappingsPoliciesGet) | **Get** /api/2.59/pod-replica-links/mappings/policies | List policy mappings
+[**PodReplicaLinksMappingsPoliciesPatch**](PodReplicaLinksAPI.md#PodReplicaLinksMappingsPoliciesPatch) | **Patch** /api/2.59/pod-replica-links/mappings/policies | Modify policy mappings
+[**PodReplicaLinksPatch**](PodReplicaLinksAPI.md#PodReplicaLinksPatch) | **Patch** /api/2.59/pod-replica-links | Modify pod replica links
+[**PodReplicaLinksPerformanceReplicationByArrayGet**](PodReplicaLinksAPI.md#PodReplicaLinksPerformanceReplicationByArrayGet) | **Get** /api/2.59/pod-replica-links/performance/replication/by-array | List replica link performance data with array details
+[**PodReplicaLinksPerformanceReplicationGet**](PodReplicaLinksAPI.md#PodReplicaLinksPerformanceReplicationGet) | **Get** /api/2.59/pod-replica-links/performance/replication | List replica link performance data
+[**PodReplicaLinksPost**](PodReplicaLinksAPI.md#PodReplicaLinksPost) | **Post** /api/2.59/pod-replica-links | Create pod replica links
 
 
 
@@ -33,7 +33,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -113,7 +113,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -204,7 +204,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -298,7 +298,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -390,7 +390,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -478,7 +478,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -563,7 +563,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -658,7 +658,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -753,7 +753,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

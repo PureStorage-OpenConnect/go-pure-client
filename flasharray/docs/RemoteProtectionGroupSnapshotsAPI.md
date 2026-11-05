@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**RemoteProtectionGroupSnapshotsDelete**](RemoteProtectionGroupSnapshotsAPI.md#RemoteProtectionGroupSnapshotsDelete) | **Delete** /api/2.58/remote-protection-group-snapshots | Delete a remote protection group snapshot
-[**RemoteProtectionGroupSnapshotsGet**](RemoteProtectionGroupSnapshotsAPI.md#RemoteProtectionGroupSnapshotsGet) | **Get** /api/2.58/remote-protection-group-snapshots | List remote protection group snapshots
-[**RemoteProtectionGroupSnapshotsPatch**](RemoteProtectionGroupSnapshotsAPI.md#RemoteProtectionGroupSnapshotsPatch) | **Patch** /api/2.58/remote-protection-group-snapshots | Modify a remote protection group snapshot
-[**RemoteProtectionGroupSnapshotsPost**](RemoteProtectionGroupSnapshotsAPI.md#RemoteProtectionGroupSnapshotsPost) | **Post** /api/2.58/remote-protection-group-snapshots | Create remote protection group snapshot and tags
-[**RemoteProtectionGroupSnapshotsTestPost**](RemoteProtectionGroupSnapshotsAPI.md#RemoteProtectionGroupSnapshotsTestPost) | **Post** /api/2.58/remote-protection-group-snapshots/test | Create an attempt to take remote protection group snapshot
-[**RemoteProtectionGroupSnapshotsTransferGet**](RemoteProtectionGroupSnapshotsAPI.md#RemoteProtectionGroupSnapshotsTransferGet) | **Get** /api/2.58/remote-protection-group-snapshots/transfer | List remote protection groups with transfer statistics
+[**RemoteProtectionGroupSnapshotsDelete**](RemoteProtectionGroupSnapshotsAPI.md#RemoteProtectionGroupSnapshotsDelete) | **Delete** /api/2.59/remote-protection-group-snapshots | Delete a remote protection group snapshot
+[**RemoteProtectionGroupSnapshotsGet**](RemoteProtectionGroupSnapshotsAPI.md#RemoteProtectionGroupSnapshotsGet) | **Get** /api/2.59/remote-protection-group-snapshots | List remote protection group snapshots
+[**RemoteProtectionGroupSnapshotsPatch**](RemoteProtectionGroupSnapshotsAPI.md#RemoteProtectionGroupSnapshotsPatch) | **Patch** /api/2.59/remote-protection-group-snapshots | Modify a remote protection group snapshot
+[**RemoteProtectionGroupSnapshotsPost**](RemoteProtectionGroupSnapshotsAPI.md#RemoteProtectionGroupSnapshotsPost) | **Post** /api/2.59/remote-protection-group-snapshots | Create remote protection group snapshot and tags
+[**RemoteProtectionGroupSnapshotsTestPost**](RemoteProtectionGroupSnapshotsAPI.md#RemoteProtectionGroupSnapshotsTestPost) | **Post** /api/2.59/remote-protection-group-snapshots/test | Create an attempt to take remote protection group snapshot
+[**RemoteProtectionGroupSnapshotsTransferGet**](RemoteProtectionGroupSnapshotsAPI.md#RemoteProtectionGroupSnapshotsTransferGet) | **Get** /api/2.59/remote-protection-group-snapshots/transfer | List remote protection groups with transfer statistics
 
 
 
@@ -30,7 +30,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -108,7 +108,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -198,7 +198,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -279,7 +279,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -368,7 +368,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -457,7 +457,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

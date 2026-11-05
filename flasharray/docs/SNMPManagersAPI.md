@@ -4,11 +4,11 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**SnmpManagersDelete**](SNMPManagersAPI.md#SnmpManagersDelete) | **Delete** /api/2.58/snmp-managers | Delete SNMP manager
-[**SnmpManagersGet**](SNMPManagersAPI.md#SnmpManagersGet) | **Get** /api/2.58/snmp-managers | List SNMP managers
-[**SnmpManagersPatch**](SNMPManagersAPI.md#SnmpManagersPatch) | **Patch** /api/2.58/snmp-managers | Modify SNMP manager
-[**SnmpManagersPost**](SNMPManagersAPI.md#SnmpManagersPost) | **Post** /api/2.58/snmp-managers | Create SNMP manager
-[**SnmpManagersTestGet**](SNMPManagersAPI.md#SnmpManagersTestGet) | **Get** /api/2.58/snmp-managers/test | List SNMP manager test results
+[**SnmpManagersDelete**](SNMPManagersAPI.md#SnmpManagersDelete) | **Delete** /api/2.59/snmp-managers | Delete SNMP manager
+[**SnmpManagersGet**](SNMPManagersAPI.md#SnmpManagersGet) | **Get** /api/2.59/snmp-managers | List SNMP managers
+[**SnmpManagersPatch**](SNMPManagersAPI.md#SnmpManagersPatch) | **Patch** /api/2.59/snmp-managers | Modify SNMP manager
+[**SnmpManagersPost**](SNMPManagersAPI.md#SnmpManagersPost) | **Post** /api/2.59/snmp-managers | Create SNMP manager
+[**SnmpManagersTestGet**](SNMPManagersAPI.md#SnmpManagersTestGet) | **Get** /api/2.59/snmp-managers/test | List SNMP manager test results
 
 
 
@@ -29,7 +29,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -104,7 +104,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -187,7 +187,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -265,7 +265,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -343,7 +343,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

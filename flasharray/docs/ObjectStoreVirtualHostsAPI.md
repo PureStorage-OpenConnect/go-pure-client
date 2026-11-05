@@ -4,9 +4,9 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ObjectStoreVirtualHostsDelete**](ObjectStoreVirtualHostsAPI.md#ObjectStoreVirtualHostsDelete) | **Delete** /api/2.58/object-store-virtual-hosts | DELETE object-store-virtual-hosts
-[**ObjectStoreVirtualHostsGet**](ObjectStoreVirtualHostsAPI.md#ObjectStoreVirtualHostsGet) | **Get** /api/2.58/object-store-virtual-hosts | GET object-store-virtual-hosts
-[**ObjectStoreVirtualHostsPost**](ObjectStoreVirtualHostsAPI.md#ObjectStoreVirtualHostsPost) | **Post** /api/2.58/object-store-virtual-hosts | POST object-store-virtual-hosts
+[**ObjectStoreVirtualHostsDelete**](ObjectStoreVirtualHostsAPI.md#ObjectStoreVirtualHostsDelete) | **Delete** /api/2.59/object-store-virtual-hosts | DELETE object-store-virtual-hosts
+[**ObjectStoreVirtualHostsGet**](ObjectStoreVirtualHostsAPI.md#ObjectStoreVirtualHostsGet) | **Get** /api/2.59/object-store-virtual-hosts | GET object-store-virtual-hosts
+[**ObjectStoreVirtualHostsPost**](ObjectStoreVirtualHostsAPI.md#ObjectStoreVirtualHostsPost) | **Post** /api/2.59/object-store-virtual-hosts | POST object-store-virtual-hosts
 
 
 
@@ -27,7 +27,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -103,7 +103,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -188,7 +188,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {

@@ -5,7 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | Pointer to **string** | The new name for the resource. | [optional] 
-**Qos** | Pointer to [**ContainerQosCeilingsPatch**](ContainerQosCeilingsPatch.md) | Sets QoS limits. | [optional] 
+**PriorityAdjustment** | Pointer to [**PriorityAdjustmentValuePatch**](PriorityAdjustmentValuePatch.md) | Adjusts host group priority. | [optional] 
+**Qos** | Pointer to [**ContainerQosPatch**](ContainerQosPatch.md) | Sets QoS ceilings and floors. | [optional] 
 
 ## Methods
 
@@ -51,22 +52,47 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
+### GetPriorityAdjustment
+
+`func (o *HostGroupPatch) GetPriorityAdjustment() PriorityAdjustmentValuePatch`
+
+GetPriorityAdjustment returns the PriorityAdjustment field if non-nil, zero value otherwise.
+
+### GetPriorityAdjustmentOk
+
+`func (o *HostGroupPatch) GetPriorityAdjustmentOk() (*PriorityAdjustmentValuePatch, bool)`
+
+GetPriorityAdjustmentOk returns a tuple with the PriorityAdjustment field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPriorityAdjustment
+
+`func (o *HostGroupPatch) SetPriorityAdjustment(v PriorityAdjustmentValuePatch)`
+
+SetPriorityAdjustment sets PriorityAdjustment field to given value.
+
+### HasPriorityAdjustment
+
+`func (o *HostGroupPatch) HasPriorityAdjustment() bool`
+
+HasPriorityAdjustment returns a boolean if a field has been set.
+
 ### GetQos
 
-`func (o *HostGroupPatch) GetQos() ContainerQosCeilingsPatch`
+`func (o *HostGroupPatch) GetQos() ContainerQosPatch`
 
 GetQos returns the Qos field if non-nil, zero value otherwise.
 
 ### GetQosOk
 
-`func (o *HostGroupPatch) GetQosOk() (*ContainerQosCeilingsPatch, bool)`
+`func (o *HostGroupPatch) GetQosOk() (*ContainerQosPatch, bool)`
 
 GetQosOk returns a tuple with the Qos field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetQos
 
-`func (o *HostGroupPatch) SetQos(v ContainerQosCeilingsPatch)`
+`func (o *HostGroupPatch) SetQos(v ContainerQosPatch)`
 
 SetQos sets Qos field to given value.
 

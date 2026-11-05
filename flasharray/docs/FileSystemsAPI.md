@@ -4,10 +4,10 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**FileSystemsDelete**](FileSystemsAPI.md#FileSystemsDelete) | **Delete** /api/2.58/file-systems | Delete file system
-[**FileSystemsGet**](FileSystemsAPI.md#FileSystemsGet) | **Get** /api/2.58/file-systems | List file systems
-[**FileSystemsPatch**](FileSystemsAPI.md#FileSystemsPatch) | **Patch** /api/2.58/file-systems | Modify a file system
-[**FileSystemsPost**](FileSystemsAPI.md#FileSystemsPost) | **Post** /api/2.58/file-systems | Create file system
+[**FileSystemsDelete**](FileSystemsAPI.md#FileSystemsDelete) | **Delete** /api/2.59/file-systems | Delete file system
+[**FileSystemsGet**](FileSystemsAPI.md#FileSystemsGet) | **Get** /api/2.59/file-systems | List file systems
+[**FileSystemsPatch**](FileSystemsAPI.md#FileSystemsPatch) | **Patch** /api/2.59/file-systems | Modify a file system
+[**FileSystemsPost**](FileSystemsAPI.md#FileSystemsPost) | **Post** /api/2.59/file-systems | Create file system
 
 
 
@@ -28,7 +28,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -105,7 +105,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -194,7 +194,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
@@ -274,7 +274,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_58"
+    openapiclient "github.com/PureStorage-OpenConnect/go-pure-client/flasharray/FA_2_59"
 )
 
 func main() {
